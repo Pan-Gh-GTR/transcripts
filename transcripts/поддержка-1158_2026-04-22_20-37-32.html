@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-1158</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/81cc3f592ecd8e7e2795792388fc6de6.png?size=1024", "roleColor": "#006800", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/8e5424768addb0eab9fb87dcd89088bb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": false}, "994164698654187580": {"author": "[PR-021] gagegaming99", "avatar": "https://cdn.discordapp.com/avatars/994164698654187580/a4be60208533432e6a6fd7fb27cc6a23.png?size=1024", "roleColor": "#ffd000", "roleIcon": "https://cdn.discordapp.com/role-icons/1448682337373130843/0748962b59e85e4f43a978676ee5a905.png?size=1024", "roleName": "ДЕТИ", "bot": false, "verified": false}, "1126160871433982102": {"author": "lskdvdk", "avatar": "https://cdn.discordapp.com/avatars/1126160871433982102/e61bdcad3e5940b4b2b2c84f79b52572.png?size=1024", "roleColor": "#0ba348", "roleIcon": "https://cdn.discordapp.com/role-icons/1416202584120623225/bd07e078ba8d33b7fe5b50fd4f167a6e.png?size=1024", "roleName": "Модератор Discord", "bot": false, "verified": false}, "1431264187228885033": {"author": "[MA-009] apchi_2002", "avatar": "https://cdn.discordapp.com/avatars/1431264187228885033/a9106725661f5e49621de7d9ff79833c.png?size=1024", "roleColor": "#ffd000", "roleIcon": "https://cdn.discordapp.com/role-icons/1416421981678731295/4baf835f869b69af221d8e45ccf47196.png?size=1024", "roleName": "Работник Месяца", "bot": false, "verified": false}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.emoji-img {
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    object-fit: contain;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/a06dfa47e027eb8acdf25152e486f1c8.png?size=1024" timestamp="2026-04-22_20-37-32">Тикет Закрыт.<br/>Причина: Не указана<br/>Закрыл: <@994164698654187580><br/>Дата: 2026-04-22_20-37-32<br/><a href="https://transcripts.erlcrussia.xyz/transcripts/поддержка-1158_2026-04-22_20-37-32.html" style="color: #00aff4;">https://transcripts.erlcrussia.xyz/transcripts/поддержка-1158_2026-04-22_20-37-32.html</a></discord-message>
+<discord-message id="m-1496564562118574244" timestamp="2026-04-22T20:33:16.434000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="padding:8px;color:#dcddde;"><discord-mention type="role">Персонал ER:LC</discord-mention> <discord-mention type="role">Команда Модерации Discord</discord-mention> <discord-mention type="user">[PR-021] gagegaming99</discord-mention></div><div style="background:#2f3136;border-left:4px solid #006800;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:8px 12px;"><div style="display:flex;gap:16px;align-items:flex-start;"><img src="https://cdn.discordapp.com/avatars/994164698654187580/a4be60208533432e6a6fd7fb27cc6a23.png?size=1024" style="width:80px;height:80px;border-radius:8px;object-fit:cover;flex-shrink:0;" /><div><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg" alt="📨" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Новый Тикет — Поддержка</span><br/><strong>В чём проблема:</strong><br/>В ходе выполнения модераторских обязанностей мной было вынесено наказание с использованием формата W (Warning), что соответствует пункту <strong>B-2.2</strong> Регламента персонала:  <br/><em>«W(номер)/Kick/Ban | Код правила — Конкретная причина»</em>.<br/>Младший администратор apchi_2002 в чате персонала потребовал не использовать формат W, ссылаясь на устную договорённость:  <br/><em>«Мы не пишем W2 больше. Мы пишем при терминах A-1»</em>.<br/>Мной было указано, что:<br/>1. Действующий Регламент персонала <strong>не содержит</strong> изменений, отменяющих пункт B-2.2.<br/>2. Изменение от 4 апреля, на которое ссылается apchi_2002, <strong>не внесено</strong> в официальный документ, следовательно, не является обязательным к исполнению.<br/>Считаю, что работа персонала должна строиться <strong>на основании утверждённого Регламента</strong>, а не устных распоряжений, противоречащих документу.<br/>Прошу руководство:<br/>1. Разъяснить, какой формат наказаний является действующим на текущий момент.<br/>2. В случае признания устных изменений - внести их в Регламент персонала официально.<br/>До получения официальных разъяснений продолжаю действовать строго по утверждённому Регламенту.</div></div></div><div style="padding:4px 12px;color:#dcddde;">⏳ <strong>Ожидайте ответа от персонала.</strong></div><div style="height:1px;background:#4f545c;margin:4px 0;"></div><div style="height:8px;"></div><div style="display:flex;gap:8px;padding:8px 0;flex-wrap:wrap;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Закрыть Тикет</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e5.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Взять Тикет</button></div></div></div><discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1496564644645703762" timestamp="2026-04-22T20:33:36.110000Z" profile="994164698654187580">просто немного не понятно</discord-message>
+<discord-message id="m-1496564660454035609" timestamp="2026-04-22T20:33:39.879000Z" profile="994164698654187580">вроде в регламенте нету</discord-message>
+<discord-message id="m-1496564672126652588" timestamp="2026-04-22T20:33:42.662000Z" profile="994164698654187580">а устно есть</discord-message>
+<discord-message id="m-1496564681618358343" timestamp="2026-04-22T20:33:44.925000Z" profile="1126160871433982102">⏱<img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/fe0f.svg" alt="️" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/></discord-message>
+<discord-message id="m-1496564730343592068" timestamp="2026-04-22T20:33:56.542000Z" profile="994164698654187580"><discord-mention type="user">[MA-009] apchi_2002</discord-mention> это не жалоба если чт <img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f609.svg" alt="😉" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/><discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f480.svg" count="1"></discord-reaction><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1496564831942086809" timestamp="2026-04-22T20:34:20.765000Z" profile="994164698654187580"><discord-reply slot="reply" author="lskdvdk" avatar="" role-color="#0ba348"><span data-goto="1496564681618358343">⏱️</span></discord-reply>Не влезаем в тикет, он именно для КВД и Менеджера персонала<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" count="1"></discord-reaction><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f615.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1496565601085427752" timestamp="2026-04-22T20:37:24.143000Z" profile="994164698654187580">разобрали</discord-message>
+<discord-message id="m-1496565621691781160" timestamp="2026-04-22T20:37:29.056000Z" profile="994164698654187580">в <a href="https://discord.com/channels/1331331077553262765/1331372022755889232" style="color: #00aff4; text-decoration: underline;" target="_blank">https://discord.com/channels/1331331077553262765/1331372022755889232</a></discord-message>
+<discord-message id="m-1496565631678681261" timestamp="2026-04-22T20:37:31.437000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет закроется через несколько секунд...</span></div></div></div></discord-message>
+</discord-messages></body></html>
