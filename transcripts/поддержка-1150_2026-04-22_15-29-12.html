@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-1150</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/81cc3f592ecd8e7e2795792388fc6de6.png?size=1024", "roleColor": "#006800", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/8e5424768addb0eab9fb87dcd89088bb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": false}, "1451590066177708164": {"author": "Andrey_Morozov08", "avatar": "https://cdn.discordapp.com/avatars/1451590066177708164/7a9789794b711071a03045083608ca6f.png?size=1024", "roleColor": "#2a88cb", "roleIcon": "https://cdn.discordapp.com/role-icons/1416177983378686052/3d06b544ab605eab4956042b2dad64fc.png?size=1024", "roleName": "Участник", "bot": false, "verified": false}, "1126160871433982102": {"author": "lskdvdk", "avatar": "https://cdn.discordapp.com/avatars/1126160871433982102/e61bdcad3e5940b4b2b2c84f79b52572.png?size=1024", "roleColor": "#0ba348", "roleIcon": "https://cdn.discordapp.com/role-icons/1416202584120623225/bd07e078ba8d33b7fe5b50fd4f167a6e.png?size=1024", "roleName": "Модератор Discord", "bot": false, "verified": false}, "760966468715937814": {"author": "bjmajgda", "avatar": "https://cdn.discordapp.com/avatars/760966468715937814/5a6ac06b184febd402852b0261dbb0df.png?size=1024", "roleColor": "#bf0000", "roleIcon": "https://cdn.discordapp.com/role-icons/1416181301962084513/0cd3fb872cd963e6a987eb0c07a0654c.png?size=1024", "roleName": "Менеджер Персонала", "bot": false, "verified": false}, "563434444321587202": {"author": "Вкусно и Точка", "avatar": "https://cdn.discordapp.com/avatars/563434444321587202/601a37c9ed01b3ff0e4ef3960d42a93b.png?size=1024", "roleColor": "#0f583d", "roleIcon": "https://cdn.discordapp.com/role-icons/1398311435901341696/b3abf0aca7be375448eb00d6508c8f6e.png?size=1024", "roleName": "Вкусно и Точка", "bot": true, "verified": true}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.emoji-img {
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    object-fit: contain;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/a06dfa47e027eb8acdf25152e486f1c8.png?size=1024" timestamp="2026-04-22_15-29-12">Тикет Закрыт.<br/>Причина: Проблема решена<br/>Закрыл: <@760966468715937814><br/>Дата: 2026-04-22_15-29-12<br/><a href="https://Pan-Gh-GTR.github.io/transcripts/transcripts/поддержка-1150_2026-04-22_15-29-12.html" style="color: #00aff4;">https://Pan-Gh-GTR.github.io/transcripts/transcripts/поддержка-1150_2026-04-22_15-29-12.html</a></discord-message>
+<discord-message id="m-1496479082836398081" timestamp="2026-04-22T14:53:36.585000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="padding:8px;color:#dcddde;"><discord-mention type="role">Персонал ER:LC</discord-mention> <discord-mention type="role">Команда Модерации Discord</discord-mention> <discord-mention type="user">Andrey_Morozov08</discord-mention></div><div style="background:#2f3136;border-left:4px solid #006800;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:8px 12px;"><div style="display:flex;gap:16px;align-items:flex-start;"><img src="https://cdn.discordapp.com/avatars/1451590066177708164/7a9789794b711071a03045083608ca6f.png?size=1024" style="width:80px;height:80px;border-radius:8px;object-fit:cover;flex-shrink:0;" /><div><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg" alt="📨" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Новый Тикет — Поддержка</span><br/><strong>В чём проблема:</strong><br/>Меня забанили по ошибке на вашем сервере</div></div></div><div style="padding:4px 12px;color:#dcddde;">⏳ <strong>Ожидайте ответа от персонала.</strong></div><div style="height:1px;background:#4f545c;margin:4px 0;"></div><div style="height:8px;"></div><div style="display:flex;gap:8px;padding:8px 0;flex-wrap:wrap;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Закрыть Тикет</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e4.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Освободить Тикет</button></div></div></div></discord-message>
+<discord-message id="m-1496481679903035496" timestamp="2026-04-22T15:03:55.774000Z" profile="1126160871433982102"><discord-mention type="user">Andrey_Morozov08</discord-mention> Уточните информацию для быстрой обработки информации уполномоченными лицами администрации<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1496482231928094853" timestamp="2026-04-22T15:06:07.387000Z" profile="1451590066177708164"></discord-message>
+<discord-message id="m-1496483017709981788" timestamp="2026-04-22T15:09:14.732000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e5.svg" alt="📥" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет взят <discord-mention type="user">bjmajgda</discord-mention>.</span></div></div></div></discord-message>
+<discord-message id="m-1496483219413930106" timestamp="2026-04-22T15:10:02.822000Z" profile="760966468715937814">Добрый день!<br/>Являюсь Менеджером Персонала Moscow Roleplay.<br/>Вы были забанены за помеха рп сцене.<br/>Также вы никак не реагировали на просьбы уехать.</discord-message>
+<discord-message id="m-1496484897018216682" timestamp="2026-04-22T15:16:42.794000Z" profile="1451590066177708164"><discord-reply slot="reply" author="bjmajgda" avatar="" role-color="#bf0000"><span data-goto="1496483219413930106">Добрый день!
+Являюсь Менеджером Персонала Moscow Roleplay.
+Вы были забанены за помеха рп сцене.
+Такж</span></discord-reply>вы в голосовой чат говорили?</discord-message>
+<discord-message id="m-1496484907147333733" timestamp="2026-04-22T15:16:45.209000Z" profile="1451590066177708164">если</discord-message>
+<discord-message id="m-1496484916274139269" timestamp="2026-04-22T15:16:47.385000Z" profile="1451590066177708164">да</discord-message>
+<discord-message id="m-1496484920003006595" timestamp="2026-04-22T15:16:48.274000Z" profile="1451590066177708164">то я не слышал</discord-message>
+<discord-message id="m-1496485007907225672" timestamp="2026-04-22T15:17:09.232000Z" profile="1451590066177708164"><discord-reply slot="reply" author="bjmajgda" avatar="" role-color="#bf0000"><span data-goto="1496483219413930106">Добрый день!
+Являюсь Менеджером Персонала Moscow Roleplay.
+Вы были забанены за помеха рп сцене.
+Такж</span></discord-reply>зачем вы тогда вызвали один вопрос имеется</discord-message>
+<discord-message id="m-1496485037850493080" timestamp="2026-04-22T15:17:16.371000Z" profile="1451590066177708164">причем</discord-message>
+<discord-message id="m-1496485048071753818" timestamp="2026-04-22T15:17:18.808000Z" profile="1451590066177708164">много раз</discord-message>
+<discord-message id="m-1496485056657490010" timestamp="2026-04-22T15:17:20.855000Z" profile="1451590066177708164">более 2</discord-message>
+<discord-message id="m-1496485904540504114" timestamp="2026-04-22T15:20:43.006000Z" profile="760966468715937814"><discord-reply slot="reply" author="Andrey_Morozov08" avatar="" role-color="#2a88cb"><span data-goto="1496485007907225672">зачем вы тогда вызвали один вопрос имеется</span></discord-reply>Я вас не вызвал. Не следует клеветать на другого человека.</discord-message>
+<discord-message id="m-1496485935204925580" timestamp="2026-04-22T15:20:50.317000Z" profile="760966468715937814"><discord-reply slot="reply" author="Andrey_Morozov08" avatar="" role-color="#2a88cb"><span data-goto="1496485007907225672">зачем вы тогда вызвали один вопрос имеется</span></discord-reply>Это раз</discord-message>
+<discord-message id="m-1496485976317628497" timestamp="2026-04-22T15:21:00.119000Z" profile="1451590066177708164">мгм</discord-message>
+<discord-message id="m-1496485983783489557" timestamp="2026-04-22T15:21:01.899000Z" profile="760966468715937814"><discord-reply slot="reply" author="Andrey_Morozov08" avatar="" role-color="#2a88cb"><span data-goto="1496484897018216682">вы в голосовой чат говорили?</span></discord-reply>Вас везде просили уехать</discord-message>
+<discord-message id="m-1496486015949471865" timestamp="2026-04-22T15:21:09.568000Z" profile="1451590066177708164">у меня был вызов в мдт</discord-message>
+<discord-message id="m-1496486030449180852" timestamp="2026-04-22T15:21:13.025000Z" profile="1451590066177708164">2 причем</discord-message>
+<discord-message id="m-1496486079455563877" timestamp="2026-04-22T15:21:24.709000Z" profile="1451590066177708164"><discord-reply slot="reply" author="bjmajgda" avatar="" role-color="#bf0000"><span data-goto="1496485983783489557">Вас везде просили уехать</span></discord-reply>где?</discord-message>
+<discord-message id="m-1496486127954038795" timestamp="2026-04-22T15:21:36.272000Z" profile="760966468715937814"><discord-reply slot="reply" author="Andrey_Morozov08" avatar="" role-color="#2a88cb"><span data-goto="1496486015949471865">у меня был вызов в мдт</span></discord-reply>Очень интересно, что сразу это я вас вызвал.</discord-message>
+<discord-message id="m-1496486250943877223" timestamp="2026-04-22T15:22:05.595000Z" profile="760966468715937814"><discord-reply slot="reply" author="Andrey_Morozov08" avatar="" role-color="#2a88cb"><span data-goto="1496486079455563877">где?</span></discord-reply>В чате к примеру вас просили уехать . Показывали  вам, что не следует идти дальше. Вы проигнорировали все это</discord-message>
+<discord-message id="m-1496486305985462362" timestamp="2026-04-22T15:22:18.718000Z" profile="1451590066177708164"><discord-reply slot="reply" author="bjmajgda" avatar="" role-color="#bf0000"><span data-goto="1496486250943877223">В чате к примеру вас просили уехать . Показывали  вам, что не следует идти дальше. Вы проигнорировал</span></discord-reply>в общем чате игры</discord-message>
+<discord-message id="m-1496486309756403852" timestamp="2026-04-22T15:22:19.617000Z" profile="563434444321587202"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f389.svg" alt="🎉" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> <discord-mention type="user">Andrey_Morozov08</discord-mention> только что получил 1 уровень!<discord-attachments slot="attachments"><discord-attachment type="image" filename="Maki-levelup.png" url="https://Pan-Gh-GTR.github.io/transcripts/attachments/1496486309756403852_1496486309546557591.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1496486310532354058" timestamp="2026-04-22T15:22:19.802000Z" profile="1451590066177708164">если</discord-message>
+<discord-message id="m-1496486324784463962" timestamp="2026-04-22T15:22:23.200000Z" profile="1451590066177708164">да</discord-message>
+<discord-message id="m-1496486510852313129" timestamp="2026-04-22T15:23:07.562000Z" profile="1451590066177708164">тогда,я извиняюсь потомучто я не заметил того как вы что то писали у меня интернет плохой поэтому и есть некоторая задержка</discord-message>
+<discord-message id="m-1496487034804768930" timestamp="2026-04-22T15:25:12.482000Z" profile="1451590066177708164"><discord-reply slot="reply" author="bjmajgda" avatar="" role-color="#bf0000"><span data-goto="1496486250943877223">В чате к примеру вас просили уехать . Показывали  вам, что не следует идти дальше. Вы проигнорировал</span></discord-reply>есть видео запись?</discord-message>
+<discord-message id="m-1496487280901226587" timestamp="2026-04-22T15:26:11.156000Z" profile="760966468715937814"><discord-reply slot="reply" author="Andrey_Morozov08" avatar="" role-color="#2a88cb"><span data-goto="1496487034804768930">есть видео запись?</span></discord-reply>Вы немного смотрите сейчас регламент персонала, где персонал на смене.</discord-message>
+<discord-message id="m-1496487407183466556" timestamp="2026-04-22T15:26:41.264000Z" profile="760966468715937814">Если вы вспомните вчерашний день, то может вспомните, что я не имел никакого отношения к персоналу.</discord-message>
+<discord-message id="m-1496487558815944794" timestamp="2026-04-22T15:27:17.416000Z" profile="760966468715937814">Вы будете разбанены в скором времени.<br/> Закрываю тикет?</discord-message>
+<discord-message id="m-1496487605666316358" timestamp="2026-04-22T15:27:28.586000Z" profile="1451590066177708164"><discord-reply slot="reply" author="bjmajgda" avatar="" role-color="#bf0000"><span data-goto="1496487558815944794">Вы будете разбанены в скором времени.
+ Закрываю тикет?</span></discord-reply>когда примерно?</discord-message>
+<discord-message id="m-1496487641007263846" timestamp="2026-04-22T15:27:37.012000Z" profile="760966468715937814"><discord-reply slot="reply" author="Andrey_Morozov08" avatar="" role-color="#2a88cb"><span data-goto="1496487605666316358">когда примерно?</span></discord-reply>В скором.</discord-message>
+<discord-message id="m-1496487748285108224" timestamp="2026-04-22T15:28:02.589000Z" profile="1451590066177708164">в скором это понятие через неделю?</discord-message>
+<discord-message id="m-1496487901817602120" timestamp="2026-04-22T15:28:39.194000Z" profile="760966468715937814"><discord-reply slot="reply" author="Andrey_Morozov08" avatar="" role-color="#2a88cb"><span data-goto="1496487748285108224">в скором это понятие через неделю?</span></discord-reply>Я вам не могу назвать точный отрезок времени, когда вас разбанят.<br/>Поэтому говорю вам прямо, что в течении этого дня вы будете разбанены.</discord-message>
+<discord-message id="m-1496487948995002479" timestamp="2026-04-22T15:28:50.442000Z" profile="1451590066177708164"><discord-reply slot="reply" author="bjmajgda" avatar="" role-color="#bf0000"><span data-goto="1496487901817602120">Я вам не могу назвать точный отрезок времени, когда вас разбанят.
+Поэтому говорю вам прямо, что в те</span></discord-reply>Окей</discord-message>
+<discord-message id="m-1496487965793321071" timestamp="2026-04-22T15:28:54.447000Z" profile="1451590066177708164">закрывайте тикет</discord-message>
+<discord-message id="m-1496488037566120107" timestamp="2026-04-22T15:29:11.559000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет закроется через несколько секунд...</span></div></div></div></discord-message>
+</discord-messages></body></html>
