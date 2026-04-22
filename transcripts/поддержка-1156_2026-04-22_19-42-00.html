@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-1156</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/81cc3f592ecd8e7e2795792388fc6de6.png?size=1024", "roleColor": "#006800", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/8e5424768addb0eab9fb87dcd89088bb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": false}, "1006868828917071873": {"author": "No_Name10289", "avatar": "https://cdn.discordapp.com/avatars/1006868828917071873/8e3f2f34c677bb158baff0fccb7cf8d2.png?size=1024", "roleColor": "#006800", "roleIcon": "https://cdn.discordapp.com/role-icons/1416420295211880521/a237d0d2699db3ece87d588a5eea13f8.png?size=1024", "roleName": "Медиа-Партнёр", "bot": false, "verified": false}, "1027118272879009886": {"author": "12446alex", "avatar": "https://cdn.discordapp.com/avatars/1027118272879009886/eccdf54b74018fb10ea9613fa43f8f92.png?size=1024", "roleColor": "#d4843d", "roleIcon": "https://cdn.discordapp.com/role-icons/1483091539973373993/b2b1d515e0da04921b1553fe55d87eea.png?size=1024", "roleName": "Руководство Проекта", "bot": false, "verified": false}, "1005561047396130848": {"author": "dimasik", "avatar": "https://cdn.discordapp.com/avatars/1005561047396130848/d5102a17f7387fc0d63858a90ca8fa0b.png?size=1024", "roleColor": "#bf0000", "roleIcon": "https://cdn.discordapp.com/role-icons/1416181450264412311/15539a6ccbad4266f91cc4fca4f0d812.png?size=1024", "roleName": "Менеджер Сообщества", "bot": false, "verified": false}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.emoji-img {
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    object-fit: contain;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/a06dfa47e027eb8acdf25152e486f1c8.png?size=1024" timestamp="2026-04-22_19-42-00">Тикет Закрыт.<br/>Причина: проблема решена (закрыто за алекса (не в сети))<br/>Закрыл: <@1005561047396130848><br/>Дата: 2026-04-22_19-42-00<br/><a href="https://transcripts.erlcrussia.xyz/transcripts/поддержка-1156_2026-04-22_19-42-00.html" style="color: #00aff4;">https://transcripts.erlcrussia.xyz/transcripts/поддержка-1156_2026-04-22_19-42-00.html</a></discord-message>
+<discord-message id="m-1496539625723007118" timestamp="2026-04-22T18:54:11.134000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="padding:8px;color:#dcddde;"><discord-mention type="role">Персонал ER:LC</discord-mention> <discord-mention type="role">Команда Модерации Discord</discord-mention> <discord-mention type="user">No_Name10289</discord-mention></div><div style="background:#2f3136;border-left:4px solid #006800;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:8px 12px;"><div style="display:flex;gap:16px;align-items:flex-start;"><img src="https://cdn.discordapp.com/avatars/1006868828917071873/8e3f2f34c677bb158baff0fccb7cf8d2.png?size=1024" style="width:80px;height:80px;border-radius:8px;object-fit:cover;flex-shrink:0;" /><div><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg" alt="📨" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Новый Тикет — Поддержка</span><br/><strong>В чём проблема:</strong><br/>щас все все распишу</div></div></div><div style="padding:4px 12px;color:#dcddde;">⏳ <strong>Ожидайте ответа от персонала.</strong></div><div style="height:1px;background:#4f545c;margin:4px 0;"></div><div style="height:8px;"></div><div style="display:flex;gap:8px;padding:8px 0;flex-wrap:wrap;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Закрыть Тикет</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e4.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Освободить Тикет</button></div></div></div></discord-message>
+<discord-message id="m-1496539761203085434" timestamp="2026-04-22T18:54:43.435000Z" profile="1006868828917071873">опровержение первому<discord-attachments slot="attachments"><discord-attachment type="image" filename="image.png" url="https://transcripts.erlcrussia.xyz/attachments/1496539761203085434_1496539760699904101.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1496539771772866741" timestamp="2026-04-22T18:54:45.955000Z" profile="1006868828917071873">А-5 - Проведение съемки/мероприятия возможно только с разрешения менеджмента (есть отдельный канал, где это планируется заранее).</discord-message>
+<discord-message id="m-1496539888818847914" timestamp="2026-04-22T18:55:13.861000Z" profile="1006868828917071873"><discord-attachments slot="attachments"><discord-attachment type="image" filename="image.png" url="https://transcripts.erlcrussia.xyz/attachments/1496539888818847914_1496539887833452775.png"></discord-attachment><discord-attachment type="image" filename="image.png" url="https://transcripts.erlcrussia.xyz/attachments/1496539888818847914_1496539888210808913.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1496541063664500797" timestamp="2026-04-22T18:59:53.966000Z" profile="1006868828917071873">Я пытался согласовать видео с PR-тимлидом (The_Borisik). Он не отвечал несколько часов. У меня не было возможности ждать дальше, потому что:<br/><blockquote> Конкурс требует быстрой публикации для набора просмотров.</blockquote><br/><blockquote> </blockquote><br/><blockquote> Я обратился к создателю проекта - человеку, который выше тимлида и имеет право давать разрешение.</blockquote><br/><blockquote> </blockquote><br/><blockquote> Если создатель проекта одобряет, то это отменяет требование согласования с PR-тимлидом, потому что создатель проекта является его руководителем.</blockquote><br/><strong>A-14 - Запрещено публиковать контент без финального согласования с PR-Тимлидом</strong><discord-attachments slot="attachments"><discord-attachment type="image" filename="image.png" url="https://transcripts.erlcrussia.xyz/attachments/1496541063664500797_1496541062339231916.png"></discord-attachment><discord-attachment type="image" filename="image.png" url="https://transcripts.erlcrussia.xyz/attachments/1496541063664500797_1496541062959730800.png"></discord-attachment><discord-attachment type="image" filename="image.png" url="https://transcripts.erlcrussia.xyz/attachments/1496541063664500797_1496541063442337812.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1496541731485777940" timestamp="2026-04-22T19:02:33.187000Z" profile="1006868828917071873">Почему я считаю решение ошибочным<br/>По А-14 — я пытался согласовать, но тимлид не отвечал<br/>Я написал PR-тимлиду (The_Borisik) для согласования видео.<br/>Он не отвечал несколько часов.<br/>Конкурс требует быстрой публикации (просмотры набираются в первые часы). Ждать дальше = терять возможность участвовать.<br/>Поскольку тимлид был недоступен, я эскалировал вопрос выше - к создателю проекта.<br/>Создатель проекта является прямым руководителем PR-тимлида. Его слово имеет приоритет.<br/>Я получил разрешение (или отсутствие запрета) от создателя проекта.<br/>Вывод по А-14:<br/>А-14 требует согласования. Я выполнил обязанность - попытался согласовать. Тимлид не выполнил свою обязанность - не ответил в разумный срок. Я пошел выше по иерархии. Это не нарушение, это корректная эскалация.</discord-message>
+<discord-message id="m-1496541949522350190" timestamp="2026-04-22T19:03:25.171000Z" profile="1006868828917071873">Да, в видео есть моменты, которые выглядят как нарушения<br/>Но:<br/>Это игровые нарушения, если они вообще были.<br/>За игровые нарушения существует отдельная система наказания - варны<br/>Смешивать игровые нарушения с дисциплинарной ответственностью в КП - неправомерно.<br/>Если в видео есть нарушения - пусть мне выдадут варн в игре. Выговор по регламенту КП за это не предусмотрен.<br/>Вывод по А-16:<br/><blockquote> <strong>А-16 была создана для ситуаций, когда медиа-партнер публикует контент, рекламирующий нарушения или наносящий урон репутации проекта. Мое видео - это конкурсный ролик, где нарушения случайны и не являются целью видео. Это не тот случай.</strong></blockquote></discord-message>
+<discord-message id="m-1496542135376412845" timestamp="2026-04-22T19:04:09.482000Z" profile="1006868828917071873">прошу:<br/>Отменить выговор как ошибочный.</discord-message>
+<discord-message id="m-1496542355740954715" timestamp="2026-04-22T19:05:02.021000Z" profile="1006868828917071873">все</discord-message>
+<discord-message id="m-1496544939650060308" timestamp="2026-04-22T19:15:18.073000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e5.svg" alt="📥" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет взят <discord-mention type="user">12446alex</discord-mention>.</span></div></div></div></discord-message>
+<discord-message id="m-1496545255355449435" timestamp="2026-04-22T19:16:33.343000Z" profile="1027118272879009886"><discord-mention type="user">No_Name10289</discord-mention> <br/>Здравствуйте, меня зовут Алексей, я член руководства проекта Moscow RolePlay. Исходя из того что вы написали, я считаю, что тикет был открыт неправильно. В данном тикете вы обжалуете действия и решения представителя персонала. Напоминаю вам, что тикет должен быть открыт в разделе, который соответствует категории тикета.<br/>Дальнейшее рассмотрение данного тикета считаю невозможным.<br/>С уважением,<br/>Руководство проекта Moscow RolePlay<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764-fe0f.svg" count="1"></discord-reaction><discord-reaction emoji="https://cdn.discordapp.com/emojis/1402209078171664405.png" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1496546134225588325" timestamp="2026-04-22T19:20:02.882000Z" profile="1027118272879009886"><discord-mention type="user">No_Name10289</discord-mention> Могу закрывать тикет?</discord-message>
+<discord-message id="m-1496546229247807530" timestamp="2026-04-22T19:20:25.537000Z" profile="1006868828917071873">а я где открыл</discord-message>
+<discord-message id="m-1496546235384070355" timestamp="2026-04-22T19:20:27.000000Z" profile="1006868828917071873">чего</discord-message>
+<discord-message id="m-1496546563034448114" timestamp="2026-04-22T19:21:45.118000Z" profile="1005561047396130848"><discord-reply slot="reply" author="No_Name10289" avatar="" role-color="#006800"><span data-goto="1496546235384070355">чего</span></discord-reply><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;">Здравствуй, являюсь менеджером персонала, извиняюсь то что указал неправильную причину в снятие выговора, перепутал, вы понижены а не уволены.</span></discord-message>
+<discord-message id="m-1496547819211718758" timestamp="2026-04-22T19:26:44.614000Z" profile="1006868828917071873">закрывай</discord-message>
+<discord-message id="m-1496551660179296447" timestamp="2026-04-22T19:42:00.372000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет закроется через несколько секунд...</span></div></div></div></discord-message>
+</discord-messages></body></html>
