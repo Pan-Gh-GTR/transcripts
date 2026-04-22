@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-1153</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/81cc3f592ecd8e7e2795792388fc6de6.png?size=1024", "roleColor": "#006800", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/8e5424768addb0eab9fb87dcd89088bb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": false}, "1195675629010558986": {"author": "[PR-014] The_Borisik", "avatar": "https://cdn.discordapp.com/avatars/1195675629010558986/6bbd4a65316e5d208cfa89062b454a64.png?size=1024", "roleColor": "#424cff", "roleIcon": "https://cdn.discordapp.com/role-icons/1410712605579939982/df9f61918e58e298252dbcbfe910e849.png?size=1024", "roleName": "Пробный Игрок", "bot": false, "verified": false}, "1092122255523328070": {"author": "NUKErbmm", "avatar": "https://cdn.discordapp.com/avatars/1092122255523328070/6838d555dbd3442f691e22afcde03c2e.png?size=1024", "roleColor": "#ff1d00", "roleIcon": "https://cdn.discordapp.com/role-icons/1418879460014424124/b149b40ab6ec3d5351239507713f9717.png?size=1024", "roleName": "Пробный Игрок", "bot": false, "verified": false}, "1005561047396130848": {"author": "dimasik", "avatar": "https://cdn.discordapp.com/avatars/1005561047396130848/d5102a17f7387fc0d63858a90ca8fa0b.png?size=1024", "roleColor": "#bf0000", "roleIcon": "https://cdn.discordapp.com/role-icons/1416181450264412311/15539a6ccbad4266f91cc4fca4f0d812.png?size=1024", "roleName": "Менеджер Сообщества", "bot": false, "verified": false}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.emoji-img {
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    object-fit: contain;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/a06dfa47e027eb8acdf25152e486f1c8.png?size=1024" timestamp="2026-04-22_18-40-22">Тикет Закрыт.<br/>Причина: Проблема решена, наказание выдано.<br/>Закрыл: <@1005561047396130848><br/>Дата: 2026-04-22_18-40-22<br/><a href="https://transcripts.erlcrussia.xyz/transcripts/поддержка-1153_2026-04-22_18-40-22.html" style="color: #00aff4;">https://transcripts.erlcrussia.xyz/transcripts/поддержка-1153_2026-04-22_18-40-22.html</a></discord-message>
+<discord-message id="m-1496528559986966782" timestamp="2026-04-22T18:10:12.857000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="padding:8px;color:#dcddde;"><discord-mention type="role">Персонал ER:LC</discord-mention> <discord-mention type="role">Команда Модерации Discord</discord-mention> <discord-mention type="user">[PR-014] The_Borisik</discord-mention></div><div style="background:#2f3136;border-left:4px solid #006800;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:8px 12px;"><div style="display:flex;gap:16px;align-items:flex-start;"><img src="https://cdn.discordapp.com/avatars/1195675629010558986/6bbd4a65316e5d208cfa89062b454a64.png?size=1024" style="width:80px;height:80px;border-radius:8px;object-fit:cover;flex-shrink:0;" /><div><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg" alt="📨" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Новый Тикет — Поддержка</span><br/><strong>В чём проблема:</strong><br/>пересмотр решения снятие предупреждения с PR-Ассистента No_Name<br/>Тикет брать менеджерам сообществам/выше</div></div></div><div style="padding:4px 12px;color:#dcddde;">⏳ <strong>Ожидайте ответа от персонала.</strong></div><div style="height:1px;background:#4f545c;margin:4px 0;"></div><div style="height:8px;"></div><div style="display:flex;gap:8px;padding:8px 0;flex-wrap:wrap;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Закрыть Тикет</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e4.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Освободить Тикет</button></div></div></div></discord-message>
+<discord-message id="m-1496528593898045704" timestamp="2026-04-22T18:10:20.942000Z" profile="1195675629010558986"><discord-reply slot="reply" author="Moscow RolePlay" avatar="" role-color="#006800"><span data-goto="1496528559986966782">[deleted]</span></discord-reply>модерам не брать</discord-message>
+<discord-message id="m-1496528631655039117" timestamp="2026-04-22T18:10:29.944000Z" profile="1195675629010558986"></discord-message>
+<discord-message id="m-1496528651536175405" timestamp="2026-04-22T18:10:34.684000Z" profile="1195675629010558986"></discord-message>
+<discord-message id="m-1496528653859688560" timestamp="2026-04-22T18:10:35.238000Z" profile="1092122255523328070"><discord-mention type="role">Руководство Проекта</discord-mention> <discord-mention type="user">dimasik</discord-mention></discord-message>
+<discord-message id="m-1496528694875787314" timestamp="2026-04-22T18:10:45.017000Z" profile="1195675629010558986">а именно про это</discord-message>
+<discord-message id="m-1496528802119942224" timestamp="2026-04-22T18:11:10.586000Z" profile="1195675629010558986">после как возьмут тикет я все распишу</discord-message>
+<discord-message id="m-1496528835368321064" timestamp="2026-04-22T18:11:18.513000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e5.svg" alt="📥" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет взят <discord-mention type="user">dimasik</discord-mention>.</span></div></div></div><discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764-fe0f.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1496528837121413161" timestamp="2026-04-22T18:11:18.931000Z" profile="1092122255523328070">ждём</discord-message>
+<discord-message id="m-1496528956948615373" timestamp="2026-04-22T18:11:47.500000Z" profile="1005561047396130848"><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;">- Здравствуйте, являюсь Менеджером Сообщества <strong><em>dimasik</strong></em></span><br/><ul><br/><li>Слушаю внимательно.</li><br/></ul></discord-message>
+<discord-message id="m-1496528980499759317" timestamp="2026-04-22T18:11:53.115000Z" profile="1195675629010558986"><discord-reply slot="reply" author="Moscow RolePlay" avatar="" role-color="#006800"><span data-goto="1496528559986966782">[deleted]</span></discord-reply>и заранее подам на него жалобу чтобы именно вы рассмотрели и выдали предупреждение<discord-reactions slot="reactions"><discord-reaction emoji="https://cdn.discordapp.com/emojis/1402209078171664405.png" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1496529007590510786" timestamp="2026-04-22T18:11:59.574000Z" profile="1195675629010558986">чтобы он не писал на меня тикеты</discord-message>
+<discord-message id="m-1496529051672645674" timestamp="2026-04-22T18:12:10.084000Z" profile="1195675629010558986"><discord-reply slot="reply" author="[PR-014] The_Borisik" avatar="" role-color="#424cff"><span data-goto="1496528980499759317">и заранее подам на него жалобу чтобы именно вы рассмотрели и выдали предупреждение</span></discord-reply>пожалуй начну с этого</discord-message>
+<discord-message id="m-1496529089895334080" timestamp="2026-04-22T18:12:19.197000Z" profile="1195675629010558986"></discord-message>
+<discord-message id="m-1496529143381233685" timestamp="2026-04-22T18:12:31.949000Z" profile="1195675629010558986"><discord-reply slot="reply" author="[PR-014] The_Borisik" avatar="" role-color="#424cff"><span data-goto="1496529089895334080">[deleted]</span></discord-reply>на данном видео я заметил нарушения А-16</discord-message>
+<discord-message id="m-1496529155519676427" timestamp="2026-04-22T18:12:34.843000Z" profile="1195675629010558986">Регламента КП</discord-message>
+<discord-message id="m-1496529185840300142" timestamp="2026-04-22T18:12:42.072000Z" profile="1195675629010558986">щас напишу</discord-message>
+<discord-message id="m-1496529207617130676" timestamp="2026-04-22T18:12:47.264000Z" profile="1195675629010558986"><discord-reply slot="reply" author="[PR-014] The_Borisik" avatar="" role-color="#424cff"><span data-goto="1496529143381233685">на данном видео я заметил нарушения А-16</span></discord-reply>А-16 - Запрещено публиковать контент с нарушениями правил сервера. Медиа-партнеры должны следить за тем, чтобы в их материалах не было признаков нарушений правил.</discord-message>
+<discord-message id="m-1496529368846176397" timestamp="2026-04-22T18:13:25.704000Z" profile="1195675629010558986"><discord-reply slot="reply" author="[PR-014] The_Borisik" avatar="" role-color="#424cff"><span data-goto="1496529089895334080">[deleted]</span></discord-reply>просмотрев данный видео материал там было не один раз видно как некоторые игроки нарушали правило Е-6 Запрещено прыгать во время стрельбы.</discord-message>
+<discord-message id="m-1496529572735356929" timestamp="2026-04-22T18:14:14.315000Z" profile="1005561047396130848"><discord-reply slot="reply" author="[PR-014] The_Borisik" avatar="" role-color="#424cff"><span data-goto="1496529089895334080">[deleted]</span></discord-reply>К большому сожалению не могу просмотреть видео<discord-attachments slot="attachments"><discord-attachment type="image" filename="image.png" url="https://transcripts.erlcrussia.xyz/attachments/1496529572735356929_1496529572475179119.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1496529632470765759" timestamp="2026-04-22T18:14:28.557000Z" profile="1195675629010558986"><discord-reply slot="reply" author="dimasik" avatar="" role-color="#bf0000"><span data-goto="1496529572735356929">К большому сожалению не могу просмотреть видео</span></discord-reply>Вот</discord-message>
+<discord-message id="m-1496529635528409130" timestamp="2026-04-22T18:14:29.286000Z" profile="1195675629010558986">ЩАс</discord-message>
+<discord-message id="m-1496529666406613144" timestamp="2026-04-22T18:14:36.648000Z" profile="1195675629010558986"><div style="margin: 8px 0; padding: 8px; background: #2f3136; border-radius: 4px; border-left: 4px solid #5865F2;">📹 <a href="https://discord.com/channels/1331331077553262765/1487155588537385061/1496536147638358197" target="_blank" style="color: #00aff4; text-decoration: underline;">Download_4.mp4</a></div><discord-attachments slot="attachments"></discord-attachments></discord-message>
+<discord-message id="m-1496529703681654956" timestamp="2026-04-22T18:14:45.535000Z" profile="1195675629010558986">правда с ватермарком теепрь</discord-message>
+<discord-message id="m-1496529829363843113" timestamp="2026-04-22T18:15:15.500000Z" profile="1195675629010558986"><discord-reply slot="reply" author="[PR-014] The_Borisik" avatar="" role-color="#424cff"><span data-goto="1496529666406613144">[deleted]</span></discord-reply>еще тут VDM</discord-message>
+<discord-message id="m-1496530079596150935" timestamp="2026-04-22T18:16:15.160000Z" profile="1005561047396130848"><discord-reply slot="reply" author="[PR-014] The_Borisik" avatar="" role-color="#424cff"><span data-goto="1496529666406613144">[deleted]</span></discord-reply><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;">- Видео было рассмотрено</span><br/><blockquote> Статус: Одобрено <img src="https://cdn.discordapp.com/emojis/1452341405258219581.png" alt="Yellow_Thinking" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> </blockquote><br/><blockquote> С нарушениями согласен. <img src="https://cdn.discordapp.com/emojis/1402209078171664405.png" alt="MRP_Checkmark" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/></blockquote></discord-message>
+<discord-message id="m-1496530119060094997" timestamp="2026-04-22T18:16:24.569000Z" profile="1195675629010558986"><discord-reply slot="reply" author="dimasik" avatar="" role-color="#bf0000"><span data-goto="1496530079596150935"># - Видео было рассмотрено
+ Статус: Одобрено :Yellow_Thinking: 
+ С нарушениям</span></discord-reply>Перейдем к пересмотру тогда<discord-reactions slot="reactions"><discord-reaction emoji="https://cdn.discordapp.com/emojis/1402209078171664405.png" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1496530137867485256" timestamp="2026-04-22T18:16:29.053000Z" profile="1195675629010558986"><discord-reply slot="reply" author="[PR-014] The_Borisik" avatar="" role-color="#424cff"><span data-goto="1496528651536175405">[deleted]</span></discord-reply>Вот этого</discord-message>
+<discord-message id="m-1496530152191037520" timestamp="2026-04-22T18:16:32.468000Z" profile="1195675629010558986">Так</discord-message>
+<discord-message id="m-1496530163536629820" timestamp="2026-04-22T18:16:35.173000Z" profile="1195675629010558986">Начну сразу</discord-message>
+<discord-message id="m-1496530226442670281" timestamp="2026-04-22T18:16:50.171000Z" profile="1195675629010558986">Пред был выдан за А-14 Запрещено публиковать контент без финального согласования с PR-Тимлидом</discord-message>
+<discord-message id="m-1496530254640971897" timestamp="2026-04-22T18:16:56.894000Z" profile="1195675629010558986"><discord-reply slot="reply" author="[PR-014] The_Borisik" avatar="" role-color="#424cff"><span data-goto="1496530226442670281">Пред был выдан за А-14 Запрещено публиковать контент без финального согласования с PR-Тимлидом</span></discord-reply>За два видео-ролика</discord-message>
+<discord-message id="m-1496530297834176695" timestamp="2026-04-22T18:17:07.192000Z" profile="1195675629010558986"></discord-message>
+<discord-message id="m-1496530320646996119" timestamp="2026-04-22T18:17:12.631000Z" profile="1195675629010558986"></discord-message>
+<discord-message id="m-1496530416461414430" timestamp="2026-04-22T18:17:35.475000Z" profile="1195675629010558986">Я считаю</discord-message>
+<discord-message id="m-1496530466310717649" timestamp="2026-04-22T18:17:47.360000Z" profile="1195675629010558986">Что сняли неправильно</discord-message>
+<discord-message id="m-1496530488599511081" timestamp="2026-04-22T18:17:52.674000Z" profile="1195675629010558986">Не выслушав всю ситуацию</discord-message>
+<discord-message id="m-1496530549798469873" timestamp="2026-04-22T18:18:07.265000Z" profile="1195675629010558986">Щас дам все</discord-message>
+<discord-message id="m-1496530569113374770" timestamp="2026-04-22T18:18:11.870000Z" profile="1195675629010558986"></discord-message>
+<discord-message id="m-1496530612830601286" timestamp="2026-04-22T18:18:22.293000Z" profile="1195675629010558986"></discord-message>
+<discord-message id="m-1496530649086169098" timestamp="2026-04-22T18:18:30.937000Z" profile="1092122255523328070">Можно я добавлю, так как я снимал варн<discord-reactions slot="reactions"><discord-reaction emoji="https://cdn.discordapp.com/emojis/1402209078171664405.png" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1496530662495096863" timestamp="2026-04-22T18:18:34.134000Z" profile="1195675629010558986"><discord-reply slot="reply" author="[PR-014] The_Borisik" avatar="" role-color="#424cff"><span data-goto="1496530569113374770">[deleted]</span></discord-reply>На данном сообщение где предоставляется ссылка на правила</discord-message>
+<discord-message id="m-1496530693423890593" timestamp="2026-04-22T18:18:41.508000Z" profile="1195675629010558986">Есть небольшое замечание</discord-message>
+<discord-message id="m-1496530704916418650" timestamp="2026-04-22T18:18:44.248000Z" profile="1195675629010558986">Соблюдение данных правил обязательно для всех действующих участников команды.</discord-message>
+<discord-message id="m-1496530759526383830" timestamp="2026-04-22T18:18:57.268000Z" profile="1195675629010558986"><discord-reply slot="reply" author="[PR-014] The_Borisik" avatar="" role-color="#424cff"><span data-goto="1496530612830601286">[deleted]</span></discord-reply>На этом сообщении</discord-message>
+<discord-message id="m-1496530782213242910" timestamp="2026-04-22T18:19:02.677000Z" profile="1195675629010558986">ничего про команду продвижения не было сказано</discord-message>
+<discord-message id="m-1496530791805751588" timestamp="2026-04-22T18:19:04.964000Z" profile="1195675629010558986">Что отмена А-14</discord-message>
+<discord-message id="m-1496530831261307021" timestamp="2026-04-22T18:19:14.371000Z" profile="1195675629010558986">Никакого сообщения мне в личку от руководства проекта так же не было</discord-message>
+<discord-message id="m-1496530866506043443" timestamp="2026-04-22T18:19:22.774000Z" profile="1195675629010558986">То что отменяется такое то пункт регламента КП</discord-message>
+<discord-message id="m-1496531024610463804" timestamp="2026-04-22T18:20:00.469000Z" profile="1195675629010558986">Правило вообще это изначальное было созданно чтобы помогать в создании видео-материалов и фильтрации видосов от медиа партнеров</discord-message>
+<discord-message id="m-1496531053232521417" timestamp="2026-04-22T18:20:07.293000Z" profile="1092122255523328070">Человек написал тикет, и в тикете сказал что он выложил видео как игрок а не в рабочих целях, Борис как я понял говорит про два видео</discord-message>
+<discord-message id="m-1496531090003988580" timestamp="2026-04-22T18:20:16.060000Z" profile="1195675629010558986"><discord-reply slot="reply" author="[PR-014] The_Borisik" avatar="" role-color="#424cff"><span data-goto="1496531024610463804">Правило вообще это изначальное было созданно чтобы помогать в создании видео-материалов и фильтрации</span></discord-reply>Типо чтобы не был какой нибудь видос где тулят</discord-message>
+<discord-message id="m-1496531101340930050" timestamp="2026-04-22T18:20:18.763000Z" profile="1092122255523328070">В тикете был лишь один</discord-message>
+<discord-message id="m-1496531126460612668" timestamp="2026-04-22T18:20:24.752000Z" profile="1092122255523328070">я поэтому снял</discord-message>
+<discord-message id="m-1496531216365654247" timestamp="2026-04-22T18:20:46.187000Z" profile="1195675629010558986"><discord-reply slot="reply" author="NUKErbmm" avatar="" role-color="#ff1d00"><span data-goto="1496531053232521417">Человек написал тикет, и в тикете сказал что он выложил видео как игрок а не в рабочих целях, Борис </span></discord-reply>Но он является PR-Ассистентом, он не может например снимать от лица игрока</discord-message>
+<discord-message id="m-1496531248720511037" timestamp="2026-04-22T18:20:53.901000Z" profile="1195675629010558986">У нас в дискорде нету правило новой жизни</discord-message>
+<discord-message id="m-1496531259697135807" timestamp="2026-04-22T18:20:56.518000Z" profile="1092122255523328070"></discord-message>
+<discord-message id="m-1496531304580386967" timestamp="2026-04-22T18:21:07.219000Z" profile="1092122255523328070"><discord-reply slot="reply" author="NUKErbmm" avatar="" role-color="#ff1d00"><span data-goto="1496531259697135807">[deleted]</span></discord-reply>тикет данного человека</discord-message>
+<discord-message id="m-1496531396209147905" timestamp="2026-04-22T18:21:29.065000Z" profile="1195675629010558986"><discord-reply slot="reply" author="NUKErbmm" avatar="" role-color="#ff1d00"><span data-goto="1496531259697135807">[deleted]</span></discord-reply><blockquote> Конкурс проводит этот же проект, условия публичные. В них нет пункта «членам команды продвижения запрещено участвовать без согласования».</blockquote><br/>Там так же не было сказано что отменяется А-14<discord-reactions slot="reactions"><discord-reaction emoji="https://cdn.discordapp.com/emojis/1402209078171664405.png" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1496531543600926883" timestamp="2026-04-22T18:22:04.206000Z" profile="1195675629010558986"><blockquote> Я участвовал как обычный игрок, а не выполнял рабочую задачу команды продвижения</blockquote><br/>Он является сотрудником коамнды продвижения. Он должен отлично понимать что он снимает или делает на проекте<discord-reactions slot="reactions"><discord-reaction emoji="https://cdn.discordapp.com/emojis/1402209078171664405.png" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1496531566883508426" timestamp="2026-04-22T18:22:09.757000Z" profile="1195675629010558986"><discord-reply slot="reply" author="[PR-014] The_Borisik" avatar="" role-color="#424cff"><span data-goto="1496531543600926883"> Я участвовал как обычный игрок, а не выполнял рабочую задачу команды продвижения
+Он является сотру</span></discord-reply>А-1 - Каждый член команды — лицо проекта Moscow RolePlay. Всё, что вы создаёте или продвигаете, отражает имидж сервера<discord-reactions slot="reactions"><discord-reaction emoji="https://cdn.discordapp.com/emojis/1402209078171664405.png" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1496531723205345280" timestamp="2026-04-22T18:22:47.027000Z" profile="1195675629010558986"><discord-reply slot="reply" author="[PR-014] The_Borisik" avatar="" role-color="#424cff"><span data-goto="1496531566883508426">А-1 - Каждый член команды — лицо проекта Moscow RolePlay. Всё, что вы создаёте или продвигаете, отра</span></discord-reply>Он как раз является сотрудником</discord-message>
+<discord-message id="m-1496531743157784811" timestamp="2026-04-22T18:22:51.784000Z" profile="1195675629010558986">Он не может стать вдруг игроком</discord-message>
+<discord-message id="m-1496531767836938240" timestamp="2026-04-22T18:22:57.668000Z" profile="1195675629010558986"><discord-reply slot="reply" author="[PR-014] The_Borisik" avatar="" role-color="#424cff"><span data-goto="1496531248720511037">У нас в дискорде нету правило новой жизни</span></discord-reply>.</discord-message>
+<discord-message id="m-1496531930177343629" timestamp="2026-04-22T18:23:36.373000Z" profile="1195675629010558986"><discord-reply slot="reply" author="NUKErbmm" avatar="" role-color="#ff1d00"><span data-goto="1496531259697135807">[deleted]</span></discord-reply>D-2 - Предоставление работ заранее с обязательной вычиткой и правками.</discord-message>
+<discord-message id="m-1496532018882810156" timestamp="2026-04-22T18:23:57.522000Z" profile="1195675629010558986"><discord-reply slot="reply" author="[PR-014] The_Borisik" avatar="" role-color="#424cff"><span data-goto="1496531930177343629">D-2 - Предоставление работ заранее с обязательной вычиткой и правками.</span></discord-reply>Это отдел обязанностей сотрудников</discord-message>
+<discord-message id="m-1496532041825648691" timestamp="2026-04-22T18:24:02.992000Z" profile="1195675629010558986">Тоесть он всегда обязан</discord-message>
+<discord-message id="m-1496532084854882395" timestamp="2026-04-22T18:24:13.251000Z" profile="1092122255523328070">Вообщем моя мысль такая, что он участвовал в конкурсе "Я участвовал как обычный игрок, а не выполнял рабочую задачу команды продвижения." зачем тогда запускать конкурс если в нём сто процентов будет учувствовать кп</discord-message>
+<discord-message id="m-1496532129373356083" timestamp="2026-04-22T18:24:23.865000Z" profile="1092122255523328070">Я про правило А14 которое я снял</discord-message>
+<discord-message id="m-1496532221467820042" timestamp="2026-04-22T18:24:45.822000Z" profile="1092122255523328070">про остальные я не говорю</discord-message>
+<discord-message id="m-1496532271329443993" timestamp="2026-04-22T18:24:57.710000Z" profile="1195675629010558986"><discord-reply slot="reply" author="NUKErbmm" avatar="" role-color="#ff1d00"><span data-goto="1496532084854882395">Вообщем моя мысль такая, что он участвовал в конкурсе &quot;Я участвовал как обычный игрок, а не выполнял</span></discord-reply>Потому что каждый может участвовать</discord-message>
+<discord-message id="m-1496532291802103850" timestamp="2026-04-22T18:25:02.591000Z" profile="1195675629010558986">Это конкурс не только для команды продвижения</discord-message>
+<discord-message id="m-1496532402573545542" timestamp="2026-04-22T18:25:29.001000Z" profile="1092122255523328070">я не говорю что только для кп</discord-message>
+<discord-message id="m-1496532413919002854" timestamp="2026-04-22T18:25:31.706000Z" profile="1195675629010558986">Игрок хотел поучаствовать и попробовать получит какое нибудь место</discord-message>
+<discord-message id="m-1496532449738625024" timestamp="2026-04-22T18:25:40.246000Z" profile="1195675629010558986"><discord-reply slot="reply" author="[PR-014] The_Borisik" avatar="" role-color="#424cff"><span data-goto="1496532413919002854">Игрок хотел поучаствовать и попробовать получит какое нибудь место</span></discord-reply>Он снял видос</discord-message>
+<discord-message id="m-1496532455757447208" timestamp="2026-04-22T18:25:41.681000Z" profile="1195675629010558986">И отправил</discord-message>
+<discord-message id="m-1496532486556094505" timestamp="2026-04-22T18:25:49.024000Z" profile="1092122255523328070">вообщем решение за димой</discord-message>
+<discord-message id="m-1496532493275234356" timestamp="2026-04-22T18:25:50.626000Z" profile="1195675629010558986">Ну как минимум предупредив персонал через !mod</discord-message>
+<discord-message id="m-1496532496366440519" timestamp="2026-04-22T18:25:51.363000Z" profile="1005561047396130848">но там нарушения . . .<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1496532538355613797" timestamp="2026-04-22T18:26:01.374000Z" profile="1092122255523328070"><discord-reply slot="reply" author="dimasik" avatar="" role-color="#bf0000"><span data-goto="1496532496366440519">но там нарушения . . .</span></discord-reply>С этим даже я согласен</discord-message>
+<discord-message id="m-1496532569364103339" timestamp="2026-04-22T18:26:08.767000Z" profile="1195675629010558986">Вообщем</discord-message>
+<discord-message id="m-1496532576138035351" timestamp="2026-04-22T18:26:10.382000Z" profile="1195675629010558986">Вкратце</discord-message>
+<discord-message id="m-1496532616202027199" timestamp="2026-04-22T18:26:19.934000Z" profile="1005561047396130848">он не выполнил условия сняв видео в этом ему анулировано всё</discord-message>
+<discord-message id="m-1496532648477331526" timestamp="2026-04-22T18:26:27.629000Z" profile="1195675629010558986">Я все расписал выше все факты почему сняли неккоретно</discord-message>
+<discord-message id="m-1496532753037135884" timestamp="2026-04-22T18:26:52.558000Z" profile="1195675629010558986"><discord-reply slot="reply" author="NUKErbmm" avatar="" role-color="#ff1d00"><span data-goto="1496531259697135807">[deleted]</span></discord-reply>Я хочу чтобы<br/>Ему выдали выговор за А-14 и А-16</discord-message>
+<discord-message id="m-1496532793067438213" timestamp="2026-04-22T18:27:02.102000Z" profile="1005561047396130848">а то что он снимал видео за игрока хотя является КП тут блин я хз даже но если по логике он не мог никак снять видео за игрока, ибо мог предупредить хотя бы</discord-message>
+<discord-message id="m-1496532952656511038" timestamp="2026-04-22T18:27:40.151000Z" profile="1195675629010558986"><discord-reply slot="reply" author="dimasik" avatar="" role-color="#bf0000"><span data-goto="1496532793067438213">а то что он снимал видео за игрока хотя является КП тут блин я хз даже но если по логике он не мог н</span></discord-reply>ну вот как раз А-14</discord-message>
+<discord-message id="m-1496533015306834145" timestamp="2026-04-22T18:27:55.088000Z" profile="1005561047396130848">и а 16 нарушения игровых ччё то  там</discord-message>
+<discord-message id="m-1496533018704347247" timestamp="2026-04-22T18:27:55.898000Z" profile="1195675629010558986">или же А-5</discord-message>
+<discord-message id="m-1496533082529075322" timestamp="2026-04-22T18:28:11.115000Z" profile="1092122255523328070">Решение за вами.</discord-message>
+<discord-message id="m-1496533092834480322" timestamp="2026-04-22T18:28:13.572000Z" profile="1195675629010558986">А-5 - Проведение съемки/мероприятия возможно только с разрешения менеджмента (есть отдельный канал, где это планируется заранее).<br/>A-14 - Запрещено публиковать контент без финального согласования с PR-Тимлидом<br/>А-16 - Запрещено публиковать контент с нарушениями правил сервера. Медиа-партнеры должны следить за тем, чтобы в их материалах не было признаков нарушений правил.</discord-message>
+<discord-message id="m-1496533158185668829" timestamp="2026-04-22T18:28:29.153000Z" profile="1195675629010558986"><discord-reply slot="reply" author="dimasik" avatar="" role-color="#bf0000"><span data-goto="1496533015306834145">и а 16 нарушения игровых ччё то  там</span></discord-reply>Вот все пункты скинул нужные</discord-message>
+<discord-message id="m-1496533169975857213" timestamp="2026-04-22T18:28:31.964000Z" profile="1195675629010558986"><discord-reply slot="reply" author="[PR-014] The_Borisik" avatar="" role-color="#424cff"><span data-goto="1496532753037135884">Я хочу чтобы
+Ему выдали выговор за А-14 и А-16</span></discord-reply>.</discord-message>
+<discord-message id="m-1496533606879985685" timestamp="2026-04-22T18:30:16.130000Z" profile="1005561047396130848"><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;">- Решение принято! <img src="https://cdn.discordapp.com/emojis/1402209078171664405.png" alt="MRP_Checkmark" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> </span><br/><blockquote> Сотруднику будут выданы 2 выговора за нарушение двух пунктов регламента.</blockquote></discord-message>
+<discord-message id="m-1496533642292367591" timestamp="2026-04-22T18:30:24.573000Z" profile="1092122255523328070">2 выговора?</discord-message>
+<discord-message id="m-1496533651880542258" timestamp="2026-04-22T18:30:26.859000Z" profile="1092122255523328070">капец</discord-message>
+<discord-message id="m-1496533694805049354" timestamp="2026-04-22T18:30:37.093000Z" profile="1005561047396130848">а в один объединить кст не вариант?)</discord-message>
+<discord-message id="m-1496533726933553365" timestamp="2026-04-22T18:30:44.753000Z" profile="1195675629010558986"><discord-reply slot="reply" author="dimasik" avatar="" role-color="#bf0000"><span data-goto="1496533694805049354">а в один объединить кст не вариант?)</span></discord-reply>ну он на исп сроке</discord-message>
+<discord-message id="m-1496533740623499496" timestamp="2026-04-22T18:30:48.017000Z" profile="1005561047396130848">ибо ему ещё выговор и он слетит</discord-message>
+<discord-message id="m-1496533763419799642" timestamp="2026-04-22T18:30:53.452000Z" profile="1195675629010558986">я его могу просто понизить обратно</discord-message>
+<discord-message id="m-1496533831367397498" timestamp="2026-04-22T18:31:09.652000Z" profile="1195675629010558986">так же кину док-во что он на исп сроке</discord-message>
+<discord-message id="m-1496533854813421773" timestamp="2026-04-22T18:31:15.242000Z" profile="1195675629010558986">чтобы было в транскрипте</discord-message>
+<discord-message id="m-1496533878830137606" timestamp="2026-04-22T18:31:20.968000Z" profile="1195675629010558986"></discord-message>
+<discord-message id="m-1496533928021069988" timestamp="2026-04-22T18:31:32.696000Z" profile="1195675629010558986"><discord-reply slot="reply" author="[PR-014] The_Borisik" avatar="" role-color="#424cff"><span data-goto="1496533878830137606">[deleted]</span></discord-reply>у гаге тоже исп срок</discord-message>
+<discord-message id="m-1496533954218688532" timestamp="2026-04-22T18:31:38.942000Z" profile="1195675629010558986">я забыл поставить</discord-message>
+<discord-message id="m-1496534147433369730" timestamp="2026-04-22T18:32:25.008000Z" profile="1005561047396130848">Давай я лучше одним выговором выдам</discord-message>
+<discord-message id="m-1496534179893084280" timestamp="2026-04-22T18:32:32.747000Z" profile="1195675629010558986">хорошо</discord-message>
+<discord-message id="m-1496534733708857425" timestamp="2026-04-22T18:34:44.787000Z" profile="1005561047396130848">мне ссылку на доки как лучше указать?</discord-message>
+<discord-message id="m-1496534759399096504" timestamp="2026-04-22T18:34:50.912000Z" profile="1005561047396130848">через транск.?</discord-message>
+<discord-message id="m-1496535005881438210" timestamp="2026-04-22T18:35:49.678000Z" profile="1195675629010558986"><discord-reply slot="reply" author="dimasik" avatar="" role-color="#bf0000"><span data-goto="1496534759399096504">через транск.?</span></discord-reply>не факт то что они работают</discord-message>
+<discord-message id="m-1496535050257436672" timestamp="2026-04-22T18:36:00.258000Z" profile="1195675629010558986">а не работают</discord-message>
+<discord-message id="m-1496535099632648262" timestamp="2026-04-22T18:36:12.030000Z" profile="1195675629010558986"><discord-reply slot="reply" author="dimasik" avatar="" role-color="#bf0000"><span data-goto="1496534733708857425">мне ссылку на доки как лучше указать?</span></discord-reply>ну типо я хочу сначала уидеть что ему выдали</discord-message>
+<discord-message id="m-1496535107824255098" timestamp="2026-04-22T18:36:13.983000Z" profile="1195675629010558986">и потом закрыть</discord-message>
+<discord-message id="m-1496535168721354974" timestamp="2026-04-22T18:36:28.502000Z" profile="1005561047396130848">я знаю, я ссылку на доки думаю как лучше указать</discord-message>
+<discord-message id="m-1496535255648309319" timestamp="2026-04-22T18:36:49.227000Z" profile="1195675629010558986">можно просто поставить тикет поддержки 1153</discord-message>
+<discord-message id="m-1496535366717673473" timestamp="2026-04-22T18:37:15.708000Z" profile="1195675629010558986"><discord-reply slot="reply" author="[PR-014] The_Borisik" avatar="" role-color="#424cff"><span data-goto="1496535255648309319">можно просто поставить тикет поддержки 1153</span></discord-reply>я очень жду когда нам сделают жалобы на команду продвижения, а то я рассматривать могу ток через поддержку</discord-message>
+<discord-message id="m-1496535458845429792" timestamp="2026-04-22T18:37:37.673000Z" profile="1005561047396130848">две недели?</discord-message>
+<discord-message id="m-1496535492618092676" timestamp="2026-04-22T18:37:45.725000Z" profile="1195675629010558986"><discord-reply slot="reply" author="dimasik" avatar="" role-color="#bf0000"><span data-goto="1496535458845429792">две недели?</span></discord-reply>ну 3 там неам?</discord-message>
+<discord-message id="m-1496535528018022401" timestamp="2026-04-22T18:37:54.165000Z" profile="1005561047396130848">могу навсегда)</discord-message>
+<discord-message id="m-1496535534296633527" timestamp="2026-04-22T18:37:55.662000Z" profile="1005561047396130848">шутка</discord-message>
+<discord-message id="m-1496535575627567154" timestamp="2026-04-22T18:38:05.516000Z" profile="1195675629010558986"><discord-reply slot="reply" author="dimasik" avatar="" role-color="#bf0000"><span data-goto="1496535528018022401">могу навсегда)</span></discord-reply>они для устных вроде</discord-message>
+<discord-message id="m-1496535670468903173" timestamp="2026-04-22T18:38:28.128000Z" profile="1005561047396130848">какой у него там ранг</discord-message>
+<discord-message id="m-1496535694863110319" timestamp="2026-04-22T18:38:33.944000Z" profile="1195675629010558986">PR-Ассистент<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764-fe0f.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1496535731626184885" timestamp="2026-04-22T18:38:42.709000Z" profile="1195675629010558986"><discord-reply slot="reply" author="[PR-014] The_Borisik" avatar="" role-color="#424cff"><span data-goto="1496535694863110319">PR-Ассистент</span></discord-reply>к сожалению мой помощник</discord-message>
+<discord-message id="m-1496535833447108810" timestamp="2026-04-22T18:39:06.985000Z" profile="1195675629010558986">все вижу</discord-message>
+<discord-message id="m-1496535841911341238" timestamp="2026-04-22T18:39:09.003000Z" profile="1195675629010558986">благодарю</discord-message>
+<discord-message id="m-1496535969950601307" timestamp="2026-04-22T18:39:39.530000Z" profile="1195675629010558986">можете закрывать</discord-message>
+<discord-message id="m-1496535970776875181" timestamp="2026-04-22T18:39:39.727000Z" profile="1005561047396130848"></discord-message>
+<discord-message id="m-1496536083016716418" timestamp="2026-04-22T18:40:06.487000Z" profile="1195675629010558986"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764-fe0f.svg" alt="❤️" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/><discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764-fe0f.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1496536137723023443" timestamp="2026-04-22T18:40:19.530000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет закроется через несколько секунд...</span></div></div></div></discord-message>
+</discord-messages></body></html>
