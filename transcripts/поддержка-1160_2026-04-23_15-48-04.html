@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-1160</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/81cc3f592ecd8e7e2795792388fc6de6.png?size=1024", "roleColor": "#006800", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/8e5424768addb0eab9fb87dcd89088bb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": false}, "1091623600206921739": {"author": "Murzik_2013", "avatar": "https://cdn.discordapp.com/avatars/1091623600206921739/45f14b54a2867ee4b35f664ff5f3b4e3.png?size=1024", "roleColor": "#907575", "roleIcon": "https://cdn.discordapp.com/role-icons/1416200713612038295/7ac4b708f87390a67ccdc112b0ab0f8c.png?size=1024", "roleName": "Бывший Сотрудник Персонала", "bot": false, "verified": false}, "1211696360558952509": {"author": "Bandit_Lotman", "avatar": "https://cdn.discordapp.com/avatars/1211696360558952509/a7726304af15a148157885b6e14db4a2.png?size=1024", "roleColor": "#2ca737", "roleIcon": "https://cdn.discordapp.com/role-icons/1416743458877739038/f533d2418b2013bfb572fd7db226a0dc.png?size=1024", "roleName": "Младший Модератор Discord", "bot": false, "verified": false}, "1195675629010558986": {"author": "[PR-014] The_Borisik", "avatar": "https://cdn.discordapp.com/avatars/1195675629010558986/6bbd4a65316e5d208cfa89062b454a64.png?size=1024", "roleColor": "#424cff", "roleIcon": "https://cdn.discordapp.com/role-icons/1410712605579939982/df9f61918e58e298252dbcbfe910e849.png?size=1024", "roleName": "Пробный Игрок", "bot": false, "verified": false}, "1133665013794607114": {"author": "Pancakeboyman_8", "avatar": "https://cdn.discordapp.com/avatars/1133665013794607114/9952a7f75bf8748ecfd9a8e39af2e279.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1331342900205850686/c1fd358ec8be5422366cbf5b58e16e31.png?size=1024", "roleName": "Владелец", "bot": false, "verified": false}, "994164698654187580": {"author": "[PR-021] gagegaming99", "avatar": "https://cdn.discordapp.com/avatars/994164698654187580/a4be60208533432e6a6fd7fb27cc6a23.png?size=1024", "roleColor": "#ffd000", "roleIcon": "https://cdn.discordapp.com/role-icons/1448682337373130843/0748962b59e85e4f43a978676ee5a905.png?size=1024", "roleName": "ДЕТИ", "bot": false, "verified": false}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.emoji-img {
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    object-fit: contain;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/a06dfa47e027eb8acdf25152e486f1c8.png?size=1024" timestamp="2026-04-23_15-48-04">Тикет Закрыт.<br/>Причина: Тикет разобран.<br/>Закрыл: <@1133665013794607114><br/>Дата: 2026-04-23_15-48-04<br/><a href="https://transcripts.erlcrussia.xyz/transcripts/поддержка-1160_2026-04-23_15-48-04.html" style="color: #00aff4;">https://transcripts.erlcrussia.xyz/transcripts/поддержка-1160_2026-04-23_15-48-04.html</a></discord-message>
+<discord-message id="m-1496777822809755781" timestamp="2026-04-23T10:40:41.745000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="padding:8px;color:#dcddde;"><discord-mention type="role">Персонал ER:LC</discord-mention> <discord-mention type="role">Команда Модерации Discord</discord-mention> <discord-mention type="user">Murzik_2013</discord-mention></div><div style="background:#2f3136;border-left:4px solid #006800;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:8px 12px;"><div style="display:flex;gap:16px;align-items:flex-start;"><img src="https://cdn.discordapp.com/avatars/1091623600206921739/45f14b54a2867ee4b35f664ff5f3b4e3.png?size=1024" style="width:80px;height:80px;border-radius:8px;object-fit:cover;flex-shrink:0;" /><div><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg" alt="📨" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Новый Тикет — Поддержка</span><br/><strong>В чём проблема:</strong><br/>Если я дам буст через сайт, а не сам, я получу рольку бустер сервера?</div></div></div><div style="padding:4px 12px;color:#dcddde;">⏳ <strong>Ожидайте ответа от персонала.</strong></div><div style="height:1px;background:#4f545c;margin:4px 0;"></div><div style="height:8px;"></div><div style="display:flex;gap:8px;padding:8px 0;flex-wrap:wrap;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Закрыть Тикет</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e5.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Взять Тикет</button></div></div></div></discord-message>
+<discord-message id="m-1496791183681257502" timestamp="2026-04-23T11:33:47.225000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e5.svg" alt="📥" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет взят <discord-mention type="user">Bandit_Lotman</discord-mention>.</span></div></div></div></discord-message>
+<discord-message id="m-1496791245706756096" timestamp="2026-04-23T11:34:02.013000Z" profile="1211696360558952509">Приветствую, Меня зовут Bandit_Lotman, и я буду сопровождать твое обращение. Пожалуйста, оставайтесь в этом канале — я вернусь с ответом через пару минут. Спасибо за ожидание и доверие к нашей команде!</discord-message>
+<discord-message id="m-1496791351596027914" timestamp="2026-04-23T11:34:27.259000Z" profile="1211696360558952509">По идее да, но роль бустер может появится не сразу а через какое это время</discord-message>
+<discord-message id="m-1496791431300517918" timestamp="2026-04-23T11:34:46.262000Z" profile="1091623600206921739">Ну так точно или нет?</discord-message>
+<discord-message id="m-1496791558555566101" timestamp="2026-04-23T11:35:16.602000Z" profile="1211696360558952509">Если хотите, я могу передать данное обращение Старшей Модерации и они дадут вам ответ</discord-message>
+<discord-message id="m-1496791590226755705" timestamp="2026-04-23T11:35:24.153000Z" profile="1091623600206921739">Ну давайте</discord-message>
+<discord-message id="m-1496791637643366462" timestamp="2026-04-23T11:35:35.458000Z" profile="1211696360558952509"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e9.svg" alt="📩" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Твое обращение передано Старшему составу .Ситуация требует более глубокого анализа. Пожалуйста, не закрывай тикет, ответ поступит в ближайшее время. Благодарим за терпение! <img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f64f.svg" alt="🙏" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/></discord-message>
+<discord-message id="m-1496791675723583571" timestamp="2026-04-23T11:35:44.537000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #e74d3c;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e4.svg" alt="📤" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет освобождён <discord-mention type="user">Bandit_Lotman</discord-mention>.</span></div></div></div></discord-message>
+<discord-message id="m-1496791731520278629" timestamp="2026-04-23T11:35:57.840000Z" profile="1091623600206921739"><discord-mention type="user">[PR-014] The_Borisik</discord-mention></discord-message>
+<discord-message id="m-1496791764097306625" timestamp="2026-04-23T11:36:05.607000Z" profile="1195675629010558986"><discord-reply slot="reply" author="Moscow RolePlay" avatar="" role-color="#006800"><span data-goto="1496777822809755781">[deleted]</span></discord-reply>Так</discord-message>
+<discord-message id="m-1496791782376079372" timestamp="2026-04-23T11:36:09.965000Z" profile="1195675629010558986">Ну вообще рольку бустера никак не выдать</discord-message>
+<discord-message id="m-1496791816073248871" timestamp="2026-04-23T11:36:17.999000Z" profile="1195675629010558986">Я ранее тоже пытался</discord-message>
+<discord-message id="m-1496791837338374204" timestamp="2026-04-23T11:36:23.069000Z" profile="1195675629010558986">Там автоматически дискорд дает роль</discord-message>
+<discord-message id="m-1496791873740603463" timestamp="2026-04-23T11:36:31.748000Z" profile="1195675629010558986">Там вручную вроде не выдать</discord-message>
+<discord-message id="m-1496791970322845726" timestamp="2026-04-23T11:36:54.775000Z" profile="1195675629010558986"><discord-reply slot="reply" author="Moscow RolePlay" avatar="" role-color="#006800"><span data-goto="1496777822809755781">[deleted]</span></discord-reply>Думаю если вы все же хотите с другого акка (ну купить с сайта)</discord-message>
+<discord-message id="m-1496792038946111499" timestamp="2026-04-23T11:37:11.136000Z" profile="1195675629010558986">Вам нужно предоставить док-ва то что вы купили бусты и вам выдадут випку</discord-message>
+<discord-message id="m-1496792074908074035" timestamp="2026-04-23T11:37:19.710000Z" profile="1195675629010558986">Там и машины и чат эксклюзивный</discord-message>
+<discord-message id="m-1496792124283158548" timestamp="2026-04-23T11:37:31.482000Z" profile="1091623600206921739">Випку или бустер?</discord-message>
+<discord-message id="m-1496792271058632744" timestamp="2026-04-23T11:38:06.476000Z" profile="1195675629010558986">Елси вы кинете бусты со своего акка = бустер<br/>Если вы купите бусты (тоесть не со своего акка а с бота который зайдет сам) = випка</discord-message>
+<discord-message id="m-1496792303803830354" timestamp="2026-04-23T11:38:14.283000Z" profile="1195675629010558986">Я думаю лучше дождатся ответа владельца</discord-message>
+<discord-message id="m-1496792329804320768" timestamp="2026-04-23T11:38:20.482000Z" profile="1195675629010558986">Для более точного ответа</discord-message>
+<discord-message id="m-1496792362255384658" timestamp="2026-04-23T11:38:28.219000Z" profile="1091623600206921739">Ну тогда ждём владельца</discord-message>
+<discord-message id="m-1496792382190911498" timestamp="2026-04-23T11:38:32.972000Z" profile="1195675629010558986">Он там вам точно даст ответ</discord-message>
+<discord-message id="m-1496792410565378059" timestamp="2026-04-23T11:38:39.737000Z" profile="1195675629010558986">Хорошо, ждите только без пингов<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1496792430408634499" timestamp="2026-04-23T11:38:44.468000Z" profile="1195675629010558986">Сегодня обязательно рассмотрит</discord-message>
+<discord-message id="m-1496792441645170688" timestamp="2026-04-23T11:38:47.147000Z" profile="1195675629010558986">Приятного дня<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f496.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1496795091925471232" timestamp="2026-04-23T11:49:19.023000Z" profile="1091623600206921739"><discord-reply slot="reply" author="[PR-014] The_Borisik" avatar="" role-color="#424cff"><span data-goto="1496792430408634499">Сегодня обязательно рассмотрит</span></discord-reply>А и рольку кастомную дают?</discord-message>
+<discord-message id="m-1496795168605606038" timestamp="2026-04-23T11:49:37.305000Z" profile="1195675629010558986"><discord-reply slot="reply" author="Murzik_2013" avatar="" role-color="#907575"><span data-goto="1496795091925471232">А и рольку кастомную дают?</span></discord-reply>Нууу вообще за випки/бустерки не дают кастомные роли</discord-message>
+<discord-message id="m-1496795212914233425" timestamp="2026-04-23T11:49:47.869000Z" profile="1195675629010558986">Но можно думаю как то договорится</discord-message>
+<discord-message id="m-1496795269927272588" timestamp="2026-04-23T11:50:01.462000Z" profile="1091623600206921739"><discord-reply slot="reply" author="[PR-014] The_Borisik" avatar="" role-color="#424cff"><span data-goto="1496795212914233425">Но можно думаю как то договорится</span></discord-reply>А как?)<discord-reactions slot="reactions"><discord-reaction emoji="https://cdn.discordapp.com/emojis/1402017275997061170.png" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1496809193527836773" timestamp="2026-04-23T12:45:21.107000Z" profile="1133665013794607114"><discord-reply slot="reply" author="Moscow RolePlay" avatar="" role-color="#006800"><span data-goto="1496777822809755781">[deleted]</span></discord-reply><discord-mention type="user">Murzik_2013</discord-mention> нет не получишь, роль бустера выдаётся дискордом на аккаунт от кого буст</discord-message>
+<discord-message id="m-1496809338000375939" timestamp="2026-04-23T12:45:55.552000Z" profile="1091623600206921739">Эх</discord-message>
+<discord-message id="m-1496809428786221198" timestamp="2026-04-23T12:46:17.197000Z" profile="1133665013794607114"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1496809193527836773">@1091623600206921739 нет не получишь, роль бустера выдаётся дискордом на аккаунт от кого буст</span></discord-reply>У нас нету прав на её выдачу</discord-message>
+<discord-message id="m-1496809523862569110" timestamp="2026-04-23T12:46:39.865000Z" profile="1091623600206921739"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1496809428786221198">У нас нету прав на её выдачу</span></discord-reply>На этом сервере</discord-message>
+<discord-message id="m-1496809554938167317" timestamp="2026-04-23T12:46:47.274000Z" profile="1091623600206921739">Не в самом дискорд</discord-message>
+<discord-message id="m-1496809719468392592" timestamp="2026-04-23T12:47:26.501000Z" profile="1133665013794607114"><discord-reply slot="reply" author="Murzik_2013" avatar="" role-color="#907575"><span data-goto="1496809523862569110">На этом сервере</span></discord-reply>?</discord-message>
+<discord-message id="m-1496810179352596602" timestamp="2026-04-23T12:49:16.146000Z" profile="1133665013794607114"><discord-reply slot="reply" author="Murzik_2013" avatar="" role-color="#907575"><span data-goto="1496809523862569110">На этом сервере</span></discord-reply>А где твой тикет на разработчика?</discord-message>
+<discord-message id="m-1496810192044822539" timestamp="2026-04-23T12:49:19.172000Z" profile="1091623600206921739">Ну я говорю что если я через сайт куплю и покажу док-ва что это я купил, можете ли тут выдать мне рольку бустер сервера чтобы мне открылись машины в erlc на нашем сервере</discord-message>
+<discord-message id="m-1496810218192113754" timestamp="2026-04-23T12:49:25.406000Z" profile="1091623600206921739"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1496810179352596602">А где твой тикет на разработчика?</span></discord-reply>Закрыл кто-то</discord-message>
+<discord-message id="m-1496810437092577290" timestamp="2026-04-23T12:50:17.596000Z" profile="1091623600206921739">Написали неактив тикета</discord-message>
+<discord-message id="m-1496810532693344357" timestamp="2026-04-23T12:50:40.389000Z" profile="1195675629010558986"><discord-reply slot="reply" author="Murzik_2013" avatar="" role-color="#907575"><span data-goto="1496810437092577290">Написали неактив тикета</span></discord-reply>номер тикета</discord-message>
+<discord-message id="m-1496810691502411817" timestamp="2026-04-23T12:51:18.252000Z" profile="1091623600206921739"><discord-reply slot="reply" author="[PR-014] The_Borisik" avatar="" role-color="#424cff"><span data-goto="1496810532693344357">номер тикета</span></discord-reply><discord-attachments slot="attachments"><discord-attachment type="image" filename="Screenshot_20260423_135059_Samsung_Internet.jpg" url="https://transcripts.erlcrussia.xyz/attachments/1496810691502411817_1496810691514863719.jpg"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1496810696921583717" timestamp="2026-04-23T12:51:19.544000Z" profile="1091623600206921739">Нету номера</discord-message>
+<discord-message id="m-1496810710297088070" timestamp="2026-04-23T12:51:22.733000Z" profile="1091623600206921739">Тикета</discord-message>
+<discord-message id="m-1496810999624368160" timestamp="2026-04-23T12:52:31.714000Z" profile="1195675629010558986"></discord-message>
+<discord-message id="m-1496811278100988045" timestamp="2026-04-23T12:53:38.108000Z" profile="1133665013794607114"><discord-reply slot="reply" author="[PR-014] The_Borisik" avatar="" role-color="#424cff"><span data-goto="1496810999624368160">[deleted]</span></discord-reply><img src="https://cdn.discordapp.com/emojis/1492608833892384989.png" alt="joebonk" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/><discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" count="3"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1496811322946359418" timestamp="2026-04-23T12:53:48.800000Z" profile="1195675629010558986"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1496811278100988045">:joebonk:</span></discord-reply>Ужас<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/274c.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1496811771657191634" timestamp="2026-04-23T12:55:35.781000Z" profile="1091623600206921739"><discord-reply slot="reply" author="Murzik_2013" avatar="" role-color="#907575"><span data-goto="1496810192044822539">Ну я говорю что если я через сайт куплю и покажу док-ва что это я купил, можете ли тут выдать мне ро</span></discord-reply>?</discord-message>
+<discord-message id="m-1496813231027785728" timestamp="2026-04-23T13:01:23.722000Z" profile="1091623600206921739">Ну я говорю что если я через сайт куплю и покажу док-ва что это я купил, можете ли тут выдать мне рольку бустер сервера чтобы мне открылись машины в erlc на нашем сервере</discord-message>
+<discord-message id="m-1496813983905218682" timestamp="2026-04-23T13:04:23.222000Z" profile="1091623600206921739"><discord-attachments slot="attachments"><discord-attachment type="image" filename="Screenshot_20260423_140411_Discord.jpg" url="https://transcripts.erlcrussia.xyz/attachments/1496813983905218682_1496813982949052527.jpg"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1496814029660885104" timestamp="2026-04-23T13:04:34.131000Z" profile="1091623600206921739">Такую рольку</discord-message>
+<discord-message id="m-1496814295218913423" timestamp="2026-04-23T13:05:37.445000Z" profile="994164698654187580"><discord-reply slot="reply" author="Murzik_2013" avatar="" role-color="#907575"><span data-goto="1496813231027785728">Ну я говорю что если я через сайт куплю и покажу док-ва что это я купил, можете ли тут выдать мне ро</span></discord-reply>Не хочется влезать, но эта роль даётся самим дискорд</discord-message>
+<discord-message id="m-1496814342190927893" timestamp="2026-04-23T13:05:48.644000Z" profile="994164698654187580">Она системная как ранее и сказали</discord-message>
+<discord-message id="m-1496814505739554846" timestamp="2026-04-23T13:06:27.637000Z" profile="1091623600206921739">Так панкейк не выше этого на этом серваке?</discord-message>
+<discord-message id="m-1496814651437219871" timestamp="2026-04-23T13:07:02.374000Z" profile="994164698654187580"><discord-reply slot="reply" author="Murzik_2013" avatar="" role-color="#907575"><span data-goto="1496814505739554846">Так панкейк не выше этого на этом серваке?</span></discord-reply>Она выдается дс<br/>Её нельзя выдать в целом вручную</discord-message>
+<discord-message id="m-1496814713525239819" timestamp="2026-04-23T13:07:17.177000Z" profile="1091623600206921739">А, ну так бы и сказали</discord-message>
+<discord-message id="m-1496814841099456584" timestamp="2026-04-23T13:07:47.593000Z" profile="1091623600206921739">Ну закрывайте, чё сказать</discord-message>
+<discord-message id="m-1496829024519983304" timestamp="2026-04-23T14:04:09.184000Z" profile="1133665013794607114"><discord-reply slot="reply" author="Murzik_2013" avatar="" role-color="#907575"><span data-goto="1496814713525239819">А, ну так бы и сказали</span></discord-reply>Ну так тебе так и сказали</discord-message>
+<discord-message id="m-1496829076919554118" timestamp="2026-04-23T14:04:21.677000Z" profile="1133665013794607114"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1496809428786221198">У нас нету прав на её выдачу</span></discord-reply>.</discord-message>
+<discord-message id="m-1496829186466119803" timestamp="2026-04-23T14:04:47.795000Z" profile="1091623600206921739">)</discord-message>
+<discord-message id="m-1496855171395883038" timestamp="2026-04-23T15:48:03.085000Z" profile="1133665013794607114">$закрыть Тикет разобран.</discord-message>
+<discord-message id="m-1496855173094707200" timestamp="2026-04-23T15:48:03.490000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет закроется через несколько секунд...</span></div></div></div></discord-message>
+</discord-messages></body></html>
