@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-1171</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/81cc3f592ecd8e7e2795792388fc6de6.png?size=1024", "roleColor": "#006800", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/8e5424768addb0eab9fb87dcd89088bb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": false}, "1313736294802657332": {"author": "FBI228004", "avatar": "https://cdn.discordapp.com/avatars/1313736294802657332/97d67799f769801d221fa6ca1408937d.png?size=1024", "roleColor": "#2a88cb", "roleIcon": "https://cdn.discordapp.com/role-icons/1416177983378686052/3d06b544ab605eab4956042b2dad64fc.png?size=1024", "roleName": "Участник", "bot": false, "verified": false}, "1126160871433982102": {"author": "lskdvdk", "avatar": "https://cdn.discordapp.com/avatars/1126160871433982102/e61bdcad3e5940b4b2b2c84f79b52572.png?size=1024", "roleColor": "#0ba348", "roleIcon": "https://cdn.discordapp.com/role-icons/1416202584120623225/bd07e078ba8d33b7fe5b50fd4f167a6e.png?size=1024", "roleName": "Модератор Discord", "bot": false, "verified": false}, "1133665013794607114": {"author": "Pancakeboyman_8", "avatar": "https://cdn.discordapp.com/avatars/1133665013794607114/9952a7f75bf8748ecfd9a8e39af2e279.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1331342900205850686/c1fd358ec8be5422366cbf5b58e16e31.png?size=1024", "roleName": "Владелец", "bot": false, "verified": false}, "1059736820876853248": {"author": "Государь Император koronsdf", "avatar": "https://cdn.discordapp.com/avatars/1059736820876853248/dc887aac8a06349c9bcb2152793fae7e.png?size=1024", "roleColor": "#ffd700", "roleIcon": "https://cdn.discordapp.com/role-icons/1422974739609292850/95e4088940371977549005ced9681737.png?size=1024", "roleName": "Государь Император и Самодержец Всероссийский", "bot": false, "verified": false}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.emoji-img {
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    object-fit: contain;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/a06dfa47e027eb8acdf25152e486f1c8.png?size=1024" timestamp="2026-04-25_16-41-48">Тикет Закрыт.<br/>Причина: Вопрос решён.<br/>Закрыл: <@1126160871433982102><br/>Дата: 2026-04-25_16-41-48<br/><a href="https://transcripts.erlcrussia.xyz/transcripts/поддержка-1171_2026-04-25_16-41-48.html" style="color: #00aff4;">https://transcripts.erlcrussia.xyz/transcripts/поддержка-1171_2026-04-25_16-41-48.html</a></discord-message>
+<discord-message id="m-1497581948627980439" timestamp="2026-04-25T15:56:00.280000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="padding:8px;color:#dcddde;"><discord-mention type="role">Персонал ER:LC</discord-mention> <discord-mention type="role">Команда Модерации Discord</discord-mention> <discord-mention type="user">FBI228004</discord-mention></div><div style="background:#2f3136;border-left:4px solid #006800;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:8px 12px;"><div style="display:flex;gap:16px;align-items:flex-start;"><img src="https://cdn.discordapp.com/avatars/1313736294802657332/97d67799f769801d221fa6ca1408937d.png?size=1024" style="width:80px;height:80px;border-radius:8px;object-fit:cover;flex-shrink:0;" /><div><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg" alt="📨" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Новый Тикет — Поддержка</span><br/><strong>В чём проблема:</strong><br/>Верификацию МВД не могу пройти причина:С браузером Bloxlink что то не так не работает (проверял несколько раз)</div></div></div><div style="padding:4px 12px;color:#dcddde;">⏳ <strong>Ожидайте ответа от персонала.</strong></div><div style="height:1px;background:#4f545c;margin:4px 0;"></div><div style="height:8px;"></div><div style="display:flex;gap:8px;padding:8px 0;flex-wrap:wrap;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Закрыть Тикет</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e4.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Освободить Тикет</button></div></div></div></discord-message>
+<discord-message id="m-1497581988243177554" timestamp="2026-04-25T15:56:09.725000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e5.svg" alt="📥" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет взят <discord-mention type="user">lskdvdk</discord-mention>.</span></div></div></div></discord-message>
+<discord-message id="m-1497582074318553189" timestamp="2026-04-25T15:56:30.247000Z" profile="1126160871433982102"><discord-mention type="user">FBI228004</discord-mention> Доброго дня, я являюсь модератором Discord</discord-message>
+<discord-message id="m-1497582100671627485" timestamp="2026-04-25T15:56:36.530000Z" profile="1313736294802657332">Здравствуйте</discord-message>
+<discord-message id="m-1497582136331473028" timestamp="2026-04-25T15:56:45.032000Z" profile="1126160871433982102">Пришлите пожалуйста скриншоты с  верификации ( сайта Bloxlink).</discord-message>
+<discord-message id="m-1497582194070130829" timestamp="2026-04-25T15:56:58.798000Z" profile="1313736294802657332">Можно только видео?</discord-message>
+<discord-message id="m-1497582243001139220" timestamp="2026-04-25T15:57:10.464000Z" profile="1126160871433982102">Если удобно, то можете видео.</discord-message>
+<discord-message id="m-1497582258977116241" timestamp="2026-04-25T15:57:14.273000Z" profile="1313736294802657332">Ок</discord-message>
+<discord-message id="m-1497582654525145209" timestamp="2026-04-25T15:58:48.579000Z" profile="1313736294802657332"><div style="margin: 8px 0; padding: 8px; background: #2f3136; border-radius: 4px; border-left: 4px solid #5865F2;">📹 <a href="https://discord.com/channels/1331331077553262765/1487155588537385061/1497593470225748159" target="_blank" style="color: #00aff4; text-decoration: underline;">Screenrecording_20260425_175733.mp4</a></div><discord-attachments slot="attachments"></discord-attachments></discord-message>
+<discord-message id="m-1497582894426750986" timestamp="2026-04-25T15:59:45.776000Z" profile="1126160871433982102">Секунду, сейчас посмотрю подробнее.</discord-message>
+<discord-message id="m-1497583246471467190" timestamp="2026-04-25T16:01:09.710000Z" profile="1313736294802657332">Прошлый раз когда делал были проблемы в аккаунте роблокс</discord-message>
+<discord-message id="m-1497583334908235877" timestamp="2026-04-25T16:01:30.795000Z" profile="1126160871433982102">Сейчас посмотрю ваш аккаунт в Roblox</discord-message>
+<discord-message id="m-1497583394823868416" timestamp="2026-04-25T16:01:45.080000Z" profile="1313736294802657332">Ок</discord-message>
+<discord-message id="m-1497583637644967936" timestamp="2026-04-25T16:02:42.973000Z" profile="1313736294802657332">В тикет МВД вообще не работает (в смысле сам тикет)<discord-reactions slot="reactions"><discord-reaction emoji="https://cdn.discordapp.com/emojis/1452341405258219581.png" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1497583850849566922" timestamp="2026-04-25T16:03:33.805000Z" profile="1126160871433982102"><discord-mention type="user">FBI228004</discord-mention> <a href="https://blox.link/" style="color: #00aff4; text-decoration: underline;" target="_blank">https://blox.link/</a> Попробуйте авторизоваться<discord-embed title="Bloxlink Roblox Bot | Roblox Bot" slot="embeds" color="#006800" thumbnail="https://blox.link/bloxlink/bloxlink-million-servers.png"><discord-embed-description slot="description">Bloxlink is the most popular Roblox bot for Discord. Bloxlink allows users to verify, get group roles, and more.</discord-embed-description></discord-embed></discord-message>
+<discord-message id="m-1497583873746407474" timestamp="2026-04-25T16:03:39.264000Z" profile="1126160871433982102"><u>через эту ссылку!</u></discord-message>
+<discord-message id="m-1497584006953177169" timestamp="2026-04-25T16:04:11.023000Z" profile="1133665013794607114"><discord-reply slot="reply" author="FBI228004" avatar="" role-color="#2a88cb"><span data-goto="1497582654525145209">[deleted]</span></discord-reply>Отключите перевод страницы</discord-message>
+<discord-message id="m-1497584059881361639" timestamp="2026-04-25T16:04:23.642000Z" profile="1133665013794607114"><discord-reply slot="reply" author="lskdvdk" avatar="" role-color="#0ba348"><span data-goto="1497583850849566922">@1313736294802657332 https://blox.link/ Попробуйте авторизоваться</span></discord-reply>#✅┃верификация почитайте гайд пожалуйста</discord-message>
+<discord-message id="m-1497584169050701984" timestamp="2026-04-25T16:04:49.670000Z" profile="1126160871433982102"><discord-mention type="user">FBI228004</discord-mention></discord-message>
+<discord-message id="m-1497584195759767562" timestamp="2026-04-25T16:04:56.038000Z" profile="1133665013794607114"><discord-reply slot="reply" author="lskdvdk" avatar="" role-color="#0ba348"><span data-goto="1497584169050701984">@1313736294802657332</span></discord-reply>Про гайд было тебе</discord-message>
+<discord-message id="m-1497584470117711882" timestamp="2026-04-25T16:06:01.450000Z" profile="1313736294802657332"><discord-attachments slot="attachments"><discord-attachment type="image" filename="image0.jpg" url="https://transcripts.erlcrussia.xyz/attachments/1497584470117711882_1497584469757006025.jpg"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1497584487804964935" timestamp="2026-04-25T16:06:05.667000Z" profile="1126160871433982102"><discord-mention type="user">FBI228004</discord-mention> Извиняюсь, вот инструкция</discord-message>
+<discord-message id="m-1497584490745299096" timestamp="2026-04-25T16:06:06.368000Z" profile="1126160871433982102">Что нужно сделать:<br/>Отключите переводчик страницы в вашем браузере<br/>Обновите страницу (F5 или Ctrl+R)<br/>Попробуйте снова пройти верификацию</discord-message>
+<discord-message id="m-1497584551487082557" timestamp="2026-04-25T16:06:20.850000Z" profile="1313736294802657332">Это не комп</discord-message>
+<discord-message id="m-1497584566221799618" timestamp="2026-04-25T16:06:24.363000Z" profile="1126160871433982102">Смотрите</discord-message>
+<discord-message id="m-1497584566737830050" timestamp="2026-04-25T16:06:24.486000Z" profile="1313736294802657332">Это тел</discord-message>
+<discord-message id="m-1497584587625201674" timestamp="2026-04-25T16:06:29.466000Z" profile="1126160871433982102">Три точечки</discord-message>
+<discord-message id="m-1497584603282800640" timestamp="2026-04-25T16:06:33.199000Z" profile="1126160871433982102">и там будет</discord-message>
+<discord-message id="m-1497584873869672629" timestamp="2026-04-25T16:07:37.712000Z" profile="1059736820876853248"><discord-reply slot="reply" author="FBI228004" avatar="" role-color="#2a88cb"><span data-goto="1497584470117711882">[deleted]</span></discord-reply>Аккаунту меньше 13</discord-message>
+<discord-message id="m-1497584960956137573" timestamp="2026-04-25T16:07:58.475000Z" profile="1313736294802657332">Хз</discord-message>
+<discord-message id="m-1497585042036101200" timestamp="2026-04-25T16:08:17.806000Z" profile="1313736294802657332">И что дальше?</discord-message>
+<discord-message id="m-1497585126346064102" timestamp="2026-04-25T16:08:37.907000Z" profile="1126160871433982102"><discord-reply slot="reply" author="lskdvdk" avatar="" role-color="#0ba348"><span data-goto="1497584490745299096">Что нужно сделать:
+Отключите переводчик страницы в вашем браузере
+Обновите страницу (F5 или Ctrl+R)
+</span></discord-reply>Не помогло? Тогда скорее всего аккаунту меньше 13</discord-message>
+<discord-message id="m-1497585164069507275" timestamp="2026-04-25T16:08:46.901000Z" profile="1059736820876853248">Если на аккаунте возраст меньше 13, то вы не сможете авторизовать ваш аккаунт в блокслинк</discord-message>
+<discord-message id="m-1497585200014692434" timestamp="2026-04-25T16:08:55.471000Z" profile="1313736294802657332">Нееее</discord-message>
+<discord-message id="m-1497585219979706519" timestamp="2026-04-25T16:09:00.231000Z" profile="1313736294802657332">Стойте</discord-message>
+<discord-message id="m-1497585235485917284" timestamp="2026-04-25T16:09:03.928000Z" profile="1313736294802657332">Прошлый раз</discord-message>
+<discord-message id="m-1497585314917650474" timestamp="2026-04-25T16:09:22.866000Z" profile="1313736294802657332">Когда я делал тоже самое в гражданском Вход</discord-message>
+<discord-message id="m-1497585339714502819" timestamp="2026-04-25T16:09:28.778000Z" profile="1313736294802657332">У меня получилось</discord-message>
+<discord-message id="m-1497585372757229610" timestamp="2026-04-25T16:09:36.656000Z" profile="1313736294802657332">А почему в МВД не так?</discord-message>
+<discord-message id="m-1497585396383617137" timestamp="2026-04-25T16:09:42.289000Z" profile="1126160871433982102">Пупупу</discord-message>
+<discord-message id="m-1497585419871588352" timestamp="2026-04-25T16:09:47.889000Z" profile="1133665013794607114">Вы не сможете авторизовать приложение OAuth если на вашем аккаунте стоит возраст меньше 13 лет</discord-message>
+<discord-message id="m-1497585514759454731" timestamp="2026-04-25T16:10:10.512000Z" profile="1313736294802657332">Не не</discord-message>
+<discord-message id="m-1497585549161267240" timestamp="2026-04-25T16:10:18.714000Z" profile="1126160871433982102">Возраст 13+?</discord-message>
+<discord-message id="m-1497585593650118708" timestamp="2026-04-25T16:10:29.321000Z" profile="1313736294802657332">12</discord-message>
+<discord-message id="m-1497585664630329454" timestamp="2026-04-25T16:10:46.244000Z" profile="1126160871433982102">Вот и ошибка, можете конечно попробовать еще раз по инструкции</discord-message>
+<discord-message id="m-1497585773397147658" timestamp="2026-04-25T16:11:12.176000Z" profile="1126160871433982102"><discord-mention type="user">FBI228004</discord-mention> Закрываю тикет или попробуете еще раз?</discord-message>
+<discord-message id="m-1497585804275613756" timestamp="2026-04-25T16:11:19.538000Z" profile="1313736294802657332">Ещё раз<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" count="2"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1497586438877872169" timestamp="2026-04-25T16:13:50.839000Z" profile="1313736294802657332">Блииииииииин</discord-message>
+<discord-message id="m-1497586450001301615" timestamp="2026-04-25T16:13:53.491000Z" profile="1126160871433982102"><a href="https://cdn.discordapp.com/attachments/1192194570822373406/1463504870261915648/image.gif" style="color: #00aff4; text-decoration: underline;" target="_blank">https://cdn.discordapp.com/attachments/1192194570822373406/1463504870261915648/image.gif</a><discord-embed title="" slot="embeds" color="#006800" thumbnail="https://cdn.discordapp.com/attachments/1192194570822373406/1463504870261915648/image.gif?ex=69edff9f&is=69ecae1f&hm=9ec1eb9205e4f6228a3a3b716719f2f96249ac55a14c3192a91d871d4f4453b5&"></discord-embed></discord-message>
+<discord-message id="m-1497586475829559517" timestamp="2026-04-25T16:13:59.649000Z" profile="1313736294802657332">Не получается</discord-message>
+<discord-message id="m-1497586533765746880" timestamp="2026-04-25T16:14:13.462000Z" profile="1126160871433982102">Здесь я уже не помогу тогда. Увы</discord-message>
+<discord-message id="m-1497586642418929715" timestamp="2026-04-25T16:14:39.367000Z" profile="1133665013794607114">Твинк</discord-message>
+<discord-message id="m-1497586705203724348" timestamp="2026-04-25T16:14:54.336000Z" profile="1313736294802657332">Аккаунт?<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1497586716175892661" timestamp="2026-04-25T16:14:56.952000Z" profile="1126160871433982102">Хм</discord-message>
+<discord-message id="m-1497586752729255936" timestamp="2026-04-25T16:15:05.667000Z" profile="1126160871433982102">Новый аккаунт</discord-message>
+<discord-message id="m-1497586774304624700" timestamp="2026-04-25T16:15:10.811000Z" profile="1313736294802657332">Ок</discord-message>
+<discord-message id="m-1497586851932803195" timestamp="2026-04-25T16:15:29.319000Z" profile="1126160871433982102">Жду ответа<img src="https://cdn.discordapp.com/emojis/1481884273849008310.png" alt="prokuratura" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/></discord-message>
+<discord-message id="m-1497586978688991323" timestamp="2026-04-25T16:15:59.540000Z" profile="1133665013794607114"><discord-reply slot="reply" author="FBI228004" avatar="" role-color="#2a88cb"><span data-goto="1497586774304624700">Ок</span></discord-reply>Поставьте на нём возраст 18</discord-message>
+<discord-message id="m-1497587057634316288" timestamp="2026-04-25T16:16:18.362000Z" profile="1313736294802657332">Какой год?</discord-message>
+<discord-message id="m-1497587098037911724" timestamp="2026-04-25T16:16:27.995000Z" profile="1133665013794607114">Пу пу пу</discord-message>
+<discord-message id="m-1497587115641536562" timestamp="2026-04-25T16:16:32.192000Z" profile="1133665013794607114">2026-18</discord-message>
+<discord-message id="m-1497587160377720973" timestamp="2026-04-25T16:16:42.858000Z" profile="1313736294802657332">Ща</discord-message>
+<discord-message id="m-1497587246553890856" timestamp="2026-04-25T16:17:03.404000Z" profile="1313736294802657332">2008</discord-message>
+<discord-message id="m-1497589401759518801" timestamp="2026-04-25T16:25:37.245000Z" profile="1313736294802657332">ПОЛУЧИЛ</discord-message>
+<discord-message id="m-1497589426728210482" timestamp="2026-04-25T16:25:43.198000Z" profile="1313736294802657332">РАХМЕТ СПАСИБО<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f480.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1497589635663134771" timestamp="2026-04-25T16:26:33.012000Z" profile="1313736294802657332">Закрывайте тикет<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1497593463485759540" timestamp="2026-04-25T16:41:45.636000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет закроется через несколько секунд...</span></div></div></div></discord-message>
+</discord-messages></body></html>
