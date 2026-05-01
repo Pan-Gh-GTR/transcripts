@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-1195</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/8f6e9a6ad7bdc609907d4c907ccadfd5.png?size=1024", "roleColor": "#006800", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/8e5424768addb0eab9fb87dcd89088bb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": true}, "1467061303322476695": {"author": "TwiksssHD", "avatar": "https://cdn.discordapp.com/avatars/1467061303322476695/42615befbdd4bb9c4f79f9a54b04776e.png?size=1024", "roleColor": "#2a88cb", "roleIcon": "https://cdn.discordapp.com/role-icons/1416177983378686052/3d06b544ab605eab4956042b2dad64fc.png?size=1024", "roleName": "Участник", "bot": false, "verified": false}, "1133665013794607114": {"author": "Pancakeboyman_8", "avatar": "https://cdn.discordapp.com/avatars/1133665013794607114/9952a7f75bf8748ecfd9a8e39af2e279.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1331342900205850686/c1fd358ec8be5422366cbf5b58e16e31.png?size=1024", "roleName": "Владелец", "bot": false, "verified": false}, "155149108183695360": {"author": "Dyno", "avatar": "https://cdn.discordapp.com/avatars/155149108183695360/b4fdfc64edff74c37e1574d34fad66c2.png?size=1024", "roleColor": "#2d7dd1", "roleIcon": "https://cdn.discordapp.com/role-icons/1338594881374912685/d9609020bcaf37f8ba7c9b3345f70579.png?size=1024", "roleName": "Dyno", "bot": true, "verified": true}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.emoji-img {
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    object-fit: contain;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/a06dfa47e027eb8acdf25152e486f1c8.png?size=1024" timestamp="2026-05-01_16-56-53">Тикет Закрыт.<br/>Причина: Тикет разобран.<br/>Закрыл: <@1133665013794607114><br/>Дата: 2026-05-01_16-56-53<br/><a href="https://transcripts.erlcrussia.xyz/transcripts/поддержка-1195_2026-05-01_16-56-53.html" style="color: #00aff4;">https://transcripts.erlcrussia.xyz/transcripts/поддержка-1195_2026-05-01_16-56-53.html</a></discord-message>
+<discord-message id="m-1499417514910679121" timestamp="2026-04-30T17:29:53.385000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="padding:8px;color:#dcddde;"><discord-mention type="role">Персонал ER:LC</discord-mention> <discord-mention type="role">Команда Модерации Discord</discord-mention> <discord-mention type="user">TwiksssHD</discord-mention></div><div style="background:#2f3136;border-left:4px solid #006800;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:8px 12px;"><div style="display:flex;gap:16px;align-items:flex-start;"><img src="https://cdn.discordapp.com/avatars/1467061303322476695/42615befbdd4bb9c4f79f9a54b04776e.png?size=1024" style="width:80px;height:80px;border-radius:8px;object-fit:cover;flex-shrink:0;" /><div><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg" alt="📨" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Новый Тикет — Поддержка</span><br/><strong>В чём проблема:</strong><br/>Не заходит помогите</div></div></div><div style="padding:4px 12px;color:#dcddde;">⏳ <strong>Ожидайте ответа от персонала.</strong></div><div style="height:1px;background:#4f545c;margin:4px 0;"></div><div style="height:8px;"></div><div style="display:flex;gap:8px;padding:8px 0;flex-wrap:wrap;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Закрыть Тикет</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e4.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Освободить Тикет</button></div></div></div></discord-message>
+<discord-message id="m-1499417531302023260" timestamp="2026-04-30T17:29:57.293000Z" profile="1467061303322476695"><discord-attachments slot="attachments"><discord-attachment type="image" filename="image.png" url="https://transcripts.erlcrussia.xyz/attachments/1499417531302023260_1499417531029655604.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1499417818255331388" timestamp="2026-04-30T17:31:05.708000Z" profile="1133665013794607114"><discord-reply slot="reply" author="TwiksssHD" avatar="" role-color="#2a88cb"><span data-goto="1499417531302023260">[deleted]</span></discord-reply><a href="https://wiki.erlcrussia.com/documentation-moscow-roleplay/guides/small-guide-for-beginners" style="color: #00aff4; text-decoration: underline;" target="_blank">https://wiki.erlcrussia.com/documentation-moscow-roleplay/guides/small-guide-for-beginners</a><discord-embed title="Небольшой Гайд Для Новичков | Докуме..." slot="embeds" color="#006800" thumbnail="https://erlcrussia.gitbook.io/documentation-moscow-roleplay/~gitbook/ogimage/oALhKL8bO5MyT0rclsBf"></discord-embed></discord-message>
+<discord-message id="m-1499417902456242337" timestamp="2026-04-30T17:31:25.783000Z" profile="1467061303322476695"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1499417818255331388">https://wiki.erlcrussia.com/documentation-moscow-roleplay/guides/small-guide-for-beginners</span></discord-reply>ЛЕЕЕЕЕЕ ПОСИБА БРОТОН<img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/263a-fe0f.svg" alt="☺️" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/></discord-message>
+<discord-message id="m-1499418336033902722" timestamp="2026-04-30T17:33:09.156000Z" profile="1467061303322476695"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1499417818255331388">https://wiki.erlcrussia.com/documentation-moscow-roleplay/guides/small-guide-for-beginners</span></discord-reply>Эт все мне друг объяснил именно при заходе, на ваш сервер ошибка</discord-message>
+<discord-message id="m-1499418572525408258" timestamp="2026-04-30T17:34:05.540000Z" profile="1133665013794607114">!unmute 1467061303322476695</discord-message>
+<discord-message id="m-1499418574861631509" timestamp="2026-04-30T17:34:06.097000Z" profile="155149108183695360"><discord-embed title="" slot="embeds" color="#43b581"><discord-embed-description slot="description"><img src="https://cdn.discordapp.com/emojis/314691591484866560.png" alt="dynoSuccess" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> <strong><em>tw1kksss was unmuted.</strong></em></discord-embed-description></discord-embed></discord-message>
+<discord-message id="m-1499418642410901695" timestamp="2026-04-30T17:34:22.202000Z" profile="1133665013794607114"><discord-reply slot="reply" author="TwiksssHD" avatar="" role-color="#2a88cb"><span data-goto="1499418336033902722">Эт все мне друг объяснил именно при заходе, на ваш сервер ошибка</span></discord-reply>Так у вас есть 500 XP и час в игре?</discord-message>
+<discord-message id="m-1499418657694945361" timestamp="2026-04-30T17:34:25.846000Z" profile="1467061303322476695"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1499418572525408258">!unmute 1467061303322476695</span></discord-reply>посиба бротон</discord-message>
+<discord-message id="m-1499418696798703800" timestamp="2026-04-30T17:34:35.169000Z" profile="1467061303322476695"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1499418642410901695">Так у вас есть 500 XP и час в игре?</span></discord-reply>Не знаю,друг позвал</discord-message>
+<discord-message id="m-1499418728981332128" timestamp="2026-04-30T17:34:42.842000Z" profile="1133665013794607114">Посмотрите гайд</discord-message>
+<discord-message id="m-1499418783817797712" timestamp="2026-04-30T17:34:55.916000Z" profile="1467061303322476695"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1499418728981332128">Посмотрите гайд</span></discord-reply>Хорошо,спасибо за ответ(:</discord-message>
+<discord-message id="m-1499418864419868753" timestamp="2026-04-30T17:35:15.133000Z" profile="1467061303322476695"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1499418728981332128">Посмотрите гайд</span></discord-reply>извините за пинги я просто даун(</discord-message>
+<discord-message id="m-1499418874695647242" timestamp="2026-04-30T17:35:17.583000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e5.svg" alt="📥" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет взят <discord-mention type="user">Pancakeboyman_8</discord-mention>.</span></div></div></div></discord-message>
+<discord-message id="m-1499418930333356172" timestamp="2026-04-30T17:35:30.848000Z" profile="1133665013794607114"><discord-reply slot="reply" author="TwiksssHD" avatar="" role-color="#2a88cb"><span data-goto="1499418864419868753">извините за пинги я просто даун(</span></discord-reply>И всё же, посмотрите <a href="https://wiki.erlcrussia.com/documentation-moscow-roleplay/guides/small-guide-for-beginners" style="color: #00aff4; text-decoration: underline;" target="_blank">https://wiki.erlcrussia.com/documentation-moscow-roleplay/guides/small-guide-for-beginners</a> для начала<discord-embed title="Небольшой Гайд Для Новичков | Докуме..." slot="embeds" color="#006800"></discord-embed></discord-message>
+<discord-message id="m-1499419013753602170" timestamp="2026-04-30T17:35:50.737000Z" profile="1467061303322476695"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1499418930333356172">И всё же, посмотрите https://wiki.erlcrussia.com/documentation-moscow-roleplay/guides/small-guide-fo</span></discord-reply>Поооосиба, ща все прочитаю удачки вам и хорошего дня)<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764-fe0f.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1499419068296331336" timestamp="2026-04-30T17:36:03.741000Z" profile="1133665013794607114">Вам тоже хорошего дня!</discord-message>
+<discord-message id="m-1499420067367227403" timestamp="2026-04-30T17:40:01.938000Z" profile="1467061303322476695"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1499419068296331336">Вам тоже хорошего дня!</span></discord-reply>Еще, раз сябки ща все сделаю и с кентом играть буду,поссиббооо<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764-fe0f.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1499771596150276309" timestamp="2026-05-01T16:56:52.931000Z" profile="1133665013794607114">$закрыть Тикет разобран.</discord-message>
+<discord-message id="m-1499771597937053736" timestamp="2026-05-01T16:56:53.357000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет закроется через несколько секунд...</span></div></div></div></discord-message>
+</discord-messages></body></html>
