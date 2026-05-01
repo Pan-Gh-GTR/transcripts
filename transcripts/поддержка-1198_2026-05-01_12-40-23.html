@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-1198</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/8f6e9a6ad7bdc609907d4c907ccadfd5.png?size=1024", "roleColor": "#006800", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/8e5424768addb0eab9fb87dcd89088bb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": true}, "625255619569647616": {"author": "[VD-009] siksty", "avatar": "https://cdn.discordapp.com/avatars/625255619569647616/c1f59838d25d8a9038d8d280d9c41aab.png?size=1024", "roleColor": "#ff5dd6", "roleIcon": "", "roleName": "Влиятельный гражданин", "bot": false, "verified": false}, "585394439715946518": {"author": "savingbox3", "avatar": "https://cdn.discordapp.com/avatars/585394439715946518/bf450ce5a7a6a0551abc35d665dd7c10.png?size=1024", "roleColor": "#d4843d", "roleIcon": "https://cdn.discordapp.com/role-icons/1483091539973373993/b2b1d515e0da04921b1553fe55d87eea.png?size=1024", "roleName": "Руководство Проекта", "bot": false, "verified": false}, "1133665013794607114": {"author": "Pancakeboyman_8", "avatar": "https://cdn.discordapp.com/avatars/1133665013794607114/9952a7f75bf8748ecfd9a8e39af2e279.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1331342900205850686/c1fd358ec8be5422366cbf5b58e16e31.png?size=1024", "roleName": "Владелец", "bot": false, "verified": false}, "1195675629010558986": {"author": "[PR-011] The_Borisik", "avatar": "https://cdn.discordapp.com/avatars/1195675629010558986/16b83fbe315df0f2f7ee3e08fee39600.png?size=1024", "roleColor": "#424cff", "roleIcon": "https://cdn.discordapp.com/role-icons/1410712605579939982/df9f61918e58e298252dbcbfe910e849.png?size=1024", "roleName": "Пробный Игрок", "bot": false, "verified": false}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.emoji-img {
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    object-fit: contain;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/a06dfa47e027eb8acdf25152e486f1c8.png?size=1024" timestamp="2026-05-01_12-40-23">Тикет Закрыт.<br/>Причина: Не указана<br/>Закрыл: <@625255619569647616><br/>Дата: 2026-05-01_12-40-23<br/><a href="https://transcripts.erlcrussia.xyz/transcripts/поддержка-1198_2026-05-01_12-40-23.html" style="color: #00aff4;">https://transcripts.erlcrussia.xyz/transcripts/поддержка-1198_2026-05-01_12-40-23.html</a></discord-message>
+<discord-message id="m-1499704335905587293" timestamp="2026-05-01T12:29:36.839000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="padding:8px;color:#dcddde;"><discord-mention type="role">Персонал ER:LC</discord-mention> <discord-mention type="role">Команда Модерации Discord</discord-mention> <discord-mention type="user">[VD-009] siksty</discord-mention></div><div style="background:#2f3136;border-left:4px solid #006800;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:8px 12px;"><div style="display:flex;gap:16px;align-items:flex-start;"><img src="https://cdn.discordapp.com/avatars/625255619569647616/c1f59838d25d8a9038d8d280d9c41aab.png?size=1024" style="width:80px;height:80px;border-radius:8px;object-fit:cover;flex-shrink:0;" /><div><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg" alt="📨" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Новый Тикет — Поддержка</span><br/><strong>В чём проблема:</strong><br/>что за хуйня это</div></div></div><div style="padding:4px 12px;color:#dcddde;">⏳ <strong>Ожидайте ответа от персонала.</strong></div><div style="height:1px;background:#4f545c;margin:4px 0;"></div><div style="height:8px;"></div><div style="display:flex;gap:8px;padding:8px 0;flex-wrap:wrap;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Закрыть Тикет</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e5.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Взять Тикет</button></div></div></div></discord-message>
+<discord-message id="m-1499704370332307547" timestamp="2026-05-01T12:29:45.047000Z" profile="625255619569647616">тикет исключительно для руководства проекта.</discord-message>
+<discord-message id="m-1499704435486752768" timestamp="2026-05-01T12:30:00.581000Z" profile="625255619569647616">у меня тикет на основе прошлого тикета 1197</discord-message>
+<discord-message id="m-1499704471968809102" timestamp="2026-05-01T12:30:09.279000Z" profile="625255619569647616"><discord-attachments slot="attachments"><discord-attachment type="image" filename="image.png" url="https://transcripts.erlcrussia.xyz/attachments/1499704471968809102_1499704471578611874.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1499704474674135171" timestamp="2026-05-01T12:30:09.924000Z" profile="625255619569647616">вот это что такое нахуй</discord-message>
+<discord-message id="m-1499704520224280719" timestamp="2026-05-01T12:30:20.784000Z" profile="625255619569647616">прост вопрос</discord-message>
+<discord-message id="m-1499704529526984706" timestamp="2026-05-01T12:30:23.002000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #8c0000;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2796.svg" alt="➖" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> <discord-mention type="role">Команда Модерации Discord</discord-mention> удалён из тикета <discord-mention type="user">User#994164698654187580</discord-mention>.</span></div></div></div></discord-message>
+<discord-message id="m-1499704574095786255" timestamp="2026-05-01T12:30:33.628000Z" profile="625255619569647616"><discord-attachments slot="attachments"><discord-attachment type="image" filename="image.png" url="https://transcripts.erlcrussia.xyz/attachments/1499704574095786255_1499704573722624102.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1499704599806873631" timestamp="2026-05-01T12:30:39.758000Z" profile="625255619569647616">борис дальше сидит и разбирает тикет</discord-message>
+<discord-message id="m-1499704649148665898" timestamp="2026-05-01T12:30:51.522000Z" profile="625255619569647616">хотя месяц назад он потверждал что ВЕСЬ хайрок относится к моему ЧОПу</discord-message>
+<discord-message id="m-1499704682753560597" timestamp="2026-05-01T12:30:59.534000Z" profile="625255619569647616">ЧОП мой оффициальный и действующий на данный момент</discord-message>
+<discord-message id="m-1499704748016926930" timestamp="2026-05-01T12:31:15.094000Z" profile="625255619569647616">в территориях так же помечено что хайрок является территорией ЧОПа</discord-message>
+<discord-message id="m-1499704821530234963" timestamp="2026-05-01T12:31:32.621000Z" profile="625255619569647616">в правилах ЧОПа тоже прописан постал нашего офиса и место нашей дислокации</discord-message>
+<discord-message id="m-1499704847954612386" timestamp="2026-05-01T12:31:38.921000Z" profile="625255619569647616">у меня просто вопрос</discord-message>
+<discord-message id="m-1499704943248932884" timestamp="2026-05-01T12:32:01.641000Z" profile="625255619569647616">почему у меня из под носа как у владельца ЧОПа борис забирает то, что до этого считал моим</discord-message>
+<discord-message id="m-1499704979827593266" timestamp="2026-05-01T12:32:10.362000Z" profile="625255619569647616">у укпаников офисы есть</discord-message>
+<discord-message id="m-1499705000970948608" timestamp="2026-05-01T12:32:15.403000Z" profile="625255619569647616">даже</discord-message>
+<discord-message id="m-1499705002933878845" timestamp="2026-05-01T12:32:15.871000Z" profile="625255619569647616">даже</discord-message>
+<discord-message id="m-1499705084840251452" timestamp="2026-05-01T12:32:35.399000Z" profile="625255619569647616">по документам всем и по РП логике, офисы у МВД по типу gas depot - тоже наша территория</discord-message>
+<discord-message id="m-1499705100950573158" timestamp="2026-05-01T12:32:39.240000Z" profile="625255619569647616">но мы туда не ездим толком</discord-message>
+<discord-message id="m-1499705112816386063" timestamp="2026-05-01T12:32:42.069000Z" profile="625255619569647616">они там постоянно обитали</discord-message>
+<discord-message id="m-1499705123977560218" timestamp="2026-05-01T12:32:44.730000Z" profile="625255619569647616">пусть они там обитают</discord-message>
+<discord-message id="m-1499705164506988595" timestamp="2026-05-01T12:32:54.393000Z" profile="625255619569647616">в конце концов на карте дохуя мест где можно базу придумать</discord-message>
+<discord-message id="m-1499705193489629214" timestamp="2026-05-01T12:33:01.303000Z" profile="625255619569647616">лидер опг укпаник санечка уже знает кто я такой</discord-message>
+<discord-message id="m-1499705221222371479" timestamp="2026-05-01T12:33:07.915000Z" profile="625255619569647616">и что из себя представляет мой чоп</discord-message>
+<discord-message id="m-1499705248372232313" timestamp="2026-05-01T12:33:14.388000Z" profile="625255619569647616">они один раз приезжали на нашу территорию с оружием</discord-message>
+<discord-message id="m-1499705264281096272" timestamp="2026-05-01T12:33:18.181000Z" profile="625255619569647616">думая что это их</discord-message>
+<discord-message id="m-1499705276205502554" timestamp="2026-05-01T12:33:21.024000Z" profile="585394439715946518"><discord-attachments slot="attachments"><discord-attachment type="image" filename="image.png" url="https://transcripts.erlcrussia.xyz/attachments/1499705276205502554_1499705275911766026.png"></discord-attachment></discord-attachments><discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1499705320174387290" timestamp="2026-05-01T12:33:31.507000Z" profile="625255619569647616">вся территория хайрока борис говорил</discord-message>
+<discord-message id="m-1499705324628742205" timestamp="2026-05-01T12:33:32.569000Z" profile="625255619569647616">вся</discord-message>
+<discord-message id="m-1499705362369089587" timestamp="2026-05-01T12:33:41.567000Z" profile="1133665013794607114">$удалить <discord-mention type="role">Персонал ER:LC</discord-mention></discord-message>
+<discord-message id="m-1499705365640642660" timestamp="2026-05-01T12:33:42.347000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #8c0000;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2796.svg" alt="➖" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> <discord-mention type="role">Персонал ER:LC</discord-mention> удалён из тикета <discord-mention type="user">Pancakeboyman_8</discord-mention>.</span></div></div></div></discord-message>
+<discord-message id="m-1499705395617337365" timestamp="2026-05-01T12:33:49.494000Z" profile="625255619569647616">и полгода мы твердим что хайрок относится так же к моему ЧОПу</discord-message>
+<discord-message id="m-1499705446045454427" timestamp="2026-05-01T12:34:01.517000Z" profile="625255619569647616">когда месяца 2 назад были траблы перед мятежом на суд</discord-message>
+<discord-message id="m-1499705463317598420" timestamp="2026-05-01T12:34:05.635000Z" profile="625255619569647616">прокуратура и СК РФ тоже говорили</discord-message>
+<discord-message id="m-1499705487804071987" timestamp="2026-05-01T12:34:11.473000Z" profile="625255619569647616"><ul><br/><li>"заповедник государственный"</li><br/></ul></discord-message>
+<discord-message id="m-1499705525237973035" timestamp="2026-05-01T12:34:20.398000Z" profile="625255619569647616">им борис будучи еще менеджементом обратное твердил</discord-message>
+<discord-message id="m-1499705545920217191" timestamp="2026-05-01T12:34:25.329000Z" profile="625255619569647616">что территория это частная, относится к нам</discord-message>
+<discord-message id="m-1499705566380032060" timestamp="2026-05-01T12:34:30.207000Z" profile="625255619569647616">и мы как ЧОП занимаемся там охраной</discord-message>
+<discord-message id="m-1499705612018388992" timestamp="2026-05-01T12:34:41.088000Z" profile="625255619569647616">на протяжении всего существования ЧОПа мы сидим только там</discord-message>
+<discord-message id="m-1499705645312507994" timestamp="2026-05-01T12:34:49.026000Z" profile="585394439715946518">они по рп купили дома там</discord-message>
+<discord-message id="m-1499705649125261362" timestamp="2026-05-01T12:34:49.935000Z" profile="625255619569647616">не смотря на то скок по документам мы охраняем территорий</discord-message>
+<discord-message id="m-1499705656121495593" timestamp="2026-05-01T12:34:51.603000Z" profile="625255619569647616">самое основное</discord-message>
+<discord-message id="m-1499705671392694362" timestamp="2026-05-01T12:34:55.244000Z" profile="625255619569647616"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1499705645312507994">они по рп купили дома там</span></discord-reply>ОПГ</discord-message>
+<discord-message id="m-1499705676958662777" timestamp="2026-05-01T12:34:56.571000Z" profile="625255619569647616">купили дома там</discord-message>
+<discord-message id="m-1499705679102083092" timestamp="2026-05-01T12:34:57.082000Z" profile="625255619569647616">да</discord-message>
+<discord-message id="m-1499705691093467249" timestamp="2026-05-01T12:34:59.941000Z" profile="585394439715946518">ну так</discord-message>
+<discord-message id="m-1499705692309819422" timestamp="2026-05-01T12:35:00.231000Z" profile="625255619569647616">у нас постоянные патрули</discord-message>
+<discord-message id="m-1499705697758347284" timestamp="2026-05-01T12:35:01.530000Z" profile="625255619569647616">по хайроку</discord-message>
+<discord-message id="m-1499705725721772164" timestamp="2026-05-01T12:35:08.197000Z" profile="625255619569647616">дроны там всегда летают</discord-message>
+<discord-message id="m-1499705749079720056" timestamp="2026-05-01T12:35:13.766000Z" profile="625255619569647616">денис по кд сидит на дронах</discord-message>
+<discord-message id="m-1499705765617860710" timestamp="2026-05-01T12:35:17.709000Z" profile="585394439715946518">они имеют право его застроить т.к у них там куплены дома</discord-message>
+<discord-message id="m-1499705769073971241" timestamp="2026-05-01T12:35:18.533000Z" profile="625255619569647616">мой боец с позывным орекстр</discord-message>
+<discord-message id="m-1499705808475131975" timestamp="2026-05-01T12:35:27.927000Z" profile="625255619569647616"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1499705765617860710">они имеют право его застроить т.к у них там куплены дома</span></discord-reply>они нихуя не имеют право там это делать</discord-message>
+<discord-message id="m-1499705825793540136" timestamp="2026-05-01T12:35:32.056000Z" profile="625255619569647616">во первых там дома не покупаются</discord-message>
+<discord-message id="m-1499705831489405020" timestamp="2026-05-01T12:35:33.414000Z" profile="625255619569647616">а снимаются</discord-message>
+<discord-message id="m-1499705843275272232" timestamp="2026-05-01T12:35:36.224000Z" profile="625255619569647616">это тоже уже обсуждалось</discord-message>
+<discord-message id="m-1499705873629577280" timestamp="2026-05-01T12:35:43.461000Z" profile="625255619569647616">щас я найду ролики 2-х месячные</discord-message>
+<discord-message id="m-1499705887504470048" timestamp="2026-05-01T12:35:46.769000Z" profile="625255619569647616">я тогда специально не удалял</discord-message>
+<discord-message id="m-1499705985382744125" timestamp="2026-05-01T12:36:10.105000Z" profile="585394439715946518"></discord-message>
+<discord-message id="m-1499706079347605656" timestamp="2026-05-01T12:36:32.508000Z" profile="1195675629010558986"><discord-reply slot="reply" author="[VD-009] siksty" avatar="" role-color="#ff5dd6"><span data-goto="1499705725721772164">дроны там всегда летают</span></discord-reply><small>А-4.1 — Патруль для сотрудников ЧОП-а разрешен только на территории, закрепленной за ЧОП-ом и территории заказчика.</small></discord-message>
+<discord-message id="m-1499706217319239720" timestamp="2026-05-01T12:37:05.403000Z" profile="585394439715946518">с твоей точки зрения ты не должен знать что у них там опг</discord-message>
+<discord-message id="m-1499706243374252062" timestamp="2026-05-01T12:37:11.615000Z" profile="625255619569647616">с другой точки зрения</discord-message>
+<discord-message id="m-1499706266472284252" timestamp="2026-05-01T12:37:17.122000Z" profile="585394439715946518">со всех</discord-message>
+<discord-message id="m-1499706268904980540" timestamp="2026-05-01T12:37:17.702000Z" profile="625255619569647616">мы им банально не позволим застраивать так территорию</discord-message>
+<discord-message id="m-1499706284994203768" timestamp="2026-05-01T12:37:21.538000Z" profile="625255619569647616">потому что 2 месяца назад</discord-message>
+<discord-message id="m-1499706299653554218" timestamp="2026-05-01T12:37:25.033000Z" profile="625255619569647616">перед мятежом</discord-message>
+<discord-message id="m-1499706312148127775" timestamp="2026-05-01T12:37:28.012000Z" profile="625255619569647616">была точно такая же ситуация</discord-message>
+<discord-message id="m-1499706330519310466" timestamp="2026-05-01T12:37:32.392000Z" profile="625255619569647616">приезжали типы из СК РФ и прокуратуры</discord-message>
+<discord-message id="m-1499706346172452936" timestamp="2026-05-01T12:37:36.124000Z" profile="625255619569647616">снимали по рп домики у нас</discord-message>
+<discord-message id="m-1499706356436041840" timestamp="2026-05-01T12:37:38.571000Z" profile="625255619569647616">БАРРИКОДАРОВАЛИ ВСЕ</discord-message>
+<discord-message id="m-1499706362660126782" timestamp="2026-05-01T12:37:40.055000Z" profile="625255619569647616">и говорили</discord-message>
+<discord-message id="m-1499706387058659438" timestamp="2026-05-01T12:37:45.872000Z" profile="625255619569647616"><ul><br/><li>"ну наше же имущество"</li><br/></ul></discord-message>
+<discord-message id="m-1499706416615784580" timestamp="2026-05-01T12:37:52.919000Z" profile="625255619569647616">им все тогда сказали что они не правы</discord-message>
+<discord-message id="m-1499706432919044166" timestamp="2026-05-01T12:37:56.806000Z" profile="585394439715946518">они купили дома</discord-message>
+<discord-message id="m-1499706441978740867" timestamp="2026-05-01T12:37:58.966000Z" profile="585394439715946518">территория их</discord-message>
+<discord-message id="m-1499706454373044254" timestamp="2026-05-01T12:38:01.921000Z" profile="625255619569647616">они не покупаются</discord-message>
+<discord-message id="m-1499706462769774713" timestamp="2026-05-01T12:38:03.923000Z" profile="585394439715946518">они имеют право делать что хотят</discord-message>
+<discord-message id="m-1499706463759896596" timestamp="2026-05-01T12:38:04.159000Z" profile="625255619569647616">это блять заповедник</discord-message>
+<discord-message id="m-1499706483296829440" timestamp="2026-05-01T12:38:08.817000Z" profile="625255619569647616">это тупо лес</discord-message>
+<discord-message id="m-1499706497435832430" timestamp="2026-05-01T12:38:12.188000Z" profile="625255619569647616">туристическое место</discord-message>
+<discord-message id="m-1499706518621392987" timestamp="2026-05-01T12:38:17.239000Z" profile="625255619569647616">куда люди ездят отдохнуть</discord-message>
+<discord-message id="m-1499706542121943190" timestamp="2026-05-01T12:38:22.842000Z" profile="585394439715946518">ну так что тогда чоп делает в заповеднике</discord-message>
+<discord-message id="m-1499706542155366451" timestamp="2026-05-01T12:38:22.850000Z" profile="625255619569647616">на природе погулять</discord-message>
+<discord-message id="m-1499706556760199349" timestamp="2026-05-01T12:38:26.332000Z" profile="625255619569647616">там везде зоны отведенные</discord-message>
+<discord-message id="m-1499706582596845658" timestamp="2026-05-01T12:38:32.492000Z" profile="585394439715946518">если так думать</discord-message>
+<discord-message id="m-1499706585566675075" timestamp="2026-05-01T12:38:33.200000Z" profile="625255619569647616">потому что мы обеспечиваем там безопасность</discord-message>
+<discord-message id="m-1499706607196573787" timestamp="2026-05-01T12:38:38.357000Z" profile="625255619569647616">мы там лишнего не делаем</discord-message>
+<discord-message id="m-1499706623311220866" timestamp="2026-05-01T12:38:42.199000Z" profile="625255619569647616">у нас сотрудники стоят на КПП</discord-message>
+<discord-message id="m-1499706649194139801" timestamp="2026-05-01T12:38:48.370000Z" profile="585394439715946518">но дома функционально покупаются</discord-message>
+<discord-message id="m-1499706660523081728" timestamp="2026-05-01T12:38:51.071000Z" profile="625255619569647616">и патрулируют</discord-message>
+<discord-message id="m-1499706704361689248" timestamp="2026-05-01T12:39:01.523000Z" profile="585394439715946518"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1499706649194139801">но дома функционально покупаются</span></discord-reply>значит</discord-message>
+<discord-message id="m-1499706709562884237" timestamp="2026-05-01T12:39:02.763000Z" profile="585394439715946518">имеют право</discord-message>
+<discord-message id="m-1499706713903730911" timestamp="2026-05-01T12:39:03.798000Z" profile="625255619569647616">постоянные рпшки</discord-message>
+<discord-message id="m-1499706740441219142" timestamp="2026-05-01T12:39:10.125000Z" profile="625255619569647616">когда там люди не там палатки с кострами разведут</discord-message>
+<discord-message id="m-1499706751879086130" timestamp="2026-05-01T12:39:12.852000Z" profile="625255619569647616">мои ребята подъедут</discord-message>
+<discord-message id="m-1499706766894567514" timestamp="2026-05-01T12:39:16.432000Z" profile="625255619569647616">покажут лицензии</discord-message>
+<discord-message id="m-1499706790873399427" timestamp="2026-05-01T12:39:22.149000Z" profile="625255619569647616">попросят в специально отведенных местах это делать</discord-message>
+<discord-message id="m-1499706832250343475" timestamp="2026-05-01T12:39:32.014000Z" profile="625255619569647616">с целью соблюдения пожарной безопасности</discord-message>
+<discord-message id="m-1499706882603094066" timestamp="2026-05-01T12:39:44.019000Z" profile="625255619569647616">хорошо</discord-message>
+<discord-message id="m-1499706895856828480" timestamp="2026-05-01T12:39:47.179000Z" profile="625255619569647616">я просто сейчас че вижу</discord-message>
+<discord-message id="m-1499706907848347660" timestamp="2026-05-01T12:39:50.038000Z" profile="585394439715946518">опг выше чопа по приоритетности</discord-message>
+<discord-message id="m-1499706930904436828" timestamp="2026-05-01T12:39:55.535000Z" profile="625255619569647616">я понял</discord-message>
+<discord-message id="m-1499706940161396877" timestamp="2026-05-01T12:39:57.742000Z" profile="585394439715946518">чоп создан для одного человека</discord-message>
+<discord-message id="m-1499706940945727518" timestamp="2026-05-01T12:39:57.929000Z" profile="625255619569647616">хорошо</discord-message>
+<discord-message id="m-1499706951502659704" timestamp="2026-05-01T12:40:00.446000Z" profile="585394439715946518">ради его целей</discord-message>
+<discord-message id="m-1499706964937015427" timestamp="2026-05-01T12:40:03.649000Z" profile="625255619569647616">через месяц если мы их видем у себя на терре</discord-message>
+<discord-message id="m-1499706991902331001" timestamp="2026-05-01T12:40:10.078000Z" profile="625255619569647616">мы покоя не дадим</discord-message>
+<discord-message id="m-1499707001809276958" timestamp="2026-05-01T12:40:12.440000Z" profile="625255619569647616">пусть тикетами заливаются</discord-message>
+<discord-message id="m-1499707016640200915" timestamp="2026-05-01T12:40:15.976000Z" profile="625255619569647616">я им дышать не дам</discord-message>
+<discord-message id="m-1499707042808594432" timestamp="2026-05-01T12:40:22.215000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет закроется через несколько секунд...</span></div></div></div></discord-message>
+</discord-messages></body></html>
