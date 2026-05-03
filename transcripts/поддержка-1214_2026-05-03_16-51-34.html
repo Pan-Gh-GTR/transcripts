@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-1214</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/8f6e9a6ad7bdc609907d4c907ccadfd5.png?size=1024", "roleColor": "#006800", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/8e5424768addb0eab9fb87dcd89088bb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": true}, "848455511215964161": {"author": "Ask_Husky", "avatar": "https://cdn.discordapp.com/avatars/848455511215964161/95fa85932c13eaed1c3b4adab467a940.png?size=1024", "roleColor": "#2a88cb", "roleIcon": "https://cdn.discordapp.com/role-icons/1416177983378686052/3d06b544ab605eab4956042b2dad64fc.png?size=1024", "roleName": "Участник", "bot": false, "verified": false}, "1133665013794607114": {"author": "Pancakeboyman_8", "avatar": "https://cdn.discordapp.com/avatars/1133665013794607114/9952a7f75bf8748ecfd9a8e39af2e279.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1331342900205850686/c1fd358ec8be5422366cbf5b58e16e31.png?size=1024", "roleName": "Владелец", "bot": false, "verified": false}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.emoji-img {
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    object-fit: contain;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/a06dfa47e027eb8acdf25152e486f1c8.png?size=1024" timestamp="2026-05-03_16-51-34">Тикет Закрыт.<br/>Причина: Не указана<br/>Закрыл: <@848455511215964161><br/>Дата: 2026-05-03_16-51-34<br/><a href="https://transcripts.erlcrussia.xyz/transcripts/поддержка-1214_2026-05-03_16-51-34.html" style="color: #00aff4;">https://transcripts.erlcrussia.xyz/transcripts/поддержка-1214_2026-05-03_16-51-34.html</a></discord-message>
+<discord-message id="m-1500487323039826082" timestamp="2026-05-03T16:20:55.519000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="padding:8px;color:#dcddde;"><discord-mention type="role">Персонал ER:LC</discord-mention> <discord-mention type="role">Команда Модерации Discord</discord-mention> <discord-mention type="user">Ask_Husky</discord-mention></div><div style="background:#2f3136;border-left:4px solid #006800;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:8px 12px;"><div style="display:flex;gap:16px;align-items:flex-start;"><img src="https://cdn.discordapp.com/avatars/848455511215964161/95fa85932c13eaed1c3b4adab467a940.png?size=1024" style="width:80px;height:80px;border-radius:8px;object-fit:cover;flex-shrink:0;" /><div><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg" alt="📨" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Новый Тикет — Поддержка</span><br/><strong>В чём проблема:</strong><br/>Я хочу узнать больше деталей про <strong>разовую рекламу</strong>.<br/>Какие у неё условия, если проект не дотягивает до (обычной, платной) партнёрки с вашим проектом?<br/>Узнал про это в канале #партнёрства.</div></div></div><div style="padding:4px 12px;color:#dcddde;">⏳ <strong>Ожидайте ответа от персонала.</strong></div><div style="height:1px;background:#4f545c;margin:4px 0;"></div><div style="height:8px;"></div><div style="display:flex;gap:8px;padding:8px 0;flex-wrap:wrap;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Закрыть Тикет</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e4.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Освободить Тикет</button></div></div></div></discord-message>
+<discord-message id="m-1500491466273849444" timestamp="2026-05-03T16:37:23.343000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e5.svg" alt="📥" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет взят <discord-mention type="user">Pancakeboyman_8</discord-mention>.</span></div></div></div></discord-message>
+<discord-message id="m-1500491508925726781" timestamp="2026-05-03T16:37:33.512000Z" profile="1133665013794607114"><discord-mention type="user">Ask_Husky</discord-mention> давайте посмотрим, сколько у вас участников</discord-message>
+<discord-message id="m-1500491632754294865" timestamp="2026-05-03T16:38:03.035000Z" profile="848455511215964161"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1500491508925726781">@848455511215964161 давайте посмотрим, сколько у вас участников</span></discord-reply>Живых или мёртвых?</discord-message>
+<discord-message id="m-1500491691529076908" timestamp="2026-05-03T16:38:17.048000Z" profile="848455511215964161"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f615.svg" alt="😕" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/></discord-message>
+<discord-message id="m-1500491724819271751" timestamp="2026-05-03T16:38:24.985000Z" profile="1133665013794607114"><discord-reply slot="reply" author="Ask_Husky" avatar="" role-color="#2a88cb"><span data-goto="1500491632754294865">Живых или мёртвых?</span></discord-reply>Ну и тех и тех без ботов</discord-message>
+<discord-message id="m-1500493201218474046" timestamp="2026-05-03T16:44:16.986000Z" profile="848455511215964161"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1500491724819271751">Ну и тех и тех без ботов</span></discord-reply>Активные Участники: 2 человека<br/>Не активине участники проекта: 12<br/>Общие количество участников проекта: 17<br/>Ботов: 6 ботов.<br/>Общие количество на сервере: 23 участника (с ботами).<br/>Связанно это с тем что проект находится в стадии разработки.<br/>(По этому уточняю на счёт разовой рекламы чтобы хотя бы 5 человек на персонал поставить)</discord-message>
+<discord-message id="m-1500493595625656430" timestamp="2026-05-03T16:45:51.020000Z" profile="1133665013794607114"><discord-reply slot="reply" author="Ask_Husky" avatar="" role-color="#2a88cb"><span data-goto="1500493201218474046">Активные Участники: 2 человека
+Не активине участники проекта: 12
+Общие количество участников проекта</span></discord-reply>ну там дорого выйдет</discord-message>
+<discord-message id="m-1500493946118471711" timestamp="2026-05-03T16:47:14.584000Z" profile="848455511215964161"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1500493595625656430">ну там дорого выйдет</span></discord-reply>разовая реклама подразумевает плата за 1 сообщение в канале партнёров?<br/>А платное партнёрство собственно тоже самое на установленный период срока?</discord-message>
+<discord-message id="m-1500494336645791935" timestamp="2026-05-03T16:48:47.693000Z" profile="1133665013794607114"><discord-reply slot="reply" author="Ask_Husky" avatar="" role-color="#2a88cb"><span data-goto="1500493946118471711">разовая реклама подразумевает плата за 1 сообщение в канале партнёров?
+А платное партнёрство собстве</span></discord-reply>Ну мы не будем рассматривать под вас партнёрство, потому что партнёрство это другое</discord-message>
+<discord-message id="m-1500494626501693653" timestamp="2026-05-03T16:49:56.800000Z" profile="848455511215964161"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1500494336645791935">Ну мы не будем рассматривать под вас партнёрство, потому что партнёрство это другое</span></discord-reply>а реклама любого рода только оплатная?</discord-message>
+<discord-message id="m-1500494761121808557" timestamp="2026-05-03T16:50:28.896000Z" profile="1133665013794607114"><discord-reply slot="reply" author="Ask_Husky" avatar="" role-color="#2a88cb"><span data-goto="1500494626501693653">а реклама любого рода только оплатная?</span></discord-reply>Для вас, да</discord-message>
+<discord-message id="m-1500494830290079814" timestamp="2026-05-03T16:50:45.387000Z" profile="1133665013794607114">Я думаю достаточно логично почему</discord-message>
+<discord-message id="m-1500495005536747580" timestamp="2026-05-03T16:51:27.169000Z" profile="848455511215964161"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1500494830290079814">Я думаю достаточно логично почему</span></discord-reply>всё же странно было даже предполагать что ответ будет не таким.</discord-message>
+<discord-message id="m-1500495034334842951" timestamp="2026-05-03T16:51:34.035000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет закроется через несколько секунд...</span></div></div></div></discord-message>
+</discord-messages></body></html>
