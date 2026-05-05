@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-1199</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/8f6e9a6ad7bdc609907d4c907ccadfd5.png?size=1024", "roleColor": "#006800", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/8e5424768addb0eab9fb87dcd89088bb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": true}, "780342958032945192": {"author": "eveningdawn228", "avatar": "https://cdn.discordapp.com/avatars/780342958032945192/b0b4e4af053509b55ca8662f6a2c137d.png?size=1024", "roleColor": "#2a88cb", "roleIcon": "https://cdn.discordapp.com/role-icons/1416177983378686052/3d06b544ab605eab4956042b2dad64fc.png?size=1024", "roleName": "Участник", "bot": false, "verified": false}, "1059736820876853248": {"author": "Государь Император koronsdf", "avatar": "https://cdn.discordapp.com/avatars/1059736820876853248/abdb75f461a6290a85006c82959d7192.png?size=1024", "roleColor": "#ffd700", "roleIcon": "https://cdn.discordapp.com/role-icons/1422974739609292850/95e4088940371977549005ced9681737.png?size=1024", "roleName": "Государь Император и Самодержец Всероссийский", "bot": false, "verified": false}, "1195675629010558986": {"author": "[PR-011] The_Borisik", "avatar": "https://cdn.discordapp.com/guilds/1331331077553262765/users/1195675629010558986/avatars/16b83fbe315df0f2f7ee3e08fee39600.png?size=1024", "roleColor": "#424cff", "roleIcon": "https://cdn.discordapp.com/role-icons/1410712605579939982/df9f61918e58e298252dbcbfe910e849.png?size=1024", "roleName": "Пробный Игрок", "bot": false, "verified": false}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.emoji-img {
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    object-fit: contain;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/a06dfa47e027eb8acdf25152e486f1c8.png?size=1024" timestamp="2026-05-05_20-55-53">Тикет Закрыт.<br/>Причина: Решено<br/>Закрыл: <@1059736820876853248><br/>Дата: 2026-05-05_20-55-53<br/><a href="https://transcripts.erlcrussia.xyz/transcripts/поддержка-1199_2026-05-05_20-55-53.html" style="color: #00aff4;">https://transcripts.erlcrussia.xyz/transcripts/поддержка-1199_2026-05-05_20-55-53.html</a></discord-message>
+<discord-message id="m-1499716800253001729" timestamp="2026-05-01T13:19:08.571000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="padding:8px;color:#dcddde;"><discord-mention type="role">Персонал ER:LC</discord-mention> <discord-mention type="role">Команда Модерации Discord</discord-mention> <discord-mention type="user">eveningdawn228</discord-mention></div><div style="background:#2f3136;border-left:4px solid #006800;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:8px 12px;"><div style="display:flex;gap:16px;align-items:flex-start;"><img src="https://cdn.discordapp.com/avatars/780342958032945192/b0b4e4af053509b55ca8662f6a2c137d.png?size=1024" style="width:80px;height:80px;border-radius:8px;object-fit:cover;flex-shrink:0;" /><div><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg" alt="📨" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Новый Тикет — Поддержка</span><br/><strong>В чём проблема:</strong><br/>здраствуйте я хотел создать свою организацию под названием чвк, можете ли вы мне с этим помочь</div></div></div><div style="padding:4px 12px;color:#dcddde;">⏳ <strong>Ожидайте ответа от персонала.</strong></div><div style="height:1px;background:#4f545c;margin:4px 0;"></div><div style="height:8px;"></div><div style="display:flex;gap:8px;padding:8px 0;flex-wrap:wrap;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Закрыть Тикет</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e4.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Освободить Тикет</button></div></div></div></discord-message>
+<discord-message id="m-1499716928510496928" timestamp="2026-05-01T13:19:39.150000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e5.svg" alt="📥" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет взят <discord-mention type="user">Государь Император koronsdf</discord-mention>.</span></div></div></div></discord-message>
+<discord-message id="m-1499716946533285969" timestamp="2026-05-01T13:19:43.447000Z" profile="1059736820876853248"><strong><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f44b.svg" alt="👋" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/>Здравствуйте!</strong><br/><em>Я являюсь <strong>Менеджером Фракций Проекта Moscow Roleplay</strong>, на данный момент я рассматриваю тикет. По вашей надобности я могу освободить его</em></discord-message>
+<discord-message id="m-1499717207045701763" timestamp="2026-05-01T13:20:45.558000Z" profile="1059736820876853248"><discord-mention type="user">eveningdawn228</discord-mention> <br/>Что за ЧВК вы хотите</discord-message>
+<discord-message id="m-1499717249995378748" timestamp="2026-05-01T13:20:55.798000Z" profile="1059736820876853248"><small>К неофициальным ОПГ также относятся: любые ЧВК и неофициальные охранные организации.</small></discord-message>
+<discord-message id="m-1499720432570339418" timestamp="2026-05-01T13:33:34.583000Z" profile="780342958032945192"><discord-reply slot="reply" author="Государь Император koronsdf" avatar="" role-color="#ffd700"><span data-goto="1499717207045701763">@780342958032945192 
+
+Что за ЧВК вы хотите</span></discord-reply>мини лор: двое бывших военных хотят основать свой чвк для помощи сотрудникам гос организаций , также помощь в коммуникации между опг и полицией и всё в таком роде иногда мы можем перейти за черту закона если это надо . также хочу заранее спросить сможем ли мы рассчитывать на личную территорию</discord-message>
+<discord-message id="m-1499720582789337118" timestamp="2026-05-01T13:34:10.398000Z" profile="1059736820876853248"><discord-reply slot="reply" author="eveningdawn228" avatar="" role-color="#2a88cb"><span data-goto="1499720432570339418">мини лор: двое бывших военных хотят основать свой чвк для помощи сотрудникам гос организаций , также</span></discord-reply>К неофициальным ОПГ также относятся: любые ЧВК и неофициальные охранные организации.</discord-message>
+<discord-message id="m-1499720792433491968" timestamp="2026-05-01T13:35:00.381000Z" profile="1059736820876853248">Так что легально вы не сможете открыть свое ЧВК</discord-message>
+<discord-message id="m-1499720913250160670" timestamp="2026-05-01T13:35:29.186000Z" profile="780342958032945192">в таком случие опг название: чвк</discord-message>
+<discord-message id="m-1499720950126743552" timestamp="2026-05-01T13:35:37.978000Z" profile="780342958032945192">так же можно</discord-message>
+<discord-message id="m-1499721897787658250" timestamp="2026-05-01T13:39:23.918000Z" profile="780342958032945192">вы тут?</discord-message>
+<discord-message id="m-1500529640220131418" timestamp="2026-05-03T19:09:04.721000Z" profile="780342958032945192">мистер</discord-message>
+<discord-message id="m-1500529658746372299" timestamp="2026-05-03T19:09:09.138000Z" profile="780342958032945192">имератор</discord-message>
+<discord-message id="m-1500529685992444017" timestamp="2026-05-03T19:09:15.634000Z" profile="780342958032945192">вы это самое</discord-message>
+<discord-message id="m-1500529700995334257" timestamp="2026-05-03T19:09:19.211000Z" profile="780342958032945192">очнитесь</discord-message>
+<discord-message id="m-1500529721463799808" timestamp="2026-05-03T19:09:24.091000Z" profile="780342958032945192">пожалуйста</discord-message>
+<discord-message id="m-1500533364254445722" timestamp="2026-05-03T19:23:52.600000Z" profile="1059736820876853248">Заявки на ОПГ не рассматриваются<br/><a href="https://discord.com/channels/1335661836342919259/1350154887597523006/1473384809777856718" style="color: #00aff4; text-decoration: underline;" target="_blank">https://discord.com/channels/1335661836342919259/1350154887597523006/1473384809777856718</a></discord-message>
+<discord-message id="m-1501152538014126172" timestamp="2026-05-05T12:24:15.128000Z" profile="1195675629010558986">Тикет закрываем?</discord-message>
+<discord-message id="m-1501281294691209287" timestamp="2026-05-05T20:55:53.112000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет закроется через несколько секунд...</span></div></div></div></discord-message>
+</discord-messages></body></html>
