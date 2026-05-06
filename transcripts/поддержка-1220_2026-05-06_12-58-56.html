@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-1220</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/8f6e9a6ad7bdc609907d4c907ccadfd5.png?size=1024", "roleColor": "#006800", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/8e5424768addb0eab9fb87dcd89088bb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": true}, "1272228304702931024": {"author": "egor_29aa", "avatar": "https://cdn.discordapp.com/avatars/1272228304702931024/a461215c0a600fa71d92b8ffe933e6bc.png?size=1024", "roleColor": "#2a88cb", "roleIcon": "https://cdn.discordapp.com/role-icons/1416177983378686052/3d06b544ab605eab4956042b2dad64fc.png?size=1024", "roleName": "Участник", "bot": false, "verified": false}, "1411384931548135604": {"author": "dimkasik125", "avatar": "https://cdn.discordapp.com/avatars/1411384931548135604/46ab63371ff5b13f80f2205941b2f4a3.png?size=1024", "roleColor": "#ffd000", "roleIcon": "https://cdn.discordapp.com/role-icons/1416421146068385902/a87ab0324cb91fc0e883d011fbfabc86.png?size=1024", "roleName": "Работник Недели", "bot": false, "verified": false}, "1363531806586048755": {"author": "Moscow RolePlay Roblox", "avatar": "https://cdn.discordapp.com/avatars/1363531806586048755/35ea443c68b7400cd036322e591042ef.png?size=1024", "roleColor": "#cc2641", "roleIcon": "https://cdn.discordapp.com/role-icons/1363544547870900358/3b6e22a9df7fe7b380b3bbeb6a5afdd1.png?size=1024", "roleName": "Moscow RolePlay Roblox", "bot": true, "verified": false}, "585394439715946518": {"author": "savingbox3", "avatar": "https://cdn.discordapp.com/avatars/585394439715946518/e82f31f878077dcd383254c613d59c3d.png?size=1024", "roleColor": "#d4843d", "roleIcon": "https://cdn.discordapp.com/role-icons/1483091539973373993/b2b1d515e0da04921b1553fe55d87eea.png?size=1024", "roleName": "Руководство Проекта", "bot": false, "verified": false}, "1420862486575317052": {"author": "ClueControl M", "avatar": "https://cdn.discordapp.com/avatars/1420862486575317052/d363f844d769990c2af3e90b85fef455.png?size=1024", "roleColor": "#e9434e", "roleIcon": "https://cdn.discordapp.com/role-icons/1420862759884685518/7cf765e674445602cfa8cfce86c114eb.png?size=1024", "roleName": "ClueControl M", "bot": true, "verified": false}, "1133665013794607114": {"author": "Pancakeboyman_8", "avatar": "https://cdn.discordapp.com/avatars/1133665013794607114/9952a7f75bf8748ecfd9a8e39af2e279.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1331342900205850686/c1fd358ec8be5422366cbf5b58e16e31.png?size=1024", "roleName": "Владелец", "bot": false, "verified": false}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.emoji-img {
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    object-fit: contain;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/a06dfa47e027eb8acdf25152e486f1c8.png?size=1024" timestamp="2026-05-06_12-58-56">Тикет Закрыт.<br/>Причина: Проблема решена.<br/>Закрыл: <@585394439715946518><br/>Дата: 2026-05-06_12-58-56<br/><a href="https://transcripts.erlcrussia.xyz/transcripts/поддержка-1220_2026-05-06_12-58-56.html" style="color: #00aff4;">https://transcripts.erlcrussia.xyz/transcripts/поддержка-1220_2026-05-06_12-58-56.html</a></discord-message>
+<discord-message id="m-1500544520490848440" timestamp="2026-05-03T20:08:12.454000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="padding:8px;color:#dcddde;"><discord-mention type="role">Персонал ER:LC</discord-mention> <discord-mention type="role">Команда Модерации Discord</discord-mention> <discord-mention type="user">egor_29aa</discord-mention></div><div style="background:#2f3136;border-left:4px solid #006800;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:8px 12px;"><div style="display:flex;gap:16px;align-items:flex-start;"><img src="https://cdn.discordapp.com/avatars/1272228304702931024/a461215c0a600fa71d92b8ffe933e6bc.png?size=1024" style="width:80px;height:80px;border-radius:8px;object-fit:cover;flex-shrink:0;" /><div><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg" alt="📨" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Новый Тикет — Поддержка</span><br/><strong>В чём проблема:</strong><br/>аппеляцию открыть надо</div></div></div><div style="padding:4px 12px;color:#dcddde;">⏳ <strong>Ожидайте ответа от персонала.</strong></div><div style="height:1px;background:#4f545c;margin:4px 0;"></div><div style="height:8px;"></div><div style="display:flex;gap:8px;padding:8px 0;flex-wrap:wrap;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Закрыть Тикет</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e4.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Освободить Тикет</button></div></div></div></discord-message>
+<discord-message id="m-1500544544494719157" timestamp="2026-05-03T20:08:18.177000Z" profile="1272228304702931024"><discord-attachments slot="attachments"><discord-attachment type="image" filename="image.png" url="https://transcripts.erlcrussia.xyz/attachments/1500544544494719157_1500544544528404480.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1500551392300105879" timestamp="2026-05-03T20:35:30.821000Z" profile="1411384931548135604">Здравствуйте <img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f44b.svg" alt="👋" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/>! Я <discord-mention type="user">dimkasik125</discord-mention>  <strong> Старший Модератор</strong> Discord <strong>Moscow RolePlay</strong>. Спасибо, что обратились в <strong>тикет</strong>. В данный момент ваш тикет рассматриваю я. Если возникнет необходимость, я передам тикет сотруднику с более высоким рангом или сообщу о временном уходе.</discord-message>
+<discord-message id="m-1500551436474515586" timestamp="2026-05-03T20:35:41.353000Z" profile="1411384931548135604">Сейчас анализирую вашу ситуацию</discord-message>
+<discord-message id="m-1500551497182871724" timestamp="2026-05-03T20:35:55.827000Z" profile="1363531806586048755"><discord-embed title="egor_29aa" slot="embeds" color="#2b2d31" thumbnail="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-62F9458A32E1F204AA06AE17DD5E56F6-Png/48/48/AvatarHeadshot/Png/noFilter"><discord-embed-fields slot="fields"><discord-embed-field field-title="Бан"><blockquote> <strong>Модератор:</strong> <discord-mention type="user">User#625255619569647616</discord-mention></blockquote><br/><blockquote> <strong>Причина:</strong> Ban | Массовое нарушение правил проекта + Полное неадекватное поведение. NITRP + MFRP + MRDM + C-1 + MVDM + A-11 + Упоминание родных + Неадекватное поведение + E-2. | Ban до 3-го числа без возможности ранней аппеляции.</blockquote><br/><blockquote> <strong>Время:</strong> <t:1766229256:f></blockquote><br/><blockquote> <strong>ID предупреждения:</strong> <code>7408102434138750976</code></blockquote><br/><blockquote> <strong>Выдано баллов:</strong> 4</blockquote></discord-embed-field></discord-embed-fields><discord-embed-author slot="author" name="lort_kyrt" icon="https://cdn.discordapp.com/avatars/1411384931548135604/46ab63371ff5b13f80f2205941b2f4a3.webp"></discord-embed-author></discord-embed><div slot="components" style="margin-top:8px;"><div class="discord-components-row" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdn.discordapp.com/emojis/1412877220942188606.png" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />None</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;">4</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdn.discordapp.com/emojis/1412877222737350656.png" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />None</button></div></div></discord-message>
+<discord-message id="m-1500551804507783290" timestamp="2026-05-03T20:37:09.099000Z" profile="1411384931548135604">Сейчас попрошу выше</discord-message>
+<discord-message id="m-1500557062432886968" timestamp="2026-05-03T20:58:02.686000Z" profile="585394439715946518">Вроде бы разбанил</discord-message>
+<discord-message id="m-1500557079709089922" timestamp="2026-05-03T20:58:06.805000Z" profile="585394439715946518">Проверьте пожалуйста</discord-message>
+<discord-message id="m-1500557258923180233" timestamp="2026-05-03T20:58:49.533000Z" profile="1420862486575317052"><discord-embed title="egor_29aa" slot="embeds" color="#2b2d31"><discord-embed-fields slot="fields"><discord-embed-field field-title="Player Information"><blockquote> <strong>Username:</strong> egor_29aa</blockquote><br/><blockquote> <strong>Display Name:</strong> Zakat</blockquote><br/><blockquote> <strong>User ID:</strong> <code>2816660329</code></blockquote><br/><blockquote> <strong>Friend Count:</strong> 54</blockquote><br/><blockquote> <strong>Created At:</strong> <t:1629208208></blockquote></discord-embed-field><discord-embed-field field-title="Punishments"><blockquote> <strong>Total Punishments:</strong> 7</blockquote><br/><blockquote> <strong>Warnings:</strong> 5</blockquote><br/><blockquote> <strong>Kicks:</strong> 1</blockquote><br/><blockquote> <strong>Bans:</strong> 1</blockquote><br/><blockquote> <strong>BOLOs:</strong> 0</blockquote><br/><blockquote> <strong>Other:</strong> 0</blockquote></discord-embed-field><discord-embed-field field-title="Player Alerts">No alerts found for this account!</discord-embed-field></discord-embed-fields><discord-embed-author slot="author" name="kaptan4984" icon="https://cdn.discordapp.com/avatars/585394439715946518/e82f31f878077dcd383254c613d59c3d.png?size=1024"></discord-embed-author></discord-embed><div slot="components" style="margin-top:8px;"><div class="discord-components-row" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdn.discordapp.com/emojis/1421123603495391232.png" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />None</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;">1</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdn.discordapp.com/emojis/1421123601028874250.png" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />None</button></div></div></discord-message>
+<discord-message id="m-1500808608919719987" timestamp="2026-05-04T13:37:36.042000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e5.svg" alt="📥" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет взят <discord-mention type="user">savingbox3</discord-mention>.</span></div></div></div></discord-message>
+<discord-message id="m-1500808627081052160" timestamp="2026-05-04T13:37:40.372000Z" profile="585394439715946518">забыл взять</discord-message>
+<discord-message id="m-1500808670106357903" timestamp="2026-05-04T13:37:50.630000Z" profile="585394439715946518">прошу проверить и отписаться сюда</discord-message>
+<discord-message id="m-1500862978201878642" timestamp="2026-05-04T17:13:38.689000Z" profile="1272228304702931024"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1500808670106357903">прошу проверить и отписаться сюда</span></discord-reply>разбанили, благодарю</discord-message>
+<discord-message id="m-1500863047726661744" timestamp="2026-05-04T17:13:55.265000Z" profile="1272228304702931024">я не пинговал<img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f614.svg" alt="😔" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/></discord-message>
+<discord-message id="m-1500863478280359986" timestamp="2026-05-04T17:15:37.917000Z" profile="1272228304702931024">разбаньте на сервере фсб пожалуйста, и на других если есть баны</discord-message>
+<discord-message id="m-1500881336305582261" timestamp="2026-05-04T18:26:35.602000Z" profile="585394439715946518"><discord-mention type="user">Pancakeboyman_8</discord-mention> команда глобального разбана почему то не работает</discord-message>
+<discord-message id="m-1500881347324018768" timestamp="2026-05-04T18:26:38.229000Z" profile="585394439715946518">пишет нет прав</discord-message>
+<discord-message id="m-1500882172104413184" timestamp="2026-05-04T18:29:54.872000Z" profile="1133665013794607114"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1500881336305582261">@1133665013794607114 команда глобального разбана почему то не работает</span></discord-reply>Я права мб не выдал</discord-message>
+<discord-message id="m-1500882179318874326" timestamp="2026-05-04T18:29:56.592000Z" profile="1133665013794607114">я сделал</discord-message>
+<discord-message id="m-1500892701690953910" timestamp="2026-05-04T19:11:45.321000Z" profile="1272228304702931024">где взять ссылку на сервак фсб</discord-message>
+<discord-message id="m-1500895938355531776" timestamp="2026-05-04T19:24:37.002000Z" profile="585394439715946518">#📂┃информация-𝖤𝖱𝖫𝖢</discord-message>
+<discord-message id="m-1500895949009060003" timestamp="2026-05-04T19:24:39.542000Z" profile="585394439715946518">и там фракции</discord-message>
+<discord-message id="m-1501523651529543770" timestamp="2026-05-06T12:58:55.485000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет закроется через несколько секунд...</span></div></div></div></discord-message>
+</discord-messages></body></html>
