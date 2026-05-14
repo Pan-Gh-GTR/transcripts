@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — жалоба-на-участника-discord-0004</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/8f6e9a6ad7bdc609907d4c907ccadfd5.png?size=1024", "roleColor": "#006800", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/8e5424768addb0eab9fb87dcd89088bb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": true}, "719906238627840022": {"author": "dewolf2229", "avatar": "https://cdn.discordapp.com/avatars/719906238627840022/91de107b268981acacd99c8b835993a5.png?size=1024", "roleColor": "#2a88cb", "roleIcon": "https://cdn.discordapp.com/role-icons/1416177983378686052/3d06b544ab605eab4956042b2dad64fc.png?size=1024", "roleName": "Участник", "bot": false, "verified": false}, "1211696360558952509": {"author": "Bandit_Lotman", "avatar": "https://cdn.discordapp.com/avatars/1211696360558952509/682a703ac96cd1fb40461ce9b039a6be.png?size=1024", "roleColor": "#0ba348", "roleIcon": "https://cdn.discordapp.com/role-icons/1416202584120623225/bd07e078ba8d33b7fe5b50fd4f167a6e.png?size=1024", "roleName": "Модератор Discord", "bot": false, "verified": false}, "994164698654187580": {"author": "[MD-013] Maye", "avatar": "https://cdn.discordapp.com/avatars/994164698654187580/2545779352ef015348f26eb2ccc46bee.png?size=1024", "roleColor": "#921813", "roleIcon": "https://cdn.discordapp.com/role-icons/1459965959258378412/2c143b327e01ee0e9694b7ba67e7a8a0.png?size=1024", "roleName": "Команда Внутренних Дел Discord", "bot": false, "verified": false}, "1059736820876853248": {"author": "Государь Император koronsdf", "avatar": "https://cdn.discordapp.com/avatars/1059736820876853248/abdb75f461a6290a85006c82959d7192.png?size=1024", "roleColor": "#ffd700", "roleIcon": "https://cdn.discordapp.com/role-icons/1422974739609292850/95e4088940371977549005ced9681737.png?size=1024", "roleName": "Государь Император и Самодержец Всероссийский", "bot": false, "verified": false}, "1027118272879009886": {"author": "12446alex", "avatar": "https://cdn.discordapp.com/avatars/1027118272879009886/eccdf54b74018fb10ea9613fa43f8f92.png?size=1024", "roleColor": "#d4843d", "roleIcon": "https://cdn.discordapp.com/role-icons/1483091539973373993/b2b1d515e0da04921b1553fe55d87eea.png?size=1024", "roleName": "Руководство Проекта", "bot": false, "verified": false}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.emoji-img {
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    object-fit: contain;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/a06dfa47e027eb8acdf25152e486f1c8.png?size=1024" timestamp="2026-05-14_10-26-55">Тикет Закрыт.<br/>Причина: Лидеру ФСБ было дано указание про набор, проведена беседа. Если опять такое повторится, то лидер будет наказан - ответ менеджера фракций<br/>Закрыл: <@994164698654187580><br/>Дата: 2026-05-14_10-26-55<br/><a href="https://transcripts.erlcrussia.xyz/transcripts/жалоба-на-участника-discord-0004_2026-05-14_10-26-55.html" style="color: #00aff4;">https://transcripts.erlcrussia.xyz/transcripts/жалоба-на-участника-discord-0004_2026-05-14_10-26-55.html</a></discord-message>
+<discord-message id="m-1504202886878330920" timestamp="2026-05-13T22:25:14.970000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="padding:8px;color:#dcddde;"><discord-mention type="role">Персонал Discord</discord-mention> <discord-mention type="user">dewolf2229</discord-mention></div><div style="background:#2f3136;border-left:4px solid #006800;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:8px 12px;"><div style="display:flex;gap:16px;align-items:flex-start;"><img src="https://cdn.discordapp.com/avatars/719906238627840022/91de107b268981acacd99c8b835993a5.png?size=1024" style="width:80px;height:80px;border-radius:8px;object-fit:cover;flex-shrink:0;" /><div><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg" alt="📨" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Новый Тикет — Жалоба на участника Discord</span><br/><strong>Нарушитель:</strong><br/>golibi.<br/><strong>Что сделал:</strong><br/>Слишком много наборов в ФСБ, проблема заключается в том что по балансу ФСБ всегда больше, + сложно набирать в ведомства других сотрудников(МВД,СК,Прокуратура и тд) так как мультифракция в случае с ФСБ запрещена, лидеру вообще плевать хотелось на баланс, а то что МВД нету ну так же его не волнует, пусть хотя бы остановиться открывать эти наборы<br/><strong>Когда:</strong><br/>На неделе +- 3 раза вроде бы<br/><strong>Доказательства:</strong><br/>Пресс-центр ФСБ</div></div></div><div style="padding:4px 12px;color:#dcddde;">⏳ <strong>Ожидайте ответа от персонала.</strong></div><div style="height:1px;background:#4f545c;margin:4px 0;"></div><div style="height:8px;"></div><div style="display:flex;gap:8px;padding:8px 0;flex-wrap:wrap;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Закрыть Тикет</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e5.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Взять Тикет</button></div></div></div></discord-message>
+<discord-message id="m-1504203128021585934" timestamp="2026-05-13T22:26:12.463000Z" profile="1211696360558952509">Извиняюсь что вмешиваюсь я этого не должен делать, но 2 сотрудника фсб буквально пол часа назад перешли в МВД</discord-message>
+<discord-message id="m-1504203215552647249" timestamp="2026-05-13T22:26:33.332000Z" profile="719906238627840022">Ну если соотнести это, ещё 4 новых места, и будет на 2 больше</discord-message>
+<discord-message id="m-1504203237572477021" timestamp="2026-05-13T22:26:38.582000Z" profile="719906238627840022">Тут даже роли не играет кто пришёл а кто ушёл</discord-message>
+<discord-message id="m-1504203248200978582" timestamp="2026-05-13T22:26:41.116000Z" profile="719906238627840022">МВД буквально нету</discord-message>
+<discord-message id="m-1504203277900710060" timestamp="2026-05-13T22:26:48.197000Z" profile="719906238627840022">На сессиях дай бог увидишь там 2-3 человека</discord-message>
+<discord-message id="m-1504203302324408432" timestamp="2026-05-13T22:26:54.020000Z" profile="719906238627840022">ППС которые нужны нема</discord-message>
+<discord-message id="m-1504203310570406029" timestamp="2026-05-13T22:26:55.986000Z" profile="719906238627840022">ДПС есть благо</discord-message>
+<discord-message id="m-1504203313762271292" timestamp="2026-05-13T22:26:56.747000Z" profile="719906238627840022">СПП</discord-message>
+<discord-message id="m-1504203325074182204" timestamp="2026-05-13T22:26:59.444000Z" profile="1211696360558952509">Я просто сказал, все я не вмешиваюсь ждите ответа</discord-message>
+<discord-message id="m-1504203329599701022" timestamp="2026-05-13T22:27:00.523000Z" profile="719906238627840022">Не видел наверное сессии 2</discord-message>
+<discord-message id="m-1504203365683560488" timestamp="2026-05-13T22:27:09.126000Z" profile="719906238627840022"><discord-reply slot="reply" author="Bandit_Lotman" avatar="" role-color="#0ba348"><span data-goto="1504203325074182204">Я просто сказал, все я не вмешиваюсь ждите ответа</span></discord-reply>Да я просто ответил<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1504203370985160864" timestamp="2026-05-13T22:27:10.390000Z" profile="719906238627840022">-_0</discord-message>
+<discord-message id="m-1504203693229347007" timestamp="2026-05-13T22:28:27.219000Z" profile="719906238627840022">Ну просто извините меня кншн, но даже в ФСО мы так не наглеем, взяли 3 человека и живём кое-как, понимая что баланс не хотим нарушать, а учесть что президент часто на сессиях появляется-нас должно быть намнооооооооооого больше</discord-message>
+<discord-message id="m-1504203761852092446" timestamp="2026-05-13T22:28:43.580000Z" profile="719906238627840022">Но по итогу ФСБ и всё 0_0</discord-message>
+<discord-message id="m-1504204499198414980" timestamp="2026-05-13T22:31:39.377000Z" profile="994164698654187580">$удалить <discord-mention type="role">Персонал Discord</discord-mention></discord-message>
+<discord-message id="m-1504204502931083316" timestamp="2026-05-13T22:31:40.267000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #8c0000;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2796.svg" alt="➖" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> <discord-mention type="role">Персонал Discord</discord-mention> удалён из тикета <discord-mention type="user">[MD-013] Maye</discord-mention>.</span></div></div></div></discord-message>
+<discord-message id="m-1504205029366829127" timestamp="2026-05-13T22:33:45.779000Z" profile="994164698654187580">Добрый вечер! Пожалуйста, дождитесь ответа от менеджера фракций <discord-mention type="user">Государь Император koronsdf</discord-mention><discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1504215897508937819" timestamp="2026-05-13T23:16:56.946000Z" profile="1027118272879009886"><discord-reply slot="reply" author="dewolf2229" avatar="" role-color="#2a88cb"><span data-goto="1504203370985160864">-_0</span></discord-reply>Здравствуйте, мы очень сожалеем, что вы не получили ответ на свой вопрос в течение часа. Постараемся разобраться в этом и ускорить процесс рассмотрения данного тикета</discord-message>
+<discord-message id="m-1504215948100370613" timestamp="2026-05-13T23:17:09.008000Z" profile="719906238627840022">Ну бывает чё</discord-message>
+<discord-message id="m-1504216097828900924" timestamp="2026-05-13T23:17:44.706000Z" profile="1027118272879009886"><discord-reply slot="reply" author="dewolf2229" avatar="" role-color="#2a88cb"><span data-goto="1504215948100370613">Ну бывает чё</span></discord-reply>А также проведем беседу с менеджером фракций<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f480.svg" count="2"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1504216119588814959" timestamp="2026-05-13T23:17:49.894000Z" profile="1027118272879009886">Приносим свои извинения<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f480.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1504324178482954362" timestamp="2026-05-14T06:27:13.142000Z" profile="1059736820876853248"><discord-reply slot="reply" author="Moscow RolePlay" avatar="" role-color="#006800"><span data-goto="1504202886878330920">[deleted]</span></discord-reply>Лидеру ФСБ было дано указание про набор, проведена беседа. Если опять такое повторится, то лидер будет наказан<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f480.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1504367746169835530" timestamp="2026-05-14T09:20:20.488000Z" profile="994164698654187580"><discord-mention type="user">dewolf2229</discord-mention> закрываю тикет?</discord-message>
+<discord-message id="m-1504371637078855793" timestamp="2026-05-14T09:35:48.153000Z" profile="719906238627840022">Ну да получается</discord-message>
+<discord-message id="m-1504384502347206667" timestamp="2026-05-14T10:26:55.472000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет закроется через несколько секунд...</span></div></div></div></discord-message>
+</discord-messages></body></html>
