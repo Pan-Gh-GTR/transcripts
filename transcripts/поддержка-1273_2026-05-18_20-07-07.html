@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-1273</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/8f6e9a6ad7bdc609907d4c907ccadfd5.png?size=1024", "roleColor": "#006800", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/8e5424768addb0eab9fb87dcd89088bb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": true}, "1219303703085973566": {"author": "hartme28", "avatar": "https://cdn.discordapp.com/avatars/1219303703085973566/d3cb290d752b01a6006e29c945bb9178.png?size=1024", "roleColor": "#a0041e", "roleIcon": "", "roleName": "Ивент-Мейкер", "bot": false, "verified": false}, "585394439715946518": {"author": "savingbox3", "avatar": "https://cdn.discordapp.com/avatars/585394439715946518/e82f31f878077dcd383254c613d59c3d.png?size=1024", "roleColor": "#d4843d", "roleIcon": "https://cdn.discordapp.com/role-icons/1483091539973373993/b2b1d515e0da04921b1553fe55d87eea.png?size=1024", "roleName": "Руководство Проекта", "bot": false, "verified": false}, "501686815120687105": {"author": "[PR-018] Лидер Мнений sqw1rtiq", "avatar": "https://cdn.discordapp.com/avatars/501686815120687105/7be30e7e7930d313bb7819c6f49a019f.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1426830509962432613/c0d406b9b857befae1149fc48c77038b.png?size=1024", "roleName": "крипс генг", "bot": false, "verified": false}, "155149108183695360": {"author": "Dyno", "avatar": "https://cdn.discordapp.com/avatars/155149108183695360/b4fdfc64edff74c37e1574d34fad66c2.png?size=1024", "roleColor": "#2d7dd1", "roleIcon": "https://cdn.discordapp.com/role-icons/1338594881374912685/d9609020bcaf37f8ba7c9b3345f70579.png?size=1024", "roleName": "Dyno", "bot": true, "verified": true}, "1420862486575317052": {"author": "ClueControl M", "avatar": "https://cdn.discordapp.com/avatars/1420862486575317052/d363f844d769990c2af3e90b85fef455.png?size=1024", "roleColor": "#e9434e", "roleIcon": "https://cdn.discordapp.com/role-icons/1420862759884685518/7cf765e674445602cfa8cfce86c114eb.png?size=1024", "roleName": "ClueControl M", "bot": true, "verified": false}, "1363531806586048755": {"author": "Moscow RolePlay Roblox", "avatar": "https://cdn.discordapp.com/avatars/1363531806586048755/35ea443c68b7400cd036322e591042ef.png?size=1024", "roleColor": "#cc2641", "roleIcon": "https://cdn.discordapp.com/role-icons/1363544547870900358/3b6e22a9df7fe7b380b3bbeb6a5afdd1.png?size=1024", "roleName": "Moscow RolePlay Roblox", "bot": true, "verified": false}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.emoji-img {
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    object-fit: contain;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/a06dfa47e027eb8acdf25152e486f1c8.png?size=1024" timestamp="2026-05-18_20-07-07">Тикет Закрыт.<br/>Причина: Проблема решена.<br/>Закрыл: <@585394439715946518><br/>Дата: 2026-05-18_20-07-07<br/><a href="https://transcripts.erlcrussia.xyz/transcripts/поддержка-1273_2026-05-18_20-07-07.html" style="color: #00aff4;">https://transcripts.erlcrussia.xyz/transcripts/поддержка-1273_2026-05-18_20-07-07.html</a></discord-message>
+<discord-message id="m-1505973831368704075" timestamp="2026-05-18T19:42:21.039000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="padding:8px;color:#dcddde;"><discord-mention type="role">Персонал ER:LC</discord-mention> <discord-mention type="role">Персонал Discord</discord-mention> <discord-mention type="user">hartme28</discord-mention></div><div style="background:#2f3136;border-left:4px solid #006800;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:8px 12px;"><div style="display:flex;gap:16px;align-items:flex-start;"><img src="https://cdn.discordapp.com/avatars/1219303703085973566/d3cb290d752b01a6006e29c945bb9178.png?size=1024" style="width:80px;height:80px;border-radius:8px;object-fit:cover;flex-shrink:0;" /><div><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg" alt="📨" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Новый Тикет — Поддержка</span><br/><strong>В чём проблема:</strong><br/>Прошу предъявить док-ва моих последних двух варнов</div></div></div><div style="padding:4px 12px;color:#dcddde;">⏳ <strong>Ожидайте ответа от персонала.</strong></div><div style="height:1px;background:#4f545c;margin:4px 0;"></div><div style="height:8px;"></div><div style="display:flex;gap:8px;padding:8px 0;flex-wrap:wrap;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Закрыть Тикет</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e4.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Освободить Тикет</button></div></div></div></discord-message>
+<discord-message id="m-1505973929976795156" timestamp="2026-05-18T19:42:44.549000Z" profile="1219303703085973566"><discord-attachments slot="attachments"><discord-attachment type="image" filename="image.png" url="https://transcripts.erlcrussia.xyz/attachments/1505973929976795156_1505973930010345654.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1505974134335733760" timestamp="2026-05-18T19:43:33.272000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e5.svg" alt="📥" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет взят <discord-mention type="user">savingbox3</discord-mention>.</span></div></div></div></discord-message>
+<discord-message id="m-1505974196864286761" timestamp="2026-05-18T19:43:48.180000Z" profile="585394439715946518">Здравствуйте, сейчас отмечу модератора<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764-fe0f.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1505974217601061007" timestamp="2026-05-18T19:43:53.124000Z" profile="585394439715946518"><discord-mention type="user">[PR-018] Лидер Мнений sqw1rtiq</discord-mention></discord-message>
+<discord-message id="m-1505974298916159769" timestamp="2026-05-18T19:44:12.511000Z" profile="501686815120687105"><div style="margin: 8px 0; padding: 8px; background: #2f3136; border-radius: 4px; border-left: 4px solid #5865F2;">📹 <a href="https://discord.com/channels/1331331077553262765/1487155588537385061/1505980038284185785" target="_blank" style="color: #00aff4; text-decoration: underline;">fffa5fa8-9f47-4168-8d8c-39f2cb159159-render.mp4</a></div><discord-attachments slot="attachments"></discord-attachments></discord-message>
+<discord-message id="m-1505974329064554537" timestamp="2026-05-18T19:44:19.699000Z" profile="501686815120687105">второй</discord-message>
+<discord-message id="m-1505974402972520599" timestamp="2026-05-18T19:44:37.320000Z" profile="501686815120687105">ща найду первый</discord-message>
+<discord-message id="m-1505974473789145168" timestamp="2026-05-18T19:44:54.204000Z" profile="1219303703085973566">Так мне же по сути не мешает ничего проехать</discord-message>
+<discord-message id="m-1505974498883801098" timestamp="2026-05-18T19:45:00.187000Z" profile="1219303703085973566">это ic нарушение</discord-message>
+<discord-message id="m-1505974554256998451" timestamp="2026-05-18T19:45:13.389000Z" profile="501686815120687105">тебя бы в жизни убили другие водители если бы ты так по главной улице москвы проехал</discord-message>
+<discord-message id="m-1505974562737750097" timestamp="2026-05-18T19:45:15.411000Z" profile="501686815120687105">учи пдд</discord-message>
+<discord-message id="m-1505974609256906941" timestamp="2026-05-18T19:45:26.502000Z" profile="1219303703085973566">так это ic момент</discord-message>
+<discord-message id="m-1505974648637100173" timestamp="2026-05-18T19:45:35.891000Z" profile="585394439715946518"><discord-reply slot="reply" author="[PR-018] Лидер Мнений sqw1rtiq" avatar="" role-color="#ffffff"><span data-goto="1505974562737750097">учи пдд</span></discord-reply>давайте будем уважительно относится друг к другу</discord-message>
+<discord-message id="m-1505974669977718864" timestamp="2026-05-18T19:45:40.979000Z" profile="585394439715946518">нарушение есть</discord-message>
+<discord-message id="m-1505974707474927647" timestamp="2026-05-18T19:45:49.919000Z" profile="1219303703085973566">я сократил, пока никого рядом не было</discord-message>
+<discord-message id="m-1505974837364129842" timestamp="2026-05-18T19:46:20.887000Z" profile="585394439715946518">с какой целью вы включили сгу в этот момент?</discord-message>
+<discord-message id="m-1505975117706956932" timestamp="2026-05-18T19:47:27.726000Z" profile="1219303703085973566"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1505974837364129842">с какой целью вы включили сгу в этот момент?</span></discord-reply>Дабы водители, которых я бы мог встретить по пути в мп увидели, что едет тяжелая техника</discord-message>
+<discord-message id="m-1505975352609083492" timestamp="2026-05-18T19:48:23.731000Z" profile="1219303703085973566">я ни разу не видел подобную тяжелую технику без оранжевых огней</discord-message>
+<discord-message id="m-1505975724090331278" timestamp="2026-05-18T19:49:52.299000Z" profile="501686815120687105"><div style="margin: 8px 0; padding: 8px; background: #2f3136; border-radius: 4px; border-left: 4px solid #5865F2;">📹 <a href="https://discord.com/channels/1331331077553262765/1487155588537385061/1505980055757656154" target="_blank" style="color: #00aff4; text-decoration: underline;">1b34abd4-cba7-434f-bf22-9d4f3c1c0c9f-render.mp4</a></div>сбитие столба, в момент этого происшествия не увидел написанного в игровой чат "// откат"<discord-attachments slot="attachments"></discord-attachments></discord-message>
+<discord-message id="m-1505975793791144006" timestamp="2026-05-18T19:50:08.917000Z" profile="501686815120687105"><div style="margin: 8px 0; padding: 8px; background: #2f3136; border-radius: 4px; border-left: 4px solid #5865F2;">📹 <a href="https://discord.com/channels/1331331077553262765/1487155588537385061/1505980060967108859" target="_blank" style="color: #00aff4; text-decoration: underline;">c1174328-faaf-4fdd-9ab0-648e2cb0dd91-render.mp4</a></div>а так же еще одно из многих нарушений на которое я закрыл глаза<discord-attachments slot="attachments"></discord-attachments></discord-message>
+<discord-message id="m-1505975895263805602" timestamp="2026-05-18T19:50:33.110000Z" profile="501686815120687105"><discord-reply slot="reply" author="[PR-018] Лидер Мнений sqw1rtiq" avatar="" role-color="#ffffff"><span data-goto="1505975793791144006">а так же еще одно из многих нарушений на которое я закрыл глаза</span></discord-reply>и подобных нарушений D-1 там куча</discord-message>
+<discord-message id="m-1505975966835540090" timestamp="2026-05-18T19:50:50.174000Z" profile="1219303703085973566">я в войсе в этот момент был и на каждое столкновение говорил откат</discord-message>
+<discord-message id="m-1505976133651534076" timestamp="2026-05-18T19:51:29.946000Z" profile="501686815120687105"><discord-reply slot="reply" author="hartme28" avatar="" role-color="#a0041e"><span data-goto="1505975966835540090">я в войсе в этот момент был и на каждое столкновение говорил откат</span></discord-reply>многочисленные откаты так же запрещены</discord-message>
+<discord-message id="m-1505976184440361142" timestamp="2026-05-18T19:51:42.055000Z" profile="501686815120687105">а там их было ох как много</discord-message>
+<discord-message id="m-1505976339318964355" timestamp="2026-05-18T19:52:18.981000Z" profile="1219303703085973566">допустим варн якобы за не откат выдан якобы верно</discord-message>
+<discord-message id="m-1505976371330158592" timestamp="2026-05-18T19:52:26.613000Z" profile="1219303703085973566">не с первым я не согласен</discord-message>
+<discord-message id="m-1505976420575477950" timestamp="2026-05-18T19:52:38.354000Z" profile="1219303703085973566">мне ничего не мешало проехать</discord-message>
+<discord-message id="m-1505976606777278595" timestamp="2026-05-18T19:53:22.748000Z" profile="501686815120687105"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1505974669977718864">нарушение есть</span></discord-reply>.</discord-message>
+<discord-message id="m-1505976625743790251" timestamp="2026-05-18T19:53:27.270000Z" profile="501686815120687105">вам уже всё сказали</discord-message>
+<discord-message id="m-1505976986114461828" timestamp="2026-05-18T19:54:53.189000Z" profile="501686815120687105"><discord-reply slot="reply" author="[PR-018] Лидер Мнений sqw1rtiq" avatar="" role-color="#ffffff"><span data-goto="1505975793791144006">а так же еще одно из многих нарушений на которое я закрыл глаза</span></discord-reply>может еще за это выдать</discord-message>
+<discord-message id="m-1505977046751252702" timestamp="2026-05-18T19:55:07.646000Z" profile="501686815120687105">чтоб у вас точно сложилось понимание, что такое РП езда</discord-message>
+<discord-message id="m-1505977073079156866" timestamp="2026-05-18T19:55:13.923000Z" profile="585394439715946518">Я получил все фрапсы от модератора и готов вынести вердикт. В первом случае нарушение присутствует, однако стоило ограничиться устным предупреждением. Второй варн полностью оправдан, к тому же отягчающим фактором на тот момент была погоня. Поэтому первый варн я снимаю и заменяю его устным предупреждением. Надеюсь, в следующий раз вы не повторите подобных ошибок.</discord-message>
+<discord-message id="m-1505977157854171177" timestamp="2026-05-18T19:55:34.135000Z" profile="585394439715946518">второй варн остаётся</discord-message>
+<discord-message id="m-1505977188850204763" timestamp="2026-05-18T19:55:41.525000Z" profile="501686815120687105"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1505977073079156866">Я получил все фрапсы от модератора и готов вынести вердикт. В первом случае нарушение присутствует, </span></discord-reply>а я бы поспорил</discord-message>
+<discord-message id="m-1505977200229482679" timestamp="2026-05-18T19:55:44.238000Z" profile="501686815120687105">со снятием</discord-message>
+<discord-message id="m-1505977273222828153" timestamp="2026-05-18T19:56:01.641000Z" profile="501686815120687105">могу приложить еще очень много видео фрагментов где игрок ездит точно так же</discord-message>
+<discord-message id="m-1505977317292249190" timestamp="2026-05-18T19:56:12.148000Z" profile="585394439715946518">если у вас есть фрапсы, где он на постоянной основе нарушает пдд за работника цодд</discord-message>
+<discord-message id="m-1505977332920484040" timestamp="2026-05-18T19:56:15.874000Z" profile="585394439715946518">то можете их предоставить</discord-message>
+<discord-message id="m-1505977373739192350" timestamp="2026-05-18T19:56:25.606000Z" profile="501686815120687105">за любого персонажа</discord-message>
+<discord-message id="m-1505977397915418715" timestamp="2026-05-18T19:56:31.370000Z" profile="501686815120687105">то есть это неоднократное нарушение</discord-message>
+<discord-message id="m-1505977435131351251" timestamp="2026-05-18T19:56:40.243000Z" profile="501686815120687105"><discord-reply slot="reply" author="[PR-018] Лидер Мнений sqw1rtiq" avatar="" role-color="#ffffff"><span data-goto="1505975793791144006">а так же еще одно из многих нарушений на которое я закрыл глаза</span></discord-reply>тому пример прощенный мною варн</discord-message>
+<discord-message id="m-1505977529180356758" timestamp="2026-05-18T19:57:02.666000Z" profile="585394439715946518"><discord-reply slot="reply" author="[PR-018] Лидер Мнений sqw1rtiq" avatar="" role-color="#ffffff"><span data-goto="1505975793791144006">а так же еще одно из многих нарушений на которое я закрыл глаза</span></discord-reply>здесь нарушения я не вижу</discord-message>
+<discord-message id="m-1505977561547673802" timestamp="2026-05-18T19:57:10.383000Z" profile="585394439715946518">была погоня</discord-message>
+<discord-message id="m-1505977703470207098" timestamp="2026-05-18T19:57:44.220000Z" profile="501686815120687105">то есть у автомобиля с подобной подвеской после такого проезда с подлетом не пострадал бы подвеска?</discord-message>
+<discord-message id="m-1505977739163730071" timestamp="2026-05-18T19:57:52.730000Z" profile="1219303703085973566"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1505977073079156866">Я получил все фрапсы от модератора и готов вынести вердикт. В первом случае нарушение присутствует, </span></discord-reply>Я получил все ответы от великого сэвинга и готов вынести вердикт. В ходе разбирательств мною было много раз изменено мое мнение касательно того, люблю я его или нет, но в итоге понял, что люблю:) Надеюсь, в следующий раз вы не повторите подобных ошибок и я не буду сомневаться в любви к вам.</discord-message>
+<discord-message id="m-1505977770587717806" timestamp="2026-05-18T19:58:00.222000Z" profile="501686815120687105"><discord-reply slot="reply" author="[PR-018] Лидер Мнений sqw1rtiq" avatar="" role-color="#ffffff"><span data-goto="1505977703470207098">то есть у автомобиля с подобной подвеской после такого проезда с подлетом не пострадал бы подвеска?</span></discord-reply>там могло и отлететь что-то спокойно</discord-message>
+<discord-message id="m-1505977819476529253" timestamp="2026-05-18T19:58:11.878000Z" profile="155149108183695360"><discord-embed title="" slot="embeds" color="#43b581"><discord-embed-description slot="description"><img src="https://cdn.discordapp.com/emojis/314691591484866560.png" alt="dynoSuccess" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> <strong><em>mark\_katrin was unmuted.</strong></em></discord-embed-description></discord-embed></discord-message>
+<discord-message id="m-1505977847108468788" timestamp="2026-05-18T19:58:18.466000Z" profile="1219303703085973566">ой спасибо</discord-message>
+<discord-message id="m-1505977897142452284" timestamp="2026-05-18T19:58:30.395000Z" profile="585394439715946518"><discord-reply slot="reply" author="[PR-018] Лидер Мнений sqw1rtiq" avatar="" role-color="#ffffff"><span data-goto="1505977770587717806">там могло и отлететь что-то спокойно</span></discord-reply>это уже притягивание за уши</discord-message>
+<discord-message id="m-1505977933217665105" timestamp="2026-05-18T19:58:38.996000Z" profile="501686815120687105">а как по мне нет</discord-message>
+<discord-message id="m-1505977986044788887" timestamp="2026-05-18T19:58:51.591000Z" profile="501686815120687105">в жизни ни один здравомыслящий человек не поехал бы так</discord-message>
+<discord-message id="m-1505978006018064444" timestamp="2026-05-18T19:58:56.353000Z" profile="501686815120687105">на убой машину пускать</discord-message>
+<discord-message id="m-1505978016701087804" timestamp="2026-05-18T19:58:58.900000Z" profile="1219303703085973566">ребятки, давайте не будем ссориться</discord-message>
+<discord-message id="m-1505978029002850395" timestamp="2026-05-18T19:59:01.833000Z" profile="585394439715946518"><discord-reply slot="reply" author="[PR-018] Лидер Мнений sqw1rtiq" avatar="" role-color="#ffffff"><span data-goto="1505977986044788887">в жизни ни один здравомыслящий человек не поехал бы так</span></discord-reply>опять же, у них была погоня</discord-message>
+<discord-message id="m-1505978072422158427" timestamp="2026-05-18T19:59:12.185000Z" profile="501686815120687105"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1505978029002850395">опять же, у них была погоня</span></discord-reply>так там наоборот еще жестче правила</discord-message>
+<discord-message id="m-1505978092336975983" timestamp="2026-05-18T19:59:16.933000Z" profile="1219303703085973566">давайте жить дружно</discord-message>
+<discord-message id="m-1505978201397137511" timestamp="2026-05-18T19:59:42.935000Z" profile="585394439715946518">скорость была не такой большой, что машина как-либо пострадала от наезда на небольшой бордюр</discord-message>
+<discord-message id="m-1505978243281453076" timestamp="2026-05-18T19:59:52.921000Z" profile="501686815120687105">100 км/ч как минимум была скорость</discord-message>
+<discord-message id="m-1505978273509670942" timestamp="2026-05-18T20:00:00.128000Z" profile="501686815120687105">в жизни там всей подвеске всё</discord-message>
+<discord-message id="m-1505978322503598143" timestamp="2026-05-18T20:00:11.809000Z" profile="501686815120687105">машина бы дальше не поехала</discord-message>
+<discord-message id="m-1505978340597825556" timestamp="2026-05-18T20:00:16.123000Z" profile="501686815120687105">если бы только по иннерции</discord-message>
+<discord-message id="m-1505978371526492242" timestamp="2026-05-18T20:00:23.497000Z" profile="585394439715946518">игрок физически не смог бы заехать в поворот на такой скорости</discord-message>
+<discord-message id="m-1505978414438289539" timestamp="2026-05-18T20:00:33.728000Z" profile="501686815120687105">ну там оба нарушили</discord-message>
+<discord-message id="m-1505978435497885766" timestamp="2026-05-18T20:00:38.749000Z" profile="585394439715946518">по загоревшимся задним фонарям видно, что он притормозил</discord-message>
+<discord-message id="m-1505978495568838788" timestamp="2026-05-18T20:00:53.071000Z" profile="501686815120687105"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1505978435497885766">по загоревшимся задним фонарям видно, что он притормозил</span></discord-reply>не вижу чтоб прям сильно</discord-message>
+<discord-message id="m-1505978569904361643" timestamp="2026-05-18T20:01:10.794000Z" profile="1219303703085973566">зачем вы ссоритесь</discord-message>
+<discord-message id="m-1505978588116156446" timestamp="2026-05-18T20:01:15.136000Z" profile="1219303703085973566">посмотрите в окно</discord-message>
+<discord-message id="m-1505978618780717086" timestamp="2026-05-18T20:01:22.447000Z" profile="1219303703085973566">солнышко</discord-message>
+<discord-message id="m-1505978641601921228" timestamp="2026-05-18T20:01:27.888000Z" profile="501686815120687105">мы не ссоримся</discord-message>
+<discord-message id="m-1505978644558909532" timestamp="2026-05-18T20:01:28.593000Z" profile="1219303703085973566">облачка</discord-message>
+<discord-message id="m-1505978658999767192" timestamp="2026-05-18T20:01:32.036000Z" profile="501686815120687105">дискутируем</discord-message>
+<discord-message id="m-1505978664049840199" timestamp="2026-05-18T20:01:33.240000Z" profile="1219303703085973566">птичкт</discord-message>
+<discord-message id="m-1505978734564474991" timestamp="2026-05-18T20:01:50.052000Z" profile="501686815120687105">я понимаю что наказания можно смягчать, но когда такая езда на постоянной основе</discord-message>
+<discord-message id="m-1505978864768389170" timestamp="2026-05-18T20:02:21.095000Z" profile="1219303703085973566">и на этой прекрасной ноте я благодарю сэвинга за его вердикт и прошу закрыть мой тикет в связи с тем, что мой вопрос уже решен</discord-message>
+<discord-message id="m-1505979151956443216" timestamp="2026-05-18T20:03:29.566000Z" profile="1219303703085973566">ток пускай сэвинг варн снять не забудет, а так спасибо большое люблю тебя прекрасный сэвинг</discord-message>
+<discord-message id="m-1505979211725279375" timestamp="2026-05-18T20:03:43.816000Z" profile="1219303703085973566">чтоб все стояло и деньги были</discord-message>
+<discord-message id="m-1505979241815347380" timestamp="2026-05-18T20:03:50.990000Z" profile="585394439715946518">В общем, давайте сошлёмся на установку о том, что игроки должны получать удовольствие от игры. Если игрок во время погони будет думать о таких микромоментах, весь его геймплей превратится в душку, которая ни к чему хорошему не приведёт. Первый варн сейчас сниму</discord-message>
+<discord-message id="m-1505979320647160029" timestamp="2026-05-18T20:04:09.785000Z" profile="585394439715946518"><discord-reply slot="reply" author="hartme28" avatar="" role-color="#a0041e"><span data-goto="1505979151956443216">ток пускай сэвинг варн снять не забудет, а так спасибо большое люблю тебя прекрасный сэвинг</span></discord-reply>давайте лучше так говорить не будем, а то сегодня я вас жалею, а завтра выдаю варн</discord-message>
+<discord-message id="m-1505979322844839946" timestamp="2026-05-18T20:04:10.309000Z" profile="501686815120687105"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1505979241815347380">В общем, давайте сошлёмся на установку о том, что игроки должны получать удовольствие от игры. Если </span></discord-reply>я понимаю</discord-message>
+<discord-message id="m-1505979323616723155" timestamp="2026-05-18T20:04:10.493000Z" profile="1219303703085973566"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1505979241815347380">В общем, давайте сошлёмся на установку о том, что игроки должны получать удовольствие от игры. Если </span></discord-reply>теперь еще больше люблю</discord-message>
+<discord-message id="m-1505979368051314738" timestamp="2026-05-18T20:04:21.087000Z" profile="1219303703085973566"><discord-reply slot="reply" author="Deleted User" avatar="https://media.discordapp.net/attachments/1363556047704293517/1485751447248437248/image.png?ex=69c3015c&is=69c1afdc&hm=6ae634e1105f4db2533f26197a450f7137a9193ce9ce2cf23a62ec1ce6027b75&=&format=webp&quality=lossless" role-color="#ffffff"><span data-goto="1505979328779784243">[deleted]</span></discord-reply>ДА ОТВАЛИ ТЫ</discord-message>
+<discord-message id="m-1505979387600965812" timestamp="2026-05-18T20:04:25.748000Z" profile="1219303703085973566">кхм</discord-message>
+<discord-message id="m-1505979392466358272" timestamp="2026-05-18T20:04:26.908000Z" profile="501686815120687105"><discord-reply slot="reply" author="[PR-018] Лидер Мнений sqw1rtiq" avatar="" role-color="#ffffff"><span data-goto="1505979322844839946">я понимаю</span></discord-reply>я же и говорю, что я там почти фулл погоню простил</discord-message>
+<discord-message id="m-1505979430298845355" timestamp="2026-05-18T20:04:35.928000Z" profile="501686815120687105">чтоб не душить</discord-message>
+<discord-message id="m-1505979454860820531" timestamp="2026-05-18T20:04:41.784000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="padding:8px;color:#dcddde;">Вы точно хотите закрыть этот тикет?</div><div class="discord-components-row" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Закрыть</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/274c.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Оставить</button></div></div></discord-message>
+<discord-message id="m-1505979472946659348" timestamp="2026-05-18T20:04:46.096000Z" profile="501686815120687105">там если сильно душить варнов 6-7 наскребсти можно</discord-message>
+<discord-message id="m-1505979513501257890" timestamp="2026-05-18T20:04:55.765000Z" profile="501686815120687105">а так я прости всё почти</discord-message>
+<discord-message id="m-1505979541741502596" timestamp="2026-05-18T20:05:02.498000Z" profile="585394439715946518"><discord-reply slot="reply" author="[PR-018] Лидер Мнений sqw1rtiq" avatar="" role-color="#ffffff"><span data-goto="1505979472946659348">там если сильно душить варнов 6-7 наскребсти можно</span></discord-reply>у сиксти так 500 пунишей вышло</discord-message>
+<discord-message id="m-1505979552378257558" timestamp="2026-05-18T20:05:05.034000Z" profile="1219303703085973566"><discord-reply slot="reply" author="Moscow RolePlay" avatar="" role-color="#006800"><span data-goto="1505979454860820531">[deleted]</span></discord-reply>если я закрою свой тикет, что же будет</discord-message>
+<discord-message id="m-1505979597454315673" timestamp="2026-05-18T20:05:15.781000Z" profile="585394439715946518">ничего</discord-message>
+<discord-message id="m-1505979598511407225" timestamp="2026-05-18T20:05:16.033000Z" profile="501686815120687105"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1505979541741502596">у сиксти так 500 пунишей вышло</span></discord-reply>ну я уже догоняю ажэывхъажыхаж</discord-message>
+<discord-message id="m-1505979609139777686" timestamp="2026-05-18T20:05:18.567000Z" profile="501686815120687105">и то не душу</discord-message>
+<discord-message id="m-1505979631168258258" timestamp="2026-05-18T20:05:23.819000Z" profile="1420862486575317052"><discord-embed title="hartme28" slot="embeds" color="#2b2d31" thumbnail="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-81C9E41FB7B76CF9461811989958FD74-Png/48/48/AvatarHeadshot/Png/noFilter"><discord-embed-fields slot="fields"><discord-embed-field field-title="Warning"><blockquote> <strong>Moderator:</strong> <discord-mention type="user">[PR-018] Лидер Мнений sqw1rtiq</discord-mention></blockquote><br/><blockquote> <strong>Reason:</strong> D-1.2 | Проехал по встречке через бордюры по центральной улице</blockquote><br/><blockquote> <strong>At:</strong> <t:1779122434></blockquote><br/><blockquote> <strong>ID:</strong> <code>7462180342570156032</code></blockquote></discord-embed-field></discord-embed-fields><discord-embed-author slot="author" name="kaptan4984" icon="https://cdn.discordapp.com/avatars/585394439715946518/e82f31f878077dcd383254c613d59c3d.png?size=1024"></discord-embed-author></discord-embed><div slot="components" style="margin-top:8px;"><div class="discord-components-row" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdn.discordapp.com/emojis/1421123603495391232.png" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />None</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;">8</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdn.discordapp.com/emojis/1421123601028874250.png" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />None</button></div></div></discord-message>
+<discord-message id="m-1505979710503522395" timestamp="2026-05-18T20:05:42.734000Z" profile="501686815120687105">не катайся больше так нагло прошу</discord-message>
+<discord-message id="m-1505979722234986597" timestamp="2026-05-18T20:05:45.531000Z" profile="501686815120687105"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f62d.svg" alt="😭" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/></discord-message>
+<discord-message id="m-1505979742115860673" timestamp="2026-05-18T20:05:50.271000Z" profile="1420862486575317052"><discord-reply slot="reply" author="Deleted User" avatar="https://media.discordapp.net/attachments/1363556047704293517/1485751447248437248/image.png?ex=69c3015c&is=69c1afdc&hm=6ae634e1105f4db2533f26197a450f7137a9193ce9ce2cf23a62ec1ce6027b75&=&format=webp&quality=lossless" role-color="#ffffff"><span data-goto="1505979697299849328">[deleted]</span></discord-reply><discord-embed title=":success: Punishment Deleted" slot="embeds" color="#57f287"><discord-embed-description slot="description">This punishment has been deleted successfully!</discord-embed-description></discord-embed></discord-message>
+<discord-message id="m-1505979756351590502" timestamp="2026-05-18T20:05:53.665000Z" profile="1219303703085973566"><discord-reply slot="reply" author="[PR-018] Лидер Мнений sqw1rtiq" avatar="" role-color="#ffffff"><span data-goto="1505979710503522395">не катайся больше так нагло прошу</span></discord-reply>хорошо</discord-message>
+<discord-message id="m-1505979774231642222" timestamp="2026-05-18T20:05:57.928000Z" profile="1363531806586048755"><discord-embed title="Баллы сняты" slot="embeds" color="#2b2d31"><discord-embed-description slot="description">Баллы за Предупреждение успешно сняты!</discord-embed-description><discord-embed-fields slot="fields"><discord-embed-field field-title="Информация о нарушителе"><blockquote> <strong>Ник:</strong> hartme28</blockquote><br/><blockquote> <strong>Айди:</strong> <code>1935176288</code></blockquote><br/><blockquote> <strong>ID предупреждения:</strong> <code>7462180342570156032</code></blockquote><br/><blockquote> <strong>Тип снятого наказания:</strong> Предупреждение</blockquote><br/><blockquote> <strong>Снято баллов:</strong> 1</blockquote><br/><blockquote> <strong>Осталось баллов:</strong> 21/30</blockquote></discord-embed-field></discord-embed-fields></discord-embed></discord-message>
+<discord-message id="m-1505979784755151018" timestamp="2026-05-18T20:06:00.437000Z" profile="585394439715946518">баллы снял</discord-message>
+<discord-message id="m-1505979800475406451" timestamp="2026-05-18T20:06:04.185000Z" profile="585394439715946518">21 балл</discord-message>
+<discord-message id="m-1505979817693155471" timestamp="2026-05-18T20:06:08.290000Z" profile="1219303703085973566"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1505979784755151018">баллы снял</span></discord-reply>люблю целую</discord-message>
+<discord-message id="m-1505979826157256885" timestamp="2026-05-18T20:06:10.308000Z" profile="585394439715946518">надеюсь скоро доделают систему баллов</discord-message>
+<discord-message id="m-1505979861104328885" timestamp="2026-05-18T20:06:18.640000Z" profile="155149108183695360"><discord-embed title="" slot="embeds" color="#43b581"><discord-embed-description slot="description"><img src="https://cdn.discordapp.com/emojis/314691591484866560.png" alt="dynoSuccess" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> <strong><em>mark\_katrin was unmuted.</strong></em></discord-embed-description></discord-embed></discord-message>
+<discord-message id="m-1505979884634116297" timestamp="2026-05-18T20:06:24.250000Z" profile="585394439715946518"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1505979826157256885">надеюсь скоро доделают систему баллов</span></discord-reply>и сможете их как то снимать</discord-message>
+<discord-message id="m-1505979936362467490" timestamp="2026-05-18T20:06:36.583000Z" profile="1219303703085973566"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1505979884634116297">и сможете их как то снимать</span></discord-reply>уже можем</discord-message>
+<discord-message id="m-1505980009771434116" timestamp="2026-05-18T20:06:54.085000Z" profile="1219303703085973566">100 рублей или робуксов панкейку это  -1 балл</discord-message>
+<discord-message id="m-1505980024124080219" timestamp="2026-05-18T20:06:57.507000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет закроется через несколько секунд...</span></div></div></div></discord-message>
+</discord-messages></body></html>
