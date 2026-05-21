@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-1285</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/8f6e9a6ad7bdc609907d4c907ccadfd5.png?size=1024", "roleColor": "#006800", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/8e5424768addb0eab9fb87dcd89088bb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": true}, "1236286225896439819": {"author": "[MM-019] 11-я От.Гв.Дес | Ястреб", "avatar": "https://cdn.discordapp.com/avatars/1236286225896439819/f870fe96fd7deec84dce6675f120f9f3.png?size=1024", "roleColor": "#ff5cd0", "roleIcon": "https://cdn.discordapp.com/role-icons/1429212035509518387/47698eda2772171945390e0254deff2b.png?size=1024", "roleName": "25thCSVSMF", "bot": false, "verified": false}, "585394439715946518": {"author": "savingbox3", "avatar": "https://cdn.discordapp.com/avatars/585394439715946518/e82f31f878077dcd383254c613d59c3d.png?size=1024", "roleColor": "#d4843d", "roleIcon": "https://cdn.discordapp.com/role-icons/1483091539973373993/b2b1d515e0da04921b1553fe55d87eea.png?size=1024", "roleName": "Руководство Проекта", "bot": false, "verified": false}, "760966468715937814": {"author": "bjmajgda", "avatar": "https://cdn.discordapp.com/avatars/760966468715937814/e0a4a503e9f54060ab423eba2c7aeb59.png?size=1024", "roleColor": "#a609db", "roleIcon": "https://cdn.discordapp.com/role-icons/1423638353840181351/c4af864bcbb247eba1ef4c35593a6625.png?size=1024", "roleName": "Флаттершай", "bot": false, "verified": false}, "501686815120687105": {"author": "[PR-018] Лидер Мнений sqw1rtiq", "avatar": "https://cdn.discordapp.com/avatars/501686815120687105/7be30e7e7930d313bb7819c6f49a019f.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1426830509962432613/c0d406b9b857befae1149fc48c77038b.png?size=1024", "roleName": "крипс генг", "bot": false, "verified": false}, "1195675629010558986": {"author": "[PR-011] The_Borisik", "avatar": "https://cdn.discordapp.com/avatars/1195675629010558986/16b83fbe315df0f2f7ee3e08fee39600.png?size=1024", "roleColor": "#424cff", "roleIcon": "https://cdn.discordapp.com/role-icons/1410712605579939982/df9f61918e58e298252dbcbfe910e849.png?size=1024", "roleName": "Пробный Игрок", "bot": false, "verified": false}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.emoji-img {
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    object-fit: contain;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/a06dfa47e027eb8acdf25152e486f1c8.png?size=1024" timestamp="2026-05-21_20-30-15">Тикет Закрыт.<br/>Причина: Не указана<br/>Закрыл: <@1236286225896439819><br/>Дата: 2026-05-21_20-30-15<br/><a href="https://transcripts.erlcrussia.xyz/transcripts/поддержка-1285_2026-05-21_20-30-15.html" style="color: #00aff4;">https://transcripts.erlcrussia.xyz/transcripts/поддержка-1285_2026-05-21_20-30-15.html</a></discord-message>
+<discord-message id="m-1507070089193590974" timestamp="2026-05-21T20:18:29.272000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="padding:8px;color:#dcddde;"><discord-mention type="role">Персонал ER:LC</discord-mention> <discord-mention type="role">Персонал Discord</discord-mention> <discord-mention type="user">[MM-019] 11-я От.Гв.Дес | Ястреб</discord-mention></div><div style="background:#2f3136;border-left:4px solid #006800;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:8px 12px;"><div style="display:flex;gap:16px;align-items:flex-start;"><img src="https://cdn.discordapp.com/avatars/1236286225896439819/f870fe96fd7deec84dce6675f120f9f3.png?size=1024" style="width:80px;height:80px;border-radius:8px;object-fit:cover;flex-shrink:0;" /><div><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg" alt="📨" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Новый Тикет — Поддержка</span><br/><strong>В чём проблема:</strong><br/>Ник 11-я От.Гв.Дес.Шт.Бр. | Ястреб</div></div></div><div style="padding:4px 12px;color:#dcddde;">⏳ <strong>Ожидайте ответа от персонала.</strong></div><div style="height:1px;background:#4f545c;margin:4px 0;"></div><div style="height:8px;"></div><div style="display:flex;gap:8px;padding:8px 0;flex-wrap:wrap;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Закрыть Тикет</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e4.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Освободить Тикет</button></div></div></div></discord-message>
+<discord-message id="m-1507071668986712244" timestamp="2026-05-21T20:24:45.924000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e5.svg" alt="📥" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет взят <discord-mention type="user">savingbox3</discord-mention>.</span></div></div></div></discord-message>
+<discord-message id="m-1507071691451269213" timestamp="2026-05-21T20:24:51.280000Z" profile="585394439715946518"><discord-mention type="user">[MM-019] 11-я От.Гв.Дес | Ястреб</discord-mention> так???</discord-message>
+<discord-message id="m-1507071735470489630" timestamp="2026-05-21T20:25:01.775000Z" profile="1236286225896439819">да</discord-message>
+<discord-message id="m-1507071753996734646" timestamp="2026-05-21T20:25:06.192000Z" profile="1236286225896439819">а без префикса не как</discord-message>
+<discord-message id="m-1507071761290625024" timestamp="2026-05-21T20:25:07.931000Z" profile="585394439715946518">ястреб не влезает</discord-message>
+<discord-message id="m-1507071822221410316" timestamp="2026-05-21T20:25:22.458000Z" profile="585394439715946518">хм</discord-message>
+<discord-message id="m-1507071831490695179" timestamp="2026-05-21T20:25:24.668000Z" profile="585394439715946518">вот это хз</discord-message>
+<discord-message id="m-1507071840407916716" timestamp="2026-05-21T20:25:26.794000Z" profile="1236286225896439819">а можно без префикса</discord-message>
+<discord-message id="m-1507071851279552726" timestamp="2026-05-21T20:25:29.386000Z" profile="1236286225896439819">пж</discord-message>
+<discord-message id="m-1507071885483966625" timestamp="2026-05-21T20:25:37.541000Z" profile="1236286225896439819">чтобы ястреб влезло</discord-message>
+<discord-message id="m-1507071893914521640" timestamp="2026-05-21T20:25:39.551000Z" profile="585394439715946518"><discord-mention type="user">bjmajgda</discord-mention> можно ник без префикса сделать?</discord-message>
+<discord-message id="m-1507071910419365989" timestamp="2026-05-21T20:25:43.486000Z" profile="585394439715946518">я просто хз</discord-message>
+<discord-message id="m-1507071964815294544" timestamp="2026-05-21T20:25:56.455000Z" profile="760966468715937814">Нет</discord-message>
+<discord-message id="m-1507071992594038824" timestamp="2026-05-21T20:26:03.078000Z" profile="501686815120687105"><discord-reply slot="reply" author="bjmajgda" avatar="" role-color="#a609db"><span data-goto="1507071964815294544">Нет</span></discord-reply>а ты почему</discord-message>
+<discord-message id="m-1507072005701107975" timestamp="2026-05-21T20:26:06.203000Z" profile="501686815120687105">без префикса</discord-message>
+<discord-message id="m-1507072010763763783" timestamp="2026-05-21T20:26:07.410000Z" profile="585394439715946518">с тимлида получается</discord-message>
+<discord-message id="m-1507072030921461811" timestamp="2026-05-21T20:26:12.216000Z" profile="585394439715946518">или как оно работает</discord-message>
+<discord-message id="m-1507072057748492299" timestamp="2026-05-21T20:26:18.612000Z" profile="585394439715946518">префикс то у него энивей в базе остаётся</discord-message>
+<discord-message id="m-1507072061330292767" timestamp="2026-05-21T20:26:19.466000Z" profile="760966468715937814">потому что так панкейк решил</discord-message>
+<discord-message id="m-1507072065587384390" timestamp="2026-05-21T20:26:20.481000Z" profile="1195675629010558986"><discord-reply slot="reply" author="[PR-018] Лидер Мнений sqw1rtiq" avatar="" role-color="#ffffff"><span data-goto="1507072005701107975">без префикса</span></discord-reply>у менеджеров нет префиксов в дс<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f416.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1507072087523590205" timestamp="2026-05-21T20:26:25.711000Z" profile="760966468715937814">у нас есть префиксы</discord-message>
+<discord-message id="m-1507072093685153992" timestamp="2026-05-21T20:26:27.180000Z" profile="585394439715946518">а гаге</discord-message>
+<discord-message id="m-1507072146462085160" timestamp="2026-05-21T20:26:39.763000Z" profile="1195675629010558986"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1507072093685153992">а гаге</span></discord-reply>щас ему перевыдам тогда<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f631.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1507072147007344662" timestamp="2026-05-21T20:26:39.893000Z" profile="760966468715937814"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1507072093685153992">а гаге</span></discord-reply>с менеджмента</discord-message>
+<discord-message id="m-1507072165072211988" timestamp="2026-05-21T20:26:44.200000Z" profile="1236286225896439819">он главный модер</discord-message>
+<discord-message id="m-1507072197431263252" timestamp="2026-05-21T20:26:51.915000Z" profile="501686815120687105">опять блат</discord-message>
+<discord-message id="m-1507072206155288666" timestamp="2026-05-21T20:26:53.995000Z" profile="501686815120687105">везде блат</discord-message>
+<discord-message id="m-1507072234752053331" timestamp="2026-05-21T20:27:00.813000Z" profile="585394439715946518"><discord-mention type="user">[MM-019] 11-я От.Гв.Дес | Ястреб</discord-mention> другой тогда?</discord-message>
+<discord-message id="m-1507072257405489233" timestamp="2026-05-21T20:27:06.214000Z" profile="1236286225896439819">щя</discord-message>
+<discord-message id="m-1507072340750762165" timestamp="2026-05-21T20:27:26.085000Z" profile="760966468715937814"><discord-reply slot="reply" author="[PR-018] Лидер Мнений sqw1rtiq" avatar="" role-color="#ffffff"><span data-goto="1507072197431263252">опять блат</span></discord-reply>модерам не нужен префикс</discord-message>
+<discord-message id="m-1507072376570122290" timestamp="2026-05-21T20:27:34.625000Z" profile="760966468715937814">они у них для красоты</discord-message>
+<discord-message id="m-1507072479745802240" timestamp="2026-05-21T20:27:59.224000Z" profile="585394439715946518"><discord-reply slot="reply" author="bjmajgda" avatar="" role-color="#a609db"><span data-goto="1507072340750762165">модерам не нужен префикс</span></discord-reply>то есть я могу ему префикс из ника убрать?</discord-message>
+<discord-message id="m-1507072495616790548" timestamp="2026-05-21T20:28:03.008000Z" profile="1195675629010558986"><discord-reply slot="reply" author="[PR-011] The_Borisik" avatar="" role-color="#424cff"><span data-goto="1507072146462085160">щас ему перевыдам тогда</span></discord-reply>перевыдал префикс PR-021</discord-message>
+<discord-message id="m-1507072511613993050" timestamp="2026-05-21T20:28:06.822000Z" profile="760966468715937814"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1507072479745802240">то есть я могу ему префикс из ника убрать?</span></discord-reply>нет</discord-message>
+<discord-message id="m-1507072573114941461" timestamp="2026-05-21T20:28:21.485000Z" profile="1236286225896439819">11-я От.Гв.Дес. | Ястреб</discord-message>
+<discord-message id="m-1507072592513859634" timestamp="2026-05-21T20:28:26.110000Z" profile="1236286225896439819">пойдет так</discord-message>
+<discord-message id="m-1507072613305028798" timestamp="2026-05-21T20:28:31.067000Z" profile="760966468715937814">префикс отключается, если ты дискорд модер <strong>только</strong></discord-message>
+<discord-message id="m-1507072619684429894" timestamp="2026-05-21T20:28:32.588000Z" profile="760966468715937814">если</discord-message>
+<discord-message id="m-1507072632871325878" timestamp="2026-05-21T20:28:35.732000Z" profile="1236286225896439819">если да то еще добавлю одно</discord-message>
+<discord-message id="m-1507072642593722478" timestamp="2026-05-21T20:28:38.050000Z" profile="760966468715937814">Ты менеджемент и выше</discord-message>
+<discord-message id="m-1507072674591936653" timestamp="2026-05-21T20:28:45.679000Z" profile="760966468715937814"><discord-mention type="user">savingbox3</discord-mention> понял?</discord-message>
+<discord-message id="m-1507072694154297364" timestamp="2026-05-21T20:28:50.343000Z" profile="501686815120687105">а если я просто очень крут</discord-message>
+<discord-message id="m-1507072698415583363" timestamp="2026-05-21T20:28:51.359000Z" profile="585394439715946518">добро</discord-message>
+<discord-message id="m-1507072726085664829" timestamp="2026-05-21T20:28:57.956000Z" profile="585394439715946518"><discord-reply slot="reply" author="[PR-018] Лидер Мнений sqw1rtiq" avatar="" role-color="#ffffff"><span data-goto="1507072694154297364">а если я просто очень крут</span></discord-reply>300 рублей на сбер</discord-message>
+<discord-message id="m-1507072757081571528" timestamp="2026-05-21T20:29:05.346000Z" profile="585394439715946518">и будешь реально крутым</discord-message>
+<discord-message id="m-1507072764807348354" timestamp="2026-05-21T20:29:07.188000Z" profile="501686815120687105">ты мне скинешь за крутость?</discord-message>
+<discord-message id="m-1507072772361293935" timestamp="2026-05-21T20:29:08.989000Z" profile="1236286225896439819"><discord-reply slot="reply" author="[PR-018] Лидер Мнений sqw1rtiq" avatar="" role-color="#ffffff"><span data-goto="1507072694154297364">а если я просто очень крут</span></discord-reply>в тикет не пиши пж</discord-message>
+<discord-message id="m-1507072772524867806" timestamp="2026-05-21T20:29:09.028000Z" profile="501686815120687105">спаг</discord-message>
+<discord-message id="m-1507072790942191786" timestamp="2026-05-21T20:29:13.419000Z" profile="1236286225896439819">бля</discord-message>
+<discord-message id="m-1507072834940305578" timestamp="2026-05-21T20:29:23.909000Z" profile="1236286225896439819">#💬┃общение</discord-message>
+<discord-message id="m-1507072841835741234" timestamp="2026-05-21T20:29:25.553000Z" profile="501686815120687105">Без матов в тикете уважаемый игрок</discord-message>
+<discord-message id="m-1507072847565033565" timestamp="2026-05-21T20:29:26.919000Z" profile="585394439715946518"><discord-reply slot="reply" author="[MM-019] 11-я От.Гв.Дес | Ястреб" avatar="" role-color="#ff5cd0"><span data-goto="1507072772361293935">в тикет не пиши пж</span></discord-reply>пойдёт?</discord-message>
+<discord-message id="m-1507072899993833512" timestamp="2026-05-21T20:29:39.419000Z" profile="585394439715946518">или как-то изменить</discord-message>
+<discord-message id="m-1507072924543226047" timestamp="2026-05-21T20:29:45.272000Z" profile="1236286225896439819"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1507072847565033565">пойдёт?</span></discord-reply>а там слово еще одно добавить</discord-message>
+<discord-message id="m-1507072945527328924" timestamp="2026-05-21T20:29:50.275000Z" profile="585394439715946518">никак</discord-message>
+<discord-message id="m-1507072970651205692" timestamp="2026-05-21T20:29:56.265000Z" profile="585394439715946518">мне пришлось точку убрать одну</discord-message>
+<discord-message id="m-1507072990557503701" timestamp="2026-05-21T20:30:01.011000Z" profile="585394439715946518">т.к не влезала буква б</discord-message>
+<discord-message id="m-1507072994248233151" timestamp="2026-05-21T20:30:01.891000Z" profile="1236286225896439819">лан</discord-message>
+<discord-message id="m-1507073005069799424" timestamp="2026-05-21T20:30:04.471000Z" profile="1236286225896439819">пойдет</discord-message>
+<discord-message id="m-1507073050430935091" timestamp="2026-05-21T20:30:15.286000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет закроется через несколько секунд...</span></div></div></div></discord-message>
+</discord-messages></body></html>
