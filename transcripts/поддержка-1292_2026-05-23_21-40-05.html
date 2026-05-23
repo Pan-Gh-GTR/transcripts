@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-1292</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/8f6e9a6ad7bdc609907d4c907ccadfd5.png?size=1024", "roleColor": "#006800", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/8e5424768addb0eab9fb87dcd89088bb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": true}, "1211696360558952509": {"author": "Bandit_Lotman", "avatar": "https://cdn.discordapp.com/avatars/1211696360558952509/682a703ac96cd1fb40461ce9b039a6be.png?size=1024", "roleColor": "#0ba348", "roleIcon": "https://cdn.discordapp.com/role-icons/1416202584120623225/bd07e078ba8d33b7fe5b50fd4f167a6e.png?size=1024", "roleName": "Модератор Discord", "bot": false, "verified": false}, "1195675629010558986": {"author": "[PR-011] The_Borisik", "avatar": "https://cdn.discordapp.com/avatars/1195675629010558986/16b83fbe315df0f2f7ee3e08fee39600.png?size=1024", "roleColor": "#424cff", "roleIcon": "https://cdn.discordapp.com/role-icons/1410712605579939982/df9f61918e58e298252dbcbfe910e849.png?size=1024", "roleName": "Пробный Игрок", "bot": false, "verified": false}, "1059736820876853248": {"author": "Государь Император koronsdf", "avatar": "https://cdn.discordapp.com/avatars/1059736820876853248/abdb75f461a6290a85006c82959d7192.png?size=1024", "roleColor": "#ffd700", "roleIcon": "https://cdn.discordapp.com/role-icons/1422974739609292850/95e4088940371977549005ced9681737.png?size=1024", "roleName": "Государь Император и Самодержец Всероссийский", "bot": false, "verified": false}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.emoji-img {
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    object-fit: contain;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/a06dfa47e027eb8acdf25152e486f1c8.png?size=1024" timestamp="2026-05-23_21-40-05">Тикет Закрыт.<br/>Причина: Решено<br/>Закрыл: <@1059736820876853248><br/>Дата: 2026-05-23_21-40-05<br/><a href="https://transcripts.erlcrussia.xyz/transcripts/поддержка-1292_2026-05-23_21-40-05.html" style="color: #00aff4;">https://transcripts.erlcrussia.xyz/transcripts/поддержка-1292_2026-05-23_21-40-05.html</a></discord-message>
+<discord-message id="m-1507808893722431690" timestamp="2026-05-23T21:14:13.998000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="padding:8px;color:#dcddde;"><discord-mention type="role">Персонал ER:LC</discord-mention> <discord-mention type="role">Персонал Discord</discord-mention> <discord-mention type="user">Bandit_Lotman</discord-mention></div><div style="background:#2f3136;border-left:4px solid #006800;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:8px 12px;"><div style="display:flex;gap:16px;align-items:flex-start;"><img src="https://cdn.discordapp.com/avatars/1211696360558952509/682a703ac96cd1fb40461ce9b039a6be.png?size=1024" style="width:80px;height:80px;border-radius:8px;object-fit:cover;flex-shrink:0;" /><div><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg" alt="📨" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Новый Тикет — Поддержка</span><br/><strong>В чём проблема:</strong><br/>Смотрите, я хочу создать в ППС кинологический  взвод типо сотрудники которые ходят с собаками, по факту, они выполняют такую же работу как и ппс просто по рп с собаками будет легче обыскивать: машины, людей и все такое. Короче, мне требуется разрешение от менеджмента а так же для этого надо ливери хотя бы на пару машин</div></div></div><div style="padding:4px 12px;color:#dcddde;">⏳ <strong>Ожидайте ответа от персонала.</strong></div><div style="height:1px;background:#4f545c;margin:4px 0;"></div><div style="height:8px;"></div><div style="display:flex;gap:8px;padding:8px 0;flex-wrap:wrap;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Закрыть Тикет</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e4.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Освободить Тикет</button></div></div></div></discord-message>
+<discord-message id="m-1507809101210714112" timestamp="2026-05-23T21:15:03.467000Z" profile="1211696360558952509">И это не новая орг, это просто взвод мне сказали надо разрешение от менеджмента</discord-message>
+<discord-message id="m-1507809226095857684" timestamp="2026-05-23T21:15:33.242000Z" profile="1195675629010558986">там чет кинелогическая служба вроде</discord-message>
+<discord-message id="m-1507809231934591058" timestamp="2026-05-23T21:15:34.634000Z" profile="1195675629010558986">это?</discord-message>
+<discord-message id="m-1507809255376289842" timestamp="2026-05-23T21:15:40.223000Z" profile="1211696360558952509">Да</discord-message>
+<discord-message id="m-1507809276465250334" timestamp="2026-05-23T21:15:45.251000Z" profile="1195675629010558986">нууу</discord-message>
+<discord-message id="m-1507809326260289557" timestamp="2026-05-23T21:15:57.123000Z" profile="1195675629010558986">пусть тогда решает менеджер фракций или руководство проекта</discord-message>
+<discord-message id="m-1507809365933949059" timestamp="2026-05-23T21:16:06.582000Z" profile="1195675629010558986">думаю не особо будет активить</discord-message>
+<discord-message id="m-1507809372292780225" timestamp="2026-05-23T21:16:08.098000Z" profile="1211696360558952509">Типо по рп подумать, легче обыски и расследования будет делать</discord-message>
+<discord-message id="m-1507809421164810410" timestamp="2026-05-23T21:16:19.750000Z" profile="1211696360558952509"><discord-reply slot="reply" author="[PR-011] The_Borisik" avatar="" role-color="#424cff"><span data-goto="1507809365933949059">думаю не особо будет активить</span></discord-reply>Но в любом случаи я гений<img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f60f.svg" alt="😏" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/></discord-message>
+<discord-message id="m-1507809468002340934" timestamp="2026-05-23T21:16:30.917000Z" profile="1211696360558952509"><discord-reply slot="reply" author="Bandit_Lotman" avatar="" role-color="#0ba348"><span data-goto="1507809372292780225">Типо по рп подумать, легче обыски и расследования будет делать</span></discord-reply>А так это ППС и задачи у них такие же</discord-message>
+<discord-message id="m-1507809554614718654" timestamp="2026-05-23T21:16:51.567000Z" profile="1211696360558952509"><discord-reply slot="reply" author="[PR-011] The_Borisik" avatar="" role-color="#424cff"><span data-goto="1507809326260289557">пусть тогда решает менеджер фракций или руководство проекта</span></discord-reply>А он у нас есть?</discord-message>
+<discord-message id="m-1507809601029017852" timestamp="2026-05-23T21:17:02.633000Z" profile="1195675629010558986">корон / севинг бокс<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1507809763948232870" timestamp="2026-05-23T21:17:41.476000Z" profile="1211696360558952509">Но это не надо новое подразделение создавать, а просто взвод в ппс такой добавить</discord-message>
+<discord-message id="m-1507809873302261932" timestamp="2026-05-23T21:18:07.548000Z" profile="1211696360558952509">Кинологический взвод ППСП</discord-message>
+<discord-message id="m-1507810107021590558" timestamp="2026-05-23T21:19:03.271000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e5.svg" alt="📥" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет взят <discord-mention type="user">Государь Император koronsdf</discord-mention>.</span></div></div></div></discord-message>
+<discord-message id="m-1507810115649273906" timestamp="2026-05-23T21:19:05.328000Z" profile="1059736820876853248"><strong><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f44b.svg" alt="👋" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/>Здравствуйте!</strong><br/><em>Я являюсь <strong>Менеджером Фракций Проекта Moscow Roleplay</strong>, на данный момент я рассматриваю тикет. По вашей надобности я могу освободить его</em><discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/274c.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1507810170120704020" timestamp="2026-05-23T21:19:18.315000Z" profile="1059736820876853248">Я в вашей идее вынужден отказать.<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/274c.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1507810208540262535" timestamp="2026-05-23T21:19:27.475000Z" profile="1059736820876853248">Это не нужно<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/274c.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1507812537427558574" timestamp="2026-05-23T21:28:42.725000Z" profile="1211696360558952509">Закрывайте</discord-message>
+<discord-message id="m-1507815400124055562" timestamp="2026-05-23T21:40:05.245000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет закроется через несколько секунд...</span></div></div></div></discord-message>
+</discord-messages></body></html>
