@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-1278</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/8f6e9a6ad7bdc609907d4c907ccadfd5.png?size=1024", "roleColor": "#006800", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/8e5424768addb0eab9fb87dcd89088bb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": true}, "1104388035199639585": {"author": "Sane4ka_TRAXAET", "avatar": "https://cdn.discordapp.com/avatars/1104388035199639585/a4ed6c685ccabbc6a529cc87fc16e032.png?size=1024", "roleColor": "#2a88cb", "roleIcon": "https://cdn.discordapp.com/role-icons/1416177983378686052/3d06b544ab605eab4956042b2dad64fc.png?size=1024", "roleName": "Участник", "bot": false, "verified": false}, "970713754411089940": {"author": "[VD-011] Sashapozzzz", "avatar": "https://cdn.discordapp.com/avatars/970713754411089940/fdfdf65cff2ccdaafbff6f1339997556.png?size=1024", "roleColor": "#921813", "roleIcon": "https://cdn.discordapp.com/role-icons/1416181646318637198/5b70f56d655e733566af6b41bc6f6c01.png?size=1024", "roleName": "Команда Внутренних Дел Roblox", "bot": false, "verified": false}, "585394439715946518": {"author": "savingbox3", "avatar": "https://cdn.discordapp.com/avatars/585394439715946518/e82f31f878077dcd383254c613d59c3d.png?size=1024", "roleColor": "#d4843d", "roleIcon": "https://cdn.discordapp.com/role-icons/1483091539973373993/b2b1d515e0da04921b1553fe55d87eea.png?size=1024", "roleName": "Руководство Проекта", "bot": false, "verified": false}, "1195675629010558986": {"author": "[PR-011] The_Borisik", "avatar": "https://cdn.discordapp.com/avatars/1195675629010558986/16b83fbe315df0f2f7ee3e08fee39600.png?size=1024", "roleColor": "#424cff", "roleIcon": "https://cdn.discordapp.com/role-icons/1410712605579939982/df9f61918e58e298252dbcbfe910e849.png?size=1024", "roleName": "Пробный Игрок", "bot": false, "verified": false}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.emoji-img {
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    object-fit: contain;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/a06dfa47e027eb8acdf25152e486f1c8.png?size=1024" timestamp="2026-05-25_16-42-35">Тикет Закрыт.<br/>Причина: Не указана<br/>Закрыл: <@1104388035199639585><br/>Дата: 2026-05-25_16-42-35<br/><a href="https://transcripts.erlcrussia.xyz/transcripts/поддержка-1278_2026-05-25_16-42-35.html" style="color: #00aff4;">https://transcripts.erlcrussia.xyz/transcripts/поддержка-1278_2026-05-25_16-42-35.html</a></discord-message>
+<discord-message id="m-1506615838491279451" timestamp="2026-05-20T14:13:27.465000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="padding:8px;color:#dcddde;"><discord-mention type="role">Персонал ER:LC</discord-mention> <discord-mention type="role">Персонал Discord</discord-mention> <discord-mention type="user">Sane4ka_TRAXAET</discord-mention></div><div style="background:#2f3136;border-left:4px solid #006800;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:8px 12px;"><div style="display:flex;gap:16px;align-items:flex-start;"><img src="https://cdn.discordapp.com/avatars/1104388035199639585/a4ed6c685ccabbc6a529cc87fc16e032.png?size=1024" style="width:80px;height:80px;border-radius:8px;object-fit:cover;flex-shrink:0;" /><div><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg" alt="📨" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Новый Тикет — Поддержка</span><br/><strong>В чём проблема:</strong><br/>Поменяйте нам название опг</div></div></div><div style="padding:4px 12px;color:#dcddde;">⏳ <strong>Ожидайте ответа от персонала.</strong></div><div style="height:1px;background:#4f545c;margin:4px 0;"></div><div style="height:8px;"></div><div style="display:flex;gap:8px;padding:8px 0;flex-wrap:wrap;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Закрыть Тикет</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e4.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Освободить Тикет</button></div></div></div></discord-message>
+<discord-message id="m-1506615925107982376" timestamp="2026-05-20T14:13:48.116000Z" profile="1104388035199639585">на русский добровольческий корпус (РДК) <br/>или террористическое сообщество "Сеть"<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f480.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1506618388506611776" timestamp="2026-05-20T14:23:35.436000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e5.svg" alt="📥" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет взят <discord-mention type="user">[VD-011] Sashapozzzz</discord-mention>.</span></div></div></div></discord-message>
+<discord-message id="m-1506618414179946498" timestamp="2026-05-20T14:23:41.557000Z" profile="970713754411089940">какой из трех?</discord-message>
+<discord-message id="m-1506618437647073311" timestamp="2026-05-20T14:23:47.152000Z" profile="970713754411089940">в том тикете еще было название</discord-message>
+<discord-message id="m-1506618660125544569" timestamp="2026-05-20T14:24:40.195000Z" profile="1104388035199639585">авангард народной воли</discord-message>
+<discord-message id="m-1506618668874731610" timestamp="2026-05-20T14:24:42.281000Z" profile="1104388035199639585">а.н.в</discord-message>
+<discord-message id="m-1506618690894823465" timestamp="2026-05-20T14:24:47.531000Z" profile="1104388035199639585">я хз</discord-message>
+<discord-message id="m-1506618702131626044" timestamp="2026-05-20T14:24:50.210000Z" profile="1104388035199639585">поч нельзя его</discord-message>
+<discord-message id="m-1506618781537931335" timestamp="2026-05-20T14:25:09.142000Z" profile="970713754411089940">ну потому что</discord-message>
+<discord-message id="m-1506618861959512114" timestamp="2026-05-20T14:25:28.316000Z" profile="970713754411089940">это в реальной жизни терр. организация</discord-message>
+<discord-message id="m-1506618934491746416" timestamp="2026-05-20T14:25:45.609000Z" profile="1104388035199639585">ну так мы тоже терр орг</discord-message>
+<discord-message id="m-1506619032453775531" timestamp="2026-05-20T14:26:08.965000Z" profile="970713754411089940">вы не в реальной жизни терр опг</discord-message>
+<discord-message id="m-1506619053425430568" timestamp="2026-05-20T14:26:13.965000Z" profile="970713754411089940">а в рп проекте</discord-message>
+<discord-message id="m-1506619067644248164" timestamp="2026-05-20T14:26:17.355000Z" profile="1104388035199639585">да</discord-message>
+<discord-message id="m-1506619088670163024" timestamp="2026-05-20T14:26:22.368000Z" profile="1104388035199639585">я про это и говорю</discord-message>
+<discord-message id="m-1506619100527591424" timestamp="2026-05-20T14:26:25.195000Z" profile="970713754411089940">ну так создайте свое название</discord-message>
+<discord-message id="m-1506619104843399199" timestamp="2026-05-20T14:26:26.224000Z" profile="970713754411089940">в игре</discord-message>
+<discord-message id="m-1506619159964942367" timestamp="2026-05-20T14:26:39.366000Z" profile="1104388035199639585">окей</discord-message>
+<discord-message id="m-1506619176067010720" timestamp="2026-05-20T14:26:43.205000Z" profile="970713754411089940">вам же никто не запрещает, становиться терр организацией</discord-message>
+<discord-message id="m-1506619190252142684" timestamp="2026-05-20T14:26:46.587000Z" profile="1104388035199639585">щас придумаем чтото</discord-message>
+<discord-message id="m-1506619194337132564" timestamp="2026-05-20T14:26:47.561000Z" profile="970713754411089940"><discord-reply slot="reply" author="Sane4ka_TRAXAET" avatar="" role-color="#2a88cb"><span data-goto="1506619159964942367">окей</span></discord-reply>спасибо</discord-message>
+<discord-message id="m-1506619197143121971" timestamp="2026-05-20T14:26:48.230000Z" profile="1104388035199639585">похожее</discord-message>
+<discord-message id="m-1506619204911235152" timestamp="2026-05-20T14:26:50.082000Z" profile="1104388035199639585">на анв</discord-message>
+<discord-message id="m-1506619210153988176" timestamp="2026-05-20T14:26:51.332000Z" profile="970713754411089940">хорошо</discord-message>
+<discord-message id="m-1506619235969794089" timestamp="2026-05-20T14:26:57.487000Z" profile="1104388035199639585">просто у нас форма уже есть с нашивкой воля</discord-message>
+<discord-message id="m-1506619269301932052" timestamp="2026-05-20T14:27:05.434000Z" profile="1104388035199639585">и логотип</discord-message>
+<discord-message id="m-1506621054506893473" timestamp="2026-05-20T14:34:11.060000Z" profile="1104388035199639585">давай Боевой сектор народной воли</discord-message>
+<discord-message id="m-1506621100040130592" timestamp="2026-05-20T14:34:21.916000Z" profile="1104388035199639585">БСНВ</discord-message>
+<discord-message id="m-1506630045513547857" timestamp="2026-05-20T15:09:54.683000Z" profile="1104388035199639585"><discord-mention type="user">[VD-011] Sashapozzzz</discord-mention></discord-message>
+<discord-message id="m-1506653245387444245" timestamp="2026-05-20T16:42:05.964000Z" profile="585394439715946518">в названии не должно быть вообще никакого упоминания</discord-message>
+<discord-message id="m-1506653251251077121" timestamp="2026-05-20T16:42:07.362000Z" profile="585394439715946518">нельзя</discord-message>
+<discord-message id="m-1506653259538894948" timestamp="2026-05-20T16:42:09.338000Z" profile="585394439715946518">запрещено</discord-message>
+<discord-message id="m-1506654297113362646" timestamp="2026-05-20T16:46:16.715000Z" profile="1104388035199639585">поч</discord-message>
+<discord-message id="m-1506654346652160161" timestamp="2026-05-20T16:46:28.526000Z" profile="1104388035199639585">название другое</discord-message>
+<discord-message id="m-1506654371738288189" timestamp="2026-05-20T16:46:34.507000Z" profile="1104388035199639585">не  существует такой орг</discord-message>
+<discord-message id="m-1506656605473607833" timestamp="2026-05-20T16:55:27.071000Z" profile="585394439715946518">в названии НЕ ДОЛЖНО быть никакого упоминания реальных организаций, которые запрещены в реальной жизни, в РФ</discord-message>
+<discord-message id="m-1506660902089523200" timestamp="2026-05-20T17:12:31.464000Z" profile="585394439715946518">если вы переименуетесь в условную "Новая Аль-Каида", то вы не перестанете быть аль каидой</discord-message>
+<discord-message id="m-1506660918757429311" timestamp="2026-05-20T17:12:35.438000Z" profile="585394439715946518">та же самая херня здесь</discord-message>
+<discord-message id="m-1506660943558606928" timestamp="2026-05-20T17:12:41.351000Z" profile="585394439715946518"><discord-reply slot="reply" author="Sane4ka_TRAXAET" avatar="" role-color="#2a88cb"><span data-goto="1506615925107982376">на русский добровольческий корпус (РДК) 
+или террористическое сообщество &quot;Сеть&quot;</span></discord-reply>какая сеть, какой рдк</discord-message>
+<discord-message id="m-1506660967034126347" timestamp="2026-05-20T17:12:46.948000Z" profile="585394439715946518">вам личиться надо</discord-message>
+<discord-message id="m-1506663079038025800" timestamp="2026-05-20T17:21:10.489000Z" profile="1104388035199639585">ладно</discord-message>
+<discord-message id="m-1506663087556792350" timestamp="2026-05-20T17:21:12.520000Z" profile="1104388035199639585">щас сделаем</discord-message>
+<discord-message id="m-1506663093227229375" timestamp="2026-05-20T17:21:13.872000Z" profile="1104388035199639585">волюще</discord-message>
+<discord-message id="m-1506663107773075497" timestamp="2026-05-20T17:21:17.340000Z" profile="1104388035199639585">не существующий</discord-message>
+<discord-message id="m-1506663116870647923" timestamp="2026-05-20T17:21:19.509000Z" profile="1104388035199639585">сам выдумаю</discord-message>
+<discord-message id="m-1506663265554403369" timestamp="2026-05-20T17:21:54.958000Z" profile="1104388035199639585"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1506660943558606928">какая сеть, какой рдк</span></discord-reply>Брух сами писали в примере рдк</discord-message>
+<discord-message id="m-1506663435356606494" timestamp="2026-05-20T17:22:35.442000Z" profile="585394439715946518"><discord-attachments slot="attachments"><discord-attachment type="image" filename="image.png" url="https://transcripts.erlcrussia.xyz/attachments/1506663435356606494_1506663435449008228.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1506663634867322890" timestamp="2026-05-20T17:23:23.009000Z" profile="1104388035199639585">жди</discord-message>
+<discord-message id="m-1506674983919947917" timestamp="2026-05-20T18:08:28.834000Z" profile="1104388035199639585">Синдикат "О.Б.Т.Н." (Отдельный блок террористического назначения)<br/>Организациия "О.Т.О." (Обьеденный террористический отряд)<br/>Организация "СЕКТОР СТАЛИ"<br/>Синдикат "Ц.У.Т" (Центральное управление террора)<br/>Синдикат "Нулевой объект"<br/>Организация "БЛОК Возмездия"</discord-message>
+<discord-message id="m-1506674992757211216" timestamp="2026-05-20T18:08:30.941000Z" profile="1104388035199639585">на выбирай</discord-message>
+<discord-message id="m-1506679111781978252" timestamp="2026-05-20T18:24:52.993000Z" profile="1104388035199639585">какие нельзя скажи</discord-message>
+<discord-message id="m-1506697963596939338" timestamp="2026-05-20T19:39:47.616000Z" profile="1104388035199639585">ну так что?</discord-message>
+<discord-message id="m-1506700278710276216" timestamp="2026-05-20T19:48:59.582000Z" profile="585394439715946518">у названий всё ещё имеется подтекст, который нарушает не только роблокс тос, но и законы РФ</discord-message>
+<discord-message id="m-1506700397488640131" timestamp="2026-05-20T19:49:27.901000Z" profile="585394439715946518">давайте что то более нейтральное и связанное с тематикой сервера</discord-message>
+<discord-message id="m-1506701041868083332" timestamp="2026-05-20T19:52:01.533000Z" profile="585394439715946518"><discord-reply slot="reply" author="Sane4ka_TRAXAET" avatar="" role-color="#2a88cb"><span data-goto="1506674983919947917">Синдикат &quot;О.Б.Т.Н.&quot; (Отдельный блок террористического назначения)
+Организациия &quot;О.Т.О.&quot; (Обьеденный </span></discord-reply>Варианты с "террористический" или "террор" полностью исключены. В Роблоксе за эти слова может прилететь бан со стороны разрабов ярлыка.<br/>СЕКТОР СТАЛИ: Это название не пропускаем. Сейчас оно вызывает слишком прямые ассоциации с реальными политическими событиями и запрещенными в РФ организациями.<br/>Блок возмездия и нулевой объект больше походи на организации джихада, которые опять же не вписываются в тематику сервера</discord-message>
+<discord-message id="m-1506712622408667186" timestamp="2026-05-20T20:38:02.549000Z" profile="1104388035199639585">ок</discord-message>
+<discord-message id="m-1506712916236308550" timestamp="2026-05-20T20:39:12.603000Z" profile="1104388035199639585">нам название надо</discord-message>
+<discord-message id="m-1506714819452080159" timestamp="2026-05-20T20:46:46.365000Z" profile="1104388035199639585">у меня хорошее название есть но оно с scp</discord-message>
+<discord-message id="m-1506714917078696017" timestamp="2026-05-20T20:47:09.641000Z" profile="585394439715946518">скидывайте</discord-message>
+<discord-message id="m-1506715221467861034" timestamp="2026-05-20T20:48:22.213000Z" profile="1104388035199639585">Алый молот</discord-message>
+<discord-message id="m-1506715303550124172" timestamp="2026-05-20T20:48:41.783000Z" profile="1104388035199639585">или красный молот</discord-message>
+<discord-message id="m-1506715771781513366" timestamp="2026-05-20T20:50:33.418000Z" profile="1104388035199639585">ну что</discord-message>
+<discord-message id="m-1506716205308711006" timestamp="2026-05-20T20:52:16.779000Z" profile="585394439715946518">окей</discord-message>
+<discord-message id="m-1506716266138701866" timestamp="2026-05-20T20:52:31.282000Z" profile="585394439715946518">какое точно хотите</discord-message>
+<discord-message id="m-1506716279673720894" timestamp="2026-05-20T20:52:34.509000Z" profile="585394439715946518">напишите ниже</discord-message>
+<discord-message id="m-1506716419432124426" timestamp="2026-05-20T20:53:07.830000Z" profile="1104388035199639585">Синдикат "алый молот"</discord-message>
+<discord-message id="m-1506716618552508598" timestamp="2026-05-20T20:53:55.304000Z" profile="1104388035199639585">или</discord-message>
+<discord-message id="m-1506716643957538887" timestamp="2026-05-20T20:54:01.361000Z" profile="1104388035199639585">Синдикат "Красный молот"</discord-message>
+<discord-message id="m-1506716652153077872" timestamp="2026-05-20T20:54:03.315000Z" profile="1104388035199639585">думаю второе</discord-message>
+<discord-message id="m-1506716752560787577" timestamp="2026-05-20T20:54:27.254000Z" profile="585394439715946518">синдикат это же что то с бизнесом связанное?</discord-message>
+<discord-message id="m-1506716772651499582" timestamp="2026-05-20T20:54:32.044000Z" profile="585394439715946518">а вы опг</discord-message>
+<discord-message id="m-1506716927370858607" timestamp="2026-05-20T20:55:08.932000Z" profile="1104388035199639585">не</discord-message>
+<discord-message id="m-1506717114390679642" timestamp="2026-05-20T20:55:53.521000Z" profile="1104388035199639585">ну либо</discord-message>
+<discord-message id="m-1506717124956131369" timestamp="2026-05-20T20:55:56.040000Z" profile="1104388035199639585">организация</discord-message>
+<discord-message id="m-1506717574610817226" timestamp="2026-05-20T20:57:43.246000Z" profile="1195675629010558986">какая разница</discord-message>
+<discord-message id="m-1506717679409434634" timestamp="2026-05-20T20:58:08.232000Z" profile="1195675629010558986">вы на карте,ролями и всем прочим будете красным молотом</discord-message>
+<discord-message id="m-1506717719687594124" timestamp="2026-05-20T20:58:17.835000Z" profile="1104388035199639585">ну я знаю</discord-message>
+<discord-message id="m-1506717757415358474" timestamp="2026-05-20T20:58:26.830000Z" profile="1104388035199639585">просто синдикат в нескольких смыслах</discord-message>
+<discord-message id="m-1506717772850266174" timestamp="2026-05-20T20:58:30.510000Z" profile="1195675629010558986">ну так что ты решишь в этом случае то и делай</discord-message>
+<discord-message id="m-1506718409428045968" timestamp="2026-05-20T21:01:02.282000Z" profile="1104388035199639585">ну как бы, синдикат это объединение нескольких группировок в одну организованную преступную группировку. У которой есть свои вербовщики, бизнес с которого получают финансирование и тд. Устраивают диверсии, нападения и тд</discord-message>
+<discord-message id="m-1506718452491223060" timestamp="2026-05-20T21:01:12.549000Z" profile="1104388035199639585">а организация объединение, у которого свои общие цели</discord-message>
+<discord-message id="m-1506718556858093730" timestamp="2026-05-20T21:01:37.432000Z" profile="1104388035199639585">ну лан сделайте название красный молот а дальше уже сами решим кто мы</discord-message>
+<discord-message id="m-1506728986544443443" timestamp="2026-05-20T21:43:04.063000Z" profile="1104388035199639585">ну что там</discord-message>
+<discord-message id="m-1506877652462731396" timestamp="2026-05-21T07:33:48.780000Z" profile="1104388035199639585">ау</discord-message>
+<discord-message id="m-1507043600725446906" timestamp="2026-05-21T18:33:13.929000Z" profile="585394439715946518"><discord-mention type="user">[PR-011] The_Borisik</discord-mention> поменяй им название на карте тер пожалуйста</discord-message>
+<discord-message id="m-1507048044842188911" timestamp="2026-05-21T18:50:53.489000Z" profile="1195675629010558986"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1507043600725446906">@1195675629010558986 поменяй им название на карте тер пожалуйста</span></discord-reply>завтра поменяю<discord-reactions slot="reactions"><discord-reaction emoji="https://cdn.discordapp.com/emojis/1441132741474127993.png" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1507444399716569209" timestamp="2026-05-22T21:05:51.855000Z" profile="1195675629010558986"><discord-mention type="user">Sane4ka_TRAXAET</discord-mention> Извиняюсь за задержку</discord-message>
+<discord-message id="m-1507444414803345559" timestamp="2026-05-22T21:05:55.452000Z" profile="1195675629010558986">Цвета ваши оставляем?</discord-message>
+<discord-message id="m-1507444727002173702" timestamp="2026-05-22T21:07:09.886000Z" profile="1195675629010558986">у вас вроде как сине-белое щас</discord-message>
+<discord-message id="m-1507445330793463818" timestamp="2026-05-22T21:09:33.841000Z" profile="1195675629010558986">Или сделаем какой нибудь красный как было у якузы</discord-message>
+<discord-message id="m-1507450912682021105" timestamp="2026-05-22T21:31:44.667000Z" profile="1104388035199639585">да</discord-message>
+<discord-message id="m-1507450919871189094" timestamp="2026-05-22T21:31:46.381000Z" profile="1104388035199639585">красныфй</discord-message>
+<discord-message id="m-1507450998904459324" timestamp="2026-05-22T21:32:05.224000Z" profile="1104388035199639585">у нас все фулл красное</discord-message>
+<discord-message id="m-1507451208074268803" timestamp="2026-05-22T21:32:55.094000Z" profile="1195675629010558986">HEX коды</discord-message>
+<discord-message id="m-1507451213690699927" timestamp="2026-05-22T21:32:56.433000Z" profile="1195675629010558986">тогда</discord-message>
+<discord-message id="m-1507451229708619886" timestamp="2026-05-22T21:33:00.252000Z" profile="1195675629010558986">свои</discord-message>
+<discord-message id="m-1507451566414893297" timestamp="2026-05-22T21:34:20.529000Z" profile="1104388035199639585">эт че</discord-message>
+<discord-message id="m-1507451591404552285" timestamp="2026-05-22T21:34:26.487000Z" profile="1104388035199639585">#FFOOO типо?<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1507451642952421428" timestamp="2026-05-22T21:34:38.777000Z" profile="1195675629010558986">E2070A</discord-message>
+<discord-message id="m-1507451651265663068" timestamp="2026-05-22T21:34:40.759000Z" profile="1195675629010558986">например это</discord-message>
+<discord-message id="m-1507451720131936450" timestamp="2026-05-22T21:34:57.178000Z" profile="1104388035199639585">FF0000</discord-message>
+<discord-message id="m-1507451787916087487" timestamp="2026-05-22T21:35:13.339000Z" profile="1195675629010558986">2?</discord-message>
+<discord-message id="m-1507451834577588336" timestamp="2026-05-22T21:35:24.464000Z" profile="1104388035199639585">либо  F80000</discord-message>
+<discord-message id="m-1507451888734441664" timestamp="2026-05-22T21:35:37.376000Z" profile="1195675629010558986">2 цвет какой</discord-message>
+<discord-message id="m-1507451905503395940" timestamp="2026-05-22T21:35:41.374000Z" profile="1195675629010558986">или у вас один</discord-message>
+<discord-message id="m-1507451907923513546" timestamp="2026-05-22T21:35:41.951000Z" profile="1104388035199639585">какой</discord-message>
+<discord-message id="m-1507451973782474862" timestamp="2026-05-22T21:35:57.653000Z" profile="1104388035199639585">Фулл красный все делай<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1507451994229702696" timestamp="2026-05-22T21:36:02.528000Z" profile="1104388035199639585">и на карте назва тож</discord-message>
+<discord-message id="m-1507452017302306947" timestamp="2026-05-22T21:36:08.029000Z" profile="1195675629010558986">я изменю карту</discord-message>
+<discord-message id="m-1507452469653930244" timestamp="2026-05-22T21:37:55.878000Z" profile="1195675629010558986">тематика вашего опг какое</discord-message>
+<discord-message id="m-1507452503225008280" timestamp="2026-05-22T21:38:03.882000Z" profile="1195675629010558986"><discord-mention type="user">Sane4ka_TRAXAET</discord-mention></discord-message>
+<discord-message id="m-1507452569717444610" timestamp="2026-05-22T21:38:19.735000Z" profile="1104388035199639585">эт для  инфы</discord-message>
+<discord-message id="m-1507452575438471168" timestamp="2026-05-22T21:38:21.099000Z" profile="1104388035199639585">?</discord-message>
+<discord-message id="m-1507452591947256100" timestamp="2026-05-22T21:38:25.035000Z" profile="1195675629010558986">мне для баннера</discord-message>
+<discord-message id="m-1507452628949274788" timestamp="2026-05-22T21:38:33.857000Z" profile="1195675629010558986">для инфы мб тоже пойдет</discord-message>
+<discord-message id="m-1507452640131285083" timestamp="2026-05-22T21:38:36.523000Z" profile="1104388035199639585">что именно надо</discord-message>
+<discord-message id="m-1507452694481338508" timestamp="2026-05-22T21:38:49.481000Z" profile="1104388035199639585">чтоб я понимал как рассписать тебе</discord-message>
+<discord-message id="m-1507452705327681668" timestamp="2026-05-22T21:38:52.067000Z" profile="1104388035199639585">много или мало</discord-message>
+<discord-message id="m-1507452736067600559" timestamp="2026-05-22T21:38:59.396000Z" profile="1195675629010558986"><discord-attachments slot="attachments"><discord-attachment type="image" filename="image.png" url="https://transcripts.erlcrussia.xyz/attachments/1507452736067600559_1507452736516522075.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1507452748981997708" timestamp="2026-05-22T21:39:02.475000Z" profile="1195675629010558986">вот так как нибудь</discord-message>
+<discord-message id="m-1507452783287079062" timestamp="2026-05-22T21:39:10.654000Z" profile="1104388035199639585">ща</discord-message>
+<discord-message id="m-1507452786441457706" timestamp="2026-05-22T21:39:11.406000Z" profile="1195675629010558986">ну типо якуза сразу понятно то что это что то из азии</discord-message>
+<discord-message id="m-1507452843081072742" timestamp="2026-05-22T21:39:24.910000Z" profile="1195675629010558986">и лого киньте</discord-message>
+<discord-message id="m-1507452861729083452" timestamp="2026-05-22T21:39:29.356000Z" profile="1195675629010558986">если у вас есть кнч он</discord-message>
+<discord-message id="m-1507452933417992263" timestamp="2026-05-22T21:39:46.448000Z" profile="1104388035199639585">ща<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1507453995579474022" timestamp="2026-05-22T21:43:59.687000Z" profile="1104388035199639585">у нас есть печать</discord-message>
+<discord-message id="m-1507454021210865694" timestamp="2026-05-22T21:44:05.798000Z" profile="1104388035199639585">но она не подойдет</discord-message>
+<discord-message id="m-1507454048180240496" timestamp="2026-05-22T21:44:12.228000Z" profile="1104388035199639585">щас начерканю сам чтото</discord-message>
+<discord-message id="m-1507466165558186205" timestamp="2026-05-22T22:32:21.236000Z" profile="1104388035199639585"><discord-attachments slot="attachments"><discord-attachment type="image" filename="IMG_20260522_223154_547.jpg" url="https://transcripts.erlcrussia.xyz/attachments/1507466165558186205_1507466165696462968.jpg"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1507466196000440461" timestamp="2026-05-22T22:32:28.494000Z" profile="1104388035199639585">щас описание</discord-message>
+<discord-message id="m-1507468930724397127" timestamp="2026-05-22T22:43:20.503000Z" profile="1195675629010558986">баннер я сам делаю</discord-message>
+<discord-message id="m-1507472016096362691" timestamp="2026-05-22T22:55:36.113000Z" profile="1104388035199639585">«Красный молот» — радикальная террористическая организация военизированного типа, специализирующаяся на силовой дестабилизации государств. Группировка делает ставку на подавляющую огневую мощь и профессиональную военную подготовку своих членов. Занимаеться проведением масштабных диверсий на критической инфраструктуре для запугивания населения и паралича власти, участием в ожесточенных перестрелках с регулярной армией и спецподразделениями, использование армейской дисциплины и готовность к максимальным разрушениям ради достижения политических целей. Все это - не просто задача, а жизнь синдиката "Красный Молот"</discord-message>
+<discord-message id="m-1507472051613470820" timestamp="2026-05-22T22:55:44.581000Z" profile="1104388035199639585">ну это тебе к примеру</discord-message>
+<discord-message id="m-1507472070366466109" timestamp="2026-05-22T22:55:49.052000Z" profile="1104388035199639585">уберешь там воду</discord-message>
+<discord-message id="m-1507472125471232091" timestamp="2026-05-22T22:56:02.190000Z" profile="1104388035199639585">самое важное оставишь</discord-message>
+<discord-message id="m-1507626491423359057" timestamp="2026-05-23T09:09:25.901000Z" profile="1104388035199639585">Борисик поменяй на все сегодня  пж</discord-message>
+<discord-message id="m-1507626507659509922" timestamp="2026-05-23T09:09:29.772000Z" profile="1104388035199639585">полностью</discord-message>
+<discord-message id="m-1507661507943596114" timestamp="2026-05-23T11:28:34.490000Z" profile="1195675629010558986">Вам уже поменяли</discord-message>
+<discord-message id="m-1507661516588191774" timestamp="2026-05-23T11:28:36.551000Z" profile="1195675629010558986">Вроде</discord-message>
+<discord-message id="m-1507668034938994698" timestamp="2026-05-23T11:54:30.647000Z" profile="1104388035199639585">не</discord-message>
+<discord-message id="m-1507668054233059338" timestamp="2026-05-23T11:54:35.247000Z" profile="1104388035199639585">роли</discord-message>
+<discord-message id="m-1507668129919012977" timestamp="2026-05-23T11:54:53.292000Z" profile="1104388035199639585">в чате опг пишет <em>состоит в опг "UKpanik"</em></discord-message>
+<discord-message id="m-1507668385423556659" timestamp="2026-05-23T11:55:54.209000Z" profile="1104388035199639585"><discord-attachments slot="attachments"><discord-attachment type="image" filename="2026-05-23_115523.png" url="https://transcripts.erlcrussia.xyz/attachments/1507668385423556659_1507668385553584198.png"></discord-attachment><discord-attachment type="image" filename="2026-05-23_115510.png" url="https://transcripts.erlcrussia.xyz/attachments/1507668385423556659_1507668385914163311.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1507668670887886958" timestamp="2026-05-23T11:57:02.269000Z" profile="1195675629010558986"><discord-reply slot="reply" author="Sane4ka_TRAXAET" avatar="" role-color="#2a88cb"><span data-goto="1507668385423556659">[deleted]</span></discord-reply>изменил</discord-message>
+<discord-message id="m-1507669383898595349" timestamp="2026-05-23T11:59:52.264000Z" profile="1104388035199639585">у макса роль зам лидака исчезла</discord-message>
+<discord-message id="m-1507669763424522301" timestamp="2026-05-23T12:01:22.750000Z" profile="1195675629010558986">пушо я снес роли замов</discord-message>
+<discord-message id="m-1507669799579160786" timestamp="2026-05-23T12:01:31.370000Z" profile="1195675629010558986">не особо нужны</discord-message>
+<discord-message id="m-1507669817895686175" timestamp="2026-05-23T12:01:35.737000Z" profile="1104388035199639585">понял</discord-message>
+<discord-message id="m-1507669832425013298" timestamp="2026-05-23T12:01:39.201000Z" profile="1104388035199639585">а когда добавишь</discord-message>
+<discord-message id="m-1507669838149976094" timestamp="2026-05-23T12:01:40.566000Z" profile="1104388035199639585">в инфу</discord-message>
+<discord-message id="m-1507669860656746586" timestamp="2026-05-23T12:01:45.932000Z" profile="1195675629010558986">у меня нет доступа</discord-message>
+<discord-message id="m-1507669870437728327" timestamp="2026-05-23T12:01:48.264000Z" profile="1195675629010558986">мне не дают</discord-message>
+<discord-message id="m-1507669892571205805" timestamp="2026-05-23T12:01:53.541000Z" profile="1104388035199639585">понял</discord-message>
+<discord-message id="m-1508465302952743074" timestamp="2026-05-25T16:42:34.154000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет закроется через несколько секунд...</span></div></div></div></discord-message>
+</discord-messages></body></html>
