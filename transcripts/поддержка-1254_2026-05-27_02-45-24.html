@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-1254</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/8f6e9a6ad7bdc609907d4c907ccadfd5.png?size=1024", "roleColor": "#006800", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/8e5424768addb0eab9fb87dcd89088bb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": true}, "1104388035199639585": {"author": "Sane4ka_TRAXAET", "avatar": "https://cdn.discordapp.com/avatars/1104388035199639585/a4ed6c685ccabbc6a529cc87fc16e032.png?size=1024", "roleColor": "#2a88cb", "roleIcon": "https://cdn.discordapp.com/role-icons/1416177983378686052/3d06b544ab605eab4956042b2dad64fc.png?size=1024", "roleName": "Участник", "bot": false, "verified": false}, "585394439715946518": {"author": "savingbox3", "avatar": "https://cdn.discordapp.com/avatars/585394439715946518/e82f31f878077dcd383254c613d59c3d.png?size=1024", "roleColor": "#d4843d", "roleIcon": "https://cdn.discordapp.com/role-icons/1483091539973373993/b2b1d515e0da04921b1553fe55d87eea.png?size=1024", "roleName": "Руководство Проекта", "bot": false, "verified": false}, "1092122255523328070": {"author": "NUKErbmm", "avatar": "https://cdn.discordapp.com/avatars/1092122255523328070/6838d555dbd3442f691e22afcde03c2e.png?size=1024", "roleColor": "#ff1d00", "roleIcon": "https://cdn.discordapp.com/role-icons/1418879460014424124/b149b40ab6ec3d5351239507713f9717.png?size=1024", "roleName": "Пробный Игрок", "bot": false, "verified": false}, "1195675629010558986": {"author": "[PR-011] The_Borisik", "avatar": "https://cdn.discordapp.com/avatars/1195675629010558986/16b83fbe315df0f2f7ee3e08fee39600.png?size=1024", "roleColor": "#424cff", "roleIcon": "https://cdn.discordapp.com/role-icons/1410712605579939982/df9f61918e58e298252dbcbfe910e849.png?size=1024", "roleName": "Пробный Игрок", "bot": false, "verified": false}, "1059736820876853248": {"author": "Государь Император koronsdf", "avatar": "https://cdn.discordapp.com/avatars/1059736820876853248/abdb75f461a6290a85006c82959d7192.png?size=1024", "roleColor": "#ffd700", "roleIcon": "https://cdn.discordapp.com/role-icons/1422974739609292850/95e4088940371977549005ced9681737.png?size=1024", "roleName": "Государь Император и Самодержец Всероссийский", "bot": false, "verified": false}, "501686815120687105": {"author": "[PR-018] Лидер Мнений sqw1rtiq", "avatar": "https://cdn.discordapp.com/avatars/501686815120687105/d2ce72c80bc8a6bdbfa976e7c2a08cfd.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1426830509962432613/c0d406b9b857befae1149fc48c77038b.png?size=1024", "roleName": "крипс генг", "bot": false, "verified": false}, "563434444321587202": {"author": "Вкусно и Точка", "avatar": "https://cdn.discordapp.com/avatars/563434444321587202/601a37c9ed01b3ff0e4ef3960d42a93b.png?size=1024", "roleColor": "#0f583d", "roleIcon": "https://cdn.discordapp.com/role-icons/1398311435901341696/b3abf0aca7be375448eb00d6508c8f6e.png?size=1024", "roleName": "Вкусно и Точка", "bot": true, "verified": true}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.emoji-img {
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    object-fit: contain;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/a06dfa47e027eb8acdf25152e486f1c8.png?size=1024" timestamp="2026-05-27_02-45-24">Тикет Закрыт.<br/>Причина: Не указана<br/>Закрыл: <@1104388035199639585><br/>Дата: 2026-05-27_02-45-24<br/><a href="https://transcripts.erlcrussia.xyz/transcripts/поддержка-1254_2026-05-27_02-45-24.html" style="color: #00aff4;">https://transcripts.erlcrussia.xyz/transcripts/поддержка-1254_2026-05-27_02-45-24.html</a></discord-message>
+<discord-message id="m-1503620661485113467" timestamp="2026-05-12T07:51:41.619000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="padding:8px;color:#dcddde;"><discord-mention type="role">Персонал ER:LC</discord-mention> <discord-mention type="role">Персонал Discord</discord-mention> <discord-mention type="user">Sane4ka_TRAXAET</discord-mention></div><div style="background:#2f3136;border-left:4px solid #006800;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:8px 12px;"><div style="display:flex;gap:16px;align-items:flex-start;"><img src="https://cdn.discordapp.com/avatars/1104388035199639585/a4ed6c685ccabbc6a529cc87fc16e032.png?size=1024" style="width:80px;height:80px;border-radius:8px;object-fit:cover;flex-shrink:0;" /><div><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg" alt="📨" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Новый Тикет — Поддержка</span><br/><strong>В чём проблема:</strong><br/>хотим получить разрешение, на угон вертолета и терракт. С помощью вертолета мы хотим совершить терракт на  самом высоком здании города</div></div></div><div style="padding:4px 12px;color:#dcddde;">⏳ <strong>Ожидайте ответа от персонала.</strong></div><div style="height:1px;background:#4f545c;margin:4px 0;"></div><div style="height:8px;"></div><div style="display:flex;gap:8px;padding:8px 0;flex-wrap:wrap;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Закрыть Тикет</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e4.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Освободить Тикет</button></div></div></div></discord-message>
+<discord-message id="m-1503623747649802322" timestamp="2026-05-12T08:03:57.418000Z" profile="1104388035199639585"><discord-attachments slot="attachments"><discord-attachment type="image" filename="2026-04-28_231305-1.png" url="https://transcripts.erlcrussia.xyz/attachments/1503623747649802322_1503623747335360552.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1503665639284281434" timestamp="2026-05-12T10:50:25.162000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e5.svg" alt="📥" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет взят <discord-mention type="user">savingbox3</discord-mention>.</span></div></div></div></discord-message>
+<discord-message id="m-1503665690119508070" timestamp="2026-05-12T10:50:37.282000Z" profile="585394439715946518">Здравствуйте, функионально вы не сможете физически устроить такое рп</discord-message>
+<discord-message id="m-1503665792477167768" timestamp="2026-05-12T10:51:01.686000Z" profile="585394439715946518">вертолёт не может быть угнан, а в здании на фото просто нет интерьера</discord-message>
+<discord-message id="m-1503665798278025338" timestamp="2026-05-12T10:51:03.069000Z" profile="585394439715946518">отказ</discord-message>
+<discord-message id="m-1503675287815065602" timestamp="2026-05-12T11:28:45.551000Z" profile="1104388035199639585">здание поджечь можно</discord-message>
+<discord-message id="m-1503675939593130067" timestamp="2026-05-12T11:31:20.947000Z" profile="1104388035199639585"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1503665792477167768">вертолёт не может быть угнан, а в здании на фото просто нет интерьера</span></discord-reply>вертолет можно угнать путем отыгрыша РП в чат. Мы отыграем как пробираемся под прикрытием на воздушную базу, где хранят вертолеты. Угоним его (у нас будет человек с лицензией пилота), долетим до центра города и отыграем как с вертолета делаем два выстрела с РПГ по зданию, после чего поставим вертолет ровно над крышей здания и взорвем его, чтобы крыша начала обваливаться, после падения вертолета и активного пожара.</discord-message>
+<discord-message id="m-1503676664331112598" timestamp="2026-05-12T11:34:13.738000Z" profile="1104388035199639585">как происходить будет? один человек который будет находиться вне РП, будет передвигаться на квадроциикле, чтобы вертолет следовал за ним, отыгрывая как мы управляем им. (Другой человек вызовет на человека на квадроцикле вертолет), Затем человек остановиться, как бы имитирую зависание вертолета в небе.  Затем пешком подвинуть вертолет ровно над зданием и взорвать его</discord-message>
+<discord-message id="m-1503677096566984796" timestamp="2026-05-12T11:35:56.791000Z" profile="1104388035199639585">либо сделать не с этим небоскребом, а  с больницей, только стрелять мы будем по крыше, и собьем вертолет над ней же, чтоб он упал. Через команду snf building (Start near fire) крыша больницы будет гореть</discord-message>
+<discord-message id="m-1503677259415027864" timestamp="2026-05-12T11:36:35.617000Z" profile="1104388035199639585">мы для террактов выбираем здания которые могут гореть через команду</discord-message>
+<discord-message id="m-1503683244200038490" timestamp="2026-05-12T12:00:22.501000Z" profile="585394439715946518"><discord-mention type="user">NUKErbmm</discord-mention> это уже больше походит на ивент<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764-fe0f.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1503744300217925703" timestamp="2026-05-12T16:02:59.390000Z" profile="1092122255523328070"><discord-reply slot="reply" author="Sane4ka_TRAXAET" avatar="" role-color="#2a88cb"><span data-goto="1503677259415027864">мы для террактов выбираем здания которые могут гореть через команду</span></discord-reply>Я думаю хорошая идея для ивента</discord-message>
+<discord-message id="m-1503744362490630224" timestamp="2026-05-12T16:03:14.237000Z" profile="1092122255523328070">11 сентября в москве</discord-message>
+<discord-message id="m-1503747358746349738" timestamp="2026-05-12T16:15:08.600000Z" profile="1104388035199639585">так когда делать</discord-message>
+<discord-message id="m-1503783030941159525" timestamp="2026-05-12T18:36:53.514000Z" profile="1092122255523328070"><discord-reply slot="reply" author="Sane4ka_TRAXAET" avatar="" role-color="#2a88cb"><span data-goto="1503747358746349738">так когда делать</span></discord-reply>Ну для ивента нужны подготовка хорошая</discord-message>
+<discord-message id="m-1503790563579658271" timestamp="2026-05-12T19:06:49.435000Z" profile="1104388035199639585">мы подготовимся</discord-message>
+<discord-message id="m-1503792208552394906" timestamp="2026-05-12T19:13:21.627000Z" profile="1195675629010558986"><discord-reply slot="reply" author="Sane4ka_TRAXAET" avatar="" role-color="#2a88cb"><span data-goto="1503790563579658271">мы подготовимся</span></discord-reply>это не вам нужно</discord-message>
+<discord-message id="m-1503792239065698355" timestamp="2026-05-12T19:13:28.902000Z" profile="1195675629010558986">а организаторам ивента</discord-message>
+<discord-message id="m-1504425073111597139" timestamp="2026-05-14T13:08:08.296000Z" profile="1104388035199639585">ну что там</discord-message>
+<discord-message id="m-1505293393818030200" timestamp="2026-05-16T22:38:32.085000Z" profile="1104388035199639585">когда нам делать</discord-message>
+<discord-message id="m-1505293416035258650" timestamp="2026-05-16T22:38:37.382000Z" profile="1104388035199639585">нам побыстрее надо</discord-message>
+<discord-message id="m-1505614405876977684" timestamp="2026-05-17T19:54:07.324000Z" profile="585394439715946518"><discord-mention type="user">NUKErbmm</discord-mention></discord-message>
+<discord-message id="m-1505614421626585101" timestamp="2026-05-17T19:54:11.079000Z" profile="585394439715946518">что там с ивентом</discord-message>
+<discord-message id="m-1505616335881900115" timestamp="2026-05-17T20:01:47.473000Z" profile="1092122255523328070"><discord-reply slot="reply" author="Sane4ka_TRAXAET" avatar="" role-color="#2a88cb"><span data-goto="1505293416035258650">нам побыстрее надо</span></discord-reply>Ну вы когда сможете?</discord-message>
+<discord-message id="m-1505616635468185620" timestamp="2026-05-17T20:02:58.900000Z" profile="1104388035199639585">в любое время</discord-message>
+<discord-message id="m-1505616642393247976" timestamp="2026-05-17T20:03:00.551000Z" profile="1104388035199639585">можем щас</discord-message>
+<discord-message id="m-1505616659145293915" timestamp="2026-05-17T20:03:04.545000Z" profile="1104388035199639585">как смотрите на это</discord-message>
+<discord-message id="m-1505629487717679147" timestamp="2026-05-17T20:54:03.115000Z" profile="1092122255523328070"><discord-reply slot="reply" author="Sane4ka_TRAXAET" avatar="" role-color="#2a88cb"><span data-goto="1505616659145293915">как смотрите на это</span></discord-reply>Ну точно не сейчас</discord-message>
+<discord-message id="m-1505629555249909770" timestamp="2026-05-17T20:54:19.216000Z" profile="1104388035199639585">хм</discord-message>
+<discord-message id="m-1505629555707220140" timestamp="2026-05-17T20:54:19.325000Z" profile="1195675629010558986"><discord-reply slot="reply" author="NUKErbmm" avatar="" role-color="#ff1d00"><span data-goto="1505629487717679147">Ну точно не сейчас</span></discord-reply>где то летом</discord-message>
+<discord-message id="m-1505629562950779041" timestamp="2026-05-17T20:54:21.052000Z" profile="1092122255523328070">Вы хотите больницу поджечь или высокое здание</discord-message>
+<discord-message id="m-1505629584538865774" timestamp="2026-05-17T20:54:26.199000Z" profile="1092122255523328070">?</discord-message>
+<discord-message id="m-1505629599789482279" timestamp="2026-05-17T20:54:29.835000Z" profile="1104388035199639585">мы не поджечь</discord-message>
+<discord-message id="m-1505629613395808466" timestamp="2026-05-17T20:54:33.079000Z" profile="1104388035199639585">мы на вертолете</discord-message>
+<discord-message id="m-1505629618949062736" timestamp="2026-05-17T20:54:34.403000Z" profile="1104388035199639585">с рпг</discord-message>
+<discord-message id="m-1505629631456346174" timestamp="2026-05-17T20:54:37.385000Z" profile="1104388035199639585">бум бум</discord-message>
+<discord-message id="m-1505629664679559249" timestamp="2026-05-17T20:54:45.306000Z" profile="1092122255523328070">Ну так какое</discord-message>
+<discord-message id="m-1505629677069537454" timestamp="2026-05-17T20:54:48.260000Z" profile="1104388035199639585">высотку</discord-message>
+<discord-message id="m-1505629697214779552" timestamp="2026-05-17T20:54:53.063000Z" profile="1104388035199639585">в игру щас зайти сможешь?</discord-message>
+<discord-message id="m-1505629715111739432" timestamp="2026-05-17T20:54:57.330000Z" profile="1104388035199639585">надо проверить</discord-message>
+<discord-message id="m-1505629721134633102" timestamp="2026-05-17T20:54:58.766000Z" profile="1059736820876853248"><small>а откуда вы РПГ возьмёте</small></discord-message>
+<discord-message id="m-1505629801099301094" timestamp="2026-05-17T20:55:17.831000Z" profile="1104388035199639585"><discord-reply slot="reply" author="Государь Император koronsdf" avatar="" role-color="#ffd700"><span data-goto="1505629721134633102">-# а откуда вы РПГ возьмёте</span></discord-reply>мы на последней контрабанде провезли все</discord-message>
+<discord-message id="m-1505629811878396157" timestamp="2026-05-17T20:55:20.401000Z" profile="1104388035199639585">я же говорил</discord-message>
+<discord-message id="m-1505629828764799017" timestamp="2026-05-17T20:55:24.427000Z" profile="1104388035199639585">мы заранее готовим планы</discord-message>
+<discord-message id="m-1505629846397649099" timestamp="2026-05-17T20:55:28.631000Z" profile="1059736820876853248">Танки тоже провезли?</discord-message>
+<discord-message id="m-1505629859399860415" timestamp="2026-05-17T20:55:31.731000Z" profile="1104388035199639585">не</discord-message>
+<discord-message id="m-1505629878610034718" timestamp="2026-05-17T20:55:36.311000Z" profile="1104388035199639585">у нас одна рпг</discord-message>
+<discord-message id="m-1505629880149217330" timestamp="2026-05-17T20:55:36.678000Z" profile="1059736820876853248">Вы где их получили</discord-message>
+<discord-message id="m-1505629883961970819" timestamp="2026-05-17T20:55:37.587000Z" profile="1104388035199639585">всего</discord-message>
+<discord-message id="m-1505629897106788372" timestamp="2026-05-17T20:55:40.721000Z" profile="1195675629010558986"><discord-reply slot="reply" author="Государь Император koronsdf" avatar="" role-color="#ffd700"><span data-goto="1505629721134633102">-# а откуда вы РПГ возьмёте</span></discord-reply>из москвы в москву<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764-fe0f.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1505629914265550960" timestamp="2026-05-17T20:55:44.812000Z" profile="1092122255523328070">Они в пути</discord-message>
+<discord-message id="m-1505629947266470126" timestamp="2026-05-17T20:55:52.680000Z" profile="1092122255523328070">танки</discord-message>
+<discord-message id="m-1505629964127440979" timestamp="2026-05-17T20:55:56.700000Z" profile="1104388035199639585">да</discord-message>
+<discord-message id="m-1505629976639312002" timestamp="2026-05-17T20:55:59.683000Z" profile="1104388035199639585">эшелон едет</discord-message>
+<discord-message id="m-1505629984717541488" timestamp="2026-05-17T20:56:01.609000Z" profile="1195675629010558986">вот ты корон не понимаешь</discord-message>
+<discord-message id="m-1505630009614663711" timestamp="2026-05-17T20:56:07.545000Z" profile="1195675629010558986">вот ракеты фламинго летят на москву</discord-message>
+<discord-message id="m-1505630029344931982" timestamp="2026-05-17T20:56:12.249000Z" profile="1195675629010558986">а они сетей над москвой поставили</discord-message>
+<discord-message id="m-1505630091697197183" timestamp="2026-05-17T20:56:27.115000Z" profile="1195675629010558986">ракеты уже есть у них</discord-message>
+<discord-message id="m-1505630116405968997" timestamp="2026-05-17T20:56:33.006000Z" profile="1059736820876853248">Точняк</discord-message>
+<discord-message id="m-1505630120340099193" timestamp="2026-05-17T20:56:33.944000Z" profile="1104388035199639585">ладно</discord-message>
+<discord-message id="m-1505630133275594954" timestamp="2026-05-17T20:56:37.028000Z" profile="1104388035199639585">фулл верт с4<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f480.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1505630142402265228" timestamp="2026-05-17T20:56:39.204000Z" profile="1104388035199639585">в небоскреб</discord-message>
+<discord-message id="m-1505630146638385302" timestamp="2026-05-17T20:56:40.214000Z" profile="1195675629010558986">пусковую установку собрать легче простого</discord-message>
+<discord-message id="m-1505630299109982290" timestamp="2026-05-17T20:57:16.566000Z" profile="1104388035199639585">ты на вопрос мой ответь</discord-message>
+<discord-message id="m-1505630313081081897" timestamp="2026-05-17T20:57:19.897000Z" profile="1104388035199639585">в укпаник чате</discord-message>
+<discord-message id="m-1505630702555631718" timestamp="2026-05-17T20:58:52.755000Z" profile="1104388035199639585">в сцену зайди</discord-message>
+<discord-message id="m-1505630707807162491" timestamp="2026-05-17T20:58:54.007000Z" profile="1104388035199639585">нук</discord-message>
+<discord-message id="m-1505921164101288018" timestamp="2026-05-18T16:13:04.184000Z" profile="1104388035199639585">нук тут</discord-message>
+<discord-message id="m-1505921185731576069" timestamp="2026-05-18T16:13:09.341000Z" profile="1104388035199639585">можем сегодня сделать</discord-message>
+<discord-message id="m-1506551607297314937" timestamp="2026-05-20T09:58:13.555000Z" profile="1104388035199639585">давай в субботу</discord-message>
+<discord-message id="m-1506551657855717436" timestamp="2026-05-20T09:58:25.609000Z" profile="1104388035199639585"><discord-reply slot="reply" author="NUKErbmm" avatar="" role-color="#ff1d00"><span data-goto="1505616335881900115">Ну вы когда сможете?</span></discord-reply>.</discord-message>
+<discord-message id="m-1506872216086773865" timestamp="2026-05-21T07:12:12.647000Z" profile="1092122255523328070"><discord-reply slot="reply" author="Sane4ka_TRAXAET" avatar="" role-color="#2a88cb"><span data-goto="1506551657855717436">.</span></discord-reply>В субботу можно будет</discord-message>
+<discord-message id="m-1506874815762530324" timestamp="2026-05-21T07:22:32.458000Z" profile="1104388035199639585">давай в 20:00</discord-message>
+<discord-message id="m-1507087851467051018" timestamp="2026-05-21T21:29:04.128000Z" profile="1104388035199639585">а тут вопрос еще</discord-message>
+<discord-message id="m-1507087878063263936" timestamp="2026-05-21T21:29:10.469000Z" profile="1104388035199639585">тюрьму захватить можно</discord-message>
+<discord-message id="m-1507670637714604043" timestamp="2026-05-23T12:04:51.197000Z" profile="1104388035199639585"><discord-reply slot="reply" author="NUKErbmm" avatar="" role-color="#ff1d00"><span data-goto="1506872216086773865">В субботу можно будет</span></discord-reply>нук в 19 30 в войс заходи тогда</discord-message>
+<discord-message id="m-1507670645549432842" timestamp="2026-05-23T12:04:53.065000Z" profile="1104388035199639585">сегодня</discord-message>
+<discord-message id="m-1507776346242416751" timestamp="2026-05-23T19:04:54.074000Z" profile="1104388035199639585">сейвинг пингани нука</discord-message>
+<discord-message id="m-1507776381990338693" timestamp="2026-05-23T19:05:02.597000Z" profile="585394439715946518"><discord-mention type="user">NUKErbmm</discord-mention> <discord-mention type="user">NUKErbmm</discord-mention> <discord-mention type="user">NUKErbmm</discord-mention> <discord-mention type="user">NUKErbmm</discord-mention> <discord-mention type="user">NUKErbmm</discord-mention></discord-message>
+<discord-message id="m-1507781095515750640" timestamp="2026-05-23T19:23:46.389000Z" profile="1104388035199639585">Ы</discord-message>
+<discord-message id="m-1507782176933154986" timestamp="2026-05-23T19:28:04.219000Z" profile="1104388035199639585">сейвинг</discord-message>
+<discord-message id="m-1507782189876646039" timestamp="2026-05-23T19:28:07.305000Z" profile="1104388035199639585">мб ты нам сделаешь</discord-message>
+<discord-message id="m-1507783746437251089" timestamp="2026-05-23T19:34:18.418000Z" profile="585394439715946518">-</discord-message>
+<discord-message id="m-1507783782088966304" timestamp="2026-05-23T19:34:26.918000Z" profile="585394439715946518"><discord-mention type="user">NUKErbmm</discord-mention></discord-message>
+<discord-message id="m-1507783918567428196" timestamp="2026-05-23T19:34:59.457000Z" profile="1104388035199639585">где он</discord-message>
+<discord-message id="m-1507784446714187968" timestamp="2026-05-23T19:37:05.377000Z" profile="585394439715946518">откисает видимо</discord-message>
+<discord-message id="m-1507785000387481712" timestamp="2026-05-23T19:39:17.383000Z" profile="1104388035199639585">где</discord-message>
+<discord-message id="m-1507785006800441445" timestamp="2026-05-23T19:39:18.912000Z" profile="1104388035199639585">и как</discord-message>
+<discord-message id="m-1507787740379615303" timestamp="2026-05-23T19:50:10.648000Z" profile="1104388035199639585">где нук</discord-message>
+<discord-message id="m-1507788000820592651" timestamp="2026-05-23T19:51:12.742000Z" profile="1195675629010558986">отдыхает</discord-message>
+<discord-message id="m-1507796159933186100" timestamp="2026-05-23T20:23:38.026000Z" profile="1104388035199639585">да где нук</discord-message>
+<discord-message id="m-1508035680142364783" timestamp="2026-05-24T12:15:24.094000Z" profile="1104388035199639585">нук ты тут</discord-message>
+<discord-message id="m-1508066176876675102" timestamp="2026-05-24T14:16:35.082000Z" profile="1104388035199639585">так а кто нам терракт сделает</discord-message>
+<discord-message id="m-1508071733796667462" timestamp="2026-05-24T14:38:39.955000Z" profile="501686815120687105">Давайте я помогу</discord-message>
+<discord-message id="m-1508071792294494258" timestamp="2026-05-24T14:38:53.902000Z" profile="501686815120687105"><discord-reply slot="reply" author="Sane4ka_TRAXAET" avatar="" role-color="#2a88cb"><span data-goto="1508066176876675102">так а кто нам терракт сделает</span></discord-reply>Распишите пожалуйста еще раз, что вам надо сделать?</discord-message>
+<discord-message id="m-1508082258106519562" timestamp="2026-05-24T15:20:29.146000Z" profile="1104388035199639585"><discord-reply slot="reply" author="Sane4ka_TRAXAET" avatar="" role-color="#2a88cb"><span data-goto="1503675939593130067">вертолет можно угнать путем отыгрыша РП в чат. Мы отыграем как пробираемся под прикрытием на воздушн</span></discord-reply>отсюда</discord-message>
+<discord-message id="m-1508084046734033037" timestamp="2026-05-24T15:27:35.588000Z" profile="1104388035199639585">по времени также</discord-message>
+<discord-message id="m-1508084054808072342" timestamp="2026-05-24T15:27:37.513000Z" profile="1104388035199639585">20 00</discord-message>
+<discord-message id="m-1508084096197197906" timestamp="2026-05-24T15:27:47.381000Z" profile="1104388035199639585">либо же через 30 минут после окончания ивента</discord-message>
+<discord-message id="m-1508084200669053038" timestamp="2026-05-24T15:28:12.289000Z" profile="1104388035199639585"><discord-mention type="user">[PR-018] Лидер Мнений sqw1rtiq</discord-mention></discord-message>
+<discord-message id="m-1508084488956280902" timestamp="2026-05-24T15:29:21.022000Z" profile="501686815120687105">сегодня точно нет</discord-message>
+<discord-message id="m-1508084507163492383" timestamp="2026-05-24T15:29:25.363000Z" profile="501686815120687105">ивент будет долго</discord-message>
+<discord-message id="m-1508084762227642368" timestamp="2026-05-24T15:30:26.175000Z" profile="1104388035199639585">да просто чтобы онлайн был</discord-message>
+<discord-message id="m-1508084826052231408" timestamp="2026-05-24T15:30:41.392000Z" profile="1104388035199639585">либо завтра</discord-message>
+<discord-message id="m-1508084847737045216" timestamp="2026-05-24T15:30:46.562000Z" profile="1104388035199639585">както набрать онлайн</discord-message>
+<discord-message id="m-1508119476422443158" timestamp="2026-05-24T17:48:22.684000Z" profile="1104388035199639585">Мб сегодня все-таки сделаем</discord-message>
+<discord-message id="m-1508119492813656085" timestamp="2026-05-24T17:48:26.592000Z" profile="1104388035199639585">после ивента</discord-message>
+<discord-message id="m-1508153724168573049" timestamp="2026-05-24T20:04:27.983000Z" profile="1104388035199639585">ну так что</discord-message>
+<discord-message id="m-1508153729549996032" timestamp="2026-05-24T20:04:29.266000Z" profile="1104388035199639585">матрикс</discord-message>
+<discord-message id="m-1508168267343200317" timestamp="2026-05-24T21:02:15.346000Z" profile="501686815120687105"><discord-reply slot="reply" author="[PR-018] Лидер Мнений sqw1rtiq" avatar="" role-color="#ffffff"><span data-goto="1508084488956280902">сегодня точно нет</span></discord-reply>.</discord-message>
+<discord-message id="m-1508168316559167559" timestamp="2026-05-24T21:02:27.080000Z" profile="501686815120687105">я вам предложил, что вы можете сделать сегодня</discord-message>
+<discord-message id="m-1508463833562349660" timestamp="2026-05-25T16:36:43.824000Z" profile="1104388035199639585">давай сегодня сделаем</discord-message>
+<discord-message id="m-1508463840587681802" timestamp="2026-05-25T16:36:45.499000Z" profile="1104388035199639585">матрикс</discord-message>
+<discord-message id="m-1508465860375744663" timestamp="2026-05-25T16:44:47.054000Z" profile="1104388035199639585">только надо подготовить состав с мчс</discord-message>
+<discord-message id="m-1508477464798691472" timestamp="2026-05-25T17:30:53.764000Z" profile="1104388035199639585"><discord-mention type="user">[PR-018] Лидер Мнений sqw1rtiq</discord-mention></discord-message>
+<discord-message id="m-1508492493052706929" timestamp="2026-05-25T18:30:36.779000Z" profile="1104388035199639585">хотя завтра  давай</discord-message>
+<discord-message id="m-1508732159500877875" timestamp="2026-05-26T10:22:57.713000Z" profile="1104388035199639585"><discord-mention type="user">[PR-018] Лидер Мнений sqw1rtiq</discord-mention> сегодня сможешь сделать?</discord-message>
+<discord-message id="m-1508742260634947724" timestamp="2026-05-26T11:03:06.011000Z" profile="501686815120687105"><discord-reply slot="reply" author="Sane4ka_TRAXAET" avatar="" role-color="#2a88cb"><span data-goto="1508732159500877875">@501686815120687105 сегодня сможешь сделать?</span></discord-reply>Я немного не понимаю до сих пор как вы будете реализовывать это</discord-message>
+<discord-message id="m-1508743228730507285" timestamp="2026-05-26T11:06:56.823000Z" profile="1104388035199639585">ну я тебе напишу</discord-message>
+<discord-message id="m-1508743232098537492" timestamp="2026-05-26T11:06:57.626000Z" profile="1104388035199639585">как</discord-message>
+<discord-message id="m-1508744221098774528" timestamp="2026-05-26T11:10:53.422000Z" profile="501686815120687105">Я прочитал как вы хотите это реализовать</discord-message>
+<discord-message id="m-1508744250534133881" timestamp="2026-05-26T11:11:00.440000Z" profile="501686815120687105">Это круто</discord-message>
+<discord-message id="m-1508744285963550790" timestamp="2026-05-26T11:11:08.887000Z" profile="501686815120687105">Но есть несколько моментов</discord-message>
+<discord-message id="m-1508744354146291853" timestamp="2026-05-26T11:11:25.143000Z" profile="501686815120687105">Будет много НРП, много FRP</discord-message>
+<discord-message id="m-1508744408722571265" timestamp="2026-05-26T11:11:38.155000Z" profile="501686815120687105">Начнут отыгрывать в свою сторону</discord-message>
+<discord-message id="m-1508744869357551686" timestamp="2026-05-26T11:13:27.979000Z" profile="501686815120687105">Что-то типо <br/><ul><br/><li><em>стрельнул из стрелы в летящий вертолет</em></li><br/><li><em>использовав ЛТЦ успешно увернулся от снаряда</em></li><br/></ul></discord-message>
+<discord-message id="m-1508744872046366770" timestamp="2026-05-26T11:13:28.620000Z" profile="563434444321587202"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f389.svg" alt="🎉" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> <discord-mention type="user">[PR-018] Лидер Мнений sqw1rtiq</discord-mention> только что получил 13 уровень!<discord-attachments slot="attachments"><discord-attachment type="image" filename="Maki-levelup.png" url="https://transcripts.erlcrussia.xyz/attachments/1508744872046366770_1508744872369193081.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1508744936537854053" timestamp="2026-05-26T11:13:43.996000Z" profile="501686815120687105"><discord-reply slot="reply" author="[PR-018] Лидер Мнений sqw1rtiq" avatar="" role-color="#ffffff"><span data-goto="1508744869357551686">Что-то типо 
+- стрельнул из стрелы в летящий вертолет
+- *использовав ЛТЦ успешно увернулся от снар</span></discord-reply>И будут конфликты</discord-message>
+<discord-message id="m-1508744945450745916" timestamp="2026-05-26T11:13:46.121000Z" profile="501686815120687105">Споры</discord-message>
+<discord-message id="m-1508744976165638165" timestamp="2026-05-26T11:13:53.444000Z" profile="501686815120687105">Кто прав/кто не прав</discord-message>
+<discord-message id="m-1508745356773429298" timestamp="2026-05-26T11:15:24.188000Z" profile="1104388035199639585">крч. Мы в игровой чат отыгрываем как залетаем на авиабазу, тараном сносим металлический забор, там вертолет начнем запускать и отстреливаться в течении минуты, после мы Грузим РПГ в вертолет, на нем начнем взлетать, машина которая таранила забор уезжает и летит вместе с вертолетом к больнице. Когда мы подлетим, там откроем дверь вертолета боковую, с нее с РПГ производим выстрелы по зданию с рпг, люди на земле также будут вести боевые действия. После этого человек который сидел в пикапе и за ним летел вертолет, заходит в здание, отыгрывает типо на вертолете становиться над крышей. Потом зарядом С4 детонируем вертолет, он падает на крышу. Пилот отыгрывает с помощником пилота как с парашута спрыгивают с вертолета, и залетают в кузов пикапа движущийся на скорости.</discord-message>
+<discord-message id="m-1508745518975815680" timestamp="2026-05-26T11:16:02.860000Z" profile="1104388035199639585"><discord-reply slot="reply" author="[PR-018] Лидер Мнений sqw1rtiq" avatar="" role-color="#ffffff"><span data-goto="1508744869357551686">Что-то типо 
+- стрельнул из стрелы в летящий вертолет
+- *использовав ЛТЦ успешно увернулся от снар</span></discord-reply>варны им выдавай, если у них отыгровки не будет как они каким-то чудом РПГ достанут с багажника</discord-message>
+<discord-message id="m-1508745610717691965" timestamp="2026-05-26T11:16:24.733000Z" profile="1104388035199639585"><discord-reply slot="reply" author="Sane4ka_TRAXAET" avatar="" role-color="#2a88cb"><span data-goto="1508745356773429298">крч. Мы в игровой чат отыгрываем как залетаем на авиабазу, тараном сносим металлический забор, там в</span></discord-reply>и еще про падение вертолета.  Мы  его просто собьем с оружия</discord-message>
+<discord-message id="m-1508745665856016535" timestamp="2026-05-26T11:16:37.879000Z" profile="1104388035199639585"><discord-reply slot="reply" author="Sane4ka_TRAXAET" avatar="" role-color="#2a88cb"><span data-goto="1508745518975815680">варны им выдавай, если у них отыгровки не будет как они каким-то чудом РПГ достанут с багажника</span></discord-reply>точнее как оно у них было</discord-message>
+<discord-message id="m-1508745726752980993" timestamp="2026-05-26T11:16:52.398000Z" profile="1104388035199639585">а не шкатулочка какая-то, что у них в багажнике может еще и Джавелин лежит</discord-message>
+<discord-message id="m-1508745951777394818" timestamp="2026-05-26T11:17:46.048000Z" profile="1104388035199639585">по факту они не должны будут успеть сбить вертолет. Во первых надо загрузить это, во вторых нужен спец транспорт, в третьих надо это еще достать и нацелиться, в четвертых не всегда можно попасть</discord-message>
+<discord-message id="m-1508746448009826464" timestamp="2026-05-26T11:19:44.359000Z" profile="1104388035199639585">ну спец транспорт то есть не к примеру бмв х5 ФСБ у которых лежит ручное ПВО в багажнике, так и еще с снарядами.  А к примеру машина спецназа, не помню как она называеться, ну которая бронированная с Сват геймпаса. Или маленький Бусик</discord-message>
+<discord-message id="m-1508747098382667879" timestamp="2026-05-26T11:22:19.420000Z" profile="501686815120687105">Вас в жизни</discord-message>
+<discord-message id="m-1508747136890572951" timestamp="2026-05-26T11:22:28.601000Z" profile="501686815120687105">перестреляют еще на моменте врыва на авиа базу</discord-message>
+<discord-message id="m-1508747168650104844" timestamp="2026-05-26T11:22:36.173000Z" profile="501686815120687105">Даже если вы взлетите</discord-message>
+<discord-message id="m-1508747189113847878" timestamp="2026-05-26T11:22:41.052000Z" profile="501686815120687105">вас моментально собьют</discord-message>
+<discord-message id="m-1508747212912459908" timestamp="2026-05-26T11:22:46.726000Z" profile="1104388035199639585">у нас если что будет бронированный пикап</discord-message>
+<discord-message id="m-1508747266599682068" timestamp="2026-05-26T11:22:59.526000Z" profile="1104388035199639585"><discord-reply slot="reply" author="[PR-018] Лидер Мнений sqw1rtiq" avatar="" role-color="#ffffff"><span data-goto="1508747189113847878">вас моментально собьют</span></discord-reply>ну на это похуй</discord-message>
+<discord-message id="m-1508747338531737671" timestamp="2026-05-26T11:23:16.676000Z" profile="501686815120687105"><discord-reply slot="reply" author="Sane4ka_TRAXAET" avatar="" role-color="#2a88cb"><span data-goto="1508747212912459908">у нас если что будет бронированный пикап</span></discord-reply>А у военных крупно каллиберного оружия много</discord-message>
+<discord-message id="m-1508747368965738536" timestamp="2026-05-26T11:23:23.932000Z" profile="1104388035199639585">это просто когда мы врываемся</discord-message>
+<discord-message id="m-1508747405665767506" timestamp="2026-05-26T11:23:32.682000Z" profile="1104388035199639585">можем отыграть как под прикрытием проникаем на базу</discord-message>
+<discord-message id="m-1508747414474063873" timestamp="2026-05-26T11:23:34.782000Z" profile="501686815120687105">И ваш бронированный пикап будет не о чем</discord-message>
+<discord-message id="m-1508747457520074825" timestamp="2026-05-26T11:23:45.045000Z" profile="501686815120687105"><discord-reply slot="reply" author="Sane4ka_TRAXAET" avatar="" role-color="#2a88cb"><span data-goto="1508747266599682068">ну на это похуй</span></discord-reply>Как так</discord-message>
+<discord-message id="m-1508747493192761354" timestamp="2026-05-26T11:23:53.550000Z" profile="1104388035199639585">смотря как удобнее будет</discord-message>
+<discord-message id="m-1508747599849590794" timestamp="2026-05-26T11:24:18.979000Z" profile="1104388035199639585">просто первый план это тараном влетаем на базу и угоняем вертолет, а второй можно под прикрытием проникнуть среди ночи и угнать вертолет</discord-message>
+<discord-message id="m-1508747724625805432" timestamp="2026-05-26T11:24:48.728000Z" profile="501686815120687105"><discord-reply slot="reply" author="Sane4ka_TRAXAET" avatar="" role-color="#2a88cb"><span data-goto="1508747599849590794">просто первый план это тараном влетаем на базу и угоняем вертолет, а второй можно под прикрытием про</span></discord-reply>там проход через кпп в такие места строгий</discord-message>
+<discord-message id="m-1508747766443282594" timestamp="2026-05-26T11:24:58.698000Z" profile="1104388035199639585">я в курсе</discord-message>
+<discord-message id="m-1508747774429102110" timestamp="2026-05-26T11:25:00.602000Z" profile="501686815120687105">куча людей спят днем и встают в ночную смену</discord-message>
+<discord-message id="m-1508747803378319410" timestamp="2026-05-26T11:25:07.504000Z" profile="501686815120687105">как вы будете проникать</discord-message>
+<discord-message id="m-1508748167351500811" timestamp="2026-05-26T11:26:34.282000Z" profile="1104388035199639585">просто смотри по первому плану, обычно авиабазы не Супер охраняемые точки, тоесть выглядит это приблизительно как на фотке<discord-attachments slot="attachments"><discord-attachment type="image" filename="i_360.webp" url="https://transcripts.erlcrussia.xyz/attachments/1508748167351500811_1508748167951417404.webp"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1508748197642764471" timestamp="2026-05-26T11:26:41.504000Z" profile="1104388035199639585">типо большое пустое поле</discord-message>
+<discord-message id="m-1508748203389091920" timestamp="2026-05-26T11:26:42.874000Z" profile="1104388035199639585">и вертолеты</discord-message>
+<discord-message id="m-1508748309299462145" timestamp="2026-05-26T11:27:08.125000Z" profile="501686815120687105">Я всю жизнь жил рядом с военной авиабазой</discord-message>
+<discord-message id="m-1508748336226762752" timestamp="2026-05-26T11:27:14.545000Z" profile="501686815120687105">Там все очень жестко</discord-message>
+<discord-message id="m-1508748410222678046" timestamp="2026-05-26T11:27:32.187000Z" profile="501686815120687105">Да, там просто поле</discord-message>
+<discord-message id="m-1508748433807249558" timestamp="2026-05-26T11:27:37.810000Z" profile="1104388035199639585">ну я вкурсе , просто там где вертолеты стоят, там большая открытая площадка</discord-message>
+<discord-message id="m-1508748463817621594" timestamp="2026-05-26T11:27:44.965000Z" profile="501686815120687105">Но вы не то чтоб угнать ничего не сможете</discord-message>
+<discord-message id="m-1508748491139055686" timestamp="2026-05-26T11:27:51.479000Z" profile="501686815120687105">Вы даже проникнуть не сможете</discord-message>
+<discord-message id="m-1508748548840230972" timestamp="2026-05-26T11:28:05.236000Z" profile="1104388035199639585">тогда как нам делать</discord-message>
+<discord-message id="m-1508748801349779538" timestamp="2026-05-26T11:29:05.439000Z" profile="1104388035199639585">ну можно конечно сделать типо семью пилота какого-то с авиабазы взять в заложники, и заставить его типо отдать нам вертолет</discord-message>
+<discord-message id="m-1508748902671847526" timestamp="2026-05-26T11:29:29.596000Z" profile="1104388035199639585">потому что у него с документами все чисто, и он проверенное лицо</discord-message>
+<discord-message id="m-1508749493645086770" timestamp="2026-05-26T11:31:50.495000Z" profile="501686815120687105"><discord-reply slot="reply" author="[PR-018] Лидер Мнений sqw1rtiq" avatar="" role-color="#ffffff"><span data-goto="1508744354146291853">Будет много НРП, много FRP</span></discord-reply>Ну опять же</discord-message>
+<discord-message id="m-1508749516512166039" timestamp="2026-05-26T11:31:55.947000Z" profile="501686815120687105">Зачем оно надо</discord-message>
+<discord-message id="m-1508749559617032333" timestamp="2026-05-26T11:32:06.224000Z" profile="501686815120687105">Т.к вы системно это никак не реализуете</discord-message>
+<discord-message id="m-1508750926465204304" timestamp="2026-05-26T11:37:32.106000Z" profile="1104388035199639585">системно можно</discord-message>
+<discord-message id="m-1508750959554072668" timestamp="2026-05-26T11:37:39.995000Z" profile="1104388035199639585">вертолет следует за человеком</discord-message>
+<discord-message id="m-1508750989409128520" timestamp="2026-05-26T11:37:47.113000Z" profile="1104388035199639585">и им управлять можно</discord-message>
+<discord-message id="m-1508751007411077193" timestamp="2026-05-26T11:37:51.405000Z" profile="1104388035199639585">просто двигаясь</discord-message>
+<discord-message id="m-1508751552737837107" timestamp="2026-05-26T11:40:01.421000Z" profile="501686815120687105">то есть расстреляв вашу машину в момент этой ситуации фактически люди собьют вертолет?</discord-message>
+<discord-message id="m-1508752084680577174" timestamp="2026-05-26T11:42:08.246000Z" profile="1104388035199639585">нет</discord-message>
+<discord-message id="m-1508752110282477762" timestamp="2026-05-26T11:42:14.350000Z" profile="1104388035199639585">вертолет сами собьем</discord-message>
+<discord-message id="m-1508752159917740102" timestamp="2026-05-26T11:42:26.184000Z" profile="1104388035199639585">с оружия</discord-message>
+<discord-message id="m-1508752185578750045" timestamp="2026-05-26T11:42:32.302000Z" profile="1104388035199639585">это ток цивики могут</discord-message>
+<discord-message id="m-1508752268709724280" timestamp="2026-05-26T11:42:52.122000Z" profile="1104388035199639585">да и плюсом откуда у того же самого ФСБ в багажнике легкового автомобиля РПГ с снарядами</discord-message>
+<discord-message id="m-1508752346979762257" timestamp="2026-05-26T11:43:10.783000Z" profile="1104388035199639585">по такой же логике после перестрелки мы можем открыть багажник автомобиля и от туда условно гранаты забрать</discord-message>
+<discord-message id="m-1508753477398954154" timestamp="2026-05-26T11:47:40.296000Z" profile="501686815120687105"><discord-reply slot="reply" author="Sane4ka_TRAXAET" avatar="" role-color="#2a88cb"><span data-goto="1508752268709724280">да и плюсом откуда у того же самого ФСБ в багажнике легкового автомобиля РПГ с снарядами</span></discord-reply>почему РПГ</discord-message>
+<discord-message id="m-1508753585956065411" timestamp="2026-05-26T11:48:06.178000Z" profile="1104388035199639585">незнаю</discord-message>
+<discord-message id="m-1508753610702458900" timestamp="2026-05-26T11:48:12.078000Z" profile="1104388035199639585">что они там достанут</discord-message>
+<discord-message id="m-1508753790327717928" timestamp="2026-05-26T11:48:54.904000Z" profile="1104388035199639585">у нас если что люди на земле, можем снайперов расставить</discord-message>
+<discord-message id="m-1508753871227322419" timestamp="2026-05-26T11:49:14.192000Z" profile="1104388035199639585">чтобы мешали сбить вертолет</discord-message>
+<discord-message id="m-1508753944237707324" timestamp="2026-05-26T11:49:31.599000Z" profile="501686815120687105">В общем, мой вердикт - отказано<br/>Системно очень тяжело реализовать и отыграть с другими фракциями, будет очень много нарушений правил/споров/конфликтов. Если в ерлс добавят вертолеты, на которых можно будет летать, можно будет сделать, но сейчас нет</discord-message>
+<discord-message id="m-1508754267261894666" timestamp="2026-05-26T11:50:48.614000Z" profile="1104388035199639585">тогда вопрос</discord-message>
+<discord-message id="m-1508754292272795720" timestamp="2026-05-26T11:50:54.577000Z" profile="1104388035199639585">есть команда</discord-message>
+<discord-message id="m-1508754331032092733" timestamp="2026-05-26T11:51:03.818000Z" profile="1104388035199639585">чтобы не только огонь делать</discord-message>
+<discord-message id="m-1508754412401725450" timestamp="2026-05-26T11:51:23.218000Z" profile="1104388035199639585">но и обрушения моста</discord-message>
+<discord-message id="m-1508754430856663042" timestamp="2026-05-26T11:51:27.618000Z" profile="1104388035199639585">и тд</discord-message>
+<discord-message id="m-1508754593260245124" timestamp="2026-05-26T11:52:06.338000Z" profile="501686815120687105">Есть</discord-message>
+<discord-message id="m-1508754690471628831" timestamp="2026-05-26T11:52:29.515000Z" profile="501686815120687105">Но она доступна только со-овнерам</discord-message>
+<discord-message id="m-1508754718447505528" timestamp="2026-05-26T11:52:36.185000Z" profile="1104388035199639585">а где нам терракты сделать можно</discord-message>
+<discord-message id="m-1508754752068915200" timestamp="2026-05-26T11:52:44.201000Z" profile="1104388035199639585">ФСБ нельзя?</discord-message>
+<discord-message id="m-1508754774269366292" timestamp="2026-05-26T11:52:49.494000Z" profile="501686815120687105">Нет</discord-message>
+<discord-message id="m-1508754786697216000" timestamp="2026-05-26T11:52:52.457000Z" profile="1104388035199639585">эх</discord-message>
+<discord-message id="m-1508754800718905485" timestamp="2026-05-26T11:52:55.800000Z" profile="501686815120687105">Там точка спавна игроков</discord-message>
+<discord-message id="m-1508754972261482698" timestamp="2026-05-26T11:53:36.699000Z" profile="501686815120687105">Можно было бы в суде, если б оружие не забирало</discord-message>
+<discord-message id="m-1508755013747609643" timestamp="2026-05-26T11:53:46.590000Z" profile="501686815120687105">Сейчас часто на сессии президент</discord-message>
+<discord-message id="m-1508755052620419092" timestamp="2026-05-26T11:53:55.858000Z" profile="501686815120687105">Можете что-то с ним попробовать сделать</discord-message>
+<discord-message id="m-1508755182823936060" timestamp="2026-05-26T11:54:26.901000Z" profile="1104388035199639585">так в суде можно отключить</discord-message>
+<discord-message id="m-1508755190897971261" timestamp="2026-05-26T11:54:28.826000Z" profile="1104388035199639585">зз</discord-message>
+<discord-message id="m-1508755904080646214" timestamp="2026-05-26T11:57:18.862000Z" profile="1104388035199639585">я точно не помню как, через команду, через баг или через помощь модеров, но я точно знаю что там можно что-то сделать чтобы оружие не забирало. Я на американском серваке бегал по суду с оружием во время президент рп</discord-message>
+<discord-message id="m-1508979390665592855" timestamp="2026-05-27T02:45:22.216000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет закроется через несколько секунд...</span></div></div></div></discord-message>
+</discord-messages></body></html>
