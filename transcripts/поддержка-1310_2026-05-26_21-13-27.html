@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-1310</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/8f6e9a6ad7bdc609907d4c907ccadfd5.png?size=1024", "roleColor": "#006800", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/8e5424768addb0eab9fb87dcd89088bb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": true}, "1211696360558952509": {"author": "Bandit_Lotman", "avatar": "https://cdn.discordapp.com/avatars/1211696360558952509/682a703ac96cd1fb40461ce9b039a6be.png?size=1024", "roleColor": "#0ba348", "roleIcon": "https://cdn.discordapp.com/role-icons/1416202584120623225/bd07e078ba8d33b7fe5b50fd4f167a6e.png?size=1024", "roleName": "Модератор Discord", "bot": false, "verified": false}, "501686815120687105": {"author": "[PR-018] Лидер Мнений sqw1rtiq", "avatar": "https://cdn.discordapp.com/avatars/501686815120687105/d2ce72c80bc8a6bdbfa976e7c2a08cfd.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1426830509962432613/c0d406b9b857befae1149fc48c77038b.png?size=1024", "roleName": "крипс генг", "bot": false, "verified": false}, "1091623600206921739": {"author": "[MM-022] Murzik_2013", "avatar": "https://cdn.discordapp.com/avatars/1091623600206921739/74c49b6a6c806bc32870079013ffac23.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1501619329274347733/abdafee2b4e786481ae843305f380f44.png?size=1024", "roleName": "Пробный Модератор Discord", "bot": false, "verified": false}, "760966468715937814": {"author": "bjmajgda", "avatar": "https://cdn.discordapp.com/avatars/760966468715937814/329f14a1e5a58d8366ed61b5b0d806ed.png?size=1024", "roleColor": "#a609db", "roleIcon": "https://cdn.discordapp.com/role-icons/1423638353840181351/c4af864bcbb247eba1ef4c35593a6625.png?size=1024", "roleName": "Флаттершай", "bot": false, "verified": false}, "585394439715946518": {"author": "savingbox3", "avatar": "https://cdn.discordapp.com/avatars/585394439715946518/e82f31f878077dcd383254c613d59c3d.png?size=1024", "roleColor": "#d4843d", "roleIcon": "https://cdn.discordapp.com/role-icons/1483091539973373993/b2b1d515e0da04921b1553fe55d87eea.png?size=1024", "roleName": "Руководство Проекта", "bot": false, "verified": false}, "155149108183695360": {"author": "Dyno", "avatar": "https://cdn.discordapp.com/avatars/155149108183695360/b4fdfc64edff74c37e1574d34fad66c2.png?size=1024", "roleColor": "#2d7dd1", "roleIcon": "https://cdn.discordapp.com/role-icons/1338594881374912685/d9609020bcaf37f8ba7c9b3345f70579.png?size=1024", "roleName": "Dyno", "bot": true, "verified": true}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.emoji-img {
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    object-fit: contain;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/a06dfa47e027eb8acdf25152e486f1c8.png?size=1024" timestamp="2026-05-26_21-13-27">Тикет Закрыт.<br/>Причина: Ответ был дан.<br/>Закрыл: <@585394439715946518><br/>Дата: 2026-05-26_21-13-27<br/><a href="https://transcripts.erlcrussia.xyz/transcripts/поддержка-1310_2026-05-26_21-13-27.html" style="color: #00aff4;">https://transcripts.erlcrussia.xyz/transcripts/поддержка-1310_2026-05-26_21-13-27.html</a></discord-message>
+<discord-message id="m-1508893674434728027" timestamp="2026-05-26T21:04:45.874000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="padding:8px;color:#dcddde;"><discord-mention type="role">Персонал ER:LC</discord-mention> <discord-mention type="role">Персонал Discord</discord-mention> <discord-mention type="user">Bandit_Lotman</discord-mention></div><div style="background:#2f3136;border-left:4px solid #006800;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:8px 12px;"><div style="display:flex;gap:16px;align-items:flex-start;"><img src="https://cdn.discordapp.com/avatars/1211696360558952509/682a703ac96cd1fb40461ce9b039a6be.png?size=1024" style="width:80px;height:80px;border-radius:8px;object-fit:cover;flex-shrink:0;" /><div><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg" alt="📨" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Новый Тикет — Поддержка</span><br/><strong>В чём проблема:</strong><br/>Здравствуйте. Я хочу предложить добавить или изменить правило насчёт неотыгровки страха.<br/>Например, если сотрудник МВД останавливает гражданина, тот сразу начинает качать права: «На каком основании?», «За какую статью?» и так далее. Некоторые вообще ведут себя так, будто им ничего не могут сделать. Я считаю, что это немного не по РП.<br/>Если посмотреть даже реальные видео из жизни ППСников, то большинство людей спокойно подчиняются требованиям сотрудников и без проблем показывают документы. Ладно, если это какой-нибудь адвокат или человек, который хорошо знает законы — тогда ещё можно понять подобное поведение. Но когда обычный гражданин начинает агрессивно качать права без какой-либо причины, это выглядит нереалистично.<br/>Также из-за такого поведения некоторые сотрудники, особенно те, кто не очень хорошо знает законы или только начинают играть за МВД, начинают бояться останавливать людей, потому что сразу сталкиваются с конфликтами и провокациями. Я считаю, что это тоже ненормально, так как подобное портит атмосферу РП и мешает нормальной игре сотрудников.<br/>Я думаю, что у персонажей должна быть хоть какая-то боязнь сотрудников МВД, потому что в реальной жизни человека могут задержать или арестовать, и люди обычно понимают последствия такого поведения.</div></div></div><div style="padding:4px 12px;color:#dcddde;">⏳ <strong>Ожидайте ответа от персонала.</strong></div><div style="height:1px;background:#4f545c;margin:4px 0;"></div><div style="height:8px;"></div><div style="display:flex;gap:8px;padding:8px 0;flex-wrap:wrap;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Закрыть Тикет</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e5.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Взять Тикет</button></div></div></div></discord-message>
+<discord-message id="m-1508893877682044978" timestamp="2026-05-26T21:05:34.332000Z" profile="501686815120687105">Большинство людей не знают свои права в РЛ, ты можешь с сотрудником хоть на ты разговаривать</discord-message>
+<discord-message id="m-1508893967096221857" timestamp="2026-05-26T21:05:55.650000Z" profile="1211696360558952509"><discord-reply slot="reply" author="[PR-018] Лидер Мнений sqw1rtiq" avatar="" role-color="#ffffff"><span data-goto="1508893877682044978">Большинство людей не знают свои права в РЛ, ты можешь с сотрудником хоть на ты разговаривать</span></discord-reply>Я про граждан</discord-message>
+<discord-message id="m-1508894005470167221" timestamp="2026-05-26T21:06:04.799000Z" profile="1211696360558952509">Типо ты остановил гражданина он начинает качать права</discord-message>
+<discord-message id="m-1508894016127893736" timestamp="2026-05-26T21:06:07.340000Z" profile="501686815120687105">Большинство в РЛ думают, что сотрудники МВД боги</discord-message>
+<discord-message id="m-1508894034100228257" timestamp="2026-05-26T21:06:11.625000Z" profile="1091623600206921739">./предложение</discord-message>
+<discord-message id="m-1508894047677448434" timestamp="2026-05-26T21:06:14.862000Z" profile="1211696360558952509">Хотя в реальной жизни но почти все подчиняются без конфликта</discord-message>
+<discord-message id="m-1508894055604686879" timestamp="2026-05-26T21:06:16.752000Z" profile="501686815120687105"><discord-reply slot="reply" author="Bandit_Lotman" avatar="" role-color="#0ba348"><span data-goto="1508894005470167221">Типо ты остановил гражданина он начинает качать права</span></discord-reply>Так у него есть право это делать</discord-message>
+<discord-message id="m-1508894101494304818" timestamp="2026-05-26T21:06:27.693000Z" profile="501686815120687105"><discord-reply slot="reply" author="Bandit_Lotman" avatar="" role-color="#0ba348"><span data-goto="1508894047677448434">Хотя в реальной жизни но почти все подчиняются без конфликта</span></discord-reply>Потому что не знают своих прав как гражданина</discord-message>
+<discord-message id="m-1508894261133840585" timestamp="2026-05-26T21:07:05.754000Z" profile="1211696360558952509">Но смотри, он имеет на это право но просто я смотрел видео про один день из жизни ППСА то там люди обычно боятся оказаться в участке</discord-message>
+<discord-message id="m-1508894314447634765" timestamp="2026-05-26T21:07:18.465000Z" profile="1211696360558952509">Типо он может но в любом случаи это не реалистично</discord-message>
+<discord-message id="m-1508894342163464324" timestamp="2026-05-26T21:07:25.073000Z" profile="501686815120687105"><discord-reply slot="reply" author="Bandit_Lotman" avatar="" role-color="#0ba348"><span data-goto="1508894261133840585">Но смотри, он имеет на это право но просто я смотрел видео про один день из жизни ППСА то там люди о</span></discord-reply>Так всмысле</discord-message>
+<discord-message id="m-1508894349017223389" timestamp="2026-05-26T21:07:26.707000Z" profile="1211696360558952509">Я не говорю что все качают, но некоторые есть</discord-message>
+<discord-message id="m-1508894408731263057" timestamp="2026-05-26T21:07:40.944000Z" profile="501686815120687105">У тебя есть право отстаивать свои права/мнение</discord-message>
+<discord-message id="m-1508894431951061133" timestamp="2026-05-26T21:07:46.480000Z" profile="501686815120687105">Такого правила не будет</discord-message>
+<discord-message id="m-1508894478130217101" timestamp="2026-05-26T21:07:57.490000Z" profile="1211696360558952509">Так я не говорю добавить я говорю изменить</discord-message>
+<discord-message id="m-1508894505888383086" timestamp="2026-05-26T21:08:04.108000Z" profile="1211696360558952509">Я хочу услышать ответ от менеджмента</discord-message>
+<discord-message id="m-1508894578869014690" timestamp="2026-05-26T21:08:21.508000Z" profile="1211696360558952509"><discord-reply slot="reply" author="[PR-018] Лидер Мнений sqw1rtiq" avatar="" role-color="#ffffff"><span data-goto="1508894408731263057">У тебя есть право отстаивать свои права/мнение</span></discord-reply>Но в реальной жизни не все знают права, ладно если юрист или адвокат</discord-message>
+<discord-message id="m-1508894593419317470" timestamp="2026-05-26T21:08:24.977000Z" profile="760966468715937814">Правило не будет меняться.<br/><discord-mention type="user">Bandit_Lotman</discord-mention> закрываю тикет?</discord-message>
+<discord-message id="m-1508894640185802912" timestamp="2026-05-26T21:08:36.127000Z" profile="1211696360558952509"><discord-reply slot="reply" author="bjmajgda" avatar="" role-color="#a609db"><span data-goto="1508894593419317470">Правило не будет меняться.
+@1211696360558952509 закрываю тикет?</span></discord-reply>…</discord-message>
+<discord-message id="m-1508894749497753630" timestamp="2026-05-26T21:09:02.189000Z" profile="1211696360558952509">Просто после этого люди просто боятся остановить гражданина для проверки потому что тот потом начинает качать права на каком основании</discord-message>
+<discord-message id="m-1508894935766798429" timestamp="2026-05-26T21:09:46.599000Z" profile="1211696360558952509">Севинг что то писал</discord-message>
+<discord-message id="m-1508894975579000873" timestamp="2026-05-26T21:09:56.091000Z" profile="585394439715946518">меня здесь нет</discord-message>
+<discord-message id="m-1508894993341747250" timestamp="2026-05-26T21:10:00.326000Z" profile="1211696360558952509"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1508894975579000873">меня здесь нет</span></discord-reply>…</discord-message>
+<discord-message id="m-1508895036597735444" timestamp="2026-05-26T21:10:10.639000Z" profile="585394439715946518">нынешнее правило феар рп писал я</discord-message>
+<discord-message id="m-1508895094349103184" timestamp="2026-05-26T21:10:24.408000Z" profile="1211696360558952509">Просто хотя бы чу чуть боятся сотрудников МВД это будет правильно</discord-message>
+<discord-message id="m-1508895118604767283" timestamp="2026-05-26T21:10:30.191000Z" profile="1211696360558952509">А сразу качать права, причем каждый</discord-message>
+<discord-message id="m-1508895131887993076" timestamp="2026-05-26T21:10:33.358000Z" profile="1211696360558952509">Ну это уже не рп</discord-message>
+<discord-message id="m-1508895198556717166" timestamp="2026-05-26T21:10:49.253000Z" profile="585394439715946518">опять же это дело каждого</discord-message>
+<discord-message id="m-1508895224699817994" timestamp="2026-05-26T21:10:55.486000Z" profile="585394439715946518">как ему отыгрывать ту или иную ситуацию</discord-message>
+<discord-message id="m-1508895251669057576" timestamp="2026-05-26T21:11:01.916000Z" profile="585394439715946518">если это конечно входит в рамки правил</discord-message>
+<discord-message id="m-1508895305272131705" timestamp="2026-05-26T21:11:14.696000Z" profile="1211696360558952509">Представим что сотрудник не сильно знает фз, его же задушат</discord-message>
+<discord-message id="m-1508895313719722075" timestamp="2026-05-26T21:11:16.710000Z" profile="585394439715946518">игрок сам в праве решить как ему общаться с полицейским</discord-message>
+<discord-message id="m-1508895326856282253" timestamp="2026-05-26T21:11:19.842000Z" profile="1211696360558952509">Просто каждый будет его душить</discord-message>
+<discord-message id="m-1508895433726885929" timestamp="2026-05-26T21:11:45.322000Z" profile="585394439715946518">ну мы же не будем наказывать людей за то, что они как-то не так играют рп</discord-message>
+<discord-message id="m-1508895492640211156" timestamp="2026-05-26T21:11:59.368000Z" profile="585394439715946518">мы не можем их принудить вежливо общаться с полицией</discord-message>
+<discord-message id="m-1508895512391061606" timestamp="2026-05-26T21:12:04.077000Z" profile="585394439715946518">это всё рп ситуации</discord-message>
+<discord-message id="m-1508895579428753469" timestamp="2026-05-26T21:12:20.060000Z" profile="1211696360558952509">Просто вот реально если смотреть ролик про день ид жизни мента то там люди вообще без проблем выполняют требования</discord-message>
+<discord-message id="m-1508895623628329060" timestamp="2026-05-26T21:12:30.598000Z" profile="585394439715946518">опять же</discord-message>
+<discord-message id="m-1508895640296624198" timestamp="2026-05-26T21:12:34.572000Z" profile="585394439715946518">мы не в реальной жизни</discord-message>
+<discord-message id="m-1508895653261082875" timestamp="2026-05-26T21:12:37.663000Z" profile="1211696360558952509">Да я понял, понял</discord-message>
+<discord-message id="m-1508895691714592898" timestamp="2026-05-26T21:12:46.831000Z" profile="585394439715946518">тут челов не могут на реальные 15 суток закатать</discord-message>
+<discord-message id="m-1508895696017948675" timestamp="2026-05-26T21:12:47.857000Z" profile="1211696360558952509"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1508895640296624198">мы не в реальной жизни</span></discord-reply>Но рп двинется к реальной жизни</discord-message>
+<discord-message id="m-1508895735838408714" timestamp="2026-05-26T21:12:57.351000Z" profile="155149108183695360"><discord-embed title="" slot="embeds" color="#43b581"><discord-embed-description slot="description"><img src="https://cdn.discordapp.com/emojis/314691591484866560.png" alt="dynoSuccess" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> <strong><em>lottm1nn was unmuted.</strong></em></discord-embed-description></discord-embed></discord-message>
+<discord-message id="m-1508895776904843324" timestamp="2026-05-26T21:13:07.142000Z" profile="1211696360558952509">Ладно закрывайте</discord-message>
+<discord-message id="m-1508895860530872420" timestamp="2026-05-26T21:13:27.080000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет закроется через несколько секунд...</span></div></div></div></discord-message>
+</discord-messages></body></html>
