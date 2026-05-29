@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-1312</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/8f6e9a6ad7bdc609907d4c907ccadfd5.png?size=1024", "roleColor": "#006800", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/8e5424768addb0eab9fb87dcd89088bb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": true}, "1104388035199639585": {"author": "Sane4ka_TRAXAET", "avatar": "https://cdn.discordapp.com/avatars/1104388035199639585/be06d4ec8b2ee2f179419908ed32dceb.png?size=1024", "roleColor": "#2a88cb", "roleIcon": "https://cdn.discordapp.com/role-icons/1416177983378686052/3d06b544ab605eab4956042b2dad64fc.png?size=1024", "roleName": "Участник", "bot": false, "verified": false}, "501686815120687105": {"author": "[PR-018] Лидер Мнений sqw1rtiq", "avatar": "https://cdn.discordapp.com/avatars/501686815120687105/d2ce72c80bc8a6bdbfa976e7c2a08cfd.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1426830509962432613/c0d406b9b857befae1149fc48c77038b.png?size=1024", "roleName": "крипс генг", "bot": false, "verified": false}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.emoji-img {
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    object-fit: contain;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/a06dfa47e027eb8acdf25152e486f1c8.png?size=1024" timestamp="2026-05-29_13-46-27">Тикет Закрыт.<br/>Причина: 67<br/>Закрыл: <@501686815120687105><br/>Дата: 2026-05-29_13-46-27<br/><a href="https://transcripts.erlcrussia.xyz/transcripts/поддержка-1312_2026-05-29_13-46-27.html" style="color: #00aff4;">https://transcripts.erlcrussia.xyz/transcripts/поддержка-1312_2026-05-29_13-46-27.html</a></discord-message>
+<discord-message id="m-1508988359807205497" timestamp="2026-05-27T03:21:00.626000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="padding:8px;color:#dcddde;"><discord-mention type="role">Персонал ER:LC</discord-mention> <discord-mention type="role">Персонал Discord</discord-mention> <discord-mention type="user">Sane4ka_TRAXAET</discord-mention></div><div style="background:#2f3136;border-left:4px solid #006800;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:8px 12px;"><div style="display:flex;gap:16px;align-items:flex-start;"><img src="https://cdn.discordapp.com/avatars/1104388035199639585/a4ed6c685ccabbc6a529cc87fc16e032.png?size=1024" style="width:80px;height:80px;border-radius:8px;object-fit:cover;flex-shrink:0;" /><div><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg" alt="📨" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Новый Тикет — Поддержка</span><br/><strong>В чём проблема:</strong><br/>хотим получить разрешение на захват здания суда вместе с заложниками и с возможным использованием взрывчатки</div></div></div><div style="padding:4px 12px;color:#dcddde;">⏳ <strong>Ожидайте ответа от персонала.</strong></div><div style="height:1px;background:#4f545c;margin:4px 0;"></div><div style="height:8px;"></div><div style="display:flex;gap:8px;padding:8px 0;flex-wrap:wrap;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Закрыть Тикет</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e4.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Освободить Тикет</button></div></div></div><discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/274c.svg" count="2"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1509136481350975550" timestamp="2026-05-27T13:09:35.554000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e5.svg" alt="📥" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет взят <discord-mention type="user">[PR-018] Лидер Мнений sqw1rtiq</discord-mention>.</span></div></div></div></discord-message>
+<discord-message id="m-1509136489311764510" timestamp="2026-05-27T13:09:37.452000Z" profile="501686815120687105">Здравствуйте</discord-message>
+<discord-message id="m-1509136513567559760" timestamp="2026-05-27T13:09:43.235000Z" profile="501686815120687105">Расскажите поподробнее</discord-message>
+<discord-message id="m-1509136528725774376" timestamp="2026-05-27T13:09:46.849000Z" profile="501686815120687105">Почему бы и нет</discord-message>
+<discord-message id="m-1509144173381423305" timestamp="2026-05-27T13:40:09.477000Z" profile="1104388035199639585">крч</discord-message>
+<discord-message id="m-1509144218554339358" timestamp="2026-05-27T13:40:20.247000Z" profile="1104388035199639585">у нас же можно Тим килл делать</discord-message>
+<discord-message id="m-1509144239983038614" timestamp="2026-05-27T13:40:25.356000Z" profile="1104388035199639585">за полицию или шерифку</discord-message>
+<discord-message id="m-1509144453787549716" timestamp="2026-05-27T13:41:16.331000Z" profile="1104388035199639585">ну мы просто Зайдем за полицию, снимем форму и полицейский ремень</discord-message>
+<discord-message id="m-1509144481205715096" timestamp="2026-05-27T13:41:22.868000Z" profile="1104388035199639585">и внутри суда бегать будем</discord-message>
+<discord-message id="m-1509144529289089166" timestamp="2026-05-27T13:41:34.332000Z" profile="1104388035199639585">и 2-3 человека за цивиков зайдут</discord-message>
+<discord-message id="m-1509144609828241498" timestamp="2026-05-27T13:41:53.534000Z" profile="1104388035199639585">там в суде есть зоны в которых оружие не забирает, и они там стоять будут</discord-message>
+<discord-message id="m-1509144706641166346" timestamp="2026-05-27T13:42:16.616000Z" profile="1104388035199639585">например возле лестницы на 2 этаже</discord-message>
+<discord-message id="m-1509144747204415638" timestamp="2026-05-27T13:42:26.287000Z" profile="1104388035199639585">и на втором выходе</discord-message>
+<discord-message id="m-1509144835775402015" timestamp="2026-05-27T13:42:47.404000Z" profile="1104388035199639585">остальные полицмены будут ходить по зданию, удерживать заложников и тд</discord-message>
+<discord-message id="m-1509145148255109230" timestamp="2026-05-27T13:44:01.905000Z" profile="1104388035199639585">+у пары человек есть детектив геймпасс. Можно авто с тонировкой перекрасить в Фулл черный, и будет как у нас машины опгшные</discord-message>
+<discord-message id="m-1509145238814462012" timestamp="2026-05-27T13:44:23.496000Z" profile="1104388035199639585">например БМВ х5. мы  на нем часто ездим</discord-message>
+<discord-message id="m-1509145749336887296" timestamp="2026-05-27T13:46:25.214000Z" profile="1104388035199639585">а потом если будем уезжать, нам просто Модер розыск кинет и тпхнет к себе</discord-message>
+<discord-message id="m-1509146390276608061" timestamp="2026-05-27T13:48:58.026000Z" profile="1104388035199639585">чтобы мы цивиками стали</discord-message>
+<discord-message id="m-1509146470308253726" timestamp="2026-05-27T13:49:17.107000Z" profile="1104388035199639585">чтоб арестовали если что, и на карте не было видно</discord-message>
+<discord-message id="m-1509146745030836327" timestamp="2026-05-27T13:50:22.606000Z" profile="1104388035199639585">ну это как мы суд захватывать будем</discord-message>
+<discord-message id="m-1509146786156253204" timestamp="2026-05-27T13:50:32.411000Z" profile="1104388035199639585">надо говорить сам захват? типо как заложников, бомбы и тд</discord-message>
+<discord-message id="m-1509155878329122816" timestamp="2026-05-27T14:26:40.154000Z" profile="501686815120687105"><discord-reply slot="reply" author="Sane4ka_TRAXAET" avatar="" role-color="#2a88cb"><span data-goto="1509144609828241498">там в суде есть зоны в которых оружие не забирает, и они там стоять будут</span></discord-reply>включили функцию, что оружие не забирает теперь</discord-message>
+<discord-message id="m-1509156278625107989" timestamp="2026-05-27T14:28:15.592000Z" profile="501686815120687105"><discord-reply slot="reply" author="Sane4ka_TRAXAET" avatar="" role-color="#2a88cb"><span data-goto="1509146786156253204">надо говорить сам захват? типо как заложников, бомбы и тд</span></discord-reply>да</discord-message>
+<discord-message id="m-1509157019083341944" timestamp="2026-05-27T14:31:12.131000Z" profile="1104388035199639585"><discord-reply slot="reply" author="[PR-018] Лидер Мнений sqw1rtiq" avatar="" role-color="#ffffff"><span data-goto="1509155878329122816">включили функцию, что оружие не забирает теперь</span></discord-reply>тогда за цивиков делать?</discord-message>
+<discord-message id="m-1509157203293114408" timestamp="2026-05-27T14:31:56.050000Z" profile="501686815120687105"><discord-reply slot="reply" author="Sane4ka_TRAXAET" avatar="" role-color="#2a88cb"><span data-goto="1509157019083341944">тогда за цивиков делать?</span></discord-reply>lf</discord-message>
+<discord-message id="m-1509157208687116380" timestamp="2026-05-27T14:31:57.336000Z" profile="501686815120687105">да</discord-message>
+<discord-message id="m-1509157357404291073" timestamp="2026-05-27T14:32:32.793000Z" profile="1104388035199639585"><discord-reply slot="reply" author="[PR-018] Лидер Мнений sqw1rtiq" avatar="" role-color="#ffffff"><span data-goto="1509156278625107989">да</span></discord-reply>ну мы сначало здание штурм, потом выживших в заложники, захватываем здание. Ставим взрывчатки на ведущие колонны здания и тд. Также жилеты смертника на заложников. Подключаем всю эту систему к своим жизненным показателям (к примеру часы которые пульс меряют). И если сигнал пропадает от одного из нас здание взрываеться</discord-message>
+<discord-message id="m-1509157590569844806" timestamp="2026-05-27T14:33:28.384000Z" profile="1104388035199639585">и пару растяжек</discord-message>
+<discord-message id="m-1509157608349630515" timestamp="2026-05-27T14:33:32.623000Z" profile="1104388035199639585">на вход к примеру</discord-message>
+<discord-message id="m-1509157624703356990" timestamp="2026-05-27T14:33:36.522000Z" profile="1104388035199639585">2 гранаты и леска</discord-message>
+<discord-message id="m-1509158988460068984" timestamp="2026-05-27T14:39:01.667000Z" profile="1104388035199639585">на здании суда же есть металлические панели, которые закрывают окна?</discord-message>
+<discord-message id="m-1509700547165294643" timestamp="2026-05-29T02:30:59.324000Z" profile="1104388035199639585">матрикс давай завтра сделаем терракт</discord-message>
+<discord-message id="m-1509700650819125308" timestamp="2026-05-29T02:31:24.037000Z" profile="1104388035199639585">мы там еще будем подствольные гранатометы использовать чтобы внешнюю часть здания пробить</discord-message>
+<discord-message id="m-1509700676215767140" timestamp="2026-05-29T02:31:30.092000Z" profile="1104388035199639585">стены двери окна и тд</discord-message>
+<discord-message id="m-1509700924891861002" timestamp="2026-05-29T02:32:29.381000Z" profile="1104388035199639585">у нас есть еще пулик 12.7  можем его запихнуть куда то.</discord-message>
+<discord-message id="m-1509857239777673266" timestamp="2026-05-29T12:53:37.754000Z" profile="501686815120687105">давай без подствольных гранатометов и пулеметов</discord-message>
+<discord-message id="m-1509857306093949019" timestamp="2026-05-29T12:53:53.565000Z" profile="501686815120687105">будем пользоваться тем, что позволяет сделать игра системно</discord-message>
+<discord-message id="m-1509869030918590464" timestamp="2026-05-29T13:40:28.981000Z" profile="501686815120687105"><discord-reply slot="reply" author="Sane4ka_TRAXAET" avatar="" role-color="#2a88cb"><span data-goto="1509700547165294643">матрикс давай завтра сделаем терракт</span></discord-reply><discord-attachments slot="attachments"><discord-attachment type="image" filename="IMG_6726.png" url="https://transcripts.erlcrussia.xyz/attachments/1509869030918590464_1509869030679249027.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1509869065567604849" timestamp="2026-05-29T13:40:37.242000Z" profile="1104388035199639585">да</discord-message>
+<discord-message id="m-1509869074253873292" timestamp="2026-05-29T13:40:39.313000Z" profile="1104388035199639585">отмена</discord-message>
+<discord-message id="m-1509869101798002729" timestamp="2026-05-29T13:40:45.880000Z" profile="501686815120687105">а чего ты так</discord-message>
+<discord-message id="m-1509869174254469300" timestamp="2026-05-29T13:41:03.155000Z" profile="1104388035199639585">так и так все-равно Варны сожру</discord-message>
+<discord-message id="m-1509869657409060894" timestamp="2026-05-29T13:42:58.348000Z" profile="501686815120687105">ну ладно</discord-message>
+<discord-message id="m-1509869681194827776" timestamp="2026-05-29T13:43:04.019000Z" profile="501686815120687105">тикет закрываю?</discord-message>
+<discord-message id="m-1509869898707239082" timestamp="2026-05-29T13:43:55.878000Z" profile="501686815120687105">и 1304 тикет тоже закрываю?</discord-message>
+<discord-message id="m-1509869915719602187" timestamp="2026-05-29T13:43:59.934000Z" profile="501686815120687105"><discord-mention type="user">Sane4ka_TRAXAET</discord-mention></discord-message>
+<discord-message id="m-1509869981108797602" timestamp="2026-05-29T13:44:15.524000Z" profile="1104388035199639585">всмысле</discord-message>
+<discord-message id="m-1509869996900356210" timestamp="2026-05-29T13:44:19.289000Z" profile="1104388035199639585">что за 1304</discord-message>
+<discord-message id="m-1509870233220022332" timestamp="2026-05-29T13:45:15.632000Z" profile="501686815120687105">там про контробанду</discord-message>
+<discord-message id="m-1509870289402728508" timestamp="2026-05-29T13:45:29.027000Z" profile="501686815120687105"><discord-reply slot="reply" author="Sane4ka_TRAXAET" avatar="" role-color="#2a88cb"><span data-goto="1509869996900356210">что за 1304</span></discord-reply>ну оба твои тикета по опг закрываю?</discord-message>
+<discord-message id="m-1509870321820373072" timestamp="2026-05-29T13:45:36.756000Z" profile="1104388035199639585">у меня исчез<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f62d.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1509870341709631488" timestamp="2026-05-29T13:45:41.498000Z" profile="1104388035199639585">у меня щас этот ток</discord-message>
+<discord-message id="m-1509870392301453363" timestamp="2026-05-29T13:45:53.560000Z" profile="501686815120687105"><discord-reply slot="reply" author="Sane4ka_TRAXAET" avatar="" role-color="#2a88cb"><span data-goto="1509870341709631488">у меня щас этот ток</span></discord-reply>ну закрываю я или нет сука скажи</discord-message>
+<discord-message id="m-1509870407316934797" timestamp="2026-05-29T13:45:57.140000Z" profile="1104388035199639585">да</discord-message>
+<discord-message id="m-1509870412601753640" timestamp="2026-05-29T13:45:58.400000Z" profile="501686815120687105">ахажхвхахаха</discord-message>
+<discord-message id="m-1509870424798924801" timestamp="2026-05-29T13:46:01.308000Z" profile="501686815120687105">хорошо</discord-message>
+<discord-message id="m-1509870532693196830" timestamp="2026-05-29T13:46:27.032000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет закроется через несколько секунд...</span></div></div></div></discord-message>
+</discord-messages></body></html>
