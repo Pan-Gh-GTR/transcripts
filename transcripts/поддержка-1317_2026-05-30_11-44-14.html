@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-1317</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/8f6e9a6ad7bdc609907d4c907ccadfd5.png?size=1024", "roleColor": "#006800", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/8e5424768addb0eab9fb87dcd89088bb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": true}, "1091623600206921739": {"author": "[MM-022] Murzik_2013", "avatar": "https://cdn.discordapp.com/avatars/1091623600206921739/74c49b6a6c806bc32870079013ffac23.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1501619329274347733/abdafee2b4e786481ae843305f380f44.png?size=1024", "roleName": "Пробный Модератор Discord", "bot": false, "verified": false}, "585394439715946518": {"author": "savingbox3", "avatar": "https://cdn.discordapp.com/avatars/585394439715946518/e82f31f878077dcd383254c613d59c3d.png?size=1024", "roleColor": "#d4843d", "roleIcon": "https://cdn.discordapp.com/role-icons/1483091539973373993/b2b1d515e0da04921b1553fe55d87eea.png?size=1024", "roleName": "Руководство Проекта", "bot": false, "verified": false}, "1133665013794607114": {"author": "Pancakeboyman_8", "avatar": "https://cdn.discordapp.com/avatars/1133665013794607114/9952a7f75bf8748ecfd9a8e39af2e279.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1331342900205850686/c1fd358ec8be5422366cbf5b58e16e31.png?size=1024", "roleName": "Владелец", "bot": false, "verified": false}, "1195675629010558986": {"author": "[PR-011] The_Borisik", "avatar": "https://cdn.discordapp.com/avatars/1195675629010558986/16b83fbe315df0f2f7ee3e08fee39600.png?size=1024", "roleColor": "#424cff", "roleIcon": "https://cdn.discordapp.com/role-icons/1410712605579939982/df9f61918e58e298252dbcbfe910e849.png?size=1024", "roleName": "Пробный Игрок", "bot": false, "verified": false}, "1236286225896439819": {"author": "[MM-019] 11-я От.Гв.Дес | Ястреб", "avatar": "https://cdn.discordapp.com/avatars/1236286225896439819/92afcb31608dbcc76afa66f78cddaf5d.png?size=1024", "roleColor": "#ff5cd0", "roleIcon": "https://cdn.discordapp.com/role-icons/1429212035509518387/47698eda2772171945390e0254deff2b.png?size=1024", "roleName": "25thCSVSMF", "bot": false, "verified": false}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.emoji-img {
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    object-fit: contain;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/a06dfa47e027eb8acdf25152e486f1c8.png?size=1024" timestamp="2026-05-30_11-44-14">Тикет Закрыт.<br/>Причина: Не указана<br/>Закрыл: <@1091623600206921739><br/>Дата: 2026-05-30_11-44-14<br/><a href="https://transcripts.erlcrussia.xyz/transcripts/поддержка-1317_2026-05-30_11-44-14.html" style="color: #00aff4;">https://transcripts.erlcrussia.xyz/transcripts/поддержка-1317_2026-05-30_11-44-14.html</a></discord-message>
+<discord-message id="m-1509901091142242446" timestamp="2026-05-29T15:47:52.734000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="padding:8px;color:#dcddde;"><discord-mention type="role">Персонал ER:LC</discord-mention> <discord-mention type="role">Персонал Discord</discord-mention> <discord-mention type="user">[MM-022] Murzik_2013</discord-mention></div><div style="background:#2f3136;border-left:4px solid #006800;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:8px 12px;"><div style="display:flex;gap:16px;align-items:flex-start;"><img src="https://cdn.discordapp.com/avatars/1091623600206921739/74c49b6a6c806bc32870079013ffac23.png?size=1024" style="width:80px;height:80px;border-radius:8px;object-fit:cover;flex-shrink:0;" /><div><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg" alt="📨" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Новый Тикет — Поддержка</span><br/><strong>В чём проблема:</strong><br/>Сколько бустов надо чтобы выдали рольку донатора (т.к. я через сторонние сайты покупаю)</div></div></div><div style="padding:4px 12px;color:#dcddde;">⏳ <strong>Ожидайте ответа от персонала.</strong></div><div style="height:1px;background:#4f545c;margin:4px 0;"></div><div style="height:8px;"></div><div style="display:flex;gap:8px;padding:8px 0;flex-wrap:wrap;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Закрыть Тикет</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e5.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Взять Тикет</button></div></div></div></discord-message>
+<discord-message id="m-1509956698289213460" timestamp="2026-05-29T19:28:50.511000Z" profile="1091623600206921739"><discord-mention type="user">savingbox3</discord-mention></discord-message>
+<discord-message id="m-1509956781055672330" timestamp="2026-05-29T19:29:10.244000Z" profile="585394439715946518">а сколько планируете купить?</discord-message>
+<discord-message id="m-1509956821195034694" timestamp="2026-05-29T19:29:19.814000Z" profile="1091623600206921739">3-5</discord-message>
+<discord-message id="m-1509957127463108804" timestamp="2026-05-29T19:30:32.834000Z" profile="585394439715946518"><discord-mention type="user">Pancakeboyman_8</discord-mention></discord-message>
+<discord-message id="m-1509957275509330174" timestamp="2026-05-29T19:31:08.131000Z" profile="1091623600206921739"><small>просто я через другой сайт куплю</small></discord-message>
+<discord-message id="m-1509957307214331935" timestamp="2026-05-29T19:31:15.690000Z" profile="1091623600206921739"><small>там боты бустят</small></discord-message>
+<discord-message id="m-1509961231270805724" timestamp="2026-05-29T19:46:51.258000Z" profile="1091623600206921739"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1509957127463108804">@1133665013794607114</span></discord-reply>Так сколько надо?</discord-message>
+<discord-message id="m-1509968044884103381" timestamp="2026-05-29T20:13:55.750000Z" profile="585394439715946518">закинь на гражданские бустов</discord-message>
+<discord-message id="m-1509968129277563121" timestamp="2026-05-29T20:14:15.871000Z" profile="585394439715946518">и я выдам донатера</discord-message>
+<discord-message id="m-1509968187914190878" timestamp="2026-05-29T20:14:29.851000Z" profile="585394439715946518">от двух точно</discord-message>
+<discord-message id="m-1509968199204995092" timestamp="2026-05-29T20:14:32.543000Z" profile="585394439715946518">на первый лвл</discord-message>
+<discord-message id="m-1509969245792899283" timestamp="2026-05-29T20:18:42.069000Z" profile="1091623600206921739"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1509968187914190878">от двух точно</span></discord-reply>3 хватает?</discord-message>
+<discord-message id="m-1509969292173508778" timestamp="2026-05-29T20:18:53.127000Z" profile="585394439715946518">вай нот</discord-message>
+<discord-message id="m-1509969458494570577" timestamp="2026-05-29T20:19:32.781000Z" profile="1091623600206921739">Короче 3 буста</discord-message>
+<discord-message id="m-1509969511862898779" timestamp="2026-05-29T20:19:45.505000Z" profile="1091623600206921739">Док-ва позже скину</discord-message>
+<discord-message id="m-1509972595607343219" timestamp="2026-05-29T20:32:00.727000Z" profile="1091623600206921739"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1509969292173508778">вай нот</span></discord-reply>Можешь ссылку на ГО дать</discord-message>
+<discord-message id="m-1509972611189313717" timestamp="2026-05-29T20:32:04.442000Z" profile="1091623600206921739">Чтобы закинули</discord-message>
+<discord-message id="m-1509973012957626558" timestamp="2026-05-29T20:33:40.231000Z" profile="1133665013794607114"><discord-reply slot="reply" author="[MM-022] Murzik_2013" avatar="" role-color="#ffffff"><span data-goto="1509972595607343219">Можешь ссылку на ГО дать</span></discord-reply><a href="https://discord.gg/dpvA2zxK4u" style="color: #00aff4; text-decoration: underline;" target="_blank">https://discord.gg/dpvA2zxK4u</a></discord-message>
+<discord-message id="m-1509973153366016110" timestamp="2026-05-29T20:34:13.707000Z" profile="1091623600206921739">Благодарю</discord-message>
+<discord-message id="m-1509974211496775901" timestamp="2026-05-29T20:38:25.985000Z" profile="1091623600206921739">А нет тут только 2</discord-message>
+<discord-message id="m-1509974224738193488" timestamp="2026-05-29T20:38:29.142000Z" profile="1091623600206921739">Или 7</discord-message>
+<discord-message id="m-1509975610716590193" timestamp="2026-05-29T20:43:59.585000Z" profile="1195675629010558986">2 буста это первый лвл вроде</discord-message>
+<discord-message id="m-1509975632619110541" timestamp="2026-05-29T20:44:04.807000Z" profile="1195675629010558986">7 буста 2 лвл</discord-message>
+<discord-message id="m-1509981538706657350" timestamp="2026-05-29T21:07:32.928000Z" profile="1091623600206921739">У них там проблемы</discord-message>
+<discord-message id="m-1509981547590193352" timestamp="2026-05-29T21:07:35.046000Z" profile="1091623600206921739">Через час</discord-message>
+<discord-message id="m-1509981553042915360" timestamp="2026-05-29T21:07:36.346000Z" profile="1091623600206921739">Будет<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f62d.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1509981855846236231" timestamp="2026-05-29T21:08:48.540000Z" profile="1091623600206921739">Ну у них там с зарубежными картами звездец</discord-message>
+<discord-message id="m-1510001545285206077" timestamp="2026-05-29T22:27:02.868000Z" profile="1091623600206921739">там с зарубежкой звездец</discord-message>
+<discord-message id="m-1510001635269677287" timestamp="2026-05-29T22:27:24.322000Z" profile="1091623600206921739">только сбп</discord-message>
+<discord-message id="m-1510170494782148618" timestamp="2026-05-30T09:38:23.567000Z" profile="1091623600206921739">А какие преимущества у бустеров?</discord-message>
+<discord-message id="m-1510170532841132052" timestamp="2026-05-30T09:38:32.641000Z" profile="1091623600206921739">Ой</discord-message>
+<discord-message id="m-1510170549027078195" timestamp="2026-05-30T09:38:36.500000Z" profile="1091623600206921739">Донатеров</discord-message>
+<discord-message id="m-1510178783871897804" timestamp="2026-05-30T10:11:19.840000Z" profile="1236286225896439819"><discord-reply slot="reply" author="[MM-022] Murzik_2013" avatar="" role-color="#ffffff"><span data-goto="1510170494782148618">А какие преимущества у бустеров?</span></discord-reply><small>В лс вам написал</small></discord-message>
+<discord-message id="m-1510202067057115166" timestamp="2026-05-30T11:43:50.984000Z" profile="1091623600206921739"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1509969292173508778">вай нот</span></discord-reply>Короче у них нету оплаты через иностранные карты</discord-message>
+<discord-message id="m-1510202129745449091" timestamp="2026-05-30T11:44:05.930000Z" profile="1091623600206921739">Так что я закрываю</discord-message>
+<discord-message id="m-1510202161819156563" timestamp="2026-05-30T11:44:13.577000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет закроется через несколько секунд...</span></div></div></div></discord-message>
+</discord-messages></body></html>
