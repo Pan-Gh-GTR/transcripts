@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-1293</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/8f6e9a6ad7bdc609907d4c907ccadfd5.png?size=1024", "roleColor": "#006800", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/8e5424768addb0eab9fb87dcd89088bb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": true}, "501686815120687105": {"author": "[PR-018] Лидер Мнений sqw1rtiq", "avatar": "https://cdn.discordapp.com/avatars/501686815120687105/d2ce72c80bc8a6bdbfa976e7c2a08cfd.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1426830509962432613/c0d406b9b857befae1149fc48c77038b.png?size=1024", "roleName": "крипс генг", "bot": false, "verified": false}, "970713754411089940": {"author": "[VD-011] Sashapozzzz", "avatar": "https://cdn.discordapp.com/avatars/970713754411089940/5f58756097872bc94c62dabede155fba.png?size=1024", "roleColor": "#921813", "roleIcon": "https://cdn.discordapp.com/role-icons/1416181646318637198/5b70f56d655e733566af6b41bc6f6c01.png?size=1024", "roleName": "Команда Внутренних Дел Roblox", "bot": false, "verified": false}, "1448059157897809940": {"author": "[MD-023] Bacon_baconkin", "avatar": "https://cdn.discordapp.com/avatars/1448059157897809940/3f3b1a55aad02c27b512e53b653922c2.png?size=1024", "roleColor": "#0037ff", "roleIcon": "https://cdn.discordapp.com/role-icons/1396120075341139969/fe63b022e708bad6d89c5bbf8c3ddbbb.png?size=1024", "roleName": "N.W.A - Fuk Da Police", "bot": false, "verified": false}, "1059736820876853248": {"author": "koronsdf", "avatar": "https://cdn.discordapp.com/avatars/1059736820876853248/abdb75f461a6290a85006c82959d7192.png?size=1024", "roleColor": "#be0000", "roleIcon": "https://cdn.discordapp.com/role-icons/1416196054814167171/5e9857a79f470f0d92dd214ce36aee68.png?size=1024", "roleName": "Статус «Кремль»", "bot": false, "verified": false}, "1133665013794607114": {"author": "Pancakeboyman_8", "avatar": "https://cdn.discordapp.com/avatars/1133665013794607114/9952a7f75bf8748ecfd9a8e39af2e279.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1331342900205850686/c1fd358ec8be5422366cbf5b58e16e31.png?size=1024", "roleName": "Владелец", "bot": false, "verified": false}, "878565267557470279": {"author": "[MM-024] wajiksss", "avatar": "https://cdn.discordapp.com/avatars/878565267557470279/1ce8e6fbb91cad583fb71bbcfb20b107.png?size=1024", "roleColor": "#dd0000", "roleIcon": "", "roleName": "бурмалдот", "bot": false, "verified": false}, "585394439715946518": {"author": "savingbox3", "avatar": "https://cdn.discordapp.com/avatars/585394439715946518/e82f31f878077dcd383254c613d59c3d.png?size=1024", "roleColor": "#d4843d", "roleIcon": "https://cdn.discordapp.com/role-icons/1483091539973373993/b2b1d515e0da04921b1553fe55d87eea.png?size=1024", "roleName": "Руководство Проекта", "bot": false, "verified": false}, "1301612859515473940": {"author": "Artyem_BOG", "avatar": "https://cdn.discordapp.com/avatars/1301612859515473940/c025a3dd53712eea652e0f97e1e6804f.png?size=1024", "roleColor": "#51c4fc", "roleIcon": "https://cdn.discordapp.com/role-icons/1416225044895498240/036f9e1029820dbe92c53098702e2041.png?size=1024", "roleName": "VIP", "bot": false, "verified": false}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.emoji-img {
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    object-fit: contain;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/a06dfa47e027eb8acdf25152e486f1c8.png?size=1024" timestamp="2026-05-31_18-23-57">Тикет Закрыт.<br/>Причина: Корон сгинул😓✌️. Правила будет редактировать будущий менеджер фракций.<br/>Закрыл: <@585394439715946518><br/>Дата: 2026-05-31_18-23-57<br/><a href="https://transcripts.erlcrussia.xyz/transcripts/поддержка-1293_2026-05-31_18-23-57.html" style="color: #00aff4;">https://transcripts.erlcrussia.xyz/transcripts/поддержка-1293_2026-05-31_18-23-57.html</a></discord-message>
+<discord-message id="m-1507822410764783737" timestamp="2026-05-23T22:07:56.712000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="padding:8px;color:#dcddde;"><discord-mention type="role">Персонал ER:LC</discord-mention> <discord-mention type="role">Персонал Discord</discord-mention> <discord-mention type="user">[PR-018] Лидер Мнений sqw1rtiq</discord-mention></div><div style="background:#2f3136;border-left:4px solid #006800;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:8px 12px;"><div style="display:flex;gap:16px;align-items:flex-start;"><img src="https://cdn.discordapp.com/avatars/501686815120687105/d2ce72c80bc8a6bdbfa976e7c2a08cfd.png?size=1024" style="width:80px;height:80px;border-radius:8px;object-fit:cover;flex-shrink:0;" /><div><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg" alt="📨" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Новый Тикет — Поддержка</span><br/><strong>В чём проблема:</strong><br/>распишу в тикете</div></div></div><div style="padding:4px 12px;color:#dcddde;">⏳ <strong>Ожидайте ответа от персонала.</strong></div><div style="height:1px;background:#4f545c;margin:4px 0;"></div><div style="height:8px;"></div><div style="display:flex;gap:8px;padding:8px 0;flex-wrap:wrap;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Закрыть Тикет</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e4.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Освободить Тикет</button></div></div></div><discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" count="5"></discord-reaction><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f631.svg" count="2"></discord-reaction><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2b50.svg" count="1"></discord-reaction><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764-fe0f.svg" count="2"></discord-reaction><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/274c.svg" count="1"></discord-reaction><discord-reaction emoji="https://cdn.discordapp.com/emojis/1402209078171664405.png" count="1"></discord-reaction><discord-reaction emoji="https://cdn.discordapp.com/emojis/1374006028185636887.png" count="1"></discord-reaction><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2753.svg" count="1"></discord-reaction><discord-reaction emoji="https://cdn.discordapp.com/emojis/1441130593634226206.png" count="1"></discord-reaction><discord-reaction emoji="https://cdn.discordapp.com/emojis/1402208986823921694.png" count="1"></discord-reaction><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f44e.svg" count="1"></discord-reaction><discord-reaction emoji="https://cdn.discordapp.com/emojis/1452344934173769769.png" count="1"></discord-reaction><discord-reaction emoji="https://cdn.discordapp.com/emojis/1452345144727699616.png" count="1"></discord-reaction><discord-reaction emoji="https://cdn.discordapp.com/emojis/1441138985282965634.png" count="2"></discord-reaction><discord-reaction emoji="https://cdn.discordapp.com/emojis/1441139042191409295.png" count="2"></discord-reaction><discord-reaction emoji="https://cdn.discordapp.com/emojis/1441132741474127993.png" count="1"></discord-reaction><discord-reaction emoji="https://cdn.discordapp.com/emojis/1441130349286654055.png" count="1"></discord-reaction><discord-reaction emoji="https://cdn.discordapp.com/emojis/1441138705950703636.png" count="1"></discord-reaction><discord-reaction emoji="https://cdn.discordapp.com/emojis/1441133223437668504.png" count="1"></discord-reaction><discord-reaction emoji="https://cdn.discordapp.com/emojis/1498063383818272910.png" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1507824455521403161" timestamp="2026-05-23T22:16:04.220000Z" profile="501686815120687105">Кароче, мысль этого тикета - перерассмотрение гос. фракций и правил фракций, вспомним лето 2025, когда у УМ было право кафать других госс. служащих, но в УМ и набирали самых норм типов. У них отобрали это право, заменив их прокуратурой. В итоге что? Прокуратура сидит афк, не следит за нарушениями других госс. фракций. Моё предложение:<br/><ul><br/><li>вернуть УМ право следить/выдавать выговоры/увольнять других госс. сотрудников</li><br/><li>ужесточить набор в ФСБ и в УМ в целом</li><br/><li>расформировать прокуратуру, т.к на данный момент это афк фрака</li><br/></ul><br/>Вспомните лето 2025, когда ФСБ воспринимали в серьёз, когда ФСБ было авторитетом, когда сотрудников УМ все боялись. Тогда в госс. фракциях была жесткая дисциплина. Сейчас что? Из-за прокуратуры ФСБ потеряло бывалую славу, сейчас ФСБ АБСОЛЮТНО ВСЕ считают рофл фракой и не воспринимают её всерьёз. Какая разница что у нас РЛ законка, в чём проблема упростить жизнь игрокам и убрать ненужные фракции увеличив права УМ. <br/>Про правила фракций. Сейчас они слишком жесткие, банально артем бог сидит с 6 сотрудниками в ФСБ, ему не дают поставит лидера на УМ из-за того, что он опаздал на 1 час по правилам, ВСЕГО НА ОДИН ЧАС. С таким отношением к игрокам вы никогда не добьётесь большого онлайна<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" count="5"></discord-reaction><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764-fe0f.svg" count="4"></discord-reaction><discord-reaction emoji="https://cdn.discordapp.com/emojis/1402209078171664405.png" count="5"></discord-reaction><discord-reaction emoji="https://cdn.discordapp.com/emojis/1464685812125012201.png" count="4"></discord-reaction><discord-reaction emoji="https://cdn.discordapp.com/emojis/1355499100807630929.png" count="4"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1507824732714569868" timestamp="2026-05-23T22:17:10.308000Z" profile="501686815120687105">Перестаньте душить игроков/лидеров госс. фракций, верните УМ право на выговоры/увольнения других госс. фракций, ужесточите набор в ФСБ<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764-fe0f.svg" count="3"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1507824834434830528" timestamp="2026-05-23T22:17:34.560000Z" profile="970713754411089940">+++</discord-message>
+<discord-message id="m-1507824837194678454" timestamp="2026-05-23T22:17:35.218000Z" profile="1448059157897809940"><discord-reply slot="reply" author="[PR-018] Лидер Мнений sqw1rtiq" avatar="" role-color="#ffffff"><span data-goto="1507824455521403161">Кароче, мысль этого тикета - перерассмотрение гос. фракций и правил фракций, вспомним лето 2025, ког</span></discord-reply>полностью соглы</discord-message>
+<discord-message id="m-1507824844073468096" timestamp="2026-05-23T22:17:36.858000Z" profile="1448059157897809940">+rep</discord-message>
+<discord-message id="m-1507824922313887868" timestamp="2026-05-23T22:17:55.512000Z" profile="1059736820876853248"><small>посторонние, не влезаем в тикет</small></discord-message>
+<discord-message id="m-1507824997656170596" timestamp="2026-05-23T22:18:13.475000Z" profile="1448059157897809940">вспомнить даже когда в прошлом месяце я играл за ФСБ , к нам подлетают михаэль и еще тип нн</discord-message>
+<discord-message id="m-1507825030464274514" timestamp="2026-05-23T22:18:21.297000Z" profile="1059736820876853248">$удалить <discord-mention type="role">Персонал Discord</discord-mention></discord-message>
+<discord-message id="m-1507825034125643810" timestamp="2026-05-23T22:18:22.170000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #8c0000;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2796.svg" alt="➖" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> <discord-mention type="role">Персонал Discord</discord-mention> удалён из тикета <discord-mention type="user">koronsdf</discord-mention>.</span></div></div></div></discord-message>
+<discord-message id="m-1507825058255470652" timestamp="2026-05-23T22:18:27.923000Z" profile="1448059157897809940">берут просто выпендриваються</discord-message>
+<discord-message id="m-1507825096277098526" timestamp="2026-05-23T22:18:36.988000Z" profile="1448059157897809940">говорят дайте нам патронов</discord-message>
+<discord-message id="m-1507825099183751188" timestamp="2026-05-23T22:18:37.681000Z" profile="1059736820876853248">$удалить <discord-mention type="role">Персонал ER:LC</discord-mention></discord-message>
+<discord-message id="m-1507825103751348275" timestamp="2026-05-23T22:18:38.770000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #8c0000;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2796.svg" alt="➖" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> <discord-mention type="role">Персонал ER:LC</discord-mention> удалён из тикета <discord-mention type="user">koronsdf</discord-mention>.</span></div></div></div></discord-message>
+<discord-message id="m-1507825115306659851" timestamp="2026-05-23T22:18:41.525000Z" profile="501686815120687105">После прихода на сервера корона и его знакомых, всё очень сильно изменилось, появилась ебанутая душка, правила фракций, половина из которых просто пиздец жесткая (без негатива)<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" count="3"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1507825638759989258" timestamp="2026-05-23T22:20:46.326000Z" profile="501686815120687105"><discord-reply slot="reply" author="[PR-018] Лидер Мнений sqw1rtiq" avatar="" role-color="#ffffff"><span data-goto="1507824455521403161">Кароче, мысль этого тикета - перерассмотрение гос. фракций и правил фракций, вспомним лето 2025, ког</span></discord-reply>Я согласен на то, чтоб оставить СК, но верните УМ права на выговоры и увольнения дргуих госс. сотрудников, просто ужесточив набор в ФСБ и в УМ</discord-message>
+<discord-message id="m-1507826680251683088" timestamp="2026-05-23T22:24:54.637000Z" profile="501686815120687105"><discord-reply slot="reply" author="[PR-018] Лидер Мнений sqw1rtiq" avatar="" role-color="#ffffff"><span data-goto="1507825638759989258">Я согласен на то, чтоб оставить СК, но верните УМ права на выговоры и увольнения дргуих госс. сотруд</span></discord-reply>Так же моно сделать так, чтоб УМ могло выдавать выговоры само, но чтоб уволить, нужно было бы разрешение куратора фракции</discord-message>
+<discord-message id="m-1507826740507181219" timestamp="2026-05-23T22:25:09.003000Z" profile="501686815120687105">Было бы очень крутое РП как раньше, с масштабным задержанием сотрудника</discord-message>
+<discord-message id="m-1507827382889742397" timestamp="2026-05-23T22:27:42.159000Z" profile="501686815120687105">Я надеюсь к этому тикету отнесутся всерьёз, решение этого вопроса может значительно поднять онлайн, интерес игроков к гос. фракам, пропадет бесконечная душка госс. фракций</discord-message>
+<discord-message id="m-1507828854679670846" timestamp="2026-05-23T22:33:33.061000Z" profile="1133665013794607114"><discord-reply slot="reply" author="[PR-018] Лидер Мнений sqw1rtiq" avatar="" role-color="#ffffff"><span data-goto="1507825638759989258">Я согласен на то, чтоб оставить СК, но верните УМ права на выговоры и увольнения дргуих госс. сотруд</span></discord-reply>так</discord-message>
+<discord-message id="m-1507828909742358558" timestamp="2026-05-23T22:33:46.189000Z" profile="1133665013794607114"><discord-reply slot="reply" author="[PR-018] Лидер Мнений sqw1rtiq" avatar="" role-color="#ffffff"><span data-goto="1507825115306659851">После прихода на сервера корона и его знакомых, всё очень сильно изменилось, появилась ебанутая душк</span></discord-reply>это я их сделал</discord-message>
+<discord-message id="m-1507829073299116275" timestamp="2026-05-23T22:34:25.184000Z" profile="1133665013794607114">правила фракций</discord-message>
+<discord-message id="m-1507830392474828921" timestamp="2026-05-23T22:39:39.700000Z" profile="501686815120687105"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1507829073299116275">правила фракций</span></discord-reply>прочитай всё, что я написал</discord-message>
+<discord-message id="m-1507830418353688686" timestamp="2026-05-23T22:39:45.870000Z" profile="501686815120687105">это не только моё мнение</discord-message>
+<discord-message id="m-1507830441950838865" timestamp="2026-05-23T22:39:51.496000Z" profile="501686815120687105">я много людей поспрашивал</discord-message>
+<discord-message id="m-1507863965034746117" timestamp="2026-05-24T00:53:04.022000Z" profile="501686815120687105">Так же хотелось бы добывить про менеджера фракций (корона), а именно про его странные действия, когда корон был в мвд, он моментально добавлял все аксессуары и ливреи для МВД, сейчас, когда он лидер ФСО, он забил на все другие фраки и добавляет преимущественно всё для ФСО, почему так? Почему отношение к фракциям зависити от нахождения в ней менеджера фракций? Почему остальные должны страдать, сколько было жалоб на корона, панкейку всё равно<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" count="2"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1507864235617685675" timestamp="2026-05-24T00:54:08.534000Z" profile="501686815120687105">Что нужно сделать, чтоб панкейк как-то отреагировал на корона? Очередной митинг как в июне-июле? Массовый РДМ всего сервера? Протест от всех лидеров одновременно? <discord-mention type="user">Pancakeboyman_8</discord-mention> я бы на твоём месте задумался по поводу этого</discord-message>
+<discord-message id="m-1507864404509593720" timestamp="2026-05-24T00:54:48.801000Z" profile="501686815120687105">Постоянная душка лидеров фракций ни за что</discord-message>
+<discord-message id="m-1507864467889721446" timestamp="2026-05-24T00:55:03.912000Z" profile="501686815120687105">Как будто не этот человек должен занимать должность менеджера фракций</discord-message>
+<discord-message id="m-1507864526576418886" timestamp="2026-05-24T00:55:17.904000Z" profile="501686815120687105">Ведь менеджер фракций должен помогать лидерам, а не душить их</discord-message>
+<discord-message id="m-1507864650434216017" timestamp="2026-05-24T00:55:47.434000Z" profile="501686815120687105">Если постоянно душить лидеров, никто и не захочет идти на лидерку фракций</discord-message>
+<discord-message id="m-1507864925215785051" timestamp="2026-05-24T00:56:52.947000Z" profile="501686815120687105">Я уверен, есть много людей, которые смогли бы заменить корона, при чем намного лучше. Делать ливреи? Легчайшее занятие. Добавлять аксы? Изи. И так можно дальше продолжать этот список</discord-message>
+<discord-message id="m-1507881438375317726" timestamp="2026-05-24T02:02:29.991000Z" profile="501686815120687105">Не надо затыкать рот людям, пусть все высказываются</discord-message>
+<discord-message id="m-1507881623381868606" timestamp="2026-05-24T02:03:14.100000Z" profile="501686815120687105">Пусть все это увидят</discord-message>
+<discord-message id="m-1507882259875631284" timestamp="2026-05-24T02:05:45.852000Z" profile="501686815120687105">Эта проблема, волнующая всех</discord-message>
+<discord-message id="m-1507882305585418392" timestamp="2026-05-24T02:05:56.750000Z" profile="501686815120687105">А именно душку со стороны корона</discord-message>
+<discord-message id="m-1507882327336947852" timestamp="2026-05-24T02:06:01.936000Z" profile="501686815120687105">Сколько людей на это жалуется</discord-message>
+<discord-message id="m-1507882378725687408" timestamp="2026-05-24T02:06:14.188000Z" profile="501686815120687105">На пальцах не сосчитать</discord-message>
+<discord-message id="m-1507882432035033199" timestamp="2026-05-24T02:06:26.898000Z" profile="501686815120687105">Сколько людей ушло с проекта из-за этого</discord-message>
+<discord-message id="m-1507883128595808287" timestamp="2026-05-24T02:09:12.971000Z" profile="501686815120687105">А ещё вспомнить, сколько людей пришло на проект из-за старого ФСБ? Сколько людей мечтало попасть в ФСБ из-за статуса и влияния</discord-message>
+<discord-message id="m-1507883202646249574" timestamp="2026-05-24T02:09:30.626000Z" profile="501686815120687105">И сколько людей разочаровалось после введения правил</discord-message>
+<discord-message id="m-1507883402630533211" timestamp="2026-05-24T02:10:18.306000Z" profile="501686815120687105">Сколько людей ежеднево разочаровывается в проекте из-за отношения персонала и руководства к игрокам</discord-message>
+<discord-message id="m-1507885521383460924" timestamp="2026-05-24T02:18:43.456000Z" profile="501686815120687105"><discord-reply slot="reply" author="[PR-018] Лидер Мнений sqw1rtiq" avatar="" role-color="#ffffff"><span data-goto="1507883402630533211">Сколько людей ежеднево разочаровывается в проекте из-за отношения персонала и руководства к игрокам</span></discord-reply>А конкретно отношения корона к игрокам госс. фракций</discord-message>
+<discord-message id="m-1507885539016183878" timestamp="2026-05-24T02:18:47.660000Z" profile="501686815120687105">эти ебаные правила</discord-message>
+<discord-message id="m-1507885572277141685" timestamp="2026-05-24T02:18:55.590000Z" profile="501686815120687105">никому нахуй не всравшиеся</discord-message>
+<discord-message id="m-1507885604430413935" timestamp="2026-05-24T02:19:03.256000Z" profile="501686815120687105">просто как же всем похуй на эти правила</discord-message>
+<discord-message id="m-1507885705035124746" timestamp="2026-05-24T02:19:27.242000Z" profile="501686815120687105">Вспомнить момент, как душили ЧОП сикстиэ</discord-message>
+<discord-message id="m-1507885873318989885" timestamp="2026-05-24T02:20:07.364000Z" profile="501686815120687105">Его душили с учетом того, что ЧОП сиксти помогал госс. фракциям в борьбе против ОПГ и других террористических организаций</discord-message>
+<discord-message id="m-1507885983289315379" timestamp="2026-05-24T02:20:33.583000Z" profile="501686815120687105">ТИп влил свою душу в ЧОП, который существовал на сервере почти год</discord-message>
+<discord-message id="m-1507885998204256266" timestamp="2026-05-24T02:20:37.139000Z" profile="501686815120687105">и ради чего?</discord-message>
+<discord-message id="m-1507886039681863790" timestamp="2026-05-24T02:20:47.028000Z" profile="501686815120687105">Ради того чтоб его передушили по правилам?</discord-message>
+<discord-message id="m-1507886126751416362" timestamp="2026-05-24T02:21:07.787000Z" profile="501686815120687105">Сколько всего сиксти сделал для проекта вместе с коробкой</discord-message>
+<discord-message id="m-1507886152416362607" timestamp="2026-05-24T02:21:13.906000Z" profile="501686815120687105">И ради чего?</discord-message>
+<discord-message id="m-1507886231877586955" timestamp="2026-05-24T02:21:32.851000Z" profile="501686815120687105">Ради того, чтоб их последее наследие на сервере передушили правилами?</discord-message>
+<discord-message id="m-1507887339433754664" timestamp="2026-05-24T02:25:56.913000Z" profile="501686815120687105">я всей душой обожаю этот сервер</discord-message>
+<discord-message id="m-1507887379489226863" timestamp="2026-05-24T02:26:06.463000Z" profile="501686815120687105">сколько я тут друзей нашел</discord-message>
+<discord-message id="m-1507887402138603600" timestamp="2026-05-24T02:26:11.863000Z" profile="501686815120687105">сколько эмоций</discord-message>
+<discord-message id="m-1507887476390367303" timestamp="2026-05-24T02:26:29.566000Z" profile="501686815120687105">но правда, очень грустно смотреть, как при всех обстоятельствах он гниёт</discord-message>
+<discord-message id="m-1507887519570857984" timestamp="2026-05-24T02:26:39.861000Z" profile="501686815120687105">при чём гниёт изнутри</discord-message>
+<discord-message id="m-1507887588923543652" timestamp="2026-05-24T02:26:56.396000Z" profile="501686815120687105">ежедневно</discord-message>
+<discord-message id="m-1507887702778052790" timestamp="2026-05-24T02:27:23.541000Z" profile="501686815120687105">от бездействия руководства, менеджмента, кураторов, пероснала, игроков</discord-message>
+<discord-message id="m-1507887833619370257" timestamp="2026-05-24T02:27:54.736000Z" profile="501686815120687105">бездействие со стороны игроков заключается в том, что обычные игроки боятся высказать своё мнение по поводу всего этого</discord-message>
+<discord-message id="m-1507888184174837965" timestamp="2026-05-24T02:29:18.315000Z" profile="501686815120687105"><discord-reply slot="reply" author="[PR-018] Лидер Мнений sqw1rtiq" avatar="" role-color="#ffffff"><span data-goto="1507887519570857984">при чём гниёт изнутри</span></discord-reply>раньше я не понимал, что пишет коробка</discord-message>
+<discord-message id="m-1507888217104318675" timestamp="2026-05-24T02:29:26.166000Z" profile="501686815120687105">мне это казалось приколом</discord-message>
+<discord-message id="m-1507888266957951059" timestamp="2026-05-24T02:29:38.052000Z" profile="501686815120687105">но глядя сйечас на ситуацию изнутри, это пизда парни</discord-message>
+<discord-message id="m-1507888410180718863" timestamp="2026-05-24T02:30:12.199000Z" profile="501686815120687105">не те люди стоят на своих должностях, не те люди занимаются основной чатью с ервера (взаимодействия с игроками)</discord-message>
+<discord-message id="m-1507888833847627817" timestamp="2026-05-24T02:31:53.209000Z" profile="501686815120687105">играв на многих рп проектах, скок ч асов я провёл на РП проектах по разным играм, я был на огромном количестве проектов админом и ГА (Главный Админ AMAZING ONLINE), могу сказать, что это сервак с огромным потенциалом</discord-message>
+<discord-message id="m-1507888884808286259" timestamp="2026-05-24T02:32:05.359000Z" profile="501686815120687105">но этот же сервак сам себя и душит</discord-message>
+<discord-message id="m-1507888931944005654" timestamp="2026-05-24T02:32:16.597000Z" profile="501686815120687105">своим отношением к игрокам</discord-message>
+<discord-message id="m-1507889015204876480" timestamp="2026-05-24T02:32:36.448000Z" profile="501686815120687105">своим отношением к персоналу и тем, кто пытается помочь серваку перестать гнить</discord-message>
+<discord-message id="m-1507889295526985888" timestamp="2026-05-24T02:33:43.282000Z" profile="501686815120687105">лично обращение к панкейку, если он это читает, братан, ты никогда не добьёшься чего-то большего, если будешь дальше заниматься тех. частью</discord-message>
+<discord-message id="m-1507889356084347030" timestamp="2026-05-24T02:33:57.720000Z" profile="501686815120687105">все ситсемы, боты для сервера это круто</discord-message>
+<discord-message id="m-1507889371406405793" timestamp="2026-05-24T02:34:01.373000Z" profile="501686815120687105">это очень круто</discord-message>
+<discord-message id="m-1507889405669408908" timestamp="2026-05-24T02:34:09.542000Z" profile="501686815120687105">но большего внимания требуют игроки</discord-message>
+<discord-message id="m-1507889446698352821" timestamp="2026-05-24T02:34:19.324000Z" profile="501686815120687105">сообщество</discord-message>
+<discord-message id="m-1507889670808276993" timestamp="2026-05-24T02:35:12.756000Z" profile="501686815120687105">мнение большинства намного важнее, чем мнение руководства/менеджмента (корон, сейвинг, бимаджа и т.д, я думаю ты понимаешь о чем я)</discord-message>
+<discord-message id="m-1507889909959102678" timestamp="2026-05-24T02:36:09.774000Z" profile="501686815120687105">кто бы не стоял на руководящих должностях, это не важно, мнение общества будет намного весомее и важнее, я думаю ты это понимаешь</discord-message>
+<discord-message id="m-1507890104285528065" timestamp="2026-05-24T02:36:56.105000Z" profile="501686815120687105">это как в обслуживании, клиент всегда прав, если ты этого не поймешь, то никогда не добьёшься успеха, которого можешь добиться</discord-message>
+<discord-message id="m-1507890349429755926" timestamp="2026-05-24T02:37:54.552000Z" profile="501686815120687105">с твоими знаниями у тебя огромный потенциал, говорю тебе как сис админ по спец. образованию, но ты упускаешь эту возможность</discord-message>
+<discord-message id="m-1507890490836652143" timestamp="2026-05-24T02:38:28.266000Z" profile="501686815120687105">сколько людей вложило душу в этот проект</discord-message>
+<discord-message id="m-1507890518955130961" timestamp="2026-05-24T02:38:34.970000Z" profile="501686815120687105">и где сейчас все эти люди?</discord-message>
+<discord-message id="m-1507890614383935669" timestamp="2026-05-24T02:38:57.722000Z" profile="501686815120687105">ЧСП? Ушли по своему желанию из-за ужасного отношения руководства к себе?</discord-message>
+<discord-message id="m-1507890978147532934" timestamp="2026-05-24T02:40:24.450000Z" profile="501686815120687105"><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;">я думаю, те, кто прочитают это с утра поймут мою мысль и посыл моих сообщений, прошу воспринять мои сообщения всерьёз в очередной раз, ведь от этого напрямую зависит судьба проекта</span><discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2795.svg" count="3"></discord-reaction><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764-fe0f.svg" count="2"></discord-reaction><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" count="2"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1508014473154134127" timestamp="2026-05-24T10:51:07.954000Z" profile="878565267557470279">1) По поводу блата: думаю, не стоит душить фракции правилами. Пусть за этим следят надзорные органы. Адекватный лидер сам не заинтересован в жестком блате. Например:<br/><ul><br/><li>Бывает кадровый дефицит. Нужно поставить начальника, берешь знакомого парня, который знает законы и вывезет фракцию, — а тебе за это дают выговор.</li><br/><li>По опыту: у меня в СК за месяц не было ни одного заблаченного сотрудника. Все повышаются строго по выслуге, за исключением ОДНОГО +2 рангов в день блата.</li><br/></ul><br/>2) Полномочия Управления «М» и суды:<br/><ul><br/><li>Если возвращать полномочия Управе «М», то это упор на быстрый интерактив и тулево. Но нужно усложнить им набор: требовать знание законов и плотное взаимодействие со СК (так как должностные преступления по 151 УПК подследственны нам).</li><br/></ul><br/>Также нужно вернуть нормальный суд и оставить связку СК + Прокуратура. Это для любителей долгого, качественного RP с упором на законодательство.<br/>3) Предлагаю вернуть строгий набор в ФСБ — сделать его таким же, как сейчас в СК, Прокуратуре и ФСО.</discord-message>
+<discord-message id="m-1508016868017831937" timestamp="2026-05-24T11:00:38.934000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e5.svg" alt="📥" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет взят <discord-mention type="user">savingbox3</discord-mention>.</span></div></div></div></discord-message>
+<discord-message id="m-1508016975765569637" timestamp="2026-05-24T11:01:04.623000Z" profile="585394439715946518">Здравствуйте, начну детальный разбор тикета после выходных.</discord-message>
+<discord-message id="m-1508024847601766421" timestamp="2026-05-24T11:32:21.415000Z" profile="1301612859515473940">по поводу фсб: набор сейчас не может усложниться из за кадрового голода</discord-message>
+<discord-message id="m-1508024927582949406" timestamp="2026-05-24T11:32:40.484000Z" profile="1301612859515473940">чисто физически, пока люди пройдут все этапы академии фракция уйдет в афк</discord-message>
+<discord-message id="m-1508024997296209970" timestamp="2026-05-24T11:32:57.105000Z" profile="1301612859515473940">необходимо набрать минимум человек 10-12 во фракцию</discord-message>
+<discord-message id="m-1508025020620734484" timestamp="2026-05-24T11:33:02.666000Z" profile="1301612859515473940">и далее усложнять набор</discord-message>
+<discord-message id="m-1508025063524536490" timestamp="2026-05-24T11:33:12.895000Z" profile="1301612859515473940">по поводу душки, встречаю я ее не первый раз</discord-message>
+<discord-message id="m-1508025417293107242" timestamp="2026-05-24T11:34:37.240000Z" profile="1301612859515473940">она впринципе была всегда, но после прихода корона стали все замечать ее в большем количестве</discord-message>
+<discord-message id="m-1508025564408316034" timestamp="2026-05-24T11:35:12.315000Z" profile="1301612859515473940">что насчет возвращения ум прав прокуратуры-крайне согласен</discord-message>
+<discord-message id="m-1508025685640220723" timestamp="2026-05-24T11:35:41.219000Z" profile="1301612859515473940">сейчас ум не воспринимают всерьез из за того что у них просто нету прав</discord-message>
+<discord-message id="m-1508025742246674472" timestamp="2026-05-24T11:35:54.715000Z" profile="1301612859515473940">нету прав наказывать людей, как то на них влиять</discord-message>
+<discord-message id="m-1508026147928281179" timestamp="2026-05-24T11:37:31.437000Z" profile="1301612859515473940">у них все возможности замкнуты в экономических преступлениях(взятках в госорганах) и контрразведкой</discord-message>
+<discord-message id="m-1508026542880460860" timestamp="2026-05-24T11:39:05.601000Z" profile="1301612859515473940">раньше же они имели буквально все возможности: следить за дисциплиной, за нарушениями, за исполнением обязанностей</discord-message>
+<discord-message id="m-1508026833663299644" timestamp="2026-05-24T11:40:14.929000Z" profile="1301612859515473940">также прошу упростить правило трех согласий(лидера, куратора и сотрудника) на перевод во фракцию</discord-message>
+<discord-message id="m-1508026920015761510" timestamp="2026-05-24T11:40:35.517000Z" profile="1301612859515473940">сделать так чтобы учитывалось мнение лишь куратора фракции или лидера</discord-message>
+<discord-message id="m-1508026999556407336" timestamp="2026-05-24T11:40:54.481000Z" profile="1301612859515473940">а иначе когда 1 из двух не согласен перевода не происходит</discord-message>
+<discord-message id="m-1508729968375496734" timestamp="2026-05-26T10:14:15.308000Z" profile="585394439715946518">Здравствуйте, правила фракций были переделаны и скоро будут обнародованы</discord-message>
+<discord-message id="m-1508730009513361561" timestamp="2026-05-26T10:14:25.116000Z" profile="585394439715946518"><discord-mention type="user">[PR-018] Лидер Мнений sqw1rtiq</discord-mention> вы их вроде уже видели?</discord-message>
+<discord-message id="m-1508742067050774529" timestamp="2026-05-26T11:02:19.857000Z" profile="501686815120687105">да</discord-message>
+<discord-message id="m-1508756343622729850" timestamp="2026-05-26T11:59:03.657000Z" profile="501686815120687105"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1508730009513361561">@501686815120687105 вы их вроде уже видели?</span></discord-reply>так же хотел бы добавить</discord-message>
+<discord-message id="m-1508756366704246846" timestamp="2026-05-26T11:59:09.160000Z" profile="501686815120687105">уберите в суде ЗЗ</discord-message>
+<discord-message id="m-1508756402230005801" timestamp="2026-05-26T11:59:17.630000Z" profile="501686815120687105">там пол госски прячется всегда</discord-message>
+<discord-message id="m-1508756462330187848" timestamp="2026-05-26T11:59:31.959000Z" profile="501686815120687105">а кримы ничего сделать не могут</discord-message>
+<discord-message id="m-1508756496287010867" timestamp="2026-05-26T11:59:40.055000Z" profile="501686815120687105">т.к у них забирает оружие</discord-message>
+<discord-message id="m-1508756510325342298" timestamp="2026-05-26T11:59:43.402000Z" profile="501686815120687105">ну и это зз</discord-message>
+<discord-message id="m-1508756546937683978" timestamp="2026-05-26T11:59:52.131000Z" profile="501686815120687105">зачем там зз, если там нет спавна игроков?</discord-message>
+<discord-message id="m-1508758248965017812" timestamp="2026-05-26T12:06:37.926000Z" profile="501686815120687105"><discord-reply slot="reply" author="[PR-018] Лидер Мнений sqw1rtiq" avatar="" role-color="#ffffff"><span data-goto="1508756366704246846">уберите в суде ЗЗ</span></discord-reply>там еще можно системно включить чтоб оружие не отбиралось</discord-message>
+<discord-message id="m-1509895118935556116" timestamp="2026-05-29T15:24:08.849000Z" profile="585394439715946518"><discord-mention type="user">koronsdf</discord-mention> правила уже ввели?</discord-message>
+<discord-message id="m-1509898553621876786" timestamp="2026-05-29T15:37:47.742000Z" profile="1059736820876853248"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1509895118935556116">@1059736820876853248 правила уже ввели?</span></discord-reply>нет</discord-message>
+<discord-message id="m-1510336369786884267" timestamp="2026-05-30T20:37:31.250000Z" profile="585394439715946518"><discord-reply slot="reply" author="koronsdf" avatar="" role-color="#be0000"><span data-goto="1509898553621876786">нет</span></discord-reply>их введут?</discord-message>
+<discord-message id="m-1510341837427314828" timestamp="2026-05-30T20:59:14.837000Z" profile="1301612859515473940"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1510336369786884267">их введут?</span></discord-reply>нет</discord-message>
+<discord-message id="m-1510341865881469008" timestamp="2026-05-30T20:59:21.621000Z" profile="585394439715946518">не бойтесь</discord-message>
+<discord-message id="m-1510341872135045240" timestamp="2026-05-30T20:59:23.112000Z" profile="585394439715946518">будут<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764-fe0f-200d-1f525.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1510665140452720741" timestamp="2026-05-31T18:23:56.285000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет закроется через несколько секунд...</span></div></div></div></discord-message>
+</discord-messages></body></html>
