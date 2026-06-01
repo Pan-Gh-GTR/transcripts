@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-1334</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/8f6e9a6ad7bdc609907d4c907ccadfd5.png?size=1024", "roleColor": "#006800", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/8e5424768addb0eab9fb87dcd89088bb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": true}, "501686815120687105": {"author": "Лидер Мнений sqw1rtiq", "avatar": "https://cdn.discordapp.com/avatars/501686815120687105/d2ce72c80bc8a6bdbfa976e7c2a08cfd.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1426830509962432613/c0d406b9b857befae1149fc48c77038b.png?size=1024", "roleName": "крипс генг", "bot": false, "verified": false}, "1363531806586048755": {"author": "Moscow RolePlay Roblox", "avatar": "https://cdn.discordapp.com/avatars/1363531806586048755/35ea443c68b7400cd036322e591042ef.png?size=1024", "roleColor": "#cc2641", "roleIcon": "https://cdn.discordapp.com/role-icons/1363544547870900358/3b6e22a9df7fe7b380b3bbeb6a5afdd1.png?size=1024", "roleName": "Moscow RolePlay Roblox", "bot": true, "verified": false}, "760966468715937814": {"author": "bjmajgda", "avatar": "https://cdn.discordapp.com/avatars/760966468715937814/329f14a1e5a58d8366ed61b5b0d806ed.png?size=1024", "roleColor": "#a609db", "roleIcon": "https://cdn.discordapp.com/role-icons/1423638353840181351/c4af864bcbb247eba1ef4c35593a6625.png?size=1024", "roleName": "Флаттершай", "bot": false, "verified": false}, "1133665013794607114": {"author": "Pancakeboyman_8", "avatar": "https://cdn.discordapp.com/avatars/1133665013794607114/9952a7f75bf8748ecfd9a8e39af2e279.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1331342900205850686/c1fd358ec8be5422366cbf5b58e16e31.png?size=1024", "roleName": "Владелец", "bot": false, "verified": false}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.emoji-img {
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    object-fit: contain;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/a06dfa47e027eb8acdf25152e486f1c8.png?size=1024" timestamp="2026-06-01_15-12-13">Тикет Закрыт.<br/>Причина: Разобран.<br/>Закрыл: <@1133665013794607114><br/>Дата: 2026-06-01_15-12-13<br/><a href="https://transcripts.erlcrussia.xyz/transcripts/поддержка-1334_2026-06-01_15-12-13.html" style="color: #00aff4;">https://transcripts.erlcrussia.xyz/transcripts/поддержка-1334_2026-06-01_15-12-13.html</a></discord-message>
+<discord-message id="m-1510968647148109945" timestamp="2026-06-01T14:29:57.920000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="padding:8px;color:#dcddde;"><discord-mention type="role">Персонал ER:LC</discord-mention> <discord-mention type="role">Персонал Discord</discord-mention> <discord-mention type="user">Лидер Мнений sqw1rtiq</discord-mention></div><div style="background:#2f3136;border-left:4px solid #006800;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:8px 12px;"><div style="display:flex;gap:16px;align-items:flex-start;"><img src="https://cdn.discordapp.com/avatars/501686815120687105/d2ce72c80bc8a6bdbfa976e7c2a08cfd.png?size=1024" style="width:80px;height:80px;border-radius:8px;object-fit:cover;flex-shrink:0;" /><div><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg" alt="📨" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Новый Тикет — Поддержка</span><br/><strong>В чём проблема:</strong></div></div></div><div style="padding:4px 12px;color:#dcddde;">⏳ <strong>Ожидайте ответа от персонала.</strong></div><div style="height:1px;background:#4f545c;margin:4px 0;"></div><div style="height:8px;"></div><div style="display:flex;gap:8px;padding:8px 0;flex-wrap:wrap;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Закрыть Тикет</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e4.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Освободить Тикет</button></div></div></div></discord-message>
+<discord-message id="m-1510968680564133978" timestamp="2026-06-01T14:30:05.887000Z" profile="501686815120687105">э</discord-message>
+<discord-message id="m-1510968684347265155" timestamp="2026-06-01T14:30:06.789000Z" profile="501686815120687105">ой</discord-message>
+<discord-message id="m-1510968700411576380" timestamp="2026-06-01T14:30:10.619000Z" profile="501686815120687105">здравствуйте</discord-message>
+<discord-message id="m-1510968716312186971" timestamp="2026-06-01T14:30:14.410000Z" profile="501686815120687105">снимите мне 5 баллов<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/274c.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1510969072702066790" timestamp="2026-06-01T14:31:39.380000Z" profile="1363531806586048755"><discord-embed title="MatrixX_X" slot="embeds" color="#2b2d31" thumbnail="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-24FEBE297B5E22D8886B805E6F1C8D94-Png/48/48/AvatarHeadshot/Png/noFilter"><discord-embed-fields slot="fields"><discord-embed-field field-title="Информация"><blockquote> <strong>Ник:</strong> MatrixX_X</blockquote><br/><blockquote> <strong>Отображаемое имя:</strong> pivko</blockquote><br/><blockquote> <strong>ID:</strong> <code>486435079</code></blockquote><br/><blockquote> <strong>Количество друзей:</strong> 200</blockquote><br/><blockquote> <strong>Количество групп:</strong> 14</blockquote></discord-embed-field><discord-embed-field field-title="Баллы"><blockquote> <strong>Текущие баллы:</strong> 3/37</blockquote></discord-embed-field><discord-embed-field field-title="Предупреждения"><blockquote> Нет предупреждений.</blockquote></discord-embed-field><discord-embed-field field-title="Статус Подписки"><blockquote> <strong>Подписка:</strong> <discord-mention type="role">Role#1416196054814167171</discord-mention></blockquote><br/><blockquote> <strong>Discord:</strong> <discord-mention type="user">Лидер Мнений sqw1rtiq</discord-mention></blockquote></discord-embed-field></discord-embed-fields><discord-embed-author slot="author" name="fxllenwxrrior" icon="https://cdn.discordapp.com/avatars/501686815120687105/d2ce72c80bc8a6bdbfa976e7c2a08cfd.webp"></discord-embed-author></discord-embed><div slot="components" style="margin-top:8px;"><div class="discord-components-row" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdn.discordapp.com/emojis/1412877220942188606.png" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />None</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;">1</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdn.discordapp.com/emojis/1412877222737350656.png" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />None</button></div></div></discord-message>
+<discord-message id="m-1510972933324013660" timestamp="2026-06-01T14:46:59.824000Z" profile="760966468715937814">Добрый день!<br/>Являюсь менеджером персонала. Начинаю разбор тикета.</discord-message>
+<discord-message id="m-1510972965528010816" timestamp="2026-06-01T14:47:07.502000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e5.svg" alt="📥" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет взят <discord-mention type="user">bjmajgda</discord-mention>.</span></div></div></div></discord-message>
+<discord-message id="m-1510973083408662548" timestamp="2026-06-01T14:47:35.607000Z" profile="1363531806586048755"><discord-embed title="MatrixX_X" slot="embeds" color="#2b2d31"><discord-embed-fields slot="fields"><discord-embed-field field-title="Предупреждение"><blockquote> <strong>Модератор:</strong> <discord-mention type="user">User#942085661308125215</discord-mention></blockquote><br/><blockquote> <strong>Причина:</strong> C-2 Провокация ФСБ</blockquote><br/><blockquote> <strong>Время:</strong> <t:1771426596:f></blockquote><br/><blockquote> <strong>ID предупреждения:</strong> <code>7429901657444188160</code></blockquote><br/><blockquote> <strong>Выдано баллов:</strong> 1</blockquote></discord-embed-field><discord-embed-field field-title="Предупреждение"><blockquote> <strong>Модератор:</strong> <discord-mention type="user">User#1431264187228885033</discord-mention></blockquote><br/><blockquote> <strong>Причина:</strong> С-8 | Грабил без отыгровок</blockquote><br/><blockquote> <strong>Время:</strong> <t:1771518246:f></blockquote><br/><blockquote> <strong>ID предупреждения:</strong> <code>7430286065640669184</code></blockquote><br/><blockquote> <strong>Выдано баллов:</strong> 1</blockquote></discord-embed-field><discord-embed-field field-title="Предупреждение"><blockquote> <strong>Модератор:</strong> <discord-mention type="user">Pancakeboyman_8</discord-mention></blockquote><br/><blockquote> <strong>Причина:</strong> A-2 | Влез в РП сцену (фиктивно подстроенная ситуация). Тикет 0577.</blockquote><br/><blockquote> <strong>Время:</strong> <t:1777562405:f></blockquote><br/><blockquote> <strong>ID предупреждения:</strong> <code>7455637109656518656</code></blockquote><br/><blockquote> <strong>Выдано баллов:</strong> 1</blockquote></discord-embed-field></discord-embed-fields><discord-embed-author slot="author" name="ttunku_pal" icon="https://cdn.discordapp.com/avatars/760966468715937814/329f14a1e5a58d8366ed61b5b0d806ed.webp"></discord-embed-author></discord-embed><div slot="components" style="margin-top:8px;"><div class="discord-components-row" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdn.discordapp.com/emojis/1412877220942188606.png" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />None</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;">2</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdn.discordapp.com/emojis/1412877222737350656.png" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />None</button></div></div></discord-message>
+<discord-message id="m-1510973467464306769" timestamp="2026-06-01T14:49:07.173000Z" profile="1363531806586048755"><discord-embed title="Баллы сняты" slot="embeds" color="#2b2d31"><discord-embed-description slot="description">Баллы за Предупреждение успешно сняты!</discord-embed-description><discord-embed-fields slot="fields"><discord-embed-field field-title="Информация о нарушителе"><blockquote> <strong>Ник:</strong> MatrixX_X</blockquote><br/><blockquote> <strong>Айди:</strong> <code>486435079</code></blockquote><br/><blockquote> <strong>ID предупреждения:</strong> <code>7429901657444188160</code></blockquote><br/><blockquote> <strong>Тип снятого наказания:</strong> Предупреждение</blockquote><br/><blockquote> <strong>Снято баллов:</strong> 1</blockquote><br/><blockquote> <strong>Осталось баллов:</strong> 2/37</blockquote><br/><blockquote> <strong>Подписка:</strong> <discord-mention type="role">Role#1416196054814167171</discord-mention></blockquote><br/><blockquote> <strong>Discord:</strong> <discord-mention type="user">Лидер Мнений sqw1rtiq</discord-mention></blockquote></discord-embed-field></discord-embed-fields></discord-embed></discord-message>
+<discord-message id="m-1510973564160049152" timestamp="2026-06-01T14:49:30.227000Z" profile="1363531806586048755"><discord-embed title="Баллы сняты" slot="embeds" color="#2b2d31"><discord-embed-description slot="description">Баллы за Предупреждение успешно сняты!</discord-embed-description><discord-embed-fields slot="fields"><discord-embed-field field-title="Информация о нарушителе"><blockquote> <strong>Ник:</strong> MatrixX_X</blockquote><br/><blockquote> <strong>Айди:</strong> <code>486435079</code></blockquote><br/><blockquote> <strong>ID предупреждения:</strong> <code>7430286065640669184</code></blockquote><br/><blockquote> <strong>Тип снятого наказания:</strong> Предупреждение</blockquote><br/><blockquote> <strong>Снято баллов:</strong> 1</blockquote><br/><blockquote> <strong>Осталось баллов:</strong> 1/37</blockquote><br/><blockquote> <strong>Подписка:</strong> <discord-mention type="role">Role#1416196054814167171</discord-mention></blockquote><br/><blockquote> <strong>Discord:</strong> <discord-mention type="user">Лидер Мнений sqw1rtiq</discord-mention></blockquote></discord-embed-field></discord-embed-fields></discord-embed></discord-message>
+<discord-message id="m-1510973687581507745" timestamp="2026-06-01T14:49:59.653000Z" profile="1363531806586048755"><discord-embed title="Баллы сняты" slot="embeds" color="#2b2d31"><discord-embed-description slot="description">Баллы за Предупреждение успешно сняты!</discord-embed-description><discord-embed-fields slot="fields"><discord-embed-field field-title="Информация о нарушителе"><blockquote> <strong>Ник:</strong> MatrixX_X</blockquote><br/><blockquote> <strong>Айди:</strong> <code>486435079</code></blockquote><br/><blockquote> <strong>ID предупреждения:</strong> <code>7455637109656518656</code></blockquote><br/><blockquote> <strong>Тип снятого наказания:</strong> Предупреждение</blockquote><br/><blockquote> <strong>Снято баллов:</strong> 1</blockquote><br/><blockquote> <strong>Осталось баллов:</strong> 0/37</blockquote><br/><blockquote> <strong>Подписка:</strong> <discord-mention type="role">Role#1416196054814167171</discord-mention></blockquote><br/><blockquote> <strong>Discord:</strong> <discord-mention type="user">Лидер Мнений sqw1rtiq</discord-mention></blockquote></discord-embed-field></discord-embed-fields></discord-embed></discord-message>
+<discord-message id="m-1510974953531375687" timestamp="2026-06-01T14:55:01.479000Z" profile="760966468715937814"><discord-mention type="user">Лидер Мнений sqw1rtiq</discord-mention></discord-message>
+<discord-message id="m-1510979279465484298" timestamp="2026-06-01T15:12:12.862000Z" profile="1133665013794607114">$закрыть Разобран.</discord-message>
+<discord-message id="m-1510979280291762237" timestamp="2026-06-01T15:12:13.059000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет закроется через несколько секунд...</span></div></div></div></discord-message>
+</discord-messages></body></html>
