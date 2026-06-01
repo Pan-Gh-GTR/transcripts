@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-1283</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/8f6e9a6ad7bdc609907d4c907ccadfd5.png?size=1024", "roleColor": "#006800", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/8e5424768addb0eab9fb87dcd89088bb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": true}, "1236286225896439819": {"author": "[MM-019] 11-я От.Гв.Дес | Ястреб", "avatar": "https://cdn.discordapp.com/avatars/1236286225896439819/92afcb31608dbcc76afa66f78cddaf5d.png?size=1024", "roleColor": "#ff5cd0", "roleIcon": "https://cdn.discordapp.com/role-icons/1429212035509518387/47698eda2772171945390e0254deff2b.png?size=1024", "roleName": "25thCSVSMF", "bot": false, "verified": false}, "585394439715946518": {"author": "savingbox3", "avatar": "https://cdn.discordapp.com/avatars/585394439715946518/e82f31f878077dcd383254c613d59c3d.png?size=1024", "roleColor": "#d4843d", "roleIcon": "https://cdn.discordapp.com/role-icons/1483091539973373993/b2b1d515e0da04921b1553fe55d87eea.png?size=1024", "roleName": "Руководство Проекта", "bot": false, "verified": false}, "1128029037365833730": {"author": "Redmi01001", "avatar": "https://cdn.discordapp.com/avatars/1128029037365833730/6e2447c05de3d2d97da8ac3f4aecb7aa.png?size=1024", "roleColor": "#2a88cb", "roleIcon": "https://cdn.discordapp.com/role-icons/1416177983378686052/3d06b544ab605eab4956042b2dad64fc.png?size=1024", "roleName": "Участник", "bot": false, "verified": false}, "1195675629010558986": {"author": "The_Borisik", "avatar": "https://cdn.discordapp.com/avatars/1195675629010558986/16b83fbe315df0f2f7ee3e08fee39600.png?size=1024", "roleColor": "#424cff", "roleIcon": "https://cdn.discordapp.com/role-icons/1410712605579939982/df9f61918e58e298252dbcbfe910e849.png?size=1024", "roleName": "Пробный Игрок", "bot": false, "verified": false}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.emoji-img {
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    object-fit: contain;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/a06dfa47e027eb8acdf25152e486f1c8.png?size=1024" timestamp="2026-06-01_19-59-52">Тикет Закрыт.<br/>Причина: Не указана<br/>Закрыл: <@1236286225896439819><br/>Дата: 2026-06-01_19-59-52<br/><a href="https://transcripts.erlcrussia.xyz/transcripts/поддержка-1283_2026-06-01_19-59-52.html" style="color: #00aff4;">https://transcripts.erlcrussia.xyz/transcripts/поддержка-1283_2026-06-01_19-59-52.html</a></discord-message>
+<discord-message id="m-1506952333060214805" timestamp="2026-05-21T12:30:34.022000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="padding:8px;color:#dcddde;"><discord-mention type="role">Персонал ER:LC</discord-mention> <discord-mention type="role">Персонал Discord</discord-mention> <discord-mention type="user">[MM-019] 11-я От.Гв.Дес | Ястреб</discord-mention></div><div style="background:#2f3136;border-left:4px solid #006800;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:8px 12px;"><div style="display:flex;gap:16px;align-items:flex-start;"><img src="https://cdn.discordapp.com/avatars/1236286225896439819/f870fe96fd7deec84dce6675f120f9f3.png?size=1024" style="width:80px;height:80px;border-radius:8px;object-fit:cover;flex-shrink:0;" /><div><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg" alt="📨" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Новый Тикет — Поддержка</span><br/><strong>В чём проблема:</strong><br/>Можно сдалать мероприятие день открытых дверей мз</div></div></div><div style="padding:4px 12px;color:#dcddde;">⏳ <strong>Ожидайте ответа от персонала.</strong></div><div style="height:1px;background:#4f545c;margin:4px 0;"></div><div style="height:8px;"></div><div style="display:flex;gap:8px;padding:8px 0;flex-wrap:wrap;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Закрыть Тикет</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e4.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Освободить Тикет</button></div></div></div></discord-message>
+<discord-message id="m-1507042065283027116" timestamp="2026-05-21T18:27:07.851000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e5.svg" alt="📥" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет взят <discord-mention type="user">savingbox3</discord-mention>.</span></div></div></div></discord-message>
+<discord-message id="m-1507042176436011220" timestamp="2026-05-21T18:27:34.352000Z" profile="585394439715946518">Здравствуйте, распишите подробней информацию о вашем мероприятии</discord-message>
+<discord-message id="m-1507070153047806084" timestamp="2026-05-21T20:18:44.496000Z" profile="1236286225896439819"></discord-message>
+<discord-message id="m-1507070174300340255" timestamp="2026-05-21T20:18:49.563000Z" profile="1236286225896439819">все расписано</discord-message>
+<discord-message id="m-1507080726808367215" timestamp="2026-05-21T21:00:45.477000Z" profile="1236286225896439819">мда</discord-message>
+<discord-message id="m-1507080748996235395" timestamp="2026-05-21T21:00:50.767000Z" profile="1236286225896439819"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1507042176436011220">Здравствуйте, распишите подробней информацию о вашем мероприятии</span></discord-reply>ну что</discord-message>
+<discord-message id="m-1507080821528334557" timestamp="2026-05-21T21:01:08.060000Z" profile="585394439715946518">чутка позже согласуем</discord-message>
+<discord-message id="m-1507080909910704371" timestamp="2026-05-21T21:01:29.132000Z" profile="1236286225896439819"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1507080821528334557">чутка позже согласуем</span></discord-reply>мне дату надо сейчас знать</discord-message>
+<discord-message id="m-1507080932329521253" timestamp="2026-05-21T21:01:34.477000Z" profile="1236286225896439819">когда сделать сможем</discord-message>
+<discord-message id="m-1507080971059724309" timestamp="2026-05-21T21:01:43.711000Z" profile="585394439715946518">в выходные нет точно</discord-message>
+<discord-message id="m-1507081000071594014" timestamp="2026-05-21T21:01:50.628000Z" profile="585394439715946518">у нас там другой ивент</discord-message>
+<discord-message id="m-1507081022536286388" timestamp="2026-05-21T21:01:55.984000Z" profile="585394439715946518">на следующей неделе только</discord-message>
+<discord-message id="m-1507352491619127337" timestamp="2026-05-22T15:00:39.257000Z" profile="1236286225896439819"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1507081022536286388">на следующей неделе только</span></discord-reply>Точную дату</discord-message>
+<discord-message id="m-1507352495738065080" timestamp="2026-05-22T15:00:40.239000Z" profile="1236286225896439819">Можно</discord-message>
+<discord-message id="m-1507766339891236984" timestamp="2026-05-23T18:25:08.374000Z" profile="585394439715946518">пока что не могу сказать</discord-message>
+<discord-message id="m-1507766375089705220" timestamp="2026-05-23T18:25:16.766000Z" profile="585394439715946518">ближе к следующей неделе будет видно</discord-message>
+<discord-message id="m-1507766408531152957" timestamp="2026-05-23T18:25:24.739000Z" profile="585394439715946518">когда вы хотите сами?</discord-message>
+<discord-message id="m-1508089682804605029" timestamp="2026-05-24T15:49:59.332000Z" profile="1236286225896439819">эту неделю</discord-message>
+<discord-message id="m-1508728311470096424" timestamp="2026-05-26T10:07:40.271000Z" profile="1236286225896439819"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1507766339891236984">пока что не могу сказать</span></discord-reply>Ну что</discord-message>
+<discord-message id="m-1508728351731351603" timestamp="2026-05-26T10:07:49.870000Z" profile="1236286225896439819">Эту неделю можно</discord-message>
+<discord-message id="m-1508728441262837761" timestamp="2026-05-26T10:08:11.216000Z" profile="585394439715946518">да, конечно</discord-message>
+<discord-message id="m-1508729321718550618" timestamp="2026-05-26T10:11:41.133000Z" profile="1236286225896439819"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1508728441262837761">да, конечно</span></discord-reply>Сегодня либо завтра</discord-message>
+<discord-message id="m-1508729341297819738" timestamp="2026-05-26T10:11:45.801000Z" profile="1236286225896439819">?</discord-message>
+<discord-message id="m-1508729372713160775" timestamp="2026-05-26T10:11:53.291000Z" profile="585394439715946518">давайте лучше завтра</discord-message>
+<discord-message id="m-1508729589902610542" timestamp="2026-05-26T10:12:45.073000Z" profile="585394439715946518">и подготовьте объявление примерно такого формата для отправки в канал ивенты<discord-attachments slot="attachments"><discord-attachment type="image" filename="image.png" url="https://transcripts.erlcrussia.xyz/attachments/1508729589902610542_1508729590141554688.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1508730737451335800" timestamp="2026-05-26T10:17:18.670000Z" profile="1236286225896439819">Уважаемые жители и гости города!<br/>Завтра в 16:00 по МСК Министерство здравоохранения  проводит День открытых дверей!<br/>Вы сможете познакомиться с работой подразделений МЗ <br/>Место проведения мероприятия: ЦКБ н1 имени Г фаховского<br/>А Это рп-ивент, на котором действуют все правила сервера. Организатор - <discord-mention type="user">[MM-019] 11-я От.Гв.Дес | Ястреб</discord-mention></discord-message>
+<discord-message id="m-1508730791092555837" timestamp="2026-05-26T10:17:31.459000Z" profile="1236286225896439819"><discord-mention type="user">savingbox3</discord-mention></discord-message>
+<discord-message id="m-1508730821916233798" timestamp="2026-05-26T10:17:38.808000Z" profile="1236286225896439819">Простите за пинг</discord-message>
+<discord-message id="m-1508730877654335528" timestamp="2026-05-26T10:17:52.097000Z" profile="1236286225896439819">Внизу можете написать еще</discord-message>
+<discord-message id="m-1508730919543111692" timestamp="2026-05-26T10:18:02.084000Z" profile="1236286225896439819">Больше информации в пресс центре минздрава <a href="https://discord.com/channels/1465040282037784667/1466848796532146399" style="color: #00aff4; text-decoration: underline;" target="_blank">https://discord.com/channels/1465040282037784667/1466848796532146399</a></discord-message>
+<discord-message id="m-1508730988375834644" timestamp="2026-05-26T10:18:18.495000Z" profile="585394439715946518">нужно его обязательно отформатировать</discord-message>
+<discord-message id="m-1508731058529763369" timestamp="2026-05-26T10:18:35.221000Z" profile="1236286225896439819"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1508730988375834644">нужно его обязательно отформатировать</span></discord-reply>Так не подходит?</discord-message>
+<discord-message id="m-1508731108093857916" timestamp="2026-05-26T10:18:47.038000Z" profile="585394439715946518">я скинул шаблон</discord-message>
+<discord-message id="m-1508731135734059018" timestamp="2026-05-26T10:18:53.628000Z" profile="585394439715946518">по нему примерно и нужно сделать</discord-message>
+<discord-message id="m-1508731241183051778" timestamp="2026-05-26T10:19:18.769000Z" profile="1236286225896439819">Ну вот</discord-message>
+<discord-message id="m-1508731257947684874" timestamp="2026-05-26T10:19:22.766000Z" profile="1236286225896439819">Все норм</discord-message>
+<discord-message id="m-1508731368161415168" timestamp="2026-05-26T10:19:49.043000Z" profile="1236286225896439819">Я туда все не напишу</discord-message>
+<discord-message id="m-1508731418614693968" timestamp="2026-05-26T10:20:01.072000Z" profile="1236286225896439819">У нас слишком много программ будет</discord-message>
+<discord-message id="m-1508731507475349586" timestamp="2026-05-26T10:20:22.258000Z" profile="585394439715946518">кратким образом обязательно нужно расписать и отформатировать</discord-message>
+<discord-message id="m-1508731521534787681" timestamp="2026-05-26T10:20:25.610000Z" profile="585394439715946518">без этого никак</discord-message>
+<discord-message id="m-1508731545756893255" timestamp="2026-05-26T10:20:31.385000Z" profile="1236286225896439819">Щя</discord-message>
+<discord-message id="m-1508732102240374844" timestamp="2026-05-26T10:22:44.061000Z" profile="1236286225896439819">Стой</discord-message>
+<discord-message id="m-1508732328132739262" timestamp="2026-05-26T10:23:37.918000Z" profile="1236286225896439819"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f3e5.svg" alt="🏥" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Уважаемые жители!<br/>Министерство здравоохранения приглашает вас на День открытых дверей в больнице — масштабное мероприятие для всей семьи, посвящённое здоровью, науке и современным медицинским технологиям.<br/>В программе мероприятия:<br/><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f52c.svg" alt="🔬" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> экскурсии по лабораториям и исследовательским центрам;<br/>🩺 бесплатные проверки здоровья — измерение давления, уровня сахара и проверка зрения;<br/><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f468.svg" alt="👨" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/>‍<img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2695-fe0f.svg" alt="⚕️" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> лекции ведущих врачей и учёных о профилактике и современных методах лечения;<br/><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/26d1.svg" alt="⛑" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> мастер-классы по оказанию первой помощи;<br/>🤝 встречи с известными медицинскими специалистами;<br/>🧬 выставки инновационных медицинских технологий и оборудования;<br/><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f388.svg" alt="🎈" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> интерактивные площадки для детей и студентов;<br/><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f489.svg" alt="💉" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> вакцинационные и профилактические акции.<br/>Это отличная возможность узнать больше о работе современной медицины, получить полезные консультации и провести день с пользой для здоровья.<br/><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4c5.svg" alt="📅" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Дата: завтра в 16:00<br/><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4cd.svg" alt="📍" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Место проведения: ЦКБ н1 имени Г фаховского<br/>⏰ Время: 16:00<br/>Организатор <discord-mention type="user">[MM-019] 11-я От.Гв.Дес | Ястреб</discord-mention></discord-message>
+<discord-message id="m-1508732508865298524" timestamp="2026-05-26T10:24:21.008000Z" profile="1236286225896439819"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1508731507475349586">кратким образом обязательно нужно расписать и отформатировать</span></discord-reply>Ну что</discord-message>
+<discord-message id="m-1508733211465744564" timestamp="2026-05-26T10:27:08.521000Z" profile="585394439715946518">всё ещё не по шаблону</discord-message>
+<discord-message id="m-1508733476596355143" timestamp="2026-05-26T10:28:11.733000Z" profile="1236286225896439819"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1508733211465744564">всё ещё не по шаблону</span></discord-reply>А так нельзя</discord-message>
+<discord-message id="m-1508733499228684421" timestamp="2026-05-26T10:28:17.129000Z" profile="1236286225896439819">Так же лучше</discord-message>
+<discord-message id="m-1508733555507986533" timestamp="2026-05-26T10:28:30.547000Z" profile="585394439715946518">есть шаблон</discord-message>
+<discord-message id="m-1508733568057212928" timestamp="2026-05-26T10:28:33.539000Z" profile="585394439715946518">без шаблона отказ</discord-message>
+<discord-message id="m-1508733968713777313" timestamp="2026-05-26T10:30:09.063000Z" profile="1236286225896439819">Ладно Щя</discord-message>
+<discord-message id="m-1508734385099112458" timestamp="2026-05-26T10:31:48.337000Z" profile="1236286225896439819">Уважаемые жители и гости города!<br/>Завтра в 16:00 по МСК Министерство здравоохранения  проводит День открытых дверей!<br/>Вы сможете познакомиться с работой подразделений МЗ также еще в программу мероприятие входит  • экскурсии по лабораториям и исследовательским центрам; . бесплатные проверки здоровья - измерение давления, уровня сахара и проверка зрения;<br/>• лекции ведущих врачей и учёных о профилактике и современных методах лечения; мастер-классы по оказанию первой помощи; встречи с известными медицинскими специалистами; выставки инновационных медицинских технологий и оборудования; интерактивные площадки для детей и студентов;<br/>• вакцинационные и профилактические акции.<br/>Место проведения мероприятия: ЦКБ н1 имени Г фаховского<br/>А Это рп-ивент, на котором действуют все правила сервера. Организатор - <discord-mention type="user">[MM-019] 11-я От.Гв.Дес | Ястреб</discord-mention></discord-message>
+<discord-message id="m-1508734453835632720" timestamp="2026-05-26T10:32:04.725000Z" profile="1236286225896439819">Ну как бы</discord-message>
+<discord-message id="m-1508734471023890513" timestamp="2026-05-26T10:32:08.823000Z" profile="1236286225896439819">Вот так</discord-message>
+<discord-message id="m-1508734486190489641" timestamp="2026-05-26T10:32:12.439000Z" profile="1236286225896439819">Либо</discord-message>
+<discord-message id="m-1508734783721832530" timestamp="2026-05-26T10:33:23.376000Z" profile="1236286225896439819"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1508733555507986533">есть шаблон</span></discord-reply>Нормально?</discord-message>
+<discord-message id="m-1508735018162458807" timestamp="2026-05-26T10:34:19.271000Z" profile="585394439715946518">у вас какой ранг?</discord-message>
+<discord-message id="m-1508735050814984222" timestamp="2026-05-26T10:34:27.056000Z" profile="585394439715946518">просто обычно такие мероприятия лидеры проводят</discord-message>
+<discord-message id="m-1508735349625585664" timestamp="2026-05-26T10:35:38.298000Z" profile="1236286225896439819"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1508735018162458807">у вас какой ранг?</span></discord-reply>Заместитель главного врача</discord-message>
+<discord-message id="m-1508735360501284926" timestamp="2026-05-26T10:35:40.891000Z" profile="1236286225896439819">Высший состав</discord-message>
+<discord-message id="m-1508735395687567480" timestamp="2026-05-26T10:35:49.280000Z" profile="1236286225896439819">Руководство больницы</discord-message>
+<discord-message id="m-1508735439056539658" timestamp="2026-05-26T10:35:59.620000Z" profile="585394439715946518">уверены, что сможете организовать людей?</discord-message>
+<discord-message id="m-1508735454936170516" timestamp="2026-05-26T10:36:03.406000Z" profile="1236286225896439819">По меркам МВД</discord-message>
+<discord-message id="m-1508735514331578488" timestamp="2026-05-26T10:36:17.567000Z" profile="1236286225896439819">Генерал</discord-message>
+<discord-message id="m-1508735530693558323" timestamp="2026-05-26T10:36:21.468000Z" profile="1236286225896439819"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1508735439056539658">уверены, что сможете организовать людей?</span></discord-reply>Да</discord-message>
+<discord-message id="m-1508735615720489072" timestamp="2026-05-26T10:36:41.740000Z" profile="585394439715946518">кто у вас лидер?</discord-message>
+<discord-message id="m-1508735636046352515" timestamp="2026-05-26T10:36:46.586000Z" profile="1236286225896439819"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1508735615720489072">кто у вас лидер?</span></discord-reply>Редми</discord-message>
+<discord-message id="m-1508735664856895539" timestamp="2026-05-26T10:36:53.455000Z" profile="1236286225896439819">Могу в тикет добавить</discord-message>
+<discord-message id="m-1508735757571850290" timestamp="2026-05-26T10:37:15.560000Z" profile="585394439715946518"><discord-mention type="user">Redmi01001</discord-mention> сможете присутствовать на мероприятии?</discord-message>
+<discord-message id="m-1508735778384121936" timestamp="2026-05-26T10:37:20.522000Z" profile="585394439715946518">и согласовано ли оно вообще с вами</discord-message>
+<discord-message id="m-1508735806359994419" timestamp="2026-05-26T10:37:27.192000Z" profile="1236286225896439819"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1508735778384121936">и согласовано ли оно вообще с вами</span></discord-reply>Да</discord-message>
+<discord-message id="m-1508788542556475523" timestamp="2026-05-26T14:07:00.481000Z" profile="1128029037365833730"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1508735757571850290">@1128029037365833730 сможете присутствовать на мероприятии?</span></discord-reply>Завтра то есть в среду?</discord-message>
+<discord-message id="m-1508788737801195590" timestamp="2026-05-26T14:07:47.031000Z" profile="1128029037365833730">Постараюсь явиться</discord-message>
+<discord-message id="m-1508792115931643934" timestamp="2026-05-26T14:21:12.440000Z" profile="1236286225896439819"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1508735757571850290">@1128029037365833730 сможете присутствовать на мероприятии?</span></discord-reply>Севинг</discord-message>
+<discord-message id="m-1508792132628910214" timestamp="2026-05-26T14:21:16.421000Z" profile="1236286225896439819">У меня к тебе вопрос</discord-message>
+<discord-message id="m-1508792151029317672" timestamp="2026-05-26T14:21:20.808000Z" profile="1236286225896439819">Если я высший состав</discord-message>
+<discord-message id="m-1508792196013363270" timestamp="2026-05-26T14:21:31.533000Z" profile="1236286225896439819">То у меня должен быть префикс</discord-message>
+<discord-message id="m-1508792209489530992" timestamp="2026-05-26T14:21:34.746000Z" profile="1236286225896439819">MZ</discord-message>
+<discord-message id="m-1508792235595010058" timestamp="2026-05-26T14:21:40.970000Z" profile="1236286225896439819">MZ-020</discord-message>
+<discord-message id="m-1508792292662841414" timestamp="2026-05-26T14:21:54.576000Z" profile="1236286225896439819">А не RE-020</discord-message>
+<discord-message id="m-1508792474917666877" timestamp="2026-05-26T14:22:38.029000Z" profile="585394439715946518">это уже нужно у редми спрашивать</discord-message>
+<discord-message id="m-1508792781034750024" timestamp="2026-05-26T14:23:51.013000Z" profile="1236286225896439819"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1508792474917666877">это уже нужно у редми спрашивать</span></discord-reply>Ну так высший состав</discord-message>
+<discord-message id="m-1508792824034885823" timestamp="2026-05-26T14:24:01.265000Z" profile="1236286225896439819">Имеет префикс MZ</discord-message>
+<discord-message id="m-1508792895065559051" timestamp="2026-05-26T14:24:18.200000Z" profile="1236286225896439819">Ну в других фракциях либо MH либо MV</discord-message>
+<discord-message id="m-1508793395462537299" timestamp="2026-05-26T14:26:17.504000Z" profile="1236286225896439819"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1508792474917666877">это уже нужно у редми спрашивать</span></discord-reply>Можно мне префикс поменять</discord-message>
+<discord-message id="m-1508794054341693746" timestamp="2026-05-26T14:28:54.593000Z" profile="1195675629010558986"><discord-reply slot="reply" author="[MM-019] 11-я От.Гв.Дес | Ястреб" avatar="" role-color="#ff5cd0"><span data-goto="1508793395462537299">Можно мне префикс поменять</span></discord-reply>Те сказали к редми</discord-message>
+<discord-message id="m-1508794300866101339" timestamp="2026-05-26T14:29:53.369000Z" profile="1236286225896439819"><discord-reply slot="reply" author="The_Borisik" avatar="" role-color="#424cff"><span data-goto="1508794054341693746">Те сказали к редми</span></discord-reply>А вы не влезайте в тикет</discord-message>
+<discord-message id="m-1508794362623168652" timestamp="2026-05-26T14:30:08.093000Z" profile="585394439715946518">в любом случае к редми</discord-message>
+<discord-message id="m-1508794403127558144" timestamp="2026-05-26T14:30:17.750000Z" profile="1236286225896439819">Мда</discord-message>
+<discord-message id="m-1508794431036325919" timestamp="2026-05-26T14:30:24.404000Z" profile="1236286225896439819">Лан</discord-message>
+<discord-message id="m-1508824891217019013" timestamp="2026-05-26T16:31:26.677000Z" profile="1236286225896439819"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1508794362623168652">в любом случае к редми</span></discord-reply>Ну что по поводу ивента</discord-message>
+<discord-message id="m-1508824926763880619" timestamp="2026-05-26T16:31:35.152000Z" profile="585394439715946518">проведём</discord-message>
+<discord-message id="m-1508824942999765184" timestamp="2026-05-26T16:31:39.023000Z" profile="585394439715946518">завтра сделаем объявление</discord-message>
+<discord-message id="m-1508825072637317281" timestamp="2026-05-26T16:32:09.931000Z" profile="1236286225896439819"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1508824926763880619">проведём</span></discord-reply>Я же организатор?</discord-message>
+<discord-message id="m-1508825111451402280" timestamp="2026-05-26T16:32:19.185000Z" profile="585394439715946518">ну по сути как инициатор да</discord-message>
+<discord-message id="m-1508825134092390490" timestamp="2026-05-26T16:32:24.583000Z" profile="585394439715946518">и как организатор</discord-message>
+<discord-message id="m-1508825179336478750" timestamp="2026-05-26T16:32:35.370000Z" profile="585394439715946518">во сколько сможешь?</discord-message>
+<discord-message id="m-1508825198307311787" timestamp="2026-05-26T16:32:39.893000Z" profile="1236286225896439819">А команды без отчета можно юзать</discord-message>
+<discord-message id="m-1508825231639318579" timestamp="2026-05-26T16:32:47.840000Z" profile="585394439715946518">ивент же рп</discord-message>
+<discord-message id="m-1508825297355804844" timestamp="2026-05-26T16:33:03.508000Z" profile="585394439715946518">ну ты можешь на смену выйти</discord-message>
+<discord-message id="m-1508825327269314781" timestamp="2026-05-26T16:33:10.640000Z" profile="1236286225896439819"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1508825179336478750">во сколько сможешь?</span></discord-reply>16:00 завтра</discord-message>
+<discord-message id="m-1508825348727505117" timestamp="2026-05-26T16:33:15.756000Z" profile="1236286225896439819"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1508825297355804844">ну ты можешь на смену выйти</span></discord-reply>У меня отпуск</discord-message>
+<discord-message id="m-1508825396768936076" timestamp="2026-05-26T16:33:27.210000Z" profile="585394439715946518">это как ивент</discord-message>
+<discord-message id="m-1508825402112610407" timestamp="2026-05-26T16:33:28.484000Z" profile="1236286225896439819">Так тоже можно ?</discord-message>
+<discord-message id="m-1508825405501739049" timestamp="2026-05-26T16:33:29.292000Z" profile="585394439715946518">поэтому можно</discord-message>
+<discord-message id="m-1508825493091258571" timestamp="2026-05-26T16:33:50.175000Z" profile="1236286225896439819">Хорошо</discord-message>
+<discord-message id="m-1509071141094952990" timestamp="2026-05-27T08:49:57.223000Z" profile="1236286225896439819"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1508825405501739049">поэтому можно</span></discord-reply>сможете в игру чтобы раставить все</discord-message>
+<discord-message id="m-1509071156643364894" timestamp="2026-05-27T08:50:00.930000Z" profile="1236286225896439819">либо</discord-message>
+<discord-message id="m-1509071187756449882" timestamp="2026-05-27T08:50:08.348000Z" profile="1236286225896439819">я могу на моем серваке сделать</discord-message>
+<discord-message id="m-1509071203879485490" timestamp="2026-05-27T08:50:12.192000Z" profile="1236286225896439819">и код вам скинуть</discord-message>
+<discord-message id="m-1509071253204500623" timestamp="2026-05-27T08:50:23.952000Z" profile="1236286225896439819">у меня там все геймпасы</discord-message>
+<discord-message id="m-1509184225574649896" timestamp="2026-05-27T16:19:18.664000Z" profile="1195675629010558986"><discord-mention type="user">[MM-019] 11-я От.Гв.Дес | Ястреб</discord-mention> Когда провести хотите то</discord-message>
+<discord-message id="m-1509184236274323456" timestamp="2026-05-27T16:19:21.215000Z" profile="1195675629010558986">Уже не сегодня это точно</discord-message>
+<discord-message id="m-1509184549437833216" timestamp="2026-05-27T16:20:35.879000Z" profile="1195675629010558986"><discord-reply slot="reply" author="The_Borisik" avatar="" role-color="#424cff"><span data-goto="1509184225574649896">@1236286225896439819 Когда провести хотите то</span></discord-reply><discord-mention type="user">Redmi01001</discord-mention></discord-message>
+<discord-message id="m-1509184644011003974" timestamp="2026-05-27T16:20:58.427000Z" profile="1128029037365833730">Воскресенье, в 14 часов</discord-message>
+<discord-message id="m-1510160953386340373" timestamp="2026-05-30T09:00:28.721000Z" profile="1128029037365833730">Сделал план для транспорта для сотрудников<discord-attachments slot="attachments"><discord-attachment type="image" filename="Untitled108_20260530075959.png" url="https://transcripts.erlcrussia.xyz/attachments/1510160953386340373_1510160952975294705.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1510160966158123008" timestamp="2026-05-30T09:00:31.766000Z" profile="1128029037365833730">Есть комментарии?</discord-message>
+<discord-message id="m-1510161634323206175" timestamp="2026-05-30T09:03:11.069000Z" profile="1128029037365833730"><discord-reply slot="reply" author="Redmi01001" avatar="" role-color="#2a88cb"><span data-goto="1510160953386340373">Сделал план для транспорта для сотрудников</span></discord-reply>Стульчики для посетителей можно уместить внутри больницы</discord-message>
+<discord-message id="m-1510164583489339412" timestamp="2026-05-30T09:14:54.205000Z" profile="1236286225896439819"><discord-reply slot="reply" author="Redmi01001" avatar="" role-color="#2a88cb"><span data-goto="1510161634323206175">Стульчики для посетителей можно уместить внутри больницы</span></discord-reply>Редми</discord-message>
+<discord-message id="m-1510164622890500097" timestamp="2026-05-30T09:15:03.599000Z" profile="1236286225896439819">Когда ты проведешь</discord-message>
+<discord-message id="m-1510164673373405225" timestamp="2026-05-30T09:15:15.635000Z" profile="1236286225896439819">Вдруг там уже дома буду</discord-message>
+<discord-message id="m-1510164953506779196" timestamp="2026-05-30T09:16:22.424000Z" profile="1128029037365833730"><discord-reply slot="reply" author="[MM-019] 11-я От.Гв.Дес | Ястреб" avatar="" role-color="#ff5cd0"><span data-goto="1510164622890500097">Когда ты проведешь</span></discord-reply>Я же писал был, что <strong>воскресенье, 14 часов по мск</strong></discord-message>
+<discord-message id="m-1510165074310856704" timestamp="2026-05-30T09:16:51.226000Z" profile="1128029037365833730">Я вообще обиделся на тебя</discord-message>
+<discord-message id="m-1510165096213647491" timestamp="2026-05-30T09:16:56.448000Z" profile="1128029037365833730">Так что отдыхай себе</discord-message>
+<discord-message id="m-1510165152132235304" timestamp="2026-05-30T09:17:09.780000Z" profile="1236286225896439819"><discord-reply slot="reply" author="Redmi01001" avatar="" role-color="#2a88cb"><span data-goto="1510165074310856704">Я вообще обиделся на тебя</span></discord-reply>Мне пришлось уехать в отпуск</discord-message>
+<discord-message id="m-1510165175481798756" timestamp="2026-05-30T09:17:15.347000Z" profile="1236286225896439819">У нас планы поменялись</discord-message>
+<discord-message id="m-1510165230993408013" timestamp="2026-05-30T09:17:28.582000Z" profile="1236286225896439819">Мы должны были ехать в субботу</discord-message>
+<discord-message id="m-1510165416750612580" timestamp="2026-05-30T09:18:12.870000Z" profile="1236286225896439819">Но друзья родителей позвонили нам и сказали что доступен номер раньше</discord-message>
+<discord-message id="m-1510218195036934205" timestamp="2026-05-30T12:47:56.194000Z" profile="1195675629010558986"><discord-reply slot="reply" author="Redmi01001" avatar="" role-color="#2a88cb"><span data-goto="1509184644011003974">Воскресенье, в 14 часов</span></discord-reply>На этой уже не сможем</discord-message>
+<discord-message id="m-1510218265001984020" timestamp="2026-05-30T12:48:12.875000Z" profile="1128029037365833730"><discord-reply slot="reply" author="The_Borisik" avatar="" role-color="#424cff"><span data-goto="1510218195036934205">На этой уже не сможем</span></discord-reply>А позднее ещё не могли написать???</discord-message>
+<discord-message id="m-1510218265023217684" timestamp="2026-05-30T12:48:12.880000Z" profile="1195675629010558986">Организатором на следующей недели возможно буду я</discord-message>
+<discord-message id="m-1510218275014054019" timestamp="2026-05-30T12:48:15.262000Z" profile="1195675629010558986">Если смогу</discord-message>
+<discord-message id="m-1510218406333251645" timestamp="2026-05-30T12:48:46.571000Z" profile="1128029037365833730"><discord-reply slot="reply" author="The_Borisik" avatar="" role-color="#424cff"><span data-goto="1510218195036934205">На этой уже не сможем</span></discord-reply>Есть на то причины?</discord-message>
+<discord-message id="m-1510218472888598628" timestamp="2026-05-30T12:49:02.439000Z" profile="1195675629010558986"><discord-reply slot="reply" author="Redmi01001" avatar="" role-color="#2a88cb"><span data-goto="1510218406333251645">Есть на то причины?</span></discord-reply>У нас есть планы на проведения других ивентов</discord-message>
+<discord-message id="m-1510218516211695739" timestamp="2026-05-30T12:49:12.768000Z" profile="1195675629010558986">Больше не могу тебе сказать<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f44e.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1511051667267653833" timestamp="2026-06-01T19:59:51.459000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет закроется через несколько секунд...</span></div></div></div></discord-message>
+</discord-messages></body></html>
