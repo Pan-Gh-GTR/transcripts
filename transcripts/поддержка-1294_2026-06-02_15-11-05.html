@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-1294</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/8f6e9a6ad7bdc609907d4c907ccadfd5.png?size=1024", "roleColor": "#006800", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/8e5424768addb0eab9fb87dcd89088bb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": true}, "1301612859515473940": {"author": "Artyem_BOG", "avatar": "https://cdn.discordapp.com/avatars/1301612859515473940/c025a3dd53712eea652e0f97e1e6804f.png?size=1024", "roleColor": "#51c4fc", "roleIcon": "https://cdn.discordapp.com/role-icons/1416225044895498240/036f9e1029820dbe92c53098702e2041.png?size=1024", "roleName": "VIP", "bot": false, "verified": false}, "1133665013794607114": {"author": "Pancakeboyman_8", "avatar": "https://cdn.discordapp.com/avatars/1133665013794607114/9952a7f75bf8748ecfd9a8e39af2e279.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1331342900205850686/c1fd358ec8be5422366cbf5b58e16e31.png?size=1024", "roleName": "Владелец", "bot": false, "verified": false}, "760966468715937814": {"author": "bjmajgda", "avatar": "https://cdn.discordapp.com/avatars/760966468715937814/329f14a1e5a58d8366ed61b5b0d806ed.png?size=1024", "roleColor": "#a609db", "roleIcon": "https://cdn.discordapp.com/role-icons/1423638353840181351/c4af864bcbb247eba1ef4c35593a6625.png?size=1024", "roleName": "Флаттершай", "bot": false, "verified": false}, "585394439715946518": {"author": "savingbox3", "avatar": "https://cdn.discordapp.com/avatars/585394439715946518/e82f31f878077dcd383254c613d59c3d.png?size=1024", "roleColor": "#d4843d", "roleIcon": "https://cdn.discordapp.com/role-icons/1483091539973373993/b2b1d515e0da04921b1553fe55d87eea.png?size=1024", "roleName": "Руководство Проекта", "bot": false, "verified": false}, "501686815120687105": {"author": "Лидер Мнений sqw1rtiq", "avatar": "https://cdn.discordapp.com/avatars/501686815120687105/d2ce72c80bc8a6bdbfa976e7c2a08cfd.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1426830509962432613/c0d406b9b857befae1149fc48c77038b.png?size=1024", "roleName": "крипс генг", "bot": false, "verified": false}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.emoji-img {
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    object-fit: contain;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/a06dfa47e027eb8acdf25152e486f1c8.png?size=1024" timestamp="2026-06-02_15-11-05">Тикет Закрыт.<br/>Причина: Лучшие времена прошли.<br/>Закрыл: <@585394439715946518><br/>Дата: 2026-06-02_15-11-05<br/><a href="https://transcripts.erlcrussia.xyz/transcripts/поддержка-1294_2026-06-02_15-11-05.html" style="color: #00aff4;">https://transcripts.erlcrussia.xyz/transcripts/поддержка-1294_2026-06-02_15-11-05.html</a></discord-message>
+<discord-message id="m-1507840541339942942" timestamp="2026-05-23T23:19:59.378000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="padding:8px;color:#dcddde;"><discord-mention type="role">Персонал ER:LC</discord-mention> <discord-mention type="role">Персонал Discord</discord-mention> <discord-mention type="user">Artyem_BOG</discord-mention></div><div style="background:#2f3136;border-left:4px solid #006800;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:8px 12px;"><div style="display:flex;gap:16px;align-items:flex-start;"><img src="https://cdn.discordapp.com/avatars/1301612859515473940/c025a3dd53712eea652e0f97e1e6804f.png?size=1024" style="width:80px;height:80px;border-radius:8px;object-fit:cover;flex-shrink:0;" /><div><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg" alt="📨" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Новый Тикет — Поддержка</span><br/><strong>В чём проблема:</strong><br/>Изменение Аксессуаров ФСБ</div></div></div><div style="padding:4px 12px;color:#dcddde;">⏳ <strong>Ожидайте ответа от персонала.</strong></div><div style="height:1px;background:#4f545c;margin:4px 0;"></div><div style="height:8px;"></div><div style="display:flex;gap:8px;padding:8px 0;flex-wrap:wrap;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Закрыть Тикет</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e4.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Освободить Тикет</button></div></div></div><discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f631.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1507840673586348205" timestamp="2026-05-23T23:20:30.908000Z" profile="1301612859515473940">тикет для тех кто добавляет аксессуары в игру</discord-message>
+<discord-message id="m-1507840756445085838" timestamp="2026-05-23T23:20:50.663000Z" profile="1301612859515473940">1. удалить все мультикам аксессуары</discord-message>
+<discord-message id="m-1507843838046109829" timestamp="2026-05-23T23:33:05.374000Z" profile="1301612859515473940">2. добавить новые мультикам аксессуары:<br/>1) FSB MCAM Helmet A<br/>2) FSB MCAM H Addon A<br/>3) FSB MCAM Bronik A<br/>4) FSB MCAM Bronik B<br/>5) FSB MCAM Bronik C<br/>6) FSB MCAM Podsymok A<br/>7) FSB MCAM Podsymok B<br/>8) FSB MCAM Helmet B<br/>9) FSB MCAM Podsymok C<br/>10) FSB MCAM Podsymok D<br/>11) FSB MCAM Belt A<br/>12) FSB MCAM Belt B <br/>13) FSB MCAM Podsymok E<br/>14) Magazines<br/>1.  127364025833691 <br/>2. 139553882755586 <br/>3. 93378624806518 <br/>4. 139380211574972 <br/>5. 94761779281409 <br/>6. 133863962893232 <br/>7. 86936507032593 <br/>8. 17172791115 <br/>9. 126759841569496<br/>10. 90020315166421<br/>11. 17550297611<br/>12. 130182142213752<br/>13. 109170241239160<br/>14. 107352749117234</discord-message>
+<discord-message id="m-1507878034005299310" timestamp="2026-05-24T01:48:58.326000Z" profile="1133665013794607114"><discord-reply slot="reply" author="Artyem_BOG" avatar="" role-color="#51c4fc"><span data-goto="1507843838046109829">2. добавить новые мультикам аксессуары:
+1) FSB MCAM Helmet A
+2) FSB MCAM H Addon A
+3) FSB MCAM Broni</span></discord-reply>Макан?</discord-message>
+<discord-message id="m-1507878055539118232" timestamp="2026-05-24T01:49:03.460000Z" profile="1133665013794607114">Ааа mcan</discord-message>
+<discord-message id="m-1507978370162495509" timestamp="2026-05-24T08:27:40.330000Z" profile="760966468715937814"><discord-reply slot="reply" author="Artyem_BOG" avatar="" role-color="#51c4fc"><span data-goto="1507843838046109829">2. добавить новые мультикам аксессуары:
+1) FSB MCAM Helmet A
+2) FSB MCAM H Addon A
+3) FSB MCAM Broni</span></discord-reply>Распиши здесь, что убрать</discord-message>
+<discord-message id="m-1508024687462973520" timestamp="2026-05-24T11:31:43.235000Z" profile="1301612859515473940"><discord-reply slot="reply" author="bjmajgda" avatar="" role-color="#a609db"><span data-goto="1507978370162495509">Распиши здесь, что убрать</span></discord-reply>все mcam</discord-message>
+<discord-message id="m-1508024741775151104" timestamp="2026-05-24T11:31:56.184000Z" profile="1301612859515473940">нету доступа к игре</discord-message>
+<discord-message id="m-1508024768891326605" timestamp="2026-05-24T11:32:02.649000Z" profile="1301612859515473940">чтобы посмотреть какие там</discord-message>
+<discord-message id="m-1508029605456642188" timestamp="2026-05-24T11:51:15.776000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e5.svg" alt="📥" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет взят <discord-mention type="user">bjmajgda</discord-mention>.</span></div></div></div></discord-message>
+<discord-message id="m-1508038707058315395" timestamp="2026-05-24T12:27:25.767000Z" profile="760966468715937814">2 не получится, так как он офсейл</discord-message>
+<discord-message id="m-1508039158717747211" timestamp="2026-05-24T12:29:13.451000Z" profile="760966468715937814">4 аналогично</discord-message>
+<discord-message id="m-1508039449978605599" timestamp="2026-05-24T12:30:22.893000Z" profile="760966468715937814">7</discord-message>
+<discord-message id="m-1508039594870964334" timestamp="2026-05-24T12:30:57.438000Z" profile="760966468715937814">8</discord-message>
+<discord-message id="m-1508039818636955668" timestamp="2026-05-24T12:31:50.788000Z" profile="760966468715937814">10</discord-message>
+<discord-message id="m-1508039929052008498" timestamp="2026-05-24T12:32:17.113000Z" profile="760966468715937814">11</discord-message>
+<discord-message id="m-1508040056676548700" timestamp="2026-05-24T12:32:47.541000Z" profile="760966468715937814">12</discord-message>
+<discord-message id="m-1508040200012693656" timestamp="2026-05-24T12:33:21.715000Z" profile="760966468715937814">13</discord-message>
+<discord-message id="m-1508040389737578497" timestamp="2026-05-24T12:34:06.949000Z" profile="760966468715937814">14</discord-message>
+<discord-message id="m-1508040468687224892" timestamp="2026-05-24T12:34:25.772000Z" profile="760966468715937814">Все кроме выше перечисленных было добавлено в игру.<br/><discord-mention type="user">Artyem_BOG</discord-mention></discord-message>
+<discord-message id="m-1508043106598256810" timestamp="2026-05-24T12:44:54.699000Z" profile="1301612859515473940"><discord-reply slot="reply" author="bjmajgda" avatar="" role-color="#a609db"><span data-goto="1508040468687224892">Все кроме выше перечисленных было добавлено в игру.
+@1301612859515473940</span></discord-reply>Не закрывайте тикет, найду замену и скину</discord-message>
+<discord-message id="m-1508043710267396106" timestamp="2026-05-24T12:47:18.625000Z" profile="1301612859515473940"><discord-reply slot="reply" author="bjmajgda" avatar="" role-color="#a609db"><span data-goto="1508040468687224892">Все кроме выше перечисленных было добавлено в игру.
+@1301612859515473940</span></discord-reply>можете также выписать названия добавленных предметов</discord-message>
+<discord-message id="m-1508045517857226863" timestamp="2026-05-24T12:54:29.588000Z" profile="760966468715937814">FSB MCAM Podsymok B<br/>FSB MCAM Helmet B<br/>FSB MCAM Podsymok D<br/>FSB MCAM Belt A<br/>FSB MCAM Belt B<br/>FSB MCAM Podsymok E<br/>Magazines<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764-fe0f.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1508058195116163102" timestamp="2026-05-24T13:44:52.082000Z" profile="1301612859515473940"><discord-reply slot="reply" author="bjmajgda" avatar="" role-color="#a609db"><span data-goto="1508045517857226863">FSB MCAM Podsymok B
+FSB MCAM Helmet B
+FSB MCAM Podsymok D
+FSB MCAM Belt A
+FSB MCAM Belt B
+FSB MCAM P</span></discord-reply>1. 18802703008 FSB MCAM Belt С<br/>2. 95537048927840 FSB MCAM Belt D<br/>3. 130229972213031 FSB MCAM Bag A<br/>4. 93212233380972 FSB MCAM H Addon A<br/>5. 99887724990300 FSB MCAM Headset A</discord-message>
+<discord-message id="m-1508058249419817080" timestamp="2026-05-24T13:45:05.029000Z" profile="760966468715937814"><discord-reply slot="reply" author="Artyem_BOG" avatar="" role-color="#51c4fc"><span data-goto="1508058195116163102">1. 18802703008 FSB MCAM Belt С
+
+2. 95537048927840 FSB MCAM Belt D
+
+3. 130229972213031 FSB MCAM Bag A</span></discord-reply>Некрасиво</discord-message>
+<discord-message id="m-1508058356768702484" timestamp="2026-05-24T13:45:30.623000Z" profile="1301612859515473940"><discord-reply slot="reply" author="bjmajgda" avatar="" role-color="#a609db"><span data-goto="1508058249419817080">Некрасиво</span></discord-reply>ну блин</discord-message>
+<discord-message id="m-1508058396945813505" timestamp="2026-05-24T13:45:40.202000Z" profile="760966468715937814"><discord-reply slot="reply" author="Artyem_BOG" avatar="" role-color="#51c4fc"><span data-goto="1508058356768702484">ну блин</span></discord-reply>Почему такие пропуски</discord-message>
+<discord-message id="m-1508058425035329557" timestamp="2026-05-24T13:45:46.899000Z" profile="1301612859515473940"><discord-reply slot="reply" author="bjmajgda" avatar="" role-color="#a609db"><span data-goto="1508058396945813505">Почему такие пропуски</span></discord-reply>так получилось</discord-message>
+<discord-message id="m-1508058454386933792" timestamp="2026-05-24T13:45:53.897000Z" profile="760966468715937814"><discord-reply slot="reply" author="Artyem_BOG" avatar="" role-color="#51c4fc"><span data-goto="1508058425035329557">так получилось</span></discord-reply><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f612.svg" alt="😒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/></discord-message>
+<discord-message id="m-1508157815590748191" timestamp="2026-05-24T20:20:43.454000Z" profile="760966468715937814"><discord-reply slot="reply" author="Artyem_BOG" avatar="" role-color="#51c4fc"><span data-goto="1508058195116163102">1. 18802703008 FSB MCAM Belt С
+
+2. 95537048927840 FSB MCAM Belt D
+
+3. 130229972213031 FSB MCAM Bag A</span></discord-reply>1 не подходит<br/>2 не подходит<br/>4 не подходит</discord-message>
+<discord-message id="m-1508157861417582742" timestamp="2026-05-24T20:20:54.380000Z" profile="760966468715937814">3 и 5 сохранены.</discord-message>
+<discord-message id="m-1508172099905392851" timestamp="2026-05-24T21:17:29.100000Z" profile="1301612859515473940">140303114101519 FSB MCAM Belt C<br/>91439011493398 FSB MCAM Bronik C<br/>131148733897776 FSB MCAM H Addon A</discord-message>
+<discord-message id="m-1508388176706932766" timestamp="2026-05-25T11:36:05.824000Z" profile="585394439715946518"><discord-reply slot="reply" author="Artyem_BOG" avatar="" role-color="#51c4fc"><span data-goto="1508172099905392851">140303114101519 FSB MCAM Belt C
+91439011493398 FSB MCAM Bronik C
+131148733897776 FSB MCAM H Addon A</span></discord-reply>удалось загрузить только первый из трёх<discord-attachments slot="attachments"><discord-attachment type="image" filename="image.png" url="https://transcripts.erlcrussia.xyz/attachments/1508388176706932766_1508388177117843597.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1508388311520247838" timestamp="2026-05-25T11:36:37.966000Z" profile="1301612859515473940"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1508388176706932766">удалось загрузить только первый из трёх</span></discord-reply>бля нужен аддон на шлем</discord-message>
+<discord-message id="m-1508388362384310465" timestamp="2026-05-25T11:36:50.093000Z" profile="1301612859515473940">ни один не подходит</discord-message>
+<discord-message id="m-1508388391119749171" timestamp="2026-05-25T11:36:56.944000Z" profile="1301612859515473940">сегодня штук 5 закину</discord-message>
+<discord-message id="m-1508388407683055746" timestamp="2026-05-25T11:37:00.893000Z" profile="1301612859515473940">один закинь</discord-message>
+<discord-message id="m-1508424141009588324" timestamp="2026-05-25T13:59:00.382000Z" profile="760966468715937814"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f641.svg" alt="🙁" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/></discord-message>
+<discord-message id="m-1508443043672621136" timestamp="2026-05-25T15:14:07.128000Z" profile="1301612859515473940">4507911797 FSB Black Tactical Glasses</discord-message>
+<discord-message id="m-1508443137440350278" timestamp="2026-05-25T15:14:29.484000Z" profile="1301612859515473940"><discord-reply slot="reply" author="bjmajgda" avatar="" role-color="#a609db"><span data-goto="1508424141009588324">🙁</span></discord-reply>теперь удалите все черные аксессуары( за исключением тех которые я кидал и за исключением масок) то есть шлем к нему допы, броник к нему допы, пояса,</discord-message>
+<discord-message id="m-1508449227024633976" timestamp="2026-05-25T15:38:41.354000Z" profile="1301612859515473940">добавить:<br/>1. 16270371844 FSB Black Tactical Hoodie<br/>2. 14807833998 FSB Black Headset A<br/>3. 7969727356 FSB Black Headset B<br/>4. 11092112219 FSB Black Helmet A<br/>5. 12986317619 FSB Black Helmet B<br/>6. 14017332608 FSB Black H Addon A<br/>7. 100204473636712 FSB Black H Goggles<br/>8. 92545851846827 FSB Black PVS31<br/>9. 15177836845 FSB Black Bronik A<br/>10. 15177851447 FSB Black Kit A<br/>11. 15577605781 FSB Black Kit B<br/>12. 11778772868 FSB Black Kit C<br/>13. 15177915664 FSB MIX Bronik A<br/>14. 18406147686 FSB Black Belt A<br/>15. 12383357842 FSB Black Belt B<br/>16. 11972444988 FSB Black Belt C<br/>17. 84456559681163 FSB Armband<br/>18. 17069340537 FSB Black Bag A<br/>19. 18325759243 FSB Black Bag B<br/>20. 8263166176 FSB Black Closed Mask</discord-message>
+<discord-message id="m-1510664727464906762" timestamp="2026-05-31T18:22:17.821000Z" profile="585394439715946518"><discord-mention type="user">Artyem_BOG</discord-mention> скинь полный список того, что нужно удалить и что нужно добавить</discord-message>
+<discord-message id="m-1510664747740172408" timestamp="2026-05-31T18:22:22.655000Z" profile="585394439715946518">с подписью где что конкретно</discord-message>
+<discord-message id="m-1510664757227552789" timestamp="2026-05-31T18:22:24.917000Z" profile="585394439715946518">после мута конечно</discord-message>
+<discord-message id="m-1511338681305403423" timestamp="2026-06-02T15:00:20.938000Z" profile="501686815120687105">nfr</discord-message>
+<discord-message id="m-1511338687638667384" timestamp="2026-06-02T15:00:22.448000Z" profile="501686815120687105">так</discord-message>
+<discord-message id="m-1511338700204675202" timestamp="2026-06-02T15:00:25.444000Z" profile="501686815120687105"><discord-mention type="user">Artyem_BOG</discord-mention></discord-message>
+<discord-message id="m-1511338708878753803" timestamp="2026-06-02T15:00:27.512000Z" profile="501686815120687105">еще раз</discord-message>
+<discord-message id="m-1511338740688359594" timestamp="2026-06-02T15:00:35.096000Z" profile="501686815120687105">полный лист</discord-message>
+<discord-message id="m-1511338826545500263" timestamp="2026-06-02T15:00:55.566000Z" profile="1301612859515473940"><discord-reply slot="reply" author="Лидер Мнений sqw1rtiq" avatar="" role-color="#ffffff"><span data-goto="1511338740688359594">полный лист</span></discord-reply>уже добавили</discord-message>
+<discord-message id="m-1511338844946173952" timestamp="2026-06-02T15:00:59.953000Z" profile="501686815120687105">а</discord-message>
+<discord-message id="m-1511338856254017707" timestamp="2026-06-02T15:01:02.649000Z" profile="501686815120687105">закрыть тикет?</discord-message>
+<discord-message id="m-1511338861555617912" timestamp="2026-06-02T15:01:03.913000Z" profile="1301612859515473940">оставлю тикет на лучшие времена, так же можно?</discord-message>
+<discord-message id="m-1511338909756297227" timestamp="2026-06-02T15:01:15.405000Z" profile="501686815120687105">лады<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764-fe0f.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1511341379039531111" timestamp="2026-06-02T15:11:04.128000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет закроется через несколько секунд...</span></div></div></div></discord-message>
+</discord-messages></body></html>
