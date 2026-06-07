@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-1388</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/8f6e9a6ad7bdc609907d4c907ccadfd5.png?size=1024", "roleColor": "#006800", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/8e5424768addb0eab9fb87dcd89088bb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": true}, "994164698654187580": {"author": "Мистер Чёрный Список", "avatar": "https://cdn.discordapp.com/avatars/994164698654187580/de5419c426578f937f6116b73a70ef9e.png?size=1024", "roleColor": "#c32424", "roleIcon": "https://cdn.discordapp.com/role-icons/1448682337373130843/1d26cf70cf0d26b9f80b2c15f6022410.png?size=1024", "roleName": "Мистер Чёрный Список", "bot": false, "verified": false}, "1133665013794607114": {"author": "Pancakeboyman_8", "avatar": "https://cdn.discordapp.com/avatars/1133665013794607114/9952a7f75bf8748ecfd9a8e39af2e279.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1331342900205850686/c1fd358ec8be5422366cbf5b58e16e31.png?size=1024", "roleName": "Владелец", "bot": false, "verified": false}, "501686815120687105": {"author": "Лидер Мнений sqw1rtiq", "avatar": "https://cdn.discordapp.com/avatars/501686815120687105/d2ce72c80bc8a6bdbfa976e7c2a08cfd.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1426830509962432613/c0d406b9b857befae1149fc48c77038b.png?size=1024", "roleName": "крипс генг", "bot": false, "verified": false}, "585394439715946518": {"author": "savingbox3", "avatar": "https://cdn.discordapp.com/avatars/585394439715946518/e82f31f878077dcd383254c613d59c3d.png?size=1024", "roleColor": "#d4843d", "roleIcon": "https://cdn.discordapp.com/role-icons/1483091539973373993/b2b1d515e0da04921b1553fe55d87eea.png?size=1024", "roleName": "Руководство Проекта", "bot": false, "verified": false}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.emoji-img {
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    object-fit: contain;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/a06dfa47e027eb8acdf25152e486f1c8.png?size=1024" timestamp="2026-06-07_17-11-34">Тикет Закрыт.<br/>Причина: Не указана<br/>Закрыл: <@994164698654187580><br/>Дата: 2026-06-07_17-11-34<br/><a href="https://transcripts.erlcrussia.xyz/transcripts/поддержка-1388_2026-06-07_17-11-34.html" style="color: #00aff4;">https://transcripts.erlcrussia.xyz/transcripts/поддержка-1388_2026-06-07_17-11-34.html</a></discord-message>
+<discord-message id="m-1512014341807935624" timestamp="2026-06-04T11:45:10.955000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="padding:8px;color:#dcddde;"><discord-mention type="role">Персонал ER:LC</discord-mention> <discord-mention type="role">Персонал Discord</discord-mention> <discord-mention type="user">Мистер Чёрный Список</discord-mention></div><div style="background:#2f3136;border-left:4px solid #006800;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:8px 12px;"><div style="display:flex;gap:16px;align-items:flex-start;"><img src="https://cdn.discordapp.com/avatars/994164698654187580/1413c3f06fd1e2f234a321a1224f4a50.png?size=1024" style="width:80px;height:80px;border-radius:8px;object-fit:cover;flex-shrink:0;" /><div><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg" alt="📨" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Новый Тикет — Поддержка</span><br/><strong>В чём проблема:</strong><br/>Поменять название фракции Минздрав и разделить ее так, как бы это было в реальности.<br/>Я еще ранее поднимал вопрос по поводу званий ( Глав врач не будет выезжать на вызовы за скорую помощь, ТК это тупо нереалистично )<br/>Изначально фракция называлась СМП. При отделении от МЧС была переименована в «Минздрав» по моему решению ( я создавал полностью отдельный сервер Минздрава ). Практика показала, что название не соответствует деятельности фракции - она занимается выездами и экстренной помощью, а не административным управлением.<br/>Стоит вернуть название Скорая медицинская помощь (СМП). Состав оперативных подразделений (СМП, Реанимация, ВЦМК Защита) остаётся без изменений.<br/>Больничный блок переедет на гражданские операции для поднятия актива в них как отдельная структура, согласно тому, как изначально хотел панкейк.<br/>Больничный блок это все подразделения больницы: медицинская служба, сотрудники гос больницы ( там также есть свои отделы )<br/>Все эти измерения только лишь из за того, что в реальности Минздрав НЕ ВЫЕЗЖАЕТ НА ВЫЗОВЫ.  На многих проектах медиков называют или Сотрудниками СМП, или Сотрудниками Больницы.<br/>В реальности все также: есть отдельные здания для подстанций скорой помощи, отдельные звания и структура ( этот вопрос также поднимается, ТК у смп в отличии от всего Минздрава различаются звания и характер деятельности)<br/>Фактически это полностью моя ошибка в переименовании и добавлении больницы. Но я уже исправить эти ошибки не могу и поэтому пишу тикет</div></div></div><div style="padding:4px 12px;color:#dcddde;">⏳ <strong>Ожидайте ответа от персонала.</strong></div><div style="height:1px;background:#4f545c;margin:4px 0;"></div><div style="height:8px;"></div><div style="display:flex;gap:8px;padding:8px 0;flex-wrap:wrap;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Закрыть Тикет</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e5.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Взять Тикет</button></div></div></div></discord-message>
+<discord-message id="m-1512014451157762049" timestamp="2026-06-04T11:45:37.026000Z" profile="994164698654187580">PS тикет для менеджера фракций и руководства</discord-message>
+<discord-message id="m-1512020080764915832" timestamp="2026-06-04T12:07:59.229000Z" profile="994164698654187580">1. <img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f691.svg" alt="🚑" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Скорая медицинская помощь (СМП)<br/><ul><br/><li>Руководство: Главный врач <strong> станции </strong> (начальник), главный фельдшер (главная медицинская сестра), заведующие подстанциями/отделениями.</li><br/></ul><br/><ul><br/><li>Врачебный состав (ВО): </li><br/></ul><br/>Врач скорой медицинской помощи, старший врач станции (отделения) СМП .<br/><ul><br/><li>Средний персонал (СО): Фельдшер скорой медицинской помощи, медицинская сестра (фельдшер) по приему вызовов (диспетчер) , старший фельдшер.</li><br/><li>Младший: </li><br/></ul><br/>Санитар, водитель <br/>2. <img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f3e5.svg" alt="🏥" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Больница<br/><ul><br/><li>Администрация: Главный врач, его заместители, главная медицинская сестра.</li><br/><li>Старший состав: </li><br/></ul><br/>Заведующий отделением — врач-специалист (например, заведующий хирургическим отделением).<br/><ul><br/><li>Врачебный состав: Врач-специалист (хирург, терапевт, невролог), врач приемного отделения.</li><br/></ul><br/><ul><br/><li>Средний персонал: </li><br/></ul><br/>Старшая медицинская сестра, медицинская сестра палатная, процедурная, операционная; акушерка, фельдшер-лаборант.<br/><ul><br/><li>Младший персонал: </li><br/></ul><br/>Младшая мед сестра ( брат ), санитар.</discord-message>
+<discord-message id="m-1512021754648989717" timestamp="2026-06-04T12:14:38.314000Z" profile="994164698654187580">Т.е фактически</discord-message>
+<discord-message id="m-1512021786508918865" timestamp="2026-06-04T12:14:45.910000Z" profile="994164698654187580">Минздрав только руководит всем вот этим</discord-message>
+<discord-message id="m-1512021848244621323" timestamp="2026-06-04T12:15:00.629000Z" profile="994164698654187580">И там только гос советники, министр и другие</discord-message>
+<discord-message id="m-1512046156799283331" timestamp="2026-06-04T13:51:36.240000Z" profile="994164698654187580"><span style="font-size:1.3em;font-weight:bold;color:#fff;display:block;margin:6px 0;">тикет для менеджера фракций и руководства</span><discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" count="2"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1512808916449366076" timestamp="2026-06-06T16:22:32.312000Z" profile="994164698654187580">также стоило бы сменить названия подразделений, тк в реальности просто не существует ни подразделения смп, ни реанимации, а только общепрофильные и специализированные бригады<discord-attachments slot="attachments"><discord-attachment type="image" filename="image.png" url="https://transcripts.erlcrussia.xyz/attachments/1512808916449366076_1512808916214353990.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1513157771871256786" timestamp="2026-06-07T15:28:45.926000Z" profile="1133665013794607114"><discord-mention type="user">Мистер Чёрный Список</discord-mention> в СМП точно нет</discord-message>
+<discord-message id="m-1513157856587813044" timestamp="2026-06-07T15:29:06.124000Z" profile="994164698654187580"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1513157771871256786">@994164698654187580 в СМП точно нет</span></discord-reply>Почему?</discord-message>
+<discord-message id="m-1513157935705100442" timestamp="2026-06-07T15:29:24.987000Z" profile="994164698654187580">Фактически в реальности оно примерно так и называется</discord-message>
+<discord-message id="m-1513158145487274114" timestamp="2026-06-07T15:30:15.003000Z" profile="1133665013794607114">Зачем если у нас везде министерства</discord-message>
+<discord-message id="m-1513158225745412166" timestamp="2026-06-07T15:30:34.138000Z" profile="1133665013794607114"><ul><br/><li>туда можно в целом сувать всё что мед</li><br/></ul></discord-message>
+<discord-message id="m-1513158253624819742" timestamp="2026-06-07T15:30:40.785000Z" profile="1133665013794607114">ну типо хз</discord-message>
+<discord-message id="m-1513158348009115740" timestamp="2026-06-07T15:31:03.288000Z" profile="1133665013794607114">Фракция изначально называлась минздрав</discord-message>
+<discord-message id="m-1513158368951406592" timestamp="2026-06-07T15:31:08.281000Z" profile="1133665013794607114">она никогда СМП не была</discord-message>
+<discord-message id="m-1513158384147239024" timestamp="2026-06-07T15:31:11.904000Z" profile="1133665013794607114">просто в ней больницы не было</discord-message>
+<discord-message id="m-1513158400643432530" timestamp="2026-06-07T15:31:15.837000Z" profile="1133665013794607114">было чисто СМП</discord-message>
+<discord-message id="m-1513158485821493258" timestamp="2026-06-07T15:31:36.145000Z" profile="1133665013794607114">У нас всегда сервер назывался МЧС/МЗ россии</discord-message>
+<discord-message id="m-1513158553819418664" timestamp="2026-06-07T15:31:52.357000Z" profile="994164698654187580"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1513158145487274114">Зачем если у нас везде министерства</span></discord-reply>Ну министерства не обязательно везде по логике.<br/>В большинстве проектов чисто обычно или больница а глава её главврач или скорая медицинская помощь <br/>Изначально я из правил сапфира везде абсолютно смп удалял</discord-message>
+<discord-message id="m-1513158620169244682" timestamp="2026-06-07T15:32:08.176000Z" profile="994164698654187580">Т.е в правилах, что в сапфире были и везде было смп кроме названия</discord-message>
+<discord-message id="m-1513159119605993482" timestamp="2026-06-07T15:34:07.251000Z" profile="1133665013794607114"><discord-mention type="user">Лидер Мнений sqw1rtiq</discord-mention> что думаешь</discord-message>
+<discord-message id="m-1513159301240324248" timestamp="2026-06-07T15:34:50.556000Z" profile="501686815120687105">не вижу смысла фракцию дробить</discord-message>
+<discord-message id="m-1513159350582120591" timestamp="2026-06-07T15:35:02.320000Z" profile="501686815120687105">будет как с прокуратурой/фсо/судом</discord-message>
+<discord-message id="m-1513159480471457954" timestamp="2026-06-07T15:35:33.288000Z" profile="994164698654187580">Тут больше смысл не в дроблении больницы и тп, а в переименовании и переделке званий и названий подразделений на реалистичные</discord-message>
+<discord-message id="m-1513159956038418564" timestamp="2026-06-07T15:37:26.672000Z" profile="501686815120687105">а что не устраивает в данный момент</discord-message>
+<discord-message id="m-1513160705715732640" timestamp="2026-06-07T15:40:25.409000Z" profile="994164698654187580"><discord-reply slot="reply" author="Лидер Мнений sqw1rtiq" avatar="" role-color="#ffffff"><span data-goto="1513159956038418564">а что не устраивает в данный момент</span></discord-reply>Чуть выше я объяснил <br/>Минздрав в реальности вообще не выезжает на вызовы и тп. Это можно сказать фракция надзора и управления над больницами, подстанциями скорой мед помощи и другими мед учреждениями. <br/>Это не министерство по типу МВД которое выезжает на вызовы.</discord-message>
+<discord-message id="m-1513160777266364498" timestamp="2026-06-07T15:40:42.468000Z" profile="1133665013794607114">ну так у тебя же по факту там подраздел СМП + Больница</discord-message>
+<discord-message id="m-1513160787206738024" timestamp="2026-06-07T15:40:44.838000Z" profile="1133665013794607114">??????</discord-message>
+<discord-message id="m-1513160806651658241" timestamp="2026-06-07T15:40:49.474000Z" profile="1133665013794607114">Что не так</discord-message>
+<discord-message id="m-1513160813085589595" timestamp="2026-06-07T15:40:51.008000Z" profile="1133665013794607114">??????</discord-message>
+<discord-message id="m-1513160846350745741" timestamp="2026-06-07T15:40:58.939000Z" profile="1133665013794607114">По факту не минздрав же выезжает</discord-message>
+<discord-message id="m-1513160864918802533" timestamp="2026-06-07T15:41:03.366000Z" profile="994164698654187580"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1513160777266364498">ну так у тебя же по факту там подраздел СМП + Больница</span></discord-reply>Всм</discord-message>
+<discord-message id="m-1513160940118474864" timestamp="2026-06-07T15:41:21.295000Z" profile="1133665013794607114">Ну зачем тебе подразделения</discord-message>
+<discord-message id="m-1513160969663156364" timestamp="2026-06-07T15:41:28.339000Z" profile="501686815120687105">я вот тоже не понимаю смысла дробления</discord-message>
+<discord-message id="m-1513160982397059153" timestamp="2026-06-07T15:41:31.375000Z" profile="1133665013794607114">Чтобы у тебя не МЗ выезжало</discord-message>
+<discord-message id="m-1513160986188714095" timestamp="2026-06-07T15:41:32.279000Z" profile="1133665013794607114">а СМП</discord-message>
+<discord-message id="m-1513160990210916512" timestamp="2026-06-07T15:41:33.238000Z" profile="994164698654187580">У нас там в целом все напутано.<br/>Типа<br/>Подразделения смп и реанимации тупо нету в реальности</discord-message>
+<discord-message id="m-1513161047664758954" timestamp="2026-06-07T15:41:46.936000Z" profile="1133665013794607114">Ты сказал</discord-message>
+<discord-message id="m-1513161048205824095" timestamp="2026-06-07T15:41:47.065000Z" profile="994164698654187580"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1513160982397059153">Чтобы у тебя не МЗ выезжало</span></discord-reply>Там просто переименовать 3 штучки</discord-message>
+<discord-message id="m-1513161063728676945" timestamp="2026-06-07T15:41:50.766000Z" profile="994164698654187580">В этом суть тикета</discord-message>
+<discord-message id="m-1513161068707319920" timestamp="2026-06-07T15:41:51.953000Z" profile="1133665013794607114">Стоп остановись послушай<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1513161584002732114" timestamp="2026-06-07T15:43:54.809000Z" profile="1133665013794607114">Ты сказал, что у тебя, цитирую: "Это можно сказать фракция надзора и управления над больницами, подстанциями скорой мед помощи и другими мед учреждениями. ", итак, теперь мы идём в то же МВД, МВД это департамент, который управляет ДПС, ППС, и прочими их отделами (подразделенями) (бля вроде правильно назвал же), и на вызов у тебя же не МВД выезжает, а конкретно ГИБДД. Тут также, у тебя есть отдел СМП который выезжает на вызов, и основная фракция МЗ которая следит за подразделением. Если у тебя подразделение называется не СМП ирл, то мы можем переимновать его в то что нужно</discord-message>
+<discord-message id="m-1513161900345786459" timestamp="2026-06-07T15:45:10.231000Z" profile="994164698654187580"></discord-message>
+<discord-message id="m-1513161981262041130" timestamp="2026-06-07T15:45:29.523000Z" profile="1133665013794607114">Ну сделайте под отдел СМП</discord-message>
+<discord-message id="m-1513161996730896386" timestamp="2026-06-07T15:45:33.211000Z" profile="1133665013794607114">И в нём</discord-message>
+<discord-message id="m-1513162004020330567" timestamp="2026-06-07T15:45:34.949000Z" profile="994164698654187580">я про что хочу сказать. Просто типа переименовать названия подразделений на более реалистичные что ли</discord-message>
+<discord-message id="m-1513162006931308695" timestamp="2026-06-07T15:45:35.643000Z" profile="1133665013794607114">Пододтелы</discord-message>
+<discord-message id="m-1513162045854318764" timestamp="2026-06-07T15:45:44.923000Z" profile="1133665013794607114">которые на фото</discord-message>
+<discord-message id="m-1513162067585269932" timestamp="2026-06-07T15:45:50.104000Z" profile="1133665013794607114">у вас будет струтура</discord-message>
+<discord-message id="m-1513162160241508422" timestamp="2026-06-07T15:46:12.195000Z" profile="1133665013794607114">МЗ<br/><ul><br/><li>СМП</li><br/><li>  - 1 с фото</li><br/><li>  - 2 с фото</li><br/><li>  - тд</li><br/><li>Больница</li><br/></ul></discord-message>
+<discord-message id="m-1513162229669695700" timestamp="2026-06-07T15:46:28.748000Z" profile="994164698654187580"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1513162067585269932">у вас будет струтура</span></discord-reply>Просто как я помню ты вроде раньше хотел чтобы больница была на гражд операциях вроде <br/>Но не суть важн</discord-message>
+<discord-message id="m-1513162267594592407" timestamp="2026-06-07T15:46:37.790000Z" profile="994164698654187580"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1513162160241508422">МЗ
+- СМП
+   - 1 с фото
+   - 2 с фото
+   - тд
+- Больница</span></discord-reply>Ну я это и имею ввиду в целом</discord-message>
+<discord-message id="m-1513162275169767494" timestamp="2026-06-07T15:46:39.596000Z" profile="1133665013794607114">сделаем вам офиц канал пресс центра</discord-message>
+<discord-message id="m-1513162278722343023" timestamp="2026-06-07T15:46:40.443000Z" profile="1133665013794607114">и всё</discord-message>
+<discord-message id="m-1513162297944834099" timestamp="2026-06-07T15:46:45.026000Z" profile="994164698654187580">Если не переименование то это</discord-message>
+<discord-message id="m-1513162298771111987" timestamp="2026-06-07T15:46:45.223000Z" profile="1133665013794607114">на ГО<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1513162344988020917" timestamp="2026-06-07T15:46:56.242000Z" profile="1133665013794607114">но и самое важное</discord-message>
+<discord-message id="m-1513162462181195816" timestamp="2026-06-07T15:47:24.183000Z" profile="1133665013794607114">я жду все заявки в папке: <a href="https://drive.google.com/drive/folders/1BWPA7d78pOfo-3ysKj7gWHdG6euHykPZ?usp=drive_link" style="color: #00aff4; text-decoration: underline;" target="_blank">https://drive.google.com/drive/folders/1BWPA7d78pOfo-3ysKj7gWHdG6euHykPZ?usp=drive_link</a><discord-embed title="Google Drive: Sign-in" slot="embeds" color="#006800"><discord-embed-description slot="description">Access Google Drive with a Google account (for personal use) or Google Workspace account (for business use).</discord-embed-description></discord-embed></discord-message>
+<discord-message id="m-1513162494959685663" timestamp="2026-06-07T15:47:31.998000Z" profile="1133665013794607114">нужна твоя почта</discord-message>
+<discord-message id="m-1513162542992855190" timestamp="2026-06-07T15:47:43.450000Z" profile="994164698654187580">Так ты же мне раньше давал доступ</discord-message>
+<discord-message id="m-1513162553705107526" timestamp="2026-06-07T15:47:46.004000Z" profile="994164698654187580">К чему то</discord-message>
+<discord-message id="m-1513162561758171136" timestamp="2026-06-07T15:47:47.924000Z" profile="1133665013794607114"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1513162462181195816">я жду все заявки в папке: https://drive.google.com/drive/folders/1BWPA7d78pOfo-3ysKj7gWHdG6euHykPZ?u</span></discord-reply>Старые заявки в папку Архив, оставить только в корне не в папках внутри оставить заявки на подразделения</discord-message>
+<discord-message id="m-1513162617928159422" timestamp="2026-06-07T15:48:01.316000Z" profile="1133665013794607114"><discord-reply slot="reply" author="Мистер Чёрный Список" avatar="" role-color="#c32424"><span data-goto="1513162542992855190">Так ты же мне раньше давал доступ</span></discord-reply>Всё забрали уже</discord-message>
+<discord-message id="m-1513162637096259624" timestamp="2026-06-07T15:48:05.886000Z" profile="994164698654187580">ааа</discord-message>
+<discord-message id="m-1513162649720983603" timestamp="2026-06-07T15:48:08.896000Z" profile="994164698654187580">velikiigoose@gmail.com</discord-message>
+<discord-message id="m-1513162821075079199" timestamp="2026-06-07T15:48:49.750000Z" profile="1133665013794607114"><discord-reply slot="reply" author="Мистер Чёрный Список" avatar="" role-color="#c32424"><span data-goto="1513162649720983603">velikiigoose@gmail.com</span></discord-reply>выдал вроже</discord-message>
+<discord-message id="m-1513162906588680232" timestamp="2026-06-07T15:49:10.138000Z" profile="1133665013794607114">вот щас точно</discord-message>
+<discord-message id="m-1513163239272222801" timestamp="2026-06-07T15:50:29.456000Z" profile="994164698654187580"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1513162462181195816">я жду все заявки в папке: https://drive.google.com/drive/folders/1BWPA7d78pOfo-3ysKj7gWHdG6euHykPZ?u</span></discord-reply>Есть только одна проблема</discord-message>
+<discord-message id="m-1513163295903842384" timestamp="2026-06-07T15:50:42.958000Z" profile="994164698654187580">Доверяет работать с заявками редми ток себе и заму своему</discord-message>
+<discord-message id="m-1513163389420175441" timestamp="2026-06-07T15:51:05.254000Z" profile="994164698654187580">А заявки он вроде удаляет</discord-message>
+<discord-message id="m-1513163421535965285" timestamp="2026-06-07T15:51:12.911000Z" profile="994164698654187580">Посла прохождения</discord-message>
+<discord-message id="m-1513163563932586144" timestamp="2026-06-07T15:51:46.861000Z" profile="994164698654187580">Ща разберусь</discord-message>
+<discord-message id="m-1513163633511759883" timestamp="2026-06-07T15:52:03.450000Z" profile="1133665013794607114"><discord-reply slot="reply" author="Мистер Чёрный Список" avatar="" role-color="#c32424"><span data-goto="1513163295903842384">Доверяет работать с заявками редми ток себе и заму своему</span></discord-reply>Спроси чьи почты<discord-attachments slot="attachments"><discord-attachment type="image" filename="image.png" url="https://transcripts.erlcrussia.xyz/attachments/1513163633511759883_1513163632660320416.png"></discord-attachment><discord-attachment type="image" filename="image.png" url="https://transcripts.erlcrussia.xyz/attachments/1513163633511759883_1513163633180278905.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1513166386921476216" timestamp="2026-06-07T16:02:59.914000Z" profile="994164698654187580">Тикет не закрывайте пока чт</discord-message>
+<discord-message id="m-1513166483419828274" timestamp="2026-06-07T16:03:22.921000Z" profile="994164698654187580">Я сюда кину одежду новую для Минздрава</discord-message>
+<discord-message id="m-1513183551074598993" timestamp="2026-06-07T17:11:12.167000Z" profile="585394439715946518"><discord-reply slot="reply" author="Мистер Чёрный Список" avatar="" role-color="#c32424"><span data-goto="1513166483419828274">Я сюда кину одежду новую для Минздрава</span></discord-reply>откройте новый тикет</discord-message>
+<discord-message id="m-1513183583265886350" timestamp="2026-06-07T17:11:19.842000Z" profile="585394439715946518">ваша проблема решена?</discord-message>
+<discord-message id="m-1513183592576974888" timestamp="2026-06-07T17:11:22.062000Z" profile="994164698654187580"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1513183551074598993">откройте новый тикет</span></discord-reply>Ок</discord-message>
+<discord-message id="m-1513183640727847143" timestamp="2026-06-07T17:11:33.542000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет закроется через несколько секунд...</span></div></div></div></discord-message>
+</discord-messages></body></html>
