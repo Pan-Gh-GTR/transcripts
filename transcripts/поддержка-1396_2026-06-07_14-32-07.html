@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-1396</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/8f6e9a6ad7bdc609907d4c907ccadfd5.png?size=1024", "roleColor": "#006800", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/8e5424768addb0eab9fb87dcd89088bb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": true}, "1104388035199639585": {"author": "Sane4ka_TRAXAET", "avatar": "https://cdn.discordapp.com/avatars/1104388035199639585/be06d4ec8b2ee2f179419908ed32dceb.png?size=1024", "roleColor": "#2a88cb", "roleIcon": "https://cdn.discordapp.com/role-icons/1416177983378686052/3d06b544ab605eab4956042b2dad64fc.png?size=1024", "roleName": "Участник", "bot": false, "verified": false}, "585394439715946518": {"author": "savingbox3", "avatar": "https://cdn.discordapp.com/avatars/585394439715946518/e82f31f878077dcd383254c613d59c3d.png?size=1024", "roleColor": "#d4843d", "roleIcon": "https://cdn.discordapp.com/role-icons/1483091539973373993/b2b1d515e0da04921b1553fe55d87eea.png?size=1024", "roleName": "Руководство Проекта", "bot": false, "verified": false}, "1133665013794607114": {"author": "Pancakeboyman_8", "avatar": "https://cdn.discordapp.com/avatars/1133665013794607114/9952a7f75bf8748ecfd9a8e39af2e279.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1331342900205850686/c1fd358ec8be5422366cbf5b58e16e31.png?size=1024", "roleName": "Владелец", "bot": false, "verified": false}, "1301612859515473940": {"author": "Artyem_BOG", "avatar": "https://cdn.discordapp.com/avatars/1301612859515473940/c025a3dd53712eea652e0f97e1e6804f.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1501619329274347733/abdafee2b4e786481ae843305f380f44.png?size=1024", "roleName": "Пробный Модератор Discord", "bot": false, "verified": false}, "1363531806586048755": {"author": "Moscow RolePlay Roblox", "avatar": "https://cdn.discordapp.com/avatars/1363531806586048755/35ea443c68b7400cd036322e591042ef.png?size=1024", "roleColor": "#cc2641", "roleIcon": "https://cdn.discordapp.com/role-icons/1363544547870900358/3b6e22a9df7fe7b380b3bbeb6a5afdd1.png?size=1024", "roleName": "Moscow RolePlay Roblox", "bot": true, "verified": false}, "501686815120687105": {"author": "Лидер Мнений sqw1rtiq", "avatar": "https://cdn.discordapp.com/avatars/501686815120687105/d2ce72c80bc8a6bdbfa976e7c2a08cfd.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1426830509962432613/c0d406b9b857befae1149fc48c77038b.png?size=1024", "roleName": "крипс генг", "bot": false, "verified": false}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.emoji-img {
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    object-fit: contain;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/a06dfa47e027eb8acdf25152e486f1c8.png?size=1024" timestamp="2026-06-07_14-32-07">Тикет Закрыт.<br/>Причина: Не указана<br/>Закрыл: <@1104388035199639585><br/>Дата: 2026-06-07_14-32-07<br/><a href="https://transcripts.erlcrussia.xyz/transcripts/поддержка-1396_2026-06-07_14-32-07.html" style="color: #00aff4;">https://transcripts.erlcrussia.xyz/transcripts/поддержка-1396_2026-06-07_14-32-07.html</a></discord-message>
+<discord-message id="m-1512120111644020737" timestamp="2026-06-04T18:45:28.449000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="padding:8px;color:#dcddde;"><discord-mention type="role">Персонал ER:LC</discord-mention> <discord-mention type="role">Персонал Discord</discord-mention> <discord-mention type="user">Sane4ka_TRAXAET</discord-mention></div><div style="background:#2f3136;border-left:4px solid #006800;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:8px 12px;"><div style="display:flex;gap:16px;align-items:flex-start;"><img src="https://cdn.discordapp.com/avatars/1104388035199639585/be06d4ec8b2ee2f179419908ed32dceb.png?size=1024" style="width:80px;height:80px;border-radius:8px;object-fit:cover;flex-shrink:0;" /><div><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg" alt="📨" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Новый Тикет — Поддержка</span><br/><strong>В чём проблема:</strong><br/>можно ли снять варны за робуксы</div></div></div><div style="padding:4px 12px;color:#dcddde;">⏳ <strong>Ожидайте ответа от персонала.</strong></div><div style="height:1px;background:#4f545c;margin:4px 0;"></div><div style="height:8px;"></div><div style="display:flex;gap:8px;padding:8px 0;flex-wrap:wrap;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Закрыть Тикет</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e4.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Освободить Тикет</button></div></div></div></discord-message>
+<discord-message id="m-1512123869459251432" timestamp="2026-06-04T19:00:24.382000Z" profile="585394439715946518"><discord-mention type="user">Pancakeboyman_8</discord-mention></discord-message>
+<discord-message id="m-1512124787856642260" timestamp="2026-06-04T19:04:03.345000Z" profile="1133665013794607114"><discord-mention type="user">Sane4ka_TRAXAET</discord-mention> хз, вы видите этот геймпасс? <a href="https://www.roblox.com/game-pass/1637029618/Starter-Pass-Month" style="color: #00aff4; text-decoration: underline;" target="_blank">https://www.roblox.com/game-pass/1637029618/Starter-Pass-Month</a></discord-message>
+<discord-message id="m-1512124873428701307" timestamp="2026-06-04T19:04:23.747000Z" profile="1133665013794607114">Ну типо реально грузится/нет?<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" count="2"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1512131665261236405" timestamp="2026-06-04T19:31:23.046000Z" profile="1104388035199639585">да</discord-message>
+<discord-message id="m-1512131879136919592" timestamp="2026-06-04T19:32:14.038000Z" profile="1104388035199639585">а обязательно через геймпасс</discord-message>
+<discord-message id="m-1512132047861452831" timestamp="2026-06-04T19:32:54.265000Z" profile="1104388035199639585">я могу через фп закинуть и комиссии не будет</discord-message>
+<discord-message id="m-1512364272133472297" timestamp="2026-06-05T10:55:40.846000Z" profile="1104388035199639585">панкейк</discord-message>
+<discord-message id="m-1512364303276314684" timestamp="2026-06-05T10:55:48.271000Z" profile="1104388035199639585">геймпасс покупать</discord-message>
+<discord-message id="m-1512364311266201762" timestamp="2026-06-05T10:55:50.176000Z" profile="1104388035199639585">для снятия</discord-message>
+<discord-message id="m-1512364315708100699" timestamp="2026-06-05T10:55:51.235000Z" profile="1104388035199639585">?</discord-message>
+<discord-message id="m-1512415369548009573" timestamp="2026-06-05T14:18:43.419000Z" profile="1301612859515473940"><discord-mention type="user">Pancakeboyman_8</discord-mention></discord-message>
+<discord-message id="m-1512416201324888154" timestamp="2026-06-05T14:22:01.730000Z" profile="1133665013794607114"><discord-reply slot="reply" author="Sane4ka_TRAXAET" avatar="" role-color="#2a88cb"><span data-goto="1512364303276314684">геймпасс покупать</span></discord-reply>Нет</discord-message>
+<discord-message id="m-1512418243984359495" timestamp="2026-06-05T14:30:08.738000Z" profile="1104388035199639585">nf</discord-message>
+<discord-message id="m-1512418251257155605" timestamp="2026-06-05T14:30:10.472000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e5.svg" alt="📥" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет взят <discord-mention type="user">Pancakeboyman_8</discord-mention>.</span></div></div></div></discord-message>
+<discord-message id="m-1512418264943296612" timestamp="2026-06-05T14:30:13.735000Z" profile="1104388035199639585">так можно снять или неъ</discord-message>
+<discord-message id="m-1512418271696257184" timestamp="2026-06-05T14:30:15.345000Z" profile="1133665013794607114"><discord-reply slot="reply" author="Sane4ka_TRAXAET" avatar="" role-color="#2a88cb"><span data-goto="1512418243984359495">nf</span></discord-reply>Давайте обговорим цену</discord-message>
+<discord-message id="m-1512418296002253020" timestamp="2026-06-05T14:30:21.140000Z" profile="1104388035199639585">давайте</discord-message>
+<discord-message id="m-1512418367435309148" timestamp="2026-06-05T14:30:38.171000Z" profile="1363531806586048755"><discord-embed title="Sane4ka_TRAXAET" slot="embeds" color="#2b2d31" thumbnail="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-C15D42D2F5A76330AE3F2E49363E869C-Png/48/48/AvatarHeadshot/Png/noFilter"><discord-embed-fields slot="fields"><discord-embed-field field-title="Кик"><blockquote> <strong>Модератор:</strong> <discord-mention type="user">User#1005561047396130848</discord-mention></blockquote><br/><blockquote> <strong>Причина:</strong> Массовые нарушения правил (использование ливери для официалов/тс, неадекватное поведение, рдм машины)</blockquote><br/><blockquote> <strong>Время:</strong> <t:1775829113:f></blockquote><br/><blockquote> <strong>ID предупреждения:</strong> <code>7448367152489037824</code></blockquote><br/><blockquote> <strong>Выдано баллов:</strong> 2</blockquote></discord-embed-field><discord-embed-field field-title="Предупреждение"><blockquote> <strong>Модератор:</strong> <discord-mention type="user">User#625255619569647616</discord-mention></blockquote><br/><blockquote> <strong>Причина:</strong> D-1 + FRP (Безрассудные действия, без веской причины решили перекрыть дорогу перед машиной, после достали оружия без единной отыгровки) | <a href="https://discord.com/channels/1331331077553262765/1331372022755889232/1496215000367235287" style="color: #00aff4; text-decoration: underline;" target="_blank">https://discord.com/channels/1331331077553262765/1331372022755889232/1496215000367235287</a></blockquote><br/><blockquote> <strong>Время:</strong> <t:1776796038:f></blockquote><br/><blockquote> <strong>ID предупреждения:</strong> <code>7452422732493094912</code></blockquote><br/><blockquote> <strong>Выдано баллов:</strong> 1</blockquote></discord-embed-field><discord-embed-field field-title="Предупреждение"><blockquote> <strong>Модератор:</strong> <discord-mention type="user">User#1236286225896439819</discord-mention></blockquote><br/><blockquote> <strong>Причина:</strong> W1 RDM Убил сотрудика ДПС без весомой причины</blockquote><br/><blockquote> <strong>Время:</strong> <t:1777736719:f></blockquote><br/><blockquote> <strong>ID предупреждения:</strong> <code>7456368234074996736</code></blockquote><br/><blockquote> <strong>Выдано баллов:</strong> 1</blockquote></discord-embed-field></discord-embed-fields><discord-embed-author slot="author" name="pancakeboyman_8" icon="https://cdn.discordapp.com/avatars/1133665013794607114/9952a7f75bf8748ecfd9a8e39af2e279.webp"></discord-embed-author></discord-embed><div slot="components" style="margin-top:8px;"><div class="discord-components-row" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdn.discordapp.com/emojis/1412877220942188606.png" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />None</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;">2</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdn.discordapp.com/emojis/1412877222737350656.png" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />None</button></div></div></discord-message>
+<discord-message id="m-1512418414046609448" timestamp="2026-06-05T14:30:49.284000Z" profile="1133665013794607114">Сколько вы хотите снять</discord-message>
+<discord-message id="m-1512418571395928074" timestamp="2026-06-05T14:31:26.799000Z" profile="1104388035199639585">5</discord-message>
+<discord-message id="m-1512418590148788324" timestamp="2026-06-05T14:31:31.270000Z" profile="1104388035199639585">ну могу все</discord-message>
+<discord-message id="m-1512418614270234804" timestamp="2026-06-05T14:31:37.021000Z" profile="1104388035199639585">смотря на цену</discord-message>
+<discord-message id="m-1512418641961029682" timestamp="2026-06-05T14:31:43.623000Z" profile="1133665013794607114"><discord-reply slot="reply" author="Sane4ka_TRAXAET" avatar="" role-color="#2a88cb"><span data-goto="1512418571395928074">5</span></discord-reply>x110</discord-message>
+<discord-message id="m-1512418693613879427" timestamp="2026-06-05T14:31:55.938000Z" profile="1104388035199639585">550 значит</discord-message>
+<discord-message id="m-1512418724328640624" timestamp="2026-06-05T14:32:03.261000Z" profile="1133665013794607114">Ну вот да</discord-message>
+<discord-message id="m-1512418745711198390" timestamp="2026-06-05T14:32:08.359000Z" profile="1104388035199639585">ща</discord-message>
+<discord-message id="m-1512418829970702488" timestamp="2026-06-05T14:32:28.448000Z" profile="1104388035199639585">посмотрю курсъ</discord-message>
+<discord-message id="m-1512418976720752750" timestamp="2026-06-05T14:33:03.436000Z" profile="1133665013794607114">на фп</discord-message>
+<discord-message id="m-1512418998392848556" timestamp="2026-06-05T14:33:08.603000Z" profile="1133665013794607114"><discord-mention type="user">Sane4ka_TRAXAET</discord-mention></discord-message>
+<discord-message id="m-1512419051111190569" timestamp="2026-06-05T14:33:21.172000Z" profile="1104388035199639585">а</discord-message>
+<discord-message id="m-1512419065527013536" timestamp="2026-06-05T14:33:24.609000Z" profile="1104388035199639585">ну я могу</discord-message>
+<discord-message id="m-1512419075937140806" timestamp="2026-06-05T14:33:27.091000Z" profile="1104388035199639585">через фанпей</discord-message>
+<discord-message id="m-1512419083147149462" timestamp="2026-06-05T14:33:28.810000Z" profile="1104388035199639585">закинуть</discord-message>
+<discord-message id="m-1512419106693845115" timestamp="2026-06-05T14:33:34.424000Z" profile="1104388035199639585">щас посмотрю</discord-message>
+<discord-message id="m-1512419117502693396" timestamp="2026-06-05T14:33:37.001000Z" profile="1104388035199639585">скок стоить будет</discord-message>
+<discord-message id="m-1512419453411917965" timestamp="2026-06-05T14:34:57.088000Z" profile="1133665013794607114"><discord-reply slot="reply" author="Sane4ka_TRAXAET" avatar="" role-color="#2a88cb"><span data-goto="1512419117502693396">скок стоить будет</span></discord-reply>можно так<discord-attachments slot="attachments"><discord-attachment type="image" filename="image.png" url="https://transcripts.erlcrussia.xyz/attachments/1512419453411917965_1512419452187050136.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1512419723663642786" timestamp="2026-06-05T14:36:01.521000Z" profile="1104388035199639585">а по курсу</discord-message>
+<discord-message id="m-1512419729996906587" timestamp="2026-06-05T14:36:03.031000Z" profile="1104388035199639585">какому</discord-message>
+<discord-message id="m-1512419750091821086" timestamp="2026-06-05T14:36:07.822000Z" profile="1133665013794607114">Рубля</discord-message>
+<discord-message id="m-1512419761534013541" timestamp="2026-06-05T14:36:10.550000Z" profile="1104388035199639585">ну я обычно по 0.53 закупаю</discord-message>
+<discord-message id="m-1512419820451401965" timestamp="2026-06-05T14:36:24.597000Z" profile="1133665013794607114">110 руб</discord-message>
+<discord-message id="m-1512419828571574463" timestamp="2026-06-05T14:36:26.533000Z" profile="1133665013794607114">же</discord-message>
+<discord-message id="m-1512419861312049274" timestamp="2026-06-05T14:36:34.339000Z" profile="1104388035199639585">всм</discord-message>
+<discord-message id="m-1512419987866779758" timestamp="2026-06-05T14:37:04.512000Z" profile="1104388035199639585">по 0.55 550 будет 300 руб</discord-message>
+<discord-message id="m-1512419988768817293" timestamp="2026-06-05T14:37:04.727000Z" profile="1133665013794607114">ну балл</discord-message>
+<discord-message id="m-1512420056498438356" timestamp="2026-06-05T14:37:20.875000Z" profile="1104388035199639585">ща</discord-message>
+<discord-message id="m-1512420264690847895" timestamp="2026-06-05T14:38:10.512000Z" profile="1104388035199639585">я могу через геймпасс</discord-message>
+<discord-message id="m-1512420270747418635" timestamp="2026-06-05T14:38:11.956000Z" profile="1104388035199639585">купить</discord-message>
+<discord-message id="m-1512420337743167518" timestamp="2026-06-05T14:38:27.929000Z" profile="1104388035199639585">который ты раньше кидал</discord-message>
+<discord-message id="m-1512420396073357312" timestamp="2026-06-05T14:38:41.836000Z" profile="1133665013794607114">а какая разница</discord-message>
+<discord-message id="m-1512420685262094547" timestamp="2026-06-05T14:39:50.784000Z" profile="1104388035199639585">а погодь</discord-message>
+<discord-message id="m-1512420701758292068" timestamp="2026-06-05T14:39:54.717000Z" profile="1104388035199639585">там коммисия на фп</discord-message>
+<discord-message id="m-1512420724126650409" timestamp="2026-06-05T14:40:00.050000Z" profile="1133665013794607114">ну</discord-message>
+<discord-message id="m-1512420736965279754" timestamp="2026-06-05T14:40:03.111000Z" profile="1104388035199639585">у тебя 0.82 за штуку</discord-message>
+<discord-message id="m-1512420751444148346" timestamp="2026-06-05T14:40:06.563000Z" profile="1133665013794607114">ну</discord-message>
+<discord-message id="m-1512420757257588836" timestamp="2026-06-05T14:40:07.949000Z" profile="1133665013794607114">ровно 550</discord-message>
+<discord-message id="m-1512420779965550653" timestamp="2026-06-05T14:40:13.363000Z" profile="1133665013794607114">для тебя</discord-message>
+<discord-message id="m-1512420861045374997" timestamp="2026-06-05T14:40:32.694000Z" profile="1104388035199639585">там если через карту</discord-message>
+<discord-message id="m-1512420869325197394" timestamp="2026-06-05T14:40:34.668000Z" profile="1104388035199639585">0.86</discord-message>
+<discord-message id="m-1512420878187630794" timestamp="2026-06-05T14:40:36.781000Z" profile="1104388035199639585">будет</discord-message>
+<discord-message id="m-1512420975667576964" timestamp="2026-06-05T14:41:00.022000Z" profile="1133665013794607114">Всо<discord-attachments slot="attachments"><discord-attachment type="image" filename="image.png" url="https://transcripts.erlcrussia.xyz/attachments/1512420975667576964_1512420975516586105.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1512421053601681429" timestamp="2026-06-05T14:41:18.603000Z" profile="1104388035199639585">а</discord-message>
+<discord-message id="m-1512421131691360258" timestamp="2026-06-05T14:41:37.221000Z" profile="1104388035199639585">типо</discord-message>
+<discord-message id="m-1512421137844535318" timestamp="2026-06-05T14:41:38.688000Z" profile="1104388035199639585">робуксы</discord-message>
+<discord-message id="m-1512421146182811748" timestamp="2026-06-05T14:41:40.676000Z" profile="1104388035199639585">но рублями</discord-message>
+<discord-message id="m-1512421151593463878" timestamp="2026-06-05T14:41:41.966000Z" profile="1104388035199639585">да</discord-message>
+<discord-message id="m-1512421173575684146" timestamp="2026-06-05T14:41:47.207000Z" profile="1133665013794607114">нет просто товар такой</discord-message>
+<discord-message id="m-1512421191384829983" timestamp="2026-06-05T14:41:51.453000Z" profile="1133665013794607114">можем через Услуги Discord</discord-message>
+<discord-message id="m-1512421288574976020" timestamp="2026-06-05T14:42:14.625000Z" profile="1133665013794607114">Можешь ваще через донате пей кинуть</discord-message>
+<discord-message id="m-1512421291481763931" timestamp="2026-06-05T14:42:15.318000Z" profile="1104388035199639585">давай я ща 3 Варна сниму, потом еще</discord-message>
+<discord-message id="m-1512421339682705499" timestamp="2026-06-05T14:42:26.810000Z" profile="1104388035199639585">закину на карту</discord-message>
+<discord-message id="m-1512421361086365806" timestamp="2026-06-05T14:42:31.913000Z" profile="1133665013794607114"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1512421288574976020">Можешь ваще через донате пей кинуть</span></discord-reply><a href="https://donatepay.ru/don/pancakeboyman_8" style="color: #00aff4; text-decoration: underline;" target="_blank">https://donatepay.ru/don/pancakeboyman_8</a><discord-embed title="Pancakeboyman_8 — DonatePay" slot="embeds" color="#006800"></discord-embed></discord-message>
+<discord-message id="m-1512421373178282094" timestamp="2026-06-05T14:42:34.796000Z" profile="1133665013794607114">Сюда просто</discord-message>
+<discord-message id="m-1512421381587861524" timestamp="2026-06-05T14:42:36.801000Z" profile="1133665013794607114">донат</discord-message>
+<discord-message id="m-1512421445752590409" timestamp="2026-06-05T14:42:52.099000Z" profile="1104388035199639585">а таак</discord-message>
+<discord-message id="m-1512421463465132053" timestamp="2026-06-05T14:42:56.322000Z" profile="1104388035199639585">скок там надо</discord-message>
+<discord-message id="m-1512421487724859493" timestamp="2026-06-05T14:43:02.106000Z" profile="1133665013794607114">если 3</discord-message>
+<discord-message id="m-1512421516233408592" timestamp="2026-06-05T14:43:08.903000Z" profile="1133665013794607114">можешь кинуть 300</discord-message>
+<discord-message id="m-1512421593324851380" timestamp="2026-06-05T14:43:27.283000Z" profile="1104388035199639585">у меня 386</discord-message>
+<discord-message id="m-1512421626371641374" timestamp="2026-06-05T14:43:35.162000Z" profile="1104388035199639585">14  не хватает</discord-message>
+<discord-message id="m-1512421632700977183" timestamp="2026-06-05T14:43:36.671000Z" profile="1104388035199639585">до 4</discord-message>
+<discord-message id="m-1512421635930722364" timestamp="2026-06-05T14:43:37.441000Z" profile="1104388035199639585">щас</discord-message>
+<discord-message id="m-1512421646408089621" timestamp="2026-06-05T14:43:39.939000Z" profile="1104388035199639585">закину на 3</discord-message>
+<discord-message id="m-1512421659192066139" timestamp="2026-06-05T14:43:42.987000Z" profile="501686815120687105">а поделиться</discord-message>
+<discord-message id="m-1512421679958196368" timestamp="2026-06-05T14:43:47.938000Z" profile="501686815120687105">🥺</discord-message>
+<discord-message id="m-1512421735041990778" timestamp="2026-06-05T14:44:01.071000Z" profile="1133665013794607114"><discord-reply slot="reply" author="Sane4ka_TRAXAET" avatar="" role-color="#2a88cb"><span data-goto="1512421593324851380">у меня 386</span></discord-reply>Коммиссию выбери не покрывать</discord-message>
+<discord-message id="m-1512422011157090325" timestamp="2026-06-05T14:45:06.902000Z" profile="1104388035199639585">не</discord-message>
+<discord-message id="m-1512422017666781184" timestamp="2026-06-05T14:45:08.454000Z" profile="1104388035199639585">на карте</discord-message>
+<discord-message id="m-1512422025401077780" timestamp="2026-06-05T14:45:10.298000Z" profile="1104388035199639585">386</discord-message>
+<discord-message id="m-1512422234466291852" timestamp="2026-06-05T14:46:00.143000Z" profile="1133665013794607114"><discord-reply slot="reply" author="Sane4ka_TRAXAET" avatar="" role-color="#2a88cb"><span data-goto="1512421593324851380">у меня 386</span></discord-reply><a href="https://new.donatepay.ru/@pancakeboyman_8?amount=300&message=Привет" style="color: #00aff4; text-decoration: underline;" target="_blank">https://new.donatepay.ru/@pancakeboyman_8?amount=300&message=Привет</a><discord-embed title="Pancakeboyman_8 — DonatePay" slot="embeds" color="#006800"></discord-embed></discord-message>
+<discord-message id="m-1512422543741554771" timestamp="2026-06-05T14:47:13.880000Z" profile="1104388035199639585">ща погоди</discord-message>
+<discord-message id="m-1512422560141283449" timestamp="2026-06-05T14:47:17.790000Z" profile="1104388035199639585">у нас захват заложника</discord-message>
+<discord-message id="m-1512423591419973752" timestamp="2026-06-05T14:51:23.666000Z" profile="1104388035199639585"><discord-attachments slot="attachments"><discord-attachment type="image" filename="Screenshot_20260605_145108_com.huawei.browser.jpg" url="https://transcripts.erlcrussia.xyz/attachments/1512423591419973752_1512423590744817744.jpg"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1512423984787099648" timestamp="2026-06-05T14:52:57.452000Z" profile="1363531806586048755"><discord-embed title="Баллы сняты" slot="embeds" color="#2b2d31"><discord-embed-description slot="description">Баллы за Кик успешно сняты!</discord-embed-description><discord-embed-fields slot="fields"><discord-embed-field field-title="Информация о нарушителе"><blockquote> <strong>Ник:</strong> Sane4ka_TRAXAET</blockquote><br/><blockquote> <strong>Айди:</strong> <code>4887670275</code></blockquote><br/><blockquote> <strong>ID предупреждения:</strong> <code>7448367152489037824</code></blockquote><br/><blockquote> <strong>Тип снятого наказания:</strong> Кик</blockquote><br/><blockquote> <strong>Снято баллов:</strong> 2</blockquote><br/><blockquote> <strong>Осталось баллов:</strong> 25/30</blockquote></discord-embed-field></discord-embed-fields></discord-embed></discord-message>
+<discord-message id="m-1512424026440732723" timestamp="2026-06-05T14:53:07.383000Z" profile="1363531806586048755"><discord-embed title="Баллы сняты" slot="embeds" color="#2b2d31"><discord-embed-description slot="description">Баллы за Предупреждение успешно сняты!</discord-embed-description><discord-embed-fields slot="fields"><discord-embed-field field-title="Информация о нарушителе"><blockquote> <strong>Ник:</strong> Sane4ka_TRAXAET</blockquote><br/><blockquote> <strong>Айди:</strong> <code>4887670275</code></blockquote><br/><blockquote> <strong>ID предупреждения:</strong> <code>7452422732493094912</code></blockquote><br/><blockquote> <strong>Тип снятого наказания:</strong> Предупреждение</blockquote><br/><blockquote> <strong>Снято баллов:</strong> 1</blockquote><br/><blockquote> <strong>Осталось баллов:</strong> 24/30</blockquote></discord-embed-field></discord-embed-fields></discord-embed></discord-message>
+<discord-message id="m-1512424075937710331" timestamp="2026-06-05T14:53:19.184000Z" profile="1363531806586048755"><discord-embed title="Баллы сняты" slot="embeds" color="#2b2d31"><discord-embed-description slot="description">Баллы за Предупреждение успешно сняты!</discord-embed-description><discord-embed-fields slot="fields"><discord-embed-field field-title="Информация о нарушителе"><blockquote> <strong>Ник:</strong> Sane4ka_TRAXAET</blockquote><br/><blockquote> <strong>Айди:</strong> <code>4887670275</code></blockquote><br/><blockquote> <strong>ID предупреждения:</strong> <code>7456368234074996736</code></blockquote><br/><blockquote> <strong>Тип снятого наказания:</strong> Предупреждение</blockquote><br/><blockquote> <strong>Снято баллов:</strong> 1</blockquote><br/><blockquote> <strong>Осталось баллов:</strong> 23/30</blockquote></discord-embed-field></discord-embed-fields></discord-embed></discord-message>
+<discord-message id="m-1512424598585741422" timestamp="2026-06-05T14:55:23.793000Z" profile="1133665013794607114"><discord-reply slot="reply" author="Sane4ka_TRAXAET" avatar="" role-color="#2a88cb"><span data-goto="1512423591419973752">[deleted]</span></discord-reply>Я даже забыл что у меня бот подключён<discord-attachments slot="attachments"><discord-attachment type="image" filename="image.png" url="https://transcripts.erlcrussia.xyz/attachments/1512424598585741422_1512424598233153716.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1512425162841129042" timestamp="2026-06-05T14:57:38.322000Z" profile="1104388035199639585">ахах</discord-message>
+<discord-message id="m-1512425199348482161" timestamp="2026-06-05T14:57:47.026000Z" profile="1104388035199639585">я потом еще куплю<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764-fe0f.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1512425217656361083" timestamp="2026-06-05T14:57:51.391000Z" profile="1104388035199639585">либо кремль<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764-fe0f.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1513143514504892588" timestamp="2026-06-07T14:32:06.705000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет закроется через несколько секунд...</span></div></div></div></discord-message>
+</discord-messages></body></html>
