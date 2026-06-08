@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — жалоба-на-персонал-erlc-0246</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/8f6e9a6ad7bdc609907d4c907ccadfd5.png?size=1024", "roleColor": "#006800", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/8e5424768addb0eab9fb87dcd89088bb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": true}, "501686815120687105": {"author": "Лидер Мнений sqw1rtiq", "avatar": "https://cdn.discordapp.com/avatars/501686815120687105/d2ce72c80bc8a6bdbfa976e7c2a08cfd.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1426830509962432613/c0d406b9b857befae1149fc48c77038b.png?size=1024", "roleName": "крипс генг", "bot": false, "verified": false}, "585394439715946518": {"author": "savingbox3", "avatar": "https://cdn.discordapp.com/avatars/585394439715946518/e82f31f878077dcd383254c613d59c3d.png?size=1024", "roleColor": "#d4843d", "roleIcon": "https://cdn.discordapp.com/role-icons/1483091539973373993/b2b1d515e0da04921b1553fe55d87eea.png?size=1024", "roleName": "Руководство Проекта", "bot": false, "verified": false}, "1133665013794607114": {"author": "Pancakeboyman_8", "avatar": "https://cdn.discordapp.com/avatars/1133665013794607114/9952a7f75bf8748ecfd9a8e39af2e279.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1331342900205850686/c1fd358ec8be5422366cbf5b58e16e31.png?size=1024", "roleName": "Владелец", "bot": false, "verified": false}, "1195675629010558986": {"author": "The_Borisik", "avatar": "https://cdn.discordapp.com/avatars/1195675629010558986/16b83fbe315df0f2f7ee3e08fee39600.png?size=1024", "roleColor": "#424cff", "roleIcon": "https://cdn.discordapp.com/role-icons/1410712605579939982/df9f61918e58e298252dbcbfe910e849.png?size=1024", "roleName": "Пробный Игрок", "bot": false, "verified": false}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.emoji-img {
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    object-fit: contain;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/a06dfa47e027eb8acdf25152e486f1c8.png?size=1024" timestamp="2026-06-08_22-01-02">Тикет Закрыт.<br/>Причина: Вы сказали: &quot;напиши сказку про мальчика хубiрта на украинском&quot;Ось чарівна казка про хлопчика на ім&#x27;я Губерт (Хубірт), який умів розмовляти з вітром.Хлопчик, який слухав вітерУ невеликому гірському селищі, де хмари часто чіплялися за верхівки смерек, жив маленький хлопчик на ім’я Хубірт. Він був особливою дитиною. Поки інші діти гралися в хованки чи наздоганяли м&#x27;яча, Хубірт міг годинами сидіти на старій скелі біля річки, нахиливши голову набік.Жителі селища казали, що він просто мрійник. Але насправді Хубірт мав дивовижний дар — він умів слухати й розуміти мову Вітру.Для хлопчика Вітер не був просто рухом повітря. Він мав три різних голоси:Легіт — теплий, весняний вітерець, який шепотів казки про далекі квітучі долини.Стрибог — сильний осінній вітер, що співав бадьорі пісні про безкраї степи.Віхола — холодна зимова буря, яка розмовляла строго, але завжди попереджала про хуртовину.Зникнення сонячного теплаОдного року в край Хубірта прийшло лихо. Посеред літа на селище впав густий, важкий туман. Сонце не могло пробитися крізь нього, на полях почав гинути врожай, а люди стали сумними та слабкими. Здавалося, що час зупинився.Хубірт зрозумів, що треба діяти. Він піднявся на найвищу гору, підняв руки до неба і закликав свого найкращого друга:— О, Леготе, прилети! Розкажи, що сталося із нашим сонцем?За мить повітря затремтіло, і лагідний подих торкнувся щоки хлопчика. Легіт зашепотів сумну історію. Виявилося, що глибоко в Темній Ущелині оселився Сонний Смут — чарівний дух, який заздрив людській радості. Він викрав Опівнічний Дзвіночок, звук якого щоранку будив сонце і розганяв хмари.Подорож за дзвіночком«Я допоможу тобі, Хубірте, — прошепотів Легіт. — Але Сонний Смут дуже сильний. Самим нам не впоратися».Тоді Хубірт попросив Легота покликати своїх старших братів. Коли три вітри з&#x27;єдналися разом, вони підхопили хлопчика і понесли його над лісами та горами прямо до Темної Ущелини.Там, серед чорного каміння, сидів величезний сірий дух, схожий на хмару попелу. У його руках тихо тьмянів золотий Опівнічний Дзвіночок. Смут побачив хлопчика і грізно закричав:— Хто посмів порушити мій спокій? Я занурю весь світ у вічний сон!Дух дихнув на Хубірта крижаним туманом. Хлопчик відчув, як його очі злипаються, а ноги стають важкими. Але в цей момент він згадав про своїх друзів.— Вітри, єднайтеся! — з останніх сил крикнув Хубірт.Перемога світлаТри вітри почули заклик хлопчика. Вони закрутилися у могутній, сильний вихор:Весняний Легіт приніс аромат перших квітів, який миттєво розвіяв сонливість Хубірта.Осінній Стрибог ударив по сірому духу своєю силою, змусивши його затремтіти.Зимова Віхола скувала туман Смута тисячами дрібних крижинок, перетворивши його на нешкідливий сніг.Сонний Смут злякався такої сили, випустив Опівнічний Дзвіночок і зник у найглибшій тріщині землі. Хубірт підхопив золотий дзвіночок і щосили задзвонив у нього.Звук кришталевого дзвону прокотився над горами. Важкий туман миттєво розтанув, і перші яскраві промені сонця зігріли землю.Хубірт повернувся додому героєм. З того часу в селищі завжди панували мир та тепло, а хлопчик і далі приходив на свою скелю, щоб дізнатися від Вітру нові, дивовижні історії з усього світу.Якщо ви хочете, я можу:Додати до казки нових персонажів (наприклад, чарівну тваринку-помічника).Зробити історію довшою та детальніше описати випробування в ущелині.Змінити фінал чи характер головного героя.Поділіться своїми побажаннями, і я доопрацюю текст для вас!ИИ может ошибаться. Проверяйте его ответы. Вы сказали: &quot;небольную ед<br/>Закрыл: <@585394439715946518><br/>Дата: 2026-06-08_22-01-02<br/><a href="https://transcripts.erlcrussia.xyz/transcripts/жалоба-на-персонал-erlc-0246_2026-06-08_22-01-02.html" style="color: #00aff4;">https://transcripts.erlcrussia.xyz/transcripts/жалоба-на-персонал-erlc-0246_2026-06-08_22-01-02.html</a></discord-message>
+<discord-message id="m-1513617112525045781" timestamp="2026-06-08T21:54:01.272000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="padding:8px;color:#dcddde;"><discord-mention type="role">Команда Внутренних Дел Roblox</discord-mention> <discord-mention type="user">Лидер Мнений sqw1rtiq</discord-mention></div><div style="background:#2f3136;border-left:4px solid #006800;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:8px 12px;"><div style="display:flex;gap:16px;align-items:flex-start;"><img src="https://cdn.discordapp.com/avatars/501686815120687105/d2ce72c80bc8a6bdbfa976e7c2a08cfd.png?size=1024" style="width:80px;height:80px;border-radius:8px;object-fit:cover;flex-shrink:0;" /><div><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg" alt="📨" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Новый Тикет — Жалоба на персонал ERLC</span><br/><strong>Ваш никнейм Roblox:</strong><br/>MatrixX_X<br/><strong>Сотрудник:</strong><br/>MatrixX_X<br/><strong>Причина:</strong><br/>не согласен с мягкостью выданного мне наказания<br/><strong>Когда:</strong><br/>только что<br/><strong>Доказательства:</strong><br/>ща скину тут в тикет</div></div></div><div style="padding:4px 12px;color:#dcddde;">⏳ <strong>Ожидайте ответа от персонала.</strong></div><div style="height:1px;background:#4f545c;margin:4px 0;"></div><div style="height:8px;"></div><div style="display:flex;gap:8px;padding:8px 0;flex-wrap:wrap;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Закрыть Тикет</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e4.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Освободить Тикет</button></div></div></div></discord-message>
+<discord-message id="m-1513617182356013116" timestamp="2026-06-08T21:54:17.921000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e5.svg" alt="📥" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет взят <discord-mention type="user">savingbox3</discord-mention>.</span></div></div></div></discord-message>
+<discord-message id="m-1513617196109004991" timestamp="2026-06-08T21:54:21.200000Z" profile="501686815120687105"><discord-attachments slot="attachments"><discord-attachment type="image" filename="image.png" url="https://transcripts.erlcrussia.xyz/attachments/1513617196109004991_1513617195844898937.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1513617230108295209" timestamp="2026-06-08T21:54:29.306000Z" profile="585394439715946518">здравствуйте, я поставлю вас на менеджера фракций в наказание</discord-message>
+<discord-message id="m-1513617248009584650" timestamp="2026-06-08T21:54:33.574000Z" profile="501686815120687105">мне надо выдать 2 выговора и внутреннее расследование</discord-message>
+<discord-message id="m-1513617266170790010" timestamp="2026-06-08T21:54:37.904000Z" profile="501686815120687105">по правилам персонала</discord-message>
+<discord-message id="m-1513617362287329310" timestamp="2026-06-08T21:55:00.820000Z" profile="501686815120687105">оск игроков + общение на ТЫ + юз команд вне смены + разбанил забаненного человека</discord-message>
+<discord-message id="m-1513617389785190612" timestamp="2026-06-08T21:55:07.376000Z" profile="501686815120687105">этот тикет если что не шутка</discord-message>
+<discord-message id="m-1513617453450526861" timestamp="2026-06-08T21:55:22.555000Z" profile="501686815120687105"><discord-attachments slot="attachments"><discord-attachment type="image" filename="image.png" url="https://transcripts.erlcrussia.xyz/attachments/1513617453450526861_1513617453165449337.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1513617457447829627" timestamp="2026-06-08T21:55:23.508000Z" profile="501686815120687105">еще вот</discord-message>
+<discord-message id="m-1513617481367945407" timestamp="2026-06-08T21:55:29.211000Z" profile="501686815120687105">жб от игрока</discord-message>
+<discord-message id="m-1513618123020828734" timestamp="2026-06-08T21:58:02.193000Z" profile="501686815120687105"><discord-mention type="user">Pancakeboyman_8</discord-mention></discord-message>
+<discord-message id="m-1513618380370874408" timestamp="2026-06-08T21:59:03.550000Z" profile="1133665013794607114">Матрикс тебе вообще то 20 лет</discord-message>
+<discord-message id="m-1513618467125985422" timestamp="2026-06-08T21:59:24.234000Z" profile="1133665013794607114">Можно как то не сгорать так</discord-message>
+<discord-message id="m-1513618497245024387" timestamp="2026-06-08T21:59:31.415000Z" profile="501686815120687105">z yt cujhf.</discord-message>
+<discord-message id="m-1513618507882037309" timestamp="2026-06-08T21:59:33.951000Z" profile="501686815120687105">я не сгораю</discord-message>
+<discord-message id="m-1513618520381063379" timestamp="2026-06-08T21:59:36.931000Z" profile="501686815120687105">ну просто по факту</discord-message>
+<discord-message id="m-1513618532120658101" timestamp="2026-06-08T21:59:39.730000Z" profile="501686815120687105">по жалобе на меня</discord-message>
+<discord-message id="m-1513618545437573171" timestamp="2026-06-08T21:59:42.905000Z" profile="501686815120687105">меня заблатили</discord-message>
+<discord-message id="m-1513618558083403988" timestamp="2026-06-08T21:59:45.920000Z" profile="501686815120687105">смягчили наказание</discord-message>
+<discord-message id="m-1513618592703316158" timestamp="2026-06-08T21:59:54.174000Z" profile="1133665013794607114">Ну просто по факту какой смысл у этого тикета?</discord-message>
+<discord-message id="m-1513618608171778048" timestamp="2026-06-08T21:59:57.862000Z" profile="1195675629010558986">ты ему еще не оформил кик в боте</discord-message>
+<discord-message id="m-1513618618771046603" timestamp="2026-06-08T22:00:00.389000Z" profile="501686815120687105">я не хочу чтоб меня блатили и смягчали наказания</discord-message>
+<discord-message id="m-1513618661678649384" timestamp="2026-06-08T22:00:10.619000Z" profile="501686815120687105"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1513618592703316158">Ну просто по факту какой смысл у этого тикета?</span></discord-reply>сейвинг неверно выдал мне наказания</discord-message>
+<discord-message id="m-1513618687507042456" timestamp="2026-06-08T22:00:16.777000Z" profile="501686815120687105">по блату смягчил</discord-message>
+<discord-message id="m-1513618775046488274" timestamp="2026-06-08T22:00:37.648000Z" profile="501686815120687105">ну там игрок реально прав в том тикете от части</discord-message>
+<discord-message id="m-1513618800333947031" timestamp="2026-06-08T22:00:43.677000Z" profile="501686815120687105">я его еще и спровоцировал по факту</discord-message>
+<discord-message id="m-1513618811667091576" timestamp="2026-06-08T22:00:46.379000Z" profile="501686815120687105">на нарушение</discord-message>
+<discord-message id="m-1513618855732318288" timestamp="2026-06-08T22:00:56.885000Z" profile="1133665013794607114"><img src="https://cdn.discordapp.com/emojis/1441135271495336038.gif" alt="Yellow_Nooo" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/></discord-message>
+<discord-message id="m-1513618878830219264" timestamp="2026-06-08T22:01:02.392000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет закроется через несколько секунд...</span></div></div></div></discord-message>
+</discord-messages></body></html>
