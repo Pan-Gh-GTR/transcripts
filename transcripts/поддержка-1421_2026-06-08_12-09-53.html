@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-1421</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/8f6e9a6ad7bdc609907d4c907ccadfd5.png?size=1024", "roleColor": "#006800", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/8e5424768addb0eab9fb87dcd89088bb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": true}, "1411384931548135604": {"author": "dimkasik125", "avatar": "https://cdn.discordapp.com/avatars/1411384931548135604/46ab63371ff5b13f80f2205941b2f4a3.png?size=1024", "roleColor": "#db1f1f", "roleIcon": "https://cdn.discordapp.com/role-icons/1449836876637671485/ce9dff2c080084534e3d33d3d0c1012b.png?size=1024", "roleName": "Гномик", "bot": false, "verified": false}, "1195675629010558986": {"author": "The_Borisik", "avatar": "https://cdn.discordapp.com/avatars/1195675629010558986/16b83fbe315df0f2f7ee3e08fee39600.png?size=1024", "roleColor": "#424cff", "roleIcon": "https://cdn.discordapp.com/role-icons/1410712605579939982/df9f61918e58e298252dbcbfe910e849.png?size=1024", "roleName": "Пробный Игрок", "bot": false, "verified": false}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.emoji-img {
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    object-fit: contain;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/a06dfa47e027eb8acdf25152e486f1c8.png?size=1024" timestamp="2026-06-08_12-09-53">Тикет Закрыт.<br/>Причина: Не указана<br/>Закрыл: <@1411384931548135604><br/>Дата: 2026-06-08_12-09-53<br/><a href="https://transcripts.erlcrussia.xyz/transcripts/поддержка-1421_2026-06-08_12-09-53.html" style="color: #00aff4;">https://transcripts.erlcrussia.xyz/transcripts/поддержка-1421_2026-06-08_12-09-53.html</a></discord-message>
+<discord-message id="m-1513468324812427437" timestamp="2026-06-08T12:02:47.517000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="padding:8px;color:#dcddde;"><discord-mention type="role">Персонал ER:LC</discord-mention> <discord-mention type="role">Персонал Discord</discord-mention> <discord-mention type="user">dimkasik125</discord-mention></div><div style="background:#2f3136;border-left:4px solid #006800;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:8px 12px;"><div style="display:flex;gap:16px;align-items:flex-start;"><img src="https://cdn.discordapp.com/avatars/1411384931548135604/46ab63371ff5b13f80f2205941b2f4a3.png?size=1024" style="width:80px;height:80px;border-radius:8px;object-fit:cover;flex-shrink:0;" /><div><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg" alt="📨" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Новый Тикет — Поддержка</span><br/><strong>В чём проблема:</strong><br/>Можно вернуть роль гномик</div></div></div><div style="padding:4px 12px;color:#dcddde;">⏳ <strong>Ожидайте ответа от персонала.</strong></div><div style="height:1px;background:#4f545c;margin:4px 0;"></div><div style="height:8px;"></div><div style="display:flex;gap:8px;padding:8px 0;flex-wrap:wrap;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Закрыть Тикет</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e4.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Освободить Тикет</button></div></div></div><discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1513468814635962379" timestamp="2026-06-08T12:04:44.300000Z" profile="1411384931548135604">Её удалили крч</discord-message>
+<discord-message id="m-1513468830863589402" timestamp="2026-06-08T12:04:48.169000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e5.svg" alt="📥" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет взят <discord-mention type="user">The_Borisik</discord-mention>.</span></div></div></div></discord-message>
+<discord-message id="m-1513468856897638420" timestamp="2026-06-08T12:04:54.376000Z" profile="1195675629010558986">у меня вроде как был твой исходник</discord-message>
+<discord-message id="m-1513468864694980708" timestamp="2026-06-08T12:04:56.235000Z" profile="1195675629010558986">сейчас посмотрю</discord-message>
+<discord-message id="m-1513468941404733492" timestamp="2026-06-08T12:05:14.524000Z" profile="1195675629010558986"><discord-attachments slot="attachments"><discord-attachment type="image" filename="Frame_41.png" url="https://transcripts.erlcrussia.xyz/attachments/1513468941404733492_1513468941140234391.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1513468946517594113" timestamp="2026-06-08T12:05:15.743000Z" profile="1195675629010558986">вот это вроде</discord-message>
+<discord-message id="m-1513468976837955725" timestamp="2026-06-08T12:05:22.972000Z" profile="1195675629010558986">Роль какого цвета будет у тебя</discord-message>
+<discord-message id="m-1513469328014708837" timestamp="2026-06-08T12:06:46.699000Z" profile="1411384931548135604">Создайте<discord-attachments slot="attachments"><discord-attachment type="image" filename="dcf77e5287daea3c9707a4b01c35518a.png" url="https://transcripts.erlcrussia.xyz/attachments/1513469328014708837_1513469327293026314.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1513469385048723508" timestamp="2026-06-08T12:07:00.297000Z" profile="1411384931548135604"><discord-reply slot="reply" author="The_Borisik" avatar="" role-color="#424cff"><span data-goto="1513468976837955725">Роль какого цвета будет у тебя</span></discord-reply>Красно белый</discord-message>
+<discord-message id="m-1513469440648282173" timestamp="2026-06-08T12:07:13.553000Z" profile="1411384931548135604">Я просто фотку искал</discord-message>
+<discord-message id="m-1513469554859442217" timestamp="2026-06-08T12:07:40.783000Z" profile="1195675629010558986">ну я тебе же роль делал</discord-message>
+<discord-message id="m-1513469568507449524" timestamp="2026-06-08T12:07:44.037000Z" profile="1195675629010558986">у меня осталась</discord-message>
+<discord-message id="m-1513469615085322270" timestamp="2026-06-08T12:07:55.142000Z" profile="1195675629010558986">щс оформлю тогда</discord-message>
+<discord-message id="m-1513469989615571005" timestamp="2026-06-08T12:09:24.437000Z" profile="1195675629010558986"><discord-reply slot="reply" author="dimkasik125" avatar="" role-color="#db1f1f"><span data-goto="1513468814635962379">Её удалили крч</span></discord-reply><discord-mention type="user">dimkasik125</discord-mention> так?</discord-message>
+<discord-message id="m-1513470025795637288" timestamp="2026-06-08T12:09:33.063000Z" profile="1411384931548135604"><discord-reply slot="reply" author="The_Borisik" avatar="" role-color="#424cff"><span data-goto="1513469989615571005">@1411384931548135604 так?</span></discord-reply>Да спасибо всё</discord-message>
+<discord-message id="m-1513470109979775028" timestamp="2026-06-08T12:09:53.134000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет закроется через несколько секунд...</span></div></div></div></discord-message>
+</discord-messages></body></html>
