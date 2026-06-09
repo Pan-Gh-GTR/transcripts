@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay — поддержка-1323</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1369322958132215871/1420647391979376811/--.png?ex=68d8cb7c&is=68d779fc&hm=9595c3134c26a4c4be4dd4e658558855c3b6fe9dac3e0b240da345eb38e7f43b&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1381962421588988074": {"author": "Moscow RolePlay", "avatar": "https://cdn.discordapp.com/avatars/1381962421588988074/8f6e9a6ad7bdc609907d4c907ccadfd5.png?size=1024", "roleColor": "#006800", "roleIcon": "https://cdn.discordapp.com/role-icons/1420650163722256446/8e5424768addb0eab9fb87dcd89088bb.png?size=1024", "roleName": "Moscow RolePlay", "bot": true, "verified": true}, "1448059157897809940": {"author": "[MD-023] Bacon_baconkin", "avatar": "https://cdn.discordapp.com/avatars/1448059157897809940/5855c9ba4bd508533b2de52c73fb4070.png?size=1024", "roleColor": "#50b46e", "roleIcon": "https://cdn.discordapp.com/role-icons/1482744352202686694/2ea71ca7999beb351dc107ad2baf310b.png?size=1024", "roleName": "Модератор ER:LC", "bot": false, "verified": false}, "878565267557470279": {"author": "[MD-024] wajiksss", "avatar": "https://cdn.discordapp.com/avatars/878565267557470279/1ce8e6fbb91cad583fb71bbcfb20b107.png?size=1024", "roleColor": "#ffd000", "roleIcon": "https://cdn.discordapp.com/role-icons/1416421146068385902/a87ab0324cb91fc0e883d011fbfabc86.png?size=1024", "roleName": "Работник Недели", "bot": false, "verified": false}, "970713754411089940": {"author": "[VD-011] Sashapozzzz", "avatar": "https://cdn.discordapp.com/avatars/970713754411089940/5f58756097872bc94c62dabede155fba.png?size=1024", "roleColor": "#921813", "roleIcon": "https://cdn.discordapp.com/role-icons/1416181646318637198/5b70f56d655e733566af6b41bc6f6c01.png?size=1024", "roleName": "Команда Внутренних Дел Roblox", "bot": false, "verified": false}, "1195675629010558986": {"author": "The_Borisik", "avatar": "https://cdn.discordapp.com/avatars/1195675629010558986/16b83fbe315df0f2f7ee3e08fee39600.png?size=1024", "roleColor": "#424cff", "roleIcon": "https://cdn.discordapp.com/role-icons/1410712605579939982/df9f61918e58e298252dbcbfe910e849.png?size=1024", "roleName": "Пробный Игрок", "bot": false, "verified": false}, "1059736820876853248": {"author": "Пётръ Алексеевичъ Романовъ", "avatar": "https://cdn.discordapp.com/avatars/1059736820876853248/abdb75f461a6290a85006c82959d7192.png?size=1024", "roleColor": "#ffffff", "roleIcon": "", "roleName": "User", "bot": false, "verified": false}, "585394439715946518": {"author": "savingbox3", "avatar": "https://cdn.discordapp.com/avatars/585394439715946518/e82f31f878077dcd383254c613d59c3d.png?size=1024", "roleColor": "#d4843d", "roleIcon": "https://cdn.discordapp.com/role-icons/1483091539973373993/b2b1d515e0da04921b1553fe55d87eea.png?size=1024", "roleName": "Руководство Проекта", "bot": false, "verified": false}, "1133665013794607114": {"author": "Pancakeboyman_8", "avatar": "https://cdn.discordapp.com/avatars/1133665013794607114/9952a7f75bf8748ecfd9a8e39af2e279.png?size=1024", "roleColor": "#ffffff", "roleIcon": "https://cdn.discordapp.com/role-icons/1331342900205850686/c1fd358ec8be5422366cbf5b58e16e31.png?size=1024", "roleName": "Владелец", "bot": false, "verified": false}}}</script>
+<style>
+body {
+    background: #36393f;
+    color: #dcddde;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#lightboxOverlay {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    z-index: 99999;
+    background: rgba(30, 30, 30, 0.85);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#lightboxOverlay img,
+#lightboxImg {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    background: #222;
+    display: block;
+    margin: auto;
+}
+discord-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 8px;
+}
+discord-reaction {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #dcddde;
+}
+discord-custom-emoji {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.emoji-img {
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    object-fit: contain;
+}
+</style>
+<script type="text/javascript">
+
+    document.addEventListener("click", t => {
+        let e = t.target;
+        if (!e) return;
+        let o = e.getAttribute && e.getAttribute("data-goto");
+        if (o) {
+            let r = document.getElementById(`m-${o}`);
+            if (r) {
+                r.scrollIntoView({behavior: "smooth", block: "center"});
+                r.style.backgroundColor = "rgba(148,156,247,0.1)";
+                r.style.transition = "background-color 0.5s ease";
+                setTimeout(() => { r.style.backgroundColor = "transparent"; }, 1000);
+            } else {
+                console.warn("Message " + o + " not found.");
+            }
+        }
+        if (e.matches && e.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+            let src = e.getAttribute("src") || (e.querySelector && e.querySelector('img') ? e.querySelector('img').src : '');
+            if (src) {
+                let overlay = document.getElementById('lightboxOverlay');
+                let img = document.getElementById('lightboxImg');
+                overlay.style.display = 'flex';
+                img.src = src;
+            }
+        }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+        let overlay = document.getElementById('lightboxOverlay');
+        overlay && overlay.addEventListener('click', () => { overlay.style.display = 'none'; });
+    });
+    
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js" onerror="console.error('Failed to load Discord components, using fallback styles.')"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/a06dfa47e027eb8acdf25152e486f1c8.png?size=1024" timestamp="2026-06-09_19-36-54">Тикет Закрыт.<br/>Причина: В данный момент любые ЧОП и ЧВК запрещены на сервере.<br/>Закрыл: <@585394439715946518><br/>Дата: 2026-06-09_19-36-54<br/><a href="https://transcripts.erlcrussia.xyz/transcripts/поддержка-1323_2026-06-09_19-36-54.html" style="color: #00aff4;">https://transcripts.erlcrussia.xyz/transcripts/поддержка-1323_2026-06-09_19-36-54.html</a></discord-message>
+<discord-message id="m-1510341291370741901" timestamp="2026-05-30T20:57:04.647000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="padding:8px;color:#dcddde;"><discord-mention type="role">Персонал ER:LC</discord-mention> <discord-mention type="role">Персонал Discord</discord-mention> <discord-mention type="user">[MD-023] Bacon_baconkin</discord-mention></div><div style="background:#2f3136;border-left:4px solid #006800;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:8px 12px;"><div style="display:flex;gap:16px;align-items:flex-start;"><img src="https://cdn.discordapp.com/avatars/1448059157897809940/3f3b1a55aad02c27b512e53b653922c2.png?size=1024" style="width:80px;height:80px;border-radius:8px;object-fit:cover;flex-shrink:0;" /><div><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg" alt="📨" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Новый Тикет — Поддержка</span><br/><strong>В чём проблема:</strong><br/>Уважаемый персонал Moscow RolePlay , а далее высшее руководство проекта, я сотрудник ЧОП "Дозор", и далее еще несколлко сотрудников хотят и настаивают чтобы наш ЧОП вернули на проект, сейчас на проекте нету никаких структур по охранной деятельности кроме , ФСО и то она государственная, наш ЧОП был создан еще в августе 2025 года, мы работали вместе слажанно с <strong>Госс структурами</strong> помогали им, выискивали людей причастных к ОПГ у нас была отличная репутация со стороны персонала так и госов, <strong>НО</strong> пришло одно ОПГ под названием "UKpanic" - ( Красный молот <em>новое название</em> ) , где после месяца инактива этой группировки они начали действовать , для начала они начали делать мясо на проекте похищать, убивать игроков , но все пошло дальше, у нас ОТЖАЛИ нашу же территорию, а именно High Rock Park она была <strong>ПЕРЕДАНА</strong> через персонал, а не через IC моменты это ставит ЛЕГАЛЬНЫЙ ЧОП в проигрышное положение, они ОТКРЫЛИ ТИКЕТ чтобы им построили там базу тоесть у нам можно сказать силой отжали нашу территорию, без лишней воды хочется чтобы всетаки на сервер вернулась ОТДЫШКА от  ОПГ чтобы все заходили на сервер не с мыслью что щас опять будет мясо, а с мыслью что будет РЕАЛЬНОЕ РП, вспомнить моменты с начала лета 25 года, где было все отлично и хорошо, и в конце концов верните наш ЧОП и его первомк создателю.</div></div></div><div style="padding:4px 12px;color:#dcddde;">⏳ <strong>Ожидайте ответа от персонала.</strong></div><div style="height:1px;background:#4f545c;margin:4px 0;"></div><div style="height:8px;"></div><div style="display:flex;gap:8px;padding:8px 0;flex-wrap:wrap;"><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Закрыть Тикет</button><button disabled style="background:#4E5058;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;cursor:not-allowed;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e4.svg" style="height:20px;width:20px;vertical-align:middle;margin-right:4px;" />Освободить Тикет</button></div></div></div></discord-message>
+<discord-message id="m-1510341444081025197" timestamp="2026-05-30T20:57:41.056000Z" profile="1448059157897809940">уберите всех лишних</discord-message>
+<discord-message id="m-1510341556165677077" timestamp="2026-05-30T20:58:07.779000Z" profile="878565267557470279">в хайроке щас резиденция президента</discord-message>
+<discord-message id="m-1510341616567844995" timestamp="2026-05-30T20:58:22.180000Z" profile="878565267557470279"><ul><br/><li>есть еще ВО СПП ГУМВД РФ</li><br/></ul></discord-message>
+<discord-message id="m-1510341616844673105" timestamp="2026-05-30T20:58:22.246000Z" profile="970713754411089940">я думаю его не вернут</discord-message>
+<discord-message id="m-1510341694808391793" timestamp="2026-05-30T20:58:40.834000Z" profile="1448059157897809940"><discord-reply slot="reply" author="[MD-024] wajiksss" avatar="" role-color="#ffd000"><span data-goto="1510341616567844995">+ есть еще ВО СПП ГУМВД РФ</span></discord-reply>да кому нужно СПП которые щас вообще не заходят</discord-message>
+<discord-message id="m-1510341736197656727" timestamp="2026-05-30T20:58:50.702000Z" profile="1448059157897809940">в чопе щас сотрудников более 10+</discord-message>
+<discord-message id="m-1510341781269774386" timestamp="2026-05-30T20:59:01.448000Z" profile="970713754411089940"><discord-reply slot="reply" author="[VD-011] Sashapozzzz" avatar="" role-color="#921813"><span data-goto="1510341616844673105">я думаю его не вернут</span></discord-reply>ну может и вернут, но только что ЧОП работал как в рл</discord-message>
+<discord-message id="m-1510341806208979036" timestamp="2026-05-30T20:59:07.394000Z" profile="1448059157897809940">и на постоянке заходило по 3-4 человека</discord-message>
+<discord-message id="m-1510341907518062792" timestamp="2026-05-30T20:59:31.548000Z" profile="878565267557470279">в ирл ни один ЧОП ни ходит в мкаме с хкшками</discord-message>
+<discord-message id="m-1510342134912385065" timestamp="2026-05-30T21:00:25.763000Z" profile="1448059157897809940"><discord-reply slot="reply" author="[MD-024] wajiksss" avatar="" role-color="#ffd000"><span data-goto="1510341907518062792">в ирл ни один ЧОП ни ходит в мкаме с хкшками</span></discord-reply>кому надо твое ирл , у нас игра мы игроки мы решаем что нам надо , но не каждый сможет это реализовать</discord-message>
+<discord-message id="m-1510342151752388648" timestamp="2026-05-30T21:00:29.778000Z" profile="970713754411089940">Крч, ждемс руководство</discord-message>
+<discord-message id="m-1510342165295792268" timestamp="2026-05-30T21:00:33.007000Z" profile="970713754411089940">давайте без споров</discord-message>
+<discord-message id="m-1510342174150103091" timestamp="2026-05-30T21:00:35.118000Z" profile="1448059157897809940">мы ЧОП смогли так то сделать</discord-message>
+<discord-message id="m-1510342192118366320" timestamp="2026-05-30T21:00:39.402000Z" profile="970713754411089940"><discord-reply slot="reply" author="[VD-011] Sashapozzzz" avatar="" role-color="#921813"><span data-goto="1510342165295792268">давайте без споров</span></discord-reply>!!!<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2795.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1510342232006201587" timestamp="2026-05-30T21:00:48.912000Z" profile="1448059157897809940">мы и ходим в мультикаме и с оружием</discord-message>
+<discord-message id="m-1510342247101763634" timestamp="2026-05-30T21:00:52.511000Z" profile="1448059157897809940">мы хотим это</discord-message>
+<discord-message id="m-1510343045495787682" timestamp="2026-05-30T21:04:02.863000Z" profile="1448059157897809940"><discord-reply slot="reply" author="[MD-023] Bacon_baconkin" avatar="" role-color="#50b46e"><span data-goto="1510341444081025197">уберите всех лишних</span></discord-reply>.</discord-message>
+<discord-message id="m-1510343294842835154" timestamp="2026-05-30T21:05:02.312000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e5.svg" alt="📥" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет взят <discord-mention type="user">The_Borisik</discord-mention>.</span></div></div></div></discord-message>
+<discord-message id="m-1510343389311270922" timestamp="2026-05-30T21:05:24.835000Z" profile="1195675629010558986">Добрый вечер я являюсь главным куратором / куратором гражданских операций</discord-message>
+<discord-message id="m-1510343412568817814" timestamp="2026-05-30T21:05:30.380000Z" profile="1448059157897809940">угу</discord-message>
+<discord-message id="m-1510343461176344616" timestamp="2026-05-30T21:05:41.969000Z" profile="1195675629010558986">Если меня попросят (руководство / менеджмент) передать тикет или я сам захочу кому либо передать выше я это сделаю</discord-message>
+<discord-message id="m-1510343482374623445" timestamp="2026-05-30T21:05:47.023000Z" profile="1195675629010558986">Щас прочитаю</discord-message>
+<discord-message id="m-1510345487310393558" timestamp="2026-05-30T21:13:45.037000Z" profile="1195675629010558986"><discord-reply slot="reply" author="Moscow RolePlay" avatar="" role-color="#006800"><span data-goto="1510341291370741901">[deleted]</span></discord-reply>Ну смотрите у меня есть несколько пунктов для вас</discord-message>
+<discord-message id="m-1510346005340487871" timestamp="2026-05-30T21:15:48.545000Z" profile="1448059157897809940">какие интересно</discord-message>
+<discord-message id="m-1510346232974016552" timestamp="2026-05-30T21:16:42.817000Z" profile="1195675629010558986">1. Делаю заявку для вас и вы напишите её для создания своего ЧОПа. Старый чоп вы не сможете уже сделать.<br/>2. У вас онли 1 территория всегда была. (смотреть фото ниже из правил) и по оформлению бывшего лидера чопа у вас не было охраняющих объектов.<br/><blockquote> А-4 — Территория, закрепленная за ЧОП-ом является основным местом дислокации ЧОП-а. Выезд за ее границы без весомой причины запрещен.</blockquote><br/>3. В будущем буду наблюдать с отношением будущих опг на терр хай рок парка с вашим чоп (Т.к щас 0 офиц опг)<br/>4. Пересмотр ваших правил если не будете их хотя бы нарушать<discord-attachments slot="attachments"><discord-attachment type="image" filename="image.png" url="https://transcripts.erlcrussia.xyz/attachments/1510346232974016552_1510346232638214296.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1510346624013172747" timestamp="2026-05-30T21:18:16.048000Z" profile="1195675629010558986">Кратко что я вам предлагаю<br/>Актив, 0 нарушений от вас</discord-message>
+<discord-message id="m-1510346681126752369" timestamp="2026-05-30T21:18:29.665000Z" profile="1448059157897809940">так стойте</discord-message>
+<discord-message id="m-1510346699888136243" timestamp="2026-05-30T21:18:34.138000Z" profile="1448059157897809940">а как же офис</discord-message>
+<discord-message id="m-1510346741528920074" timestamp="2026-05-30T21:18:44.066000Z" profile="1448059157897809940">у нас офис на главном вьезде в хай рок</discord-message>
+<discord-message id="m-1510346760566870228" timestamp="2026-05-30T21:18:48.605000Z" profile="1195675629010558986"><discord-reply slot="reply" author="[MD-023] Bacon_baconkin" avatar="" role-color="#50b46e"><span data-goto="1510346699888136243">а как же офис</span></discord-reply>У ЧОП может быть два офиса, которые владелец обязан обозначить (почтовый код + номер здания). Офисами обязательно должны являться постройки (здание или дом).</discord-message>
+<discord-message id="m-1510346792154304524" timestamp="2026-05-30T21:18:56.136000Z" profile="1195675629010558986">у вас был там</discord-message>
+<discord-message id="m-1510346796818239659" timestamp="2026-05-30T21:18:57.248000Z" profile="1195675629010558986">я помню</discord-message>
+<discord-message id="m-1510346847687020594" timestamp="2026-05-30T21:19:09.376000Z" profile="1448059157897809940">какой толк от домов если их мирные граждане БЕРУТ ДЛЯ ТОГО ЧТОБЫ ПОЖИТЬ ТАМ</discord-message>
+<discord-message id="m-1510346920214925425" timestamp="2026-05-30T21:19:26.668000Z" profile="1448059157897809940"><discord-reply slot="reply" author="The_Borisik" avatar="" role-color="#424cff"><span data-goto="1510346760566870228">У ЧОП может быть два офиса, которые владелец обязан обозначить (почтовый код + номер здания). Офисам</span></discord-reply>так а территорию</discord-message>
+<discord-message id="m-1510346937730339006" timestamp="2026-05-30T21:19:30.844000Z" profile="1448059157897809940">можно увеличить?</discord-message>
+<discord-message id="m-1510346952502542347" timestamp="2026-05-30T21:19:34.366000Z" profile="1448059157897809940">и</discord-message>
+<discord-message id="m-1510346973280993532" timestamp="2026-05-30T21:19:39.320000Z" profile="1448059157897809940">вопрос</discord-message>
+<discord-message id="m-1510346986354901203" timestamp="2026-05-30T21:19:42.437000Z" profile="1195675629010558986"><discord-reply slot="reply" author="[MD-023] Bacon_baconkin" avatar="" role-color="#50b46e"><span data-goto="1510346937730339006">можно увеличить?</span></discord-reply>см пункт 4</discord-message>
+<discord-message id="m-1510347039043489874" timestamp="2026-05-30T21:19:54.999000Z" profile="1195675629010558986">территория так же входит в правила</discord-message>
+<discord-message id="m-1510347139690266824" timestamp="2026-05-30T21:20:18.995000Z" profile="1448059157897809940">чутка не понял А-4 правило</discord-message>
+<discord-message id="m-1510347231243407591" timestamp="2026-05-30T21:20:40.823000Z" profile="1448059157897809940">типо</discord-message>
+<discord-message id="m-1510347269172494448" timestamp="2026-05-30T21:20:49.866000Z" profile="1448059157897809940">если я сижу щас на офисе на территории чопа</discord-message>
+<discord-message id="m-1510347303070859404" timestamp="2026-05-30T21:20:57.948000Z" profile="1448059157897809940">если я уеду  с нее то там нарушение?<discord-reactions slot="reactions"><discord-reaction emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" count="1"></discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1510347390282891415" timestamp="2026-05-30T21:21:18.741000Z" profile="1448059157897809940">чего</discord-message>
+<discord-message id="m-1510347402849157242" timestamp="2026-05-30T21:21:21.737000Z" profile="1195675629010558986">Ну если вы едите на другой объект который вы охраняйте</discord-message>
+<discord-message id="m-1510347415843111102" timestamp="2026-05-30T21:21:24.835000Z" profile="1195675629010558986">ТО это не будет нарушением</discord-message>
+<discord-message id="m-1510347462647480510" timestamp="2026-05-30T21:21:35.994000Z" profile="1448059157897809940">а типо поехать проверять чоп</discord-message>
+<discord-message id="m-1510347478187376700" timestamp="2026-05-30T21:21:39.699000Z" profile="1448059157897809940">ой</discord-message>
+<discord-message id="m-1510347499087462551" timestamp="2026-05-30T21:21:44.682000Z" profile="1448059157897809940">территорию хай рока</discord-message>
+<discord-message id="m-1510347535279984751" timestamp="2026-05-30T21:21:53.311000Z" profile="1448059157897809940">на квадроциклах</discord-message>
+<discord-message id="m-1510347644059521136" timestamp="2026-05-30T21:22:19.246000Z" profile="1195675629010558986"><discord-reply slot="reply" author="[MD-023] Bacon_baconkin" avatar="" role-color="#50b46e"><span data-goto="1510347499087462551">территорию хай рока</span></discord-reply>На вашу территорию пока что максимум</discord-message>
+<discord-message id="m-1510347712413958407" timestamp="2026-05-30T21:22:35.543000Z" profile="1195675629010558986">А-4.1 — Патруль для сотрудников ЧОП-а разрешен только на территории, закрепленной за ЧОП-ом и территории заказчика.</discord-message>
+<discord-message id="m-1510347721712603226" timestamp="2026-05-30T21:22:37.760000Z" profile="1448059157897809940">тоесть нельзя?</discord-message>
+<discord-message id="m-1510347751303544863" timestamp="2026-05-30T21:22:44.815000Z" profile="1448059157897809940"><discord-reply slot="reply" author="The_Borisik" avatar="" role-color="#424cff"><span data-goto="1510347712413958407">А-4.1 — Патруль для сотрудников ЧОП-а разрешен только на территории, закрепленной за ЧОП-ом и террит</span></discord-reply>ммм</discord-message>
+<discord-message id="m-1510347803468239038" timestamp="2026-05-30T21:22:57.252000Z" profile="1448059157897809940">а как увеличить?</discord-message>
+<discord-message id="m-1510347819280633937" timestamp="2026-05-30T21:23:01.022000Z" profile="1448059157897809940">территорию чопа</discord-message>
+<discord-message id="m-1510347870262268005" timestamp="2026-05-30T21:23:13.177000Z" profile="1195675629010558986"><discord-reply slot="reply" author="Deleted User" avatar="https://media.discordapp.net/attachments/1363556047704293517/1485751447248437248/image.png?ex=69c3015c&is=69c1afdc&hm=6ae634e1105f4db2533f26197a450f7137a9193ce9ce2cf23a62ec1ce6027b75&=&format=webp&quality=lossless" role-color="#ffffff"><span data-goto="1510347822107725914">[deleted]</span></discord-reply>Заказчики это владельцы бизнесов</discord-message>
+<discord-message id="m-1510347906480082954" timestamp="2026-05-30T21:23:21.812000Z" profile="1195675629010558986">Спасибо что вставил фото сюда корон</discord-message>
+<discord-message id="m-1510347969017417738" timestamp="2026-05-30T21:23:36.722000Z" profile="1195675629010558986">Пункт из правил бизнесов<br/><blockquote> B-3 — Охрана и ЧОП. Бизнес имеет право нанимать охрану. Это фиксируется IC-договором и согласием с Менеджером Гражданских операций.</blockquote></discord-message>
+<discord-message id="m-1510348048029585419" timestamp="2026-05-30T21:23:55.560000Z" profile="1448059157897809940"><discord-reply slot="reply" author="The_Borisik" avatar="" role-color="#424cff"><span data-goto="1510347969017417738">Пункт из правил бизнесов
+ B-3 — Охрана и ЧОП. Бизнес имеет право нанимать охрану. Это фиксируется I</span></discord-reply>ебануться правила</discord-message>
+<discord-message id="m-1510348062764306552" timestamp="2026-05-30T21:23:59.073000Z" profile="1448059157897809940">на каждом месте</discord-message>
+<discord-message id="m-1510348093311287316" timestamp="2026-05-30T21:24:06.356000Z" profile="1448059157897809940">так</discord-message>
+<discord-message id="m-1510348107106484360" timestamp="2026-05-30T21:24:09.645000Z" profile="1448059157897809940">короче</discord-message>
+<discord-message id="m-1510348124084764824" timestamp="2026-05-30T21:24:13.693000Z" profile="1448059157897809940">что там надо</discord-message>
+<discord-message id="m-1510348144062238882" timestamp="2026-05-30T21:24:18.456000Z" profile="1448059157897809940">отличная репутация</discord-message>
+<discord-message id="m-1510348183417393163" timestamp="2026-05-30T21:24:27.839000Z" profile="1448059157897809940">в IC моментах так и в OOC</discord-message>
+<discord-message id="m-1510348215344693330" timestamp="2026-05-30T21:24:35.451000Z" profile="1448059157897809940">0 нарушений правил</discord-message>
+<discord-message id="m-1510348230960087151" timestamp="2026-05-30T21:24:39.174000Z" profile="1448059157897809940">и</discord-message>
+<discord-message id="m-1510348236903420105" timestamp="2026-05-30T21:24:40.591000Z" profile="1448059157897809940">все?</discord-message>
+<discord-message id="m-1510348284655435989" timestamp="2026-05-30T21:24:51.976000Z" profile="1195675629010558986"><discord-reply slot="reply" author="[MD-023] Bacon_baconkin" avatar="" role-color="#50b46e"><span data-goto="1510348183417393163">в IC моментах так и в OOC</span></discord-reply>Хорошую можно</discord-message>
+<discord-message id="m-1510348315160739943" timestamp="2026-05-30T21:24:59.249000Z" profile="1195675629010558986">Да</discord-message>
+<discord-message id="m-1510348333053382726" timestamp="2026-05-30T21:25:03.515000Z" profile="1195675629010558986"><discord-reply slot="reply" author="The_Borisik" avatar="" role-color="#424cff"><span data-goto="1510346232974016552">1. Делаю заявку для вас и вы напишите её для создания своего ЧОПа. Старый чоп вы не сможете уже сдел</span></discord-reply>Ну вот весь список</discord-message>
+<discord-message id="m-1510348450292564068" timestamp="2026-05-30T21:25:31.467000Z" profile="1448059157897809940">угу</discord-message>
+<discord-message id="m-1510348477102821628" timestamp="2026-05-30T21:25:37.859000Z" profile="1448059157897809940">но ест ьеще один не закрытый вопрос</discord-message>
+<discord-message id="m-1510348501572255955" timestamp="2026-05-30T21:25:43.693000Z" profile="1448059157897809940">как увеличить территорию?</discord-message>
+<discord-message id="m-1510348558702739687" timestamp="2026-05-30T21:25:57.314000Z" profile="1448059157897809940">тоетсь тчобы весь хай рок был нашим</discord-message>
+<discord-message id="m-1510348580009807943" timestamp="2026-05-30T21:26:02.394000Z" profile="1448059157897809940">это надо соглаосвание</discord-message>
+<discord-message id="m-1510348597219295384" timestamp="2026-05-30T21:26:06.497000Z" profile="1448059157897809940">в OOC</discord-message>
+<discord-message id="m-1510348618144546916" timestamp="2026-05-30T21:26:11.486000Z" profile="1448059157897809940">и в IC</discord-message>
+<discord-message id="m-1510348640672288930" timestamp="2026-05-30T21:26:16.857000Z" profile="1448059157897809940">бумажном договоре</discord-message>
+<discord-message id="m-1510348645667569714" timestamp="2026-05-30T21:26:18.048000Z" profile="1448059157897809940">?</discord-message>
+<discord-message id="m-1510348655515926618" timestamp="2026-05-30T21:26:20.396000Z" profile="1195675629010558986">в IC думаю не надо</discord-message>
+<discord-message id="m-1510348724793114815" timestamp="2026-05-30T21:26:36.913000Z" profile="1195675629010558986"><discord-reply slot="reply" author="[MD-023] Bacon_baconkin" avatar="" role-color="#50b46e"><span data-goto="1510348501572255955">как увеличить территорию?</span></discord-reply>опять же ваша территория закреплена правилами</discord-message>
+<discord-message id="m-1510348749896155228" timestamp="2026-05-30T21:26:42.898000Z" profile="1195675629010558986"><discord-reply slot="reply" author="The_Borisik" avatar="" role-color="#424cff"><span data-goto="1510346232974016552">1. Делаю заявку для вас и вы напишите её для создания своего ЧОПа. Старый чоп вы не сможете уже сдел</span></discord-reply>смотрите пункт 4 тут</discord-message>
+<discord-message id="m-1510348805327949986" timestamp="2026-05-30T21:26:56.114000Z" profile="1448059157897809940">ну</discord-message>
+<discord-message id="m-1510348821995978824" timestamp="2026-05-30T21:27:00.088000Z" profile="1448059157897809940">а увеличить как?</discord-message>
+<discord-message id="m-1510349317066457240" timestamp="2026-05-30T21:28:58.122000Z" profile="1448059157897809940">терру</discord-message>
+<discord-message id="m-1510349407500107996" timestamp="2026-05-30T21:29:19.683000Z" profile="1195675629010558986">Рассказываю подробнее пункт 4.<br/>Если вы будете хорошо себя показывать вообще со всех сторон (как в ООС так и в IC) то я буду пересматривать ваши правила. В эти правила так же входят ваша основная территория. Тоесть я могу вам её взять и изменить побольше (Опять же если будете себя хорошо показывать). Но если вы будете плохими и тыщу жалоб (не считая душки) то пересмотр правил не будет и вероятно мы закроем снова ваш ЧОП<discord-attachments slot="attachments"><discord-attachment type="image" filename="image.png" url="https://transcripts.erlcrussia.xyz/attachments/1510349407500107996_1510349406967435395.png"></discord-attachment></discord-attachments></discord-message>
+<discord-message id="m-1510349664992362537" timestamp="2026-05-30T21:30:21.074000Z" profile="1448059157897809940"><discord-reply slot="reply" author="The_Borisik" avatar="" role-color="#424cff"><span data-goto="1510349407500107996">Рассказываю подробнее пункт 4.
+Если вы будете хорошо себя показывать вообще со всех сторон (как в ОО</span></discord-reply>ну у нас были траблы с прокой которые говорили что по факту это не наша территорию но мы в IC моментах им показывали документы и даже сам руководитель прокой говорил чт овсе нормально</discord-message>
+<discord-message id="m-1510349707430592632" timestamp="2026-05-30T21:30:31.192000Z" profile="1448059157897809940">была максимум душка с проки и ОПГ</discord-message>
+<discord-message id="m-1510349713004822708" timestamp="2026-05-30T21:30:32.521000Z" profile="1195675629010558986"><discord-reply slot="reply" author="[MD-023] Bacon_baconkin" avatar="" role-color="#50b46e"><span data-goto="1510349664992362537">ну у нас были траблы с прокой которые говорили что по факту это не наша территорию но мы в IC момент</span></discord-reply>Щас и лидер другой вроде как</discord-message>
+<discord-message id="m-1510349745070014475" timestamp="2026-05-30T21:30:40.166000Z" profile="1448059157897809940"><discord-reply slot="reply" author="The_Borisik" avatar="" role-color="#424cff"><span data-goto="1510349713004822708">Щас и лидер другой вроде как</span></discord-reply>ага</discord-message>
+<discord-message id="m-1510349765999591484" timestamp="2026-05-30T21:30:45.156000Z" profile="1448059157897809940">ну короче ответ</discord-message>
+<discord-message id="m-1510349790737858652" timestamp="2026-05-30T21:30:51.054000Z" profile="1448059157897809940">возвраждение можно?</discord-message>
+<discord-message id="m-1510349805367332997" timestamp="2026-05-30T21:30:54.542000Z" profile="1195675629010558986"><discord-reply slot="reply" author="[MD-023] Bacon_baconkin" avatar="" role-color="#50b46e"><span data-goto="1510349707430592632">была максимум душка с проки и ОПГ</span></discord-reply>Правила опг скоро тоже обновим</discord-message>
+<discord-message id="m-1510349914054328440" timestamp="2026-05-30T21:31:20.455000Z" profile="1448059157897809940"><discord-reply slot="reply" author="[MD-023] Bacon_baconkin" avatar="" role-color="#50b46e"><span data-goto="1510349790737858652">возвраждение можно?</span></discord-reply>.</discord-message>
+<discord-message id="m-1510349932706664589" timestamp="2026-05-30T21:31:24.902000Z" profile="1448059157897809940"><discord-reply slot="reply" author="The_Borisik" avatar="" role-color="#424cff"><span data-goto="1510349805367332997">Правила опг скоро тоже обновим</span></discord-reply>окей</discord-message>
+<discord-message id="m-1510349967460667423" timestamp="2026-05-30T21:31:33.188000Z" profile="1195675629010558986">1. Делаю заявку для вас и вы напишите её для создания своего ЧОПа. Старый чоп вы не сможете уже сделать.</discord-message>
+<discord-message id="m-1510350009869144084" timestamp="2026-05-30T21:31:43.299000Z" profile="1195675629010558986"><discord-reply slot="reply" author="The_Borisik" avatar="" role-color="#424cff"><span data-goto="1510346232974016552">1. Делаю заявку для вас и вы напишите её для создания своего ЧОПа. Старый чоп вы не сможете уже сдел</span></discord-reply>Вы если тут со всем согласны то я делаю заявку</discord-message>
+<discord-message id="m-1510350227394265269" timestamp="2026-05-30T21:32:35.161000Z" profile="1448059157897809940"><discord-reply slot="reply" author="The_Borisik" avatar="" role-color="#424cff"><span data-goto="1510349967460667423">1. Делаю заявку для вас и вы напишите её для создания своего ЧОПа. Старый чоп вы не сможете уже сдел</span></discord-reply>тоесть только новое название</discord-message>
+<discord-message id="m-1510350270259793973" timestamp="2026-05-30T21:32:45.381000Z" profile="1195675629010558986"><discord-reply slot="reply" author="[MD-023] Bacon_baconkin" avatar="" role-color="#50b46e"><span data-goto="1510350227394265269">тоесть только новое название</span></discord-reply>новый чоп</discord-message>
+<discord-message id="m-1510350280464793712" timestamp="2026-05-30T21:32:47.814000Z" profile="1195675629010558986">новая репутация</discord-message>
+<discord-message id="m-1510350287221817576" timestamp="2026-05-30T21:32:49.425000Z" profile="1195675629010558986">новая история</discord-message>
+<discord-message id="m-1510350305621971004" timestamp="2026-05-30T21:32:53.812000Z" profile="1448059157897809940">ну понятно</discord-message>
+<discord-message id="m-1510350334873309317" timestamp="2026-05-30T21:33:00.786000Z" profile="1448059157897809940">а мультикам можно?</discord-message>
+<discord-message id="m-1510350360236134641" timestamp="2026-05-30T21:33:06.833000Z" profile="1448059157897809940">потому что у всех скины на это</discord-message>
+<discord-message id="m-1510350370067579081" timestamp="2026-05-30T21:33:09.177000Z" profile="1448059157897809940">есть</discord-message>
+<discord-message id="m-1510350388308742184" timestamp="2026-05-30T21:33:13.526000Z" profile="1448059157897809940">из сотрудников</discord-message>
+<discord-message id="m-1510350410798469331" timestamp="2026-05-30T21:33:18.888000Z" profile="1195675629010558986">Нууу тут даже не знаю</discord-message>
+<discord-message id="m-1510350437100945488" timestamp="2026-05-30T21:33:25.159000Z" profile="1195675629010558986">Тут я думаю решит севинг</discord-message>
+<discord-message id="m-1510350485385777243" timestamp="2026-05-30T21:33:36.671000Z" profile="1448059157897809940">ну так то ты тут главный куратор</discord-message>
+<discord-message id="m-1510350495544512655" timestamp="2026-05-30T21:33:39.093000Z" profile="1448059157897809940">ГО</discord-message>
+<discord-message id="m-1510350505820553216" timestamp="2026-05-30T21:33:41.543000Z" profile="1448059157897809940">тебе решать</discord-message>
+<discord-message id="m-1510350534635290655" timestamp="2026-05-30T21:33:48.413000Z" profile="1448059157897809940">ну мультикам наше все</discord-message>
+<discord-message id="m-1510350564649599128" timestamp="2026-05-30T21:33:55.569000Z" profile="1448059157897809940">это наша идеология</discord-message>
+<discord-message id="m-1510350576515547327" timestamp="2026-05-30T21:33:58.398000Z" profile="1195675629010558986"><discord-reply slot="reply" author="[MD-023] Bacon_baconkin" avatar="" role-color="#50b46e"><span data-goto="1510350334873309317">а мультикам можно?</span></discord-reply><discord-mention type="user">savingbox3</discord-mention></discord-message>
+<discord-message id="m-1510350652994355344" timestamp="2026-05-30T21:34:16.632000Z" profile="585394439715946518">дам свой ответ позже</discord-message>
+<discord-message id="m-1510350675270177000" timestamp="2026-05-30T21:34:21.943000Z" profile="585394439715946518">перечитаю всё тут</discord-message>
+<discord-message id="m-1510350724448391300" timestamp="2026-05-30T21:34:33.668000Z" profile="1448059157897809940">ну так да - да , нет - нет</discord-message>
+<discord-message id="m-1510350759533740112" timestamp="2026-05-30T21:34:42.033000Z" profile="1195675629010558986"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1510350652994355344">дам свой ответ позже</span></discord-reply>Тогда вот все перечитай и дай ответ</discord-message>
+<discord-message id="m-1510350774763520114" timestamp="2026-05-30T21:34:45.664000Z" profile="1448059157897809940">можно - можно , нельзя - нельзя</discord-message>
+<discord-message id="m-1510350786239009011" timestamp="2026-05-30T21:34:48.400000Z" profile="1195675629010558986">И после него начну делать заявку</discord-message>
+<discord-message id="m-1510350901901135922" timestamp="2026-05-30T21:35:15.976000Z" profile="585394439715946518">ребят, вы в прошлый раз создали чвк на пеньках</discord-message>
+<discord-message id="m-1510350917105483938" timestamp="2026-05-30T21:35:19.601000Z" profile="585394439715946518">из этого ничего не вышло</discord-message>
+<discord-message id="m-1510350966493417482" timestamp="2026-05-30T21:35:31.376000Z" profile="585394439715946518">дам свой ответ позже</discord-message>
+<discord-message id="m-1510351722130702557" timestamp="2026-05-30T21:38:31.534000Z" profile="1448059157897809940"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1510350901901135922">ребят, вы в прошлый раз создали чвк на пеньках</span></discord-reply>если что ЧВК нету в РФ</discord-message>
+<discord-message id="m-1510351794537234533" timestamp="2026-05-30T21:38:48.797000Z" profile="1448059157897809940">но мы переименовали себя как ЧОП</discord-message>
+<discord-message id="m-1510351846185762878" timestamp="2026-05-30T21:39:01.111000Z" profile="1448059157897809940">и не на пеньках</discord-message>
+<discord-message id="m-1510351880365281310" timestamp="2026-05-30T21:39:09.260000Z" profile="1448059157897809940"><discord-reply slot="reply" author="savingbox3" avatar="" role-color="#d4843d"><span data-goto="1510350917105483938">из этого ничего не вышло</span></discord-reply>и как бы вышло</discord-message>
+<discord-message id="m-1510351935784353853" timestamp="2026-05-30T21:39:22.473000Z" profile="1448059157897809940">1. Отличная репутация от госс и персонала сервера</discord-message>
+<discord-message id="m-1510352043280171218" timestamp="2026-05-30T21:39:48.102000Z" profile="1448059157897809940">2. помощь и организация сотрудникам органов в поимке ОПГ</discord-message>
+<discord-message id="m-1510352152273621262" timestamp="2026-05-30T21:40:14.088000Z" profile="1448059157897809940">3. мы охраняли бизнесы под постал-кодами</discord-message>
+<discord-message id="m-1510352301322145943" timestamp="2026-05-30T21:40:49.624000Z" profile="1448059157897809940">4. охраняли Хай Рок парк , не давали пройти туда незнакомым лицам которые хотели сделать терракты</discord-message>
+<discord-message id="m-1510352311510237204" timestamp="2026-05-30T21:40:52.053000Z" profile="1448059157897809940">и так далее</discord-message>
+<discord-message id="m-1510352342510211222" timestamp="2026-05-30T21:40:59.444000Z" profile="1448059157897809940">еще много много много</discord-message>
+<discord-message id="m-1510352767880003714" timestamp="2026-05-30T21:42:40.860000Z" profile="1448059157897809940">но нам ответ дали</discord-message>
+<discord-message id="m-1510352785994944653" timestamp="2026-05-30T21:42:45.179000Z" profile="1448059157897809940">чоп можно возврадить</discord-message>
+<discord-message id="m-1513794134908076183" timestamp="2026-06-09T09:37:26.697000Z" profile="585394439715946518">Здравствуйте, в данный момент запрещены любые неофициальные организации.</discord-message>
+<discord-message id="m-1513794150384795778" timestamp="2026-06-09T09:37:30.387000Z" profile="585394439715946518">тикет закрываю</discord-message>
+<discord-message id="m-1513794769464197282" timestamp="2026-06-09T09:39:57.987000Z" profile="1448059157897809940">Тоесть всмысле</discord-message>
+<discord-message id="m-1513794799151480912" timestamp="2026-06-09T09:40:05.065000Z" profile="1448059157897809940">Теперь чоп неофициальная организация?</discord-message>
+<discord-message id="m-1513795952299999302" timestamp="2026-06-09T09:44:39.997000Z" profile="585394439715946518">да, правил чопа больше нет</discord-message>
+<discord-message id="m-1513796047212777584" timestamp="2026-06-09T09:45:02.626000Z" profile="585394439715946518">вы хотели создать свой чоп?</discord-message>
+<discord-message id="m-1513896045099356210" timestamp="2026-06-09T16:22:23.980000Z" profile="1448059157897809940">Ну я с саоим другом хотел</discord-message>
+<discord-message id="m-1513896062342139904" timestamp="2026-06-09T16:22:28.091000Z" profile="1448059157897809940">Почему чоп убрали</discord-message>
+<discord-message id="m-1513931915537678377" timestamp="2026-06-09T18:44:56.159000Z" profile="1133665013794607114">Потому что они не тем чем нужно занимаются</discord-message>
+<discord-message id="m-1513931949037846720" timestamp="2026-06-09T18:45:04.146000Z" profile="1133665013794607114">Последний чоп был ЧВК</discord-message>
+<discord-message id="m-1513936171099754567" timestamp="2026-06-09T19:01:50.764000Z" profile="1448059157897809940"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="" role-color="#ffffff"><span data-goto="1513931949037846720">Последний чоп был ЧВК</span></discord-reply>Не думаю</discord-message>
+<discord-message id="m-1513944992010338497" timestamp="2026-06-09T19:36:53.833000Z" profile="1381962421588988074"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет закроется через несколько секунд...</span></div></div></div></discord-message>
+</discord-messages></body></html>
