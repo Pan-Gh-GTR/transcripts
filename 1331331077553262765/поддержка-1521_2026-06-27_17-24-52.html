@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Гражданские Операции — поддержка-1521</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1363556047704293517/1513924719437680660/-ERLC------.png?ex=6a297fc4&is=6a282e44&hm=1810ee6d4c66657140fbb7fc3d89572de5b7768f2648ec3a721f0b730e083520&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1499112043855482980":{"author":"ERLC Россия","avatar":"https://cdn.discordapp.com/avatars/1499112043855482980/8bfcdd85f17467e7032a3e4a480432e8.png?size=128","roleColor":"#ffffff","roleIcon":"","roleName":"User","bot":true,"verified":false},"1513303728290267148":{"author":"Nussty","avatar":"https://cdn.discordapp.com/embed/avatars/2.png","roleColor":"#ffffff","roleIcon":"","roleName":"User","bot":false,"verified":false},"970713754411089940":{"author":"Orvile","avatar":"https://cdn.discordapp.com/avatars/970713754411089940/22eca4ffb63103b0724bd6a36d52a123.png?size=128","roleColor":"#ffffff","roleIcon":"","roleName":"User","bot":false,"verified":false},"426537812993638400":{"author":"Bloxlink","avatar":"https://cdn.discordapp.com/avatars/426537812993638400/3b5bf728b1f484541783b1566bf6529f.png?size=128","roleColor":"#ffffff","roleIcon":"","roleName":"User","bot":true,"verified":true},"1143972955374756040":{"author":"S1rex","avatar":"https://cdn.discordapp.com/avatars/1143972955374756040/b4f67309ff383483dad9fba32eabb56e.png?size=128","roleColor":"#ffffff","roleIcon":"","roleName":"User","bot":false,"verified":false}}};</script>
+<style>
+body{background:#36393f;color:#dcddde;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;margin:0;padding:0}
+#lightboxOverlay{display:none;position:fixed;left:0;top:0;right:0;bottom:0;width:100vw;height:100vh;z-index:99999;background:rgba(30,30,30,.85);align-items:center;justify-content:center}
+#lightboxImg{max-width:90vw;max-height:90vh;object-fit:contain;border-radius:6px;box-shadow:0 4px 20px rgba(0,0,0,.6);background:#222}
+discord-reactions{display:flex;flex-wrap:wrap;gap:2px;margin-top:8px}
+discord-reaction{display:inline-flex;align-items:center;border-radius:6px;margin-right:2px;padding:2px 4px;font-size:14px;color:#dcddde}
+discord-custom-emoji{vertical-align:middle;margin-right:4px}
+.emoji-img{height:18px;width:18px;vertical-align:middle;display:inline-block;object-fit:contain}
+.reply-preview{margin-bottom:6px;padding:6px 10px;border-left:3px solid #5865f2;background:#2b2d31;border-radius:4px;color:#b5bac1;cursor:pointer}
+</style>
+<script>
+    document.addEventListener("click", (event) => {
+      const target = event.target;
+      if (!target) return;
+      const goto = target.getAttribute && target.getAttribute("data-goto");
+      if (goto) {
+        const reply = document.getElementById("m-" + goto);
+        if (reply) {
+          reply.scrollIntoView({ behavior: "smooth", block: "center" });
+          reply.style.backgroundColor = "rgba(148,156,247,0.1)";
+          reply.style.transition = "background-color 0.5s ease";
+          setTimeout(() => { reply.style.backgroundColor = "transparent"; }, 1000);
+        }
+      }
+      if (target.matches && target.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+        const src = target.getAttribute("src") || "";
+        if (src) {
+          const overlay = document.getElementById("lightboxOverlay");
+          const img = document.getElementById("lightboxImg");
+          overlay.style.display = "flex";
+          img.src = src;
+        }
+      }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+      const overlay = document.getElementById("lightboxOverlay");
+      if (overlay) overlay.addEventListener("click", () => { overlay.style.display = "none"; });
+    });
+  </script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/a06dfa47e027eb8acdf25152e486f1c8.webp?size=1024" timestamp="2026-06-27_17-24-52">Тикет Закрыт.<br/>Причина: Проблема решена.<br/>Закрыл: <@1005561047396130848><br/>Дата: 2026-06-27_17-24-52<br/><a href="https://transcripts.erlcrussia.xyz/1331331077553262765/поддержка-1521_2026-06-27_17-24-52.html" style="color: #00aff4;">https://transcripts.erlcrussia.xyz/1331331077553262765/поддержка-1521_2026-06-27_17-24-52.html</a></discord-message>
+<discord-message id="m-1519741523749638156" timestamp="2026-06-25T16:30:14.694Z" profile="1499112043855482980"><div slot="components" style="margin-top:8px;"><div style="padding:8px;color:#dcddde;"><discord-mention type="role">Персонал Discord</discord-mention> <discord-mention type="role">Персонал ER:LC</discord-mention> <discord-mention type="user">Nussty</discord-mention></div><div style="background:#2f3136;border-left:4px solid #006800;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:8px 12px;"><div style="display:flex;gap:16px;align-items:flex-start;"><img src="https://cdn.discordapp.com/embed/avatars/2.png" style="width:80px;height:80px;border-radius:8px;object-fit:cover;flex-shrink:0;" /><div><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg" alt="📨" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Новый Тикет — Поддержка</span><br/><strong>В чём проблема:</strong><br/>Как попасть в ФСБ?</div></div></div><div style="padding:4px 12px;color:#dcddde;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/23f3.svg" alt="⏳" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> <strong>Ожидайте ответа от персонала.</strong></div><div style="height:1px;background:#4f545c;margin:4px 0;"></div><div style="height:8px;"></div><div style="display:flex;gap:8px;padding:8px 0;flex-wrap:wrap;"><button disabled style="background:#4f545c;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;">🔒 Закрыть Тикет</button><button disabled style="background:#4f545c;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;">📤 Освободить Тикет</button></div></div></div></discord-message>
+<discord-message id="m-1519741607224803328" timestamp="2026-06-25T16:30:34.596Z" profile="1499112043855482980"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e5.svg" alt="📥" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет взят <discord-mention type="user">Orvile</discord-mention>.</span></div></div></div></discord-message>
+<discord-message id="m-1519741693090332863" timestamp="2026-06-25T16:30:55.068Z" profile="970713754411089940">Добрый вечер, я сотрудник Команды Внутренних Дел / Тимлид персонала</discord-message>
+<discord-message id="m-1519741864796754051" timestamp="2026-06-25T16:31:36.006Z" profile="970713754411089940">Чтобы попасть в ФСБ, вам нужно для начала вступить в МВД, затем ожидать вербовку в ФСБ, или перевод</discord-message>
+<discord-message id="m-1519741997437554838" timestamp="2026-06-25T16:32:07.630Z" profile="1513303728290267148"><discord-reply slot="reply" author="Orvile" avatar="https://cdn.discordapp.com/avatars/970713754411089940/22eca4ffb63103b0724bd6a36d52a123.png?size=128" role-color="#ffffff"><span data-goto="1519741864796754051">Чтобы попасть в ФСБ, вам нужно для начала вступить в МВД, затем ожидать вербовку в ФСБ, или перевод</span></discord-reply>А чтоб в МВД?</discord-message>
+<discord-message id="m-1519742046964027544" timestamp="2026-06-25T16:32:19.438Z" profile="970713754411089940">так же пройдите верификацию по команде /verify</discord-message>
+<discord-message id="m-1519742074293846088" timestamp="2026-06-25T16:32:25.954Z" profile="970713754411089940">через бота <discord-mention type="user">Bloxlink</discord-mention></discord-message>
+<discord-message id="m-1519742131357614181" timestamp="2026-06-25T16:32:39.559Z" profile="426537812993638400">To verify with Bloxlink, click the link below.<div slot="components" style="margin-top:8px;"><div style="display:flex;gap:8px;padding:8px 0;flex-wrap:wrap;"><a href="https://blox.link/dashboard/verifications" target="_blank" style="background:#5865F2;color:#ffffff;padding:8px 16px;border-radius:4px;text-decoration:none;display:inline-flex;align-items:center;font-size:14px;font-weight:500;">Verify with Bloxlink</a><a href="https://www.youtube.com/watch?v=SbDltmom1R8&amp;list=PLz7SOP-guESE1V6ywCCLc1IQWiLURSvBE&amp;index=1&amp;ab_channel=Bloxlink" target="_blank" style="background:#5865F2;color:#ffffff;padding:8px 16px;border-radius:4px;text-decoration:none;display:inline-flex;align-items:center;font-size:14px;font-weight:500;">Stuck? See a Tutorial</a></div></div></discord-message>
+<discord-message id="m-1519742187531796691" timestamp="2026-06-25T16:32:52.952Z" profile="970713754411089940"><discord-reply slot="reply" author="Nussty" avatar="https://cdn.discordapp.com/embed/avatars/2.png" role-color="#ffffff"><span data-goto="1519741997437554838">А чтоб в МВД?</span></discord-reply>чтобы поступить в МВД, нужно написать заявку в ППС или ДПС</discord-message>
+<discord-message id="m-1519742281077494090" timestamp="2026-06-25T16:33:15.255Z" profile="426537812993638400"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" alt="✅" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Верификация успешно пройдена! Добро пожаловать на сервер <strong>Moscow RolePlay</strong>, Sashapozzzz! Вы получили доступ ко всем каналам сообщества. Если Вам потребуется сменить привязанный аккаунт, пожалуйста, воспользуйтесь следующей ссылкой: <a href="https://blox.link/dashboard/user/verifications/verify?page=username" style="color:#00aff4;text-decoration:underline;" target="_blank">https://blox.link/dashboard/user/verifications/verify?page=username</a> . При возникновении вопросов или трудностей Вы всегда можете открыть тикет в канале #╚-тикеты. Желаем Вам приятной игры!<div slot="embeds" style="margin-top:8px;padding:12px;border-left:4px solid #5865f2;background:#2b2d31;border-radius:4px;"><div style="font-weight:700;color:#fff;">Member Updated</div><div style="margin-top:8px;"><strong>Added Roles</strong><br/>&lt;@&amp;1416176095228858581&gt;</div><div style="margin-top:8px;"><strong>Nickname</strong><br/>Sashapozzzz</div></div></discord-message>
+<discord-message id="m-1519742494617767956" timestamp="2026-06-25T16:34:06.167Z" profile="1513303728290267148"><discord-reply slot="reply" author="Orvile" avatar="https://cdn.discordapp.com/avatars/970713754411089940/22eca4ffb63103b0724bd6a36d52a123.png?size=128" role-color="#ffffff"><span data-goto="1519742187531796691">чтобы поступить в МВД, нужно написать заявку в ППС или ДПС</span></discord-reply>А где?</discord-message>
+<discord-message id="m-1519742573445386272" timestamp="2026-06-25T16:34:24.961Z" profile="970713754411089940"><a href="https://discord.gg/3YuRYcRz6" style="color:#00aff4;text-decoration:underline;" target="_blank">https://discord.gg/3YuRYcRz6</a> вот дискорд сервер фракции</discord-message>
+<discord-message id="m-1520023174320754828" timestamp="2026-06-26T11:09:25.423Z" profile="1143972955374756040"><discord-mention type="user">Nussty</discord-mention> Закрываем тикет?</discord-message>
+<discord-message id="m-1520434745497092278" timestamp="2026-06-27T14:24:51.638Z" profile="1499112043855482980"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #f39c12;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет закроется через несколько секунд...</span></div></div></div></discord-message>
+</discord-messages></body></html>
