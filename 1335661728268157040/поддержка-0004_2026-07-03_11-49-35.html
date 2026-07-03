@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Гражданские Операции — поддержка-0004</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1363556047704293517/1513218466390474902/5f265991675ebc94.png?ex=6a26ee04&is=6a259c84&hm=97049ab4e07b96ded1e781607d5f0062f2316362a5e91ca973e67d89747b3279&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1378287291604275200":{"author":"МЧС России","avatar":"https://cdn.discordapp.com/avatars/1378287291604275200/99b3e0416701d4e46b0ba9ae26adc417.png?size=128","roleColor":"#ffffff","roleIcon":"","roleName":"User","bot":true,"verified":false},"1143120062102908979":{"author":"ФиКУс","avatar":"https://cdn.discordapp.com/avatars/1143120062102908979/bf3a8bf8a7dcc16236c4d240a39ad02b.png?size=128","roleColor":"#ffffff","roleIcon":"","roleName":"User","bot":false,"verified":false},"1065653913698705519":{"author":"w1zardxxx","avatar":"https://cdn.discordapp.com/avatars/1065653913698705519/8f36af8352c6da954f52be7e4760f3f1.png?size=128","roleColor":"#ffffff","roleIcon":"","roleName":"User","bot":false,"verified":false},"1424043087474196661":{"author":"ПоZыVнОй Каспер","avatar":"https://cdn.discordapp.com/avatars/1424043087474196661/20b0f22f007a76b6b5566f04b10e8ba8.png?size=128","roleColor":"#ffffff","roleIcon":"","roleName":"User","bot":false,"verified":false}}};</script>
+<style>
+body{background:#36393f;color:#dcddde;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;margin:0;padding:0}
+#lightboxOverlay{display:none;position:fixed;left:0;top:0;right:0;bottom:0;width:100vw;height:100vh;z-index:99999;background:rgba(30,30,30,.85);align-items:center;justify-content:center}
+#lightboxImg{max-width:90vw;max-height:90vh;object-fit:contain;border-radius:6px;box-shadow:0 4px 20px rgba(0,0,0,.6);background:#222}
+discord-reactions{display:flex;flex-wrap:wrap;gap:2px;margin-top:8px}
+discord-reaction{display:inline-flex;align-items:center;border-radius:6px;margin-right:2px;padding:2px 4px;font-size:14px;color:#dcddde}
+discord-custom-emoji{vertical-align:middle;margin-right:4px}
+.emoji-img{height:18px;width:18px;vertical-align:middle;display:inline-block;object-fit:contain}
+.reply-preview{margin-bottom:6px;padding:6px 10px;border-left:3px solid #5865f2;background:#2b2d31;border-radius:4px;color:#b5bac1;cursor:pointer}
+</style>
+<script>
+    document.addEventListener("click", (event) => {
+      const target = event.target;
+      if (!target) return;
+      const goto = target.getAttribute && target.getAttribute("data-goto");
+      if (goto) {
+        const reply = document.getElementById("m-" + goto);
+        if (reply) {
+          reply.scrollIntoView({ behavior: "smooth", block: "center" });
+          reply.style.backgroundColor = "rgba(148,156,247,0.1)";
+          reply.style.transition = "background-color 0.5s ease";
+          setTimeout(() => { reply.style.backgroundColor = "transparent"; }, 1000);
+        }
+      }
+      if (target.matches && target.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+        const src = target.getAttribute("src") || "";
+        if (src) {
+          const overlay = document.getElementById("lightboxOverlay");
+          const img = document.getElementById("lightboxImg");
+          overlay.style.display = "flex";
+          img.src = src;
+        }
+      }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+      const overlay = document.getElementById("lightboxOverlay");
+      if (overlay) overlay.addEventListener("click", () => { overlay.style.display = "none"; });
+    });
+  </script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1335661728268157040/9988773f4b051ab95175686cdb51660e.webp?size=1024" timestamp="2026-07-03_11-49-35">Тикет Закрыт.<br/>Причина: Разобрались<br/>Закрыл: <@1143120062102908979><br/>Дата: 2026-07-03_11-49-35<br/><a href="https://transcripts.erlcrussia.xyz/1335661728268157040/поддержка-0004_2026-07-03_11-49-35.html" style="color: #00aff4;">https://transcripts.erlcrussia.xyz/1335661728268157040/поддержка-0004_2026-07-03_11-49-35.html</a></discord-message>
+<discord-message id="m-1522495574421540977" timestamp="2026-07-03T06:53:51.542Z" profile="1378287291604275200"><div slot="components" style="margin-top:8px;"><div style="padding:8px;color:#dcddde;"><discord-mention type="role">Высший Начальствующий Состав</discord-mention> <discord-mention type="user">ФиКУс</discord-mention></div><div style="background:#2f3136;border-left:4px solid #c90000;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:8px 12px;"><div style="display:flex;gap:16px;align-items:flex-start;"><img src="https://cdn.discordapp.com/avatars/1143120062102908979/bf3a8bf8a7dcc16236c4d240a39ad02b.webp" style="width:80px;height:80px;border-radius:8px;object-fit:cover;flex-shrink:0;" /><div><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg" alt="📨" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Новый Тикет — Поддержка</span><br/><strong>В чём проблема:</strong><br/>Меня приняли заявку но я вообще не понимаю что мне ждать и где ждать</div></div></div><div style="padding:4px 12px;color:#dcddde;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/23f3.svg" alt="⏳" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> <strong>Ожидайте ответа от персонала.</strong></div><div style="height:1px;background:#4f545c;margin:4px 0;"></div><div style="height:8px;"></div><div style="display:flex;gap:8px;padding:8px 0;flex-wrap:wrap;"><button disabled style="background:#4f545c;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;">🔒 Закрыть Тикет</button><button disabled style="background:#4f545c;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;">📥 Взять Тикет</button></div></div></div></discord-message>
+<discord-message id="m-1522518793740619777" timestamp="2026-07-03T08:26:07.459Z" profile="1065653913698705519">Вам приняли заявку, теперь свяжитесь с инструктором и он вам проведет тренировку</discord-message>
+<discord-message id="m-1522523660466913352" timestamp="2026-07-03T08:45:27.777Z" profile="1424043087474196661">Разобрались, тикет закрываем? <discord-mention type="user">ФиКУс</discord-mention></discord-message>
+<discord-message id="m-1522523961454235751" timestamp="2026-07-03T08:46:39.538Z" profile="1143120062102908979">а кто инструктор то?</discord-message>
+<discord-message id="m-1522524012574543902" timestamp="2026-07-03T08:46:51.726Z" profile="1424043087474196661">Секунду, щас скажу</discord-message>
+<discord-message id="m-1522524443727888444" timestamp="2026-07-03T08:48:34.521Z" profile="1424043087474196661">Инструктор ПСЧ - [PH-222] jgjgughjhf</discord-message>
+<discord-message id="m-1522524460681396234" timestamp="2026-07-03T08:48:38.563Z" profile="1424043087474196661"><discord-mention type="user">ФиКУс</discord-mention></discord-message>
+<discord-message id="m-1522524536707350600" timestamp="2026-07-03T08:48:56.689Z" profile="1143120062102908979">понял спасибо закрывайте<discord-reactions slot="reactions"><discord-reaction count="1" burst="false" me="false">❤️‍🔥</discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1522524602151075860" timestamp="2026-07-03T08:49:12.292Z" profile="1424043087474196661">Хорошей игры!</discord-message>
+<discord-message id="m-1522524697663639653" timestamp="2026-07-03T08:49:35.064Z" profile="1378287291604275200"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #f39c12;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет закроется через несколько секунд...</span></div></div></div></discord-message>
+</discord-messages></body></html>
