@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Гражданские Операции — поддержка-1508</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1363556047704293517/1513924719437680660/-ERLC------.png?ex=6a297fc4&is=6a282e44&hm=1810ee6d4c66657140fbb7fc3d89572de5b7768f2648ec3a721f0b730e083520&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1499112043855482980":{"author":"ERLC Россия","avatar":"https://cdn.discordapp.com/avatars/1499112043855482980/8bfcdd85f17467e7032a3e4a480432e8.png?size=128","roleColor":"#ffffff","roleIcon":"","roleName":"User","bot":true,"verified":false},"1411384931548135604":{"author":"Lort_Kyrt","avatar":"https://cdn.discordapp.com/avatars/1411384931548135604/eaf332b1074d7593270d1513623f986c.png?size=128","roleColor":"#ffffff","roleIcon":"","roleName":"User","bot":false,"verified":false},"760966468715937814":{"author":"bjmajgda","avatar":"https://cdn.discordapp.com/avatars/760966468715937814/880336b2d0d570e95d1f2c5fac203853.png?size=128","roleColor":"#ffffff","roleIcon":"","roleName":"User","bot":false,"verified":false},"625255619569647616":{"author":"h1kzenn","avatar":"https://cdn.discordapp.com/avatars/625255619569647616/3e874150d2e418646418c7dd6b38b8ad.png?size=128","roleColor":"#ffffff","roleIcon":"","roleName":"User","bot":false,"verified":false},"501686815120687105":{"author":"сквиртик","avatar":"https://cdn.discordapp.com/avatars/501686815120687105/d2ce72c80bc8a6bdbfa976e7c2a08cfd.png?size=128","roleColor":"#ffffff","roleIcon":"","roleName":"User","bot":false,"verified":false},"1133665013794607114":{"author":"Pancakeboyman_8","avatar":"https://cdn.discordapp.com/avatars/1133665013794607114/9952a7f75bf8748ecfd9a8e39af2e279.png?size=128","roleColor":"#ffffff","roleIcon":"","roleName":"User","bot":false,"verified":false},"1489183417110233229":{"author":"rebsqwizzy","avatar":"https://cdn.discordapp.com/avatars/1489183417110233229/92ee95c64d415b5b98fe6fabcafcc0b0.png?size=128","roleColor":"#ffffff","roleIcon":"","roleName":"User","bot":false,"verified":false}}};</script>
+<style>
+body{background:#36393f;color:#dcddde;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;margin:0;padding:0}
+#lightboxOverlay{display:none;position:fixed;left:0;top:0;right:0;bottom:0;width:100vw;height:100vh;z-index:99999;background:rgba(30,30,30,.85);align-items:center;justify-content:center}
+#lightboxImg{max-width:90vw;max-height:90vh;object-fit:contain;border-radius:6px;box-shadow:0 4px 20px rgba(0,0,0,.6);background:#222}
+discord-reactions{display:flex;flex-wrap:wrap;gap:2px;margin-top:8px}
+discord-reaction{display:inline-flex;align-items:center;border-radius:6px;margin-right:2px;padding:2px 4px;font-size:14px;color:#dcddde}
+discord-custom-emoji{vertical-align:middle;margin-right:4px}
+.emoji-img{height:18px;width:18px;vertical-align:middle;display:inline-block;object-fit:contain}
+.reply-preview{margin-bottom:6px;padding:6px 10px;border-left:3px solid #5865f2;background:#2b2d31;border-radius:4px;color:#b5bac1;cursor:pointer}
+</style>
+<script>
+    document.addEventListener("click", (event) => {
+      const target = event.target;
+      if (!target) return;
+      const goto = target.getAttribute && target.getAttribute("data-goto");
+      if (goto) {
+        const reply = document.getElementById("m-" + goto);
+        if (reply) {
+          reply.scrollIntoView({ behavior: "smooth", block: "center" });
+          reply.style.backgroundColor = "rgba(148,156,247,0.1)";
+          reply.style.transition = "background-color 0.5s ease";
+          setTimeout(() => { reply.style.backgroundColor = "transparent"; }, 1000);
+        }
+      }
+      if (target.matches && target.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+        const src = target.getAttribute("src") || "";
+        if (src) {
+          const overlay = document.getElementById("lightboxOverlay");
+          const img = document.getElementById("lightboxImg");
+          overlay.style.display = "flex";
+          img.src = src;
+        }
+      }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+      const overlay = document.getElementById("lightboxOverlay");
+      if (overlay) overlay.addEventListener("click", () => { overlay.style.display = "none"; });
+    });
+  </script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/a06dfa47e027eb8acdf25152e486f1c8.webp?size=1024" timestamp="2026-07-07_18-25-17">Тикет Закрыт.<br/>Причина: Актив поднят. Остальные идеи тоже примем к сведенью, если ещё не сделали.<br/>Закрыл: <@1133665013794607114><br/>Дата: 2026-07-07_18-25-17<br/><a href="https://transcripts.erlcrussia.xyz/1331331077553262765/поддержка-1508_2026-07-07_18-25-17.html" style="color: #00aff4;">https://transcripts.erlcrussia.xyz/1331331077553262765/поддержка-1508_2026-07-07_18-25-17.html</a></discord-message>
+<discord-message id="m-1519113903173533810" timestamp="2026-06-23T22:56:18.288Z" profile="1499112043855482980"><div slot="components" style="margin-top:8px;"><div style="padding:8px;color:#dcddde;"><discord-mention type="role">Персонал Discord</discord-mention> <discord-mention type="role">Персонал ER:LC</discord-mention> <discord-mention type="user">Lort_Kyrt</discord-mention></div><div style="background:#2f3136;border-left:4px solid #006800;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:8px 12px;"><div style="display:flex;gap:16px;align-items:flex-start;"><img src="https://cdn.discordapp.com/avatars/1411384931548135604/eaf332b1074d7593270d1513623f986c.webp" style="width:80px;height:80px;border-radius:8px;object-fit:cover;flex-shrink:0;" /><div><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg" alt="📨" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Новый Тикет — Поддержка</span><br/><strong>В чём проблема:</strong><br/>Крч я так понял у нас проект немного изменился и изменяется. Крч че я предлагаю изменить. 1 это руководство касаемо ивентов. Потому-что у нас я не знаю ивенты однотипные или же делать по типу раньше когда ивенты были эксклюзивные и интересные. 2 уволить весь состав которые ну младше 12-13 лет просто эти люди пока что не осознают что делают тот же cat aki человек сакура был в чсп и стал менеджентом это загадка для меня. 3. Начать делать рекламы нашего сервера как раньше или выпускать промо ролики. 4. Руководство касаемо фракций и кураторов типы нехуя не делают просиживают свои места по приколу у мвд 0 онлайн у фсб 0 онлайн и лидер неактив сидит в раст играет у мчс тоже 0 актив. 6. Делать всякие розыгрыши не только для вип типов но и для обычных работяг. 7. Ужесточить наборы для поступление в модерацию ERLС да я понимаю людей и так не много но лучше уж будет 3-4 адекватных типов, а не 16 балванчиков которые банальные ситуации разобрать не могут.Суть во всем этом что вы сможете завлечь игроков на это проект и что бы они играли на нем.</div></div></div><div style="padding:4px 12px;color:#dcddde;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/23f3.svg" alt="⏳" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> <strong>Ожидайте ответа от персонала.</strong></div><div style="height:1px;background:#4f545c;margin:4px 0;"></div><div style="height:8px;"></div><div style="display:flex;gap:8px;padding:8px 0;flex-wrap:wrap;"><button disabled style="background:#4f545c;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;">🔒 Закрыть Тикет</button><button disabled style="background:#4f545c;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;">📥 Взять Тикет</button></div></div></div></discord-message>
+<discord-message id="m-1519113971196756099" timestamp="2026-06-23T22:56:34.506Z" profile="1411384931548135604"><discord-mention type="user">bjmajgda</discord-mention> привет</discord-message>
+<discord-message id="m-1519115273045540905" timestamp="2026-06-23T23:01:44.891Z" profile="760966468715937814">Попа</discord-message>
+<discord-message id="m-1519115285104168972" timestamp="2026-06-23T23:01:47.766Z" profile="1499112043855482980"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e5.svg" alt="📥" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет взят <discord-mention type="user">bjmajgda</discord-mention>.</span></div></div></div></discord-message>
+<discord-message id="m-1519116323345662022" timestamp="2026-06-23T23:05:55.302Z" profile="760966468715937814"><discord-reply slot="reply" author="Lort_Kyrt" avatar="https://cdn.discordapp.com/avatars/1411384931548135604/eaf332b1074d7593270d1513623f986c.png?size=128" role-color="#ffffff"><span data-goto="1519113971196756099">&lt;@760966468715937814&gt; привет</span></discord-reply>теперь жди панкейка</discord-message>
+<discord-message id="m-1519116346921713734" timestamp="2026-06-23T23:06:00.923Z" profile="1499112043855482980"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #e74d3c;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e4.svg" alt="📤" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет освобождён <discord-mention type="user">bjmajgda</discord-mention>.</span></div></div></div></discord-message>
+<discord-message id="m-1519116416677187735" timestamp="2026-06-23T23:06:17.554Z" profile="1411384931548135604"><discord-reply slot="reply" author="bjmajgda" avatar="https://cdn.discordapp.com/avatars/760966468715937814/880336b2d0d570e95d1f2c5fac203853.png?size=128" role-color="#ffffff"><span data-goto="1519116323345662022">теперь жди панкейка</span></discord-reply>Я нищий смертный</discord-message>
+<discord-message id="m-1519116676967305387" timestamp="2026-06-23T23:07:19.612Z" profile="760966468715937814"><discord-reply slot="reply" author="Lort_Kyrt" avatar="https://cdn.discordapp.com/avatars/1411384931548135604/eaf332b1074d7593270d1513623f986c.png?size=128" role-color="#ffffff"><span data-goto="1519116416677187735">Я нищий смертный</span></discord-reply>да</discord-message>
+<discord-message id="m-1519116724811595846" timestamp="2026-06-23T23:07:31.019Z" profile="1411384931548135604"><div style="margin-top:8px;"><a href="https://discord.com/channels/1331331077553262765/1487155588537385061/1524073828458696725" target="_blank" style="color:#00aff4;text-decoration:underline;">📹 Открыть архивное видео</a></div><a href="https://tenor.com/view/dancing-pibble-dancing-french-bulldog-gif-9393224975559348511" style="color:#00aff4;text-decoration:underline;" target="_blank">https://tenor.com/view/dancing-pibble-dancing-french-bulldog-gif-9393224975559348511</a><div slot="embeds" style="margin-top:8px;padding:12px;border-left:4px solid #5865f2;background:#2b2d31;border-radius:4px;"><img src="https://media.tenor.com/gltwWQuK0R8AAAAe/dancing-pibble-dancing-french-bulldog.png" style="max-width:80px;border-radius:8px;margin-top:8px;" /></div><discord-reactions slot="reactions"><discord-reaction count="1" burst="false" me="false">❤️</discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1519124339599999016" timestamp="2026-06-23T23:37:46.526Z" profile="760966468715937814"><discord-mention type="user">h1kzenn</discord-mention></discord-message>
+<discord-message id="m-1519125368269963404" timestamp="2026-06-23T23:41:51.780Z" profile="760966468715937814"><discord-reply slot="reply" author="bjmajgda" avatar="https://cdn.discordapp.com/avatars/760966468715937814/880336b2d0d570e95d1f2c5fac203853.png?size=128" role-color="#ffffff"><span data-goto="1519124339599999016">&lt;@625255619569647616&gt;</span></discord-reply>Можешь расписать все</discord-message>
+<discord-message id="m-1519140429398933585" timestamp="2026-06-24T00:41:42.633Z" profile="625255619569647616">так ну в целом че говорить</discord-message>
+<discord-message id="m-1519140455005028352" timestamp="2026-06-24T00:41:48.738Z" profile="625255619569647616">я вчера в ГО все основное высказал</discord-message>
+<discord-message id="m-1519140482804875396" timestamp="2026-06-24T00:41:55.366Z" profile="625255619569647616">ну димкасик верные вещи сказал</discord-message>
+<discord-message id="m-1519140500077150441" timestamp="2026-06-24T00:41:59.484Z" profile="625255619569647616">руководство у вас хуйня полная</discord-message>
+<discord-message id="m-1519140537897324767" timestamp="2026-06-24T00:42:08.501Z" profile="625255619569647616">понабрали половину школяр ебанных тупоголовых</discord-message>
+<discord-message id="m-1519140562287202476" timestamp="2026-06-24T00:42:14.316Z" profile="625255619569647616">которые толком не понимают что делают</discord-message>
+<discord-message id="m-1519140594960695367" timestamp="2026-06-24T00:42:22.106Z" profile="625255619569647616">а половину нестабильных афкшных уродов</discord-message>
+<discord-message id="m-1519140632000725084" timestamp="2026-06-24T00:42:30.937Z" profile="625255619569647616">одни хуйню по кд творят</discord-message>
+<discord-message id="m-1519140706130595930" timestamp="2026-06-24T00:42:48.611Z" profile="625255619569647616">другие тикет проверят, просят написать заявку на опг, и 2 недели сопли жуют</discord-message>
+<discord-message id="m-1519140745100136508" timestamp="2026-06-24T00:42:57.902Z" profile="625255619569647616">в руководстве сидит человек 10</discord-message>
+<discord-message id="m-1519140767766020266" timestamp="2026-06-24T00:43:03.306Z" profile="625255619569647616">и никто не парится насчет актива на проекте</discord-message>
+<discord-message id="m-1519140786237866065" timestamp="2026-06-24T00:43:07.710Z" profile="625255619569647616">15 человек актив - да похуй</discord-message>
+<discord-message id="m-1519140790704668774" timestamp="2026-06-24T00:43:08.775Z" profile="625255619569647616">хули</discord-message>
+<discord-message id="m-1519140798392700948" timestamp="2026-06-24T00:43:10.608Z" profile="625255619569647616">и так сойдет</discord-message>
+<discord-message id="m-1519140816063430687" timestamp="2026-06-24T00:43:14.821Z" profile="625255619569647616">зато давайте парни посидим</discord-message>
+<discord-message id="m-1519140853267042425" timestamp="2026-06-24T00:43:23.691Z" profile="625255619569647616">и в общении будем дальше высказываться о проектах</discord-message>
+<discord-message id="m-1519140866390757498" timestamp="2026-06-24T00:43:26.820Z" profile="625255619569647616">о кемерово</discord-message>
+<discord-message id="m-1519140879325986978" timestamp="2026-06-24T00:43:29.904Z" profile="625255619569647616">о других проектах</discord-message>
+<discord-message id="m-1519140983625748540" timestamp="2026-06-24T00:43:54.771Z" profile="625255619569647616">15 человек, еще раз повторяю актив</discord-message>
+<discord-message id="m-1519141023207653487" timestamp="2026-06-24T00:44:04.208Z" profile="625255619569647616">и вы умудряетесь еще пасть свою гнилую открывать в сторону проекта</discord-message>
+<discord-message id="m-1519141034209050694" timestamp="2026-06-24T00:44:06.831Z" profile="625255619569647616">с активом в 3.5к</discord-message>
+<discord-message id="m-1519141070615740498" timestamp="2026-06-24T00:44:15.511Z" profile="625255619569647616">вы че реально ебанутые</discord-message>
+<discord-message id="m-1519141119731040339" timestamp="2026-06-24T00:44:27.221Z" profile="625255619569647616">панкейк набирает руководство просто блядей</discord-message>
+<discord-message id="m-1519141136562782319" timestamp="2026-06-24T00:44:31.234Z" profile="625255619569647616">ворм сидит год афк</discord-message>
+<discord-message id="m-1519141179294224444" timestamp="2026-06-24T00:44:41.422Z" profile="625255619569647616">был предлог что там девушка ни девушка</discord-message>
+<discord-message id="m-1519141193890529470" timestamp="2026-06-24T00:44:44.902Z" profile="625255619569647616">а нахуй это нужно</discord-message>
+<discord-message id="m-1519141198755790898" timestamp="2026-06-24T00:44:46.062Z" profile="625255619569647616">он че</discord-message>
+<discord-message id="m-1519141216070008912" timestamp="2026-06-24T00:44:50.190Z" profile="625255619569647616">с девушкой 24\7 время проводит</discord-message>
+<discord-message id="m-1519141257933230200" timestamp="2026-06-24T00:45:00.171Z" profile="625255619569647616">что у него времени нету даже сообщение в дс написать хоть одно</discord-message>
+<discord-message id="m-1519141295019262065" timestamp="2026-06-24T00:45:09.013Z" profile="625255619569647616">на его месте мог быть другой человек который бы поднял проект с колен</discord-message>
+<discord-message id="m-1519141315122692250" timestamp="2026-06-24T00:45:13.806Z" profile="625255619569647616">но давайте лучше оставим так</discord-message>
+<discord-message id="m-1519141321791504454" timestamp="2026-06-24T00:45:15.396Z" profile="625255619569647616">хули</discord-message>
+<discord-message id="m-1519141330675044433" timestamp="2026-06-24T00:45:17.514Z" profile="625255619569647616">пришел сейвинг</discord-message>
+<discord-message id="m-1519141344692404274" timestamp="2026-06-24T00:45:20.856Z" profile="625255619569647616">поработал</discord-message>
+<discord-message id="m-1519141352724627650" timestamp="2026-06-24T00:45:22.771Z" profile="625255619569647616">и опять в афк ушел</discord-message>
+<discord-message id="m-1519141368491147366" timestamp="2026-06-24T00:45:26.530Z" profile="625255619569647616">синичку взяли</discord-message>
+<discord-message id="m-1519141375797366916" timestamp="2026-06-24T00:45:28.272Z" profile="625255619569647616">чекайте</discord-message>
+<discord-message id="m-1519141391446442168" timestamp="2026-06-24T00:45:32.003Z" profile="625255619569647616">через неделю он будет фулл афк</discord-message>
+<discord-message id="m-1519141429711208598" timestamp="2026-06-24T00:45:41.126Z" profile="625255619569647616">берете на менеджемент уродов<discord-reactions slot="reactions"><discord-reaction count="1" burst="false" me="false">❤️</discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1519141450816688229" timestamp="2026-06-24T00:45:46.158Z" profile="625255619569647616">которые правила намеренно нарушали</discord-message>
+<discord-message id="m-1519141459587235872" timestamp="2026-06-24T00:45:48.249Z" profile="625255619569647616">вплоть до чсп</discord-message>
+<discord-message id="m-1519141475542237224" timestamp="2026-06-24T00:45:52.053Z" profile="625255619569647616">и сейчас сидят в руководстве</discord-message>
+<discord-message id="m-1519141543854866513" timestamp="2026-06-24T00:46:08.340Z" profile="625255619569647616">руководство москвы гнилое</discord-message>
+<discord-message id="m-1519141564264349806" timestamp="2026-06-24T00:46:13.206Z" profile="625255619569647616">об этом каждый второй на проекте говорит</discord-message>
+<discord-message id="m-1519141659021934624" timestamp="2026-06-24T00:46:35.798Z" profile="625255619569647616">а самое главное что вы делать с этим ниче не хотите</discord-message>
+<discord-message id="m-1519141667301621811" timestamp="2026-06-24T00:46:37.772Z" profile="625255619569647616">в частности панкейк</discord-message>
+<discord-message id="m-1519141796188389597" timestamp="2026-06-24T00:47:08.501Z" profile="625255619569647616">заработка у вас нихуя</discord-message>
+<discord-message id="m-1519141807802548356" timestamp="2026-06-24T00:47:11.270Z" profile="625255619569647616">зарплаты нихуя</discord-message>
+<discord-message id="m-1519141825024102432" timestamp="2026-06-24T00:47:15.376Z" profile="625255619569647616">стафф говна ебанного</discord-message>
+<discord-message id="m-1519141842791174204" timestamp="2026-06-24T00:47:19.612Z" profile="625255619569647616">как димкасик ранее сказал</discord-message>
+<discord-message id="m-1519141862475038831" timestamp="2026-06-24T00:47:24.305Z" profile="625255619569647616">сидят 15 балванчиклв</discord-message>
+<discord-message id="m-1519141877381861458" timestamp="2026-06-24T00:47:27.859Z" profile="625255619569647616">которые сопли жуют</discord-message>
+<discord-message id="m-1519141895559974997" timestamp="2026-06-24T00:47:32.193Z" profile="625255619569647616">ну отмечу апчи</discord-message>
+<discord-message id="m-1519141928917270608" timestamp="2026-06-24T00:47:40.146Z" profile="625255619569647616">стабильного модера которого 24\7 вижу</discord-message>
+<discord-message id="m-1519141933589463081" timestamp="2026-06-24T00:47:41.260Z" profile="625255619569647616">вот он да</discord-message>
+<discord-message id="m-1519141969300033807" timestamp="2026-06-24T00:47:49.774Z" profile="625255619569647616">ему нравится модерировать, ему в кайф</discord-message>
+<discord-message id="m-1519141981589209158" timestamp="2026-06-24T00:47:52.704Z" profile="625255619569647616">красавчик</discord-message>
+<discord-message id="m-1519141996965396791" timestamp="2026-06-24T00:47:56.370Z" profile="625255619569647616">остальные сидят нихуя не делают</discord-message>
+<discord-message id="m-1519142083951067166" timestamp="2026-06-24T00:48:17.109Z" profile="625255619569647616">правила вы с каждым днем все жестче и жестче делаете</discord-message>
+<discord-message id="m-1519142097083568261" timestamp="2026-06-24T00:48:20.240Z" profile="625255619569647616">50 пунктов правил</discord-message>
+<discord-message id="m-1519142129396617256" timestamp="2026-06-24T00:48:27.944Z" profile="625255619569647616">и вы думаете что вы актив обретете при таком раскладе</discord-message>
+<discord-message id="m-1519142168919408720" timestamp="2026-06-24T00:48:37.367Z" profile="625255619569647616">игроки новенькие приходят</discord-message>
+<discord-message id="m-1519142183586762794" timestamp="2026-06-24T00:48:40.864Z" profile="625255619569647616">и в ахуе сидят с правил</discord-message>
+<discord-message id="m-1519142226700013780" timestamp="2026-06-24T00:48:51.143Z" profile="625255619569647616">а что бы в стафф попасть</discord-message>
+<discord-message id="m-1519142232765104209" timestamp="2026-06-24T00:48:52.589Z" profile="625255619569647616">в модерацию</discord-message>
+<discord-message id="m-1519142273424556032" timestamp="2026-06-24T00:49:02.283Z" profile="625255619569647616">достаточно через яндекс прогнать ответы, и по фастику ответить на все</discord-message>
+<discord-message id="m-1519142303103586395" timestamp="2026-06-24T00:49:09.359Z" profile="625255619569647616">на тренировке посидеть, сопли пожевать</discord-message>
+<discord-message id="m-1519142319037747390" timestamp="2026-06-24T00:49:13.158Z" profile="625255619569647616">через дискорд подсмотреть правила</discord-message>
+<discord-message id="m-1519142346288136263" timestamp="2026-06-24T00:49:19.655Z" profile="625255619569647616">и потом душить всех</discord-message>
+<discord-message id="m-1519142367611977748" timestamp="2026-06-24T00:49:24.739Z" profile="625255619569647616">что бы типа задушить ЛЮБОГО</discord-message>
+<discord-message id="m-1519142399002284152" timestamp="2026-06-24T00:49:32.223Z" profile="625255619569647616">достаточно за ним поспекать пару часов</discord-message>
+<discord-message id="m-1519142405792596118" timestamp="2026-06-24T00:49:33.842Z" profile="625255619569647616">не так вышел из авто</discord-message>
+<discord-message id="m-1519142408078491708" timestamp="2026-06-24T00:49:34.387Z" profile="625255619569647616">варн</discord-message>
+<discord-message id="m-1519142417209495734" timestamp="2026-06-24T00:49:36.564Z" profile="625255619569647616">не так подышал</discord-message>
+<discord-message id="m-1519142419289870346" timestamp="2026-06-24T00:49:37.060Z" profile="625255619569647616">варн</discord-message>
+<discord-message id="m-1519142444032069644" timestamp="2026-06-24T00:49:42.959Z" profile="625255619569647616">правила позволяют такое</discord-message>
+<discord-message id="m-1519142488835625000" timestamp="2026-06-24T00:49:53.641Z" profile="625255619569647616">опять же</discord-message>
+<discord-message id="m-1519142520439705723" timestamp="2026-06-24T00:50:01.176Z" profile="625255619569647616">возвращаемся</discord-message>
+<discord-message id="m-1519142588500803595" timestamp="2026-06-24T00:50:17.403Z" profile="625255619569647616">ладно бы сидели игроки обычные</discord-message>
+<discord-message id="m-1519142607056277515" timestamp="2026-06-24T00:50:21.827Z" profile="625255619569647616">поливали говном другой проект</discord-message>
+<discord-message id="m-1519142665206108200" timestamp="2026-06-24T00:50:35.691Z" profile="625255619569647616">но у вас сидит высший состав администрации</discord-message>
+<discord-message id="m-1519142689726271509" timestamp="2026-06-24T00:50:41.537Z" profile="625255619569647616">и высказывается о другом проекте</discord-message>
+<discord-message id="m-1519142711205040229" timestamp="2026-06-24T00:50:46.658Z" profile="625255619569647616">поливает говном</discord-message>
+<discord-message id="m-1519142725562274003" timestamp="2026-06-24T00:50:50.081Z" profile="625255619569647616">а на что вы надеетесь</discord-message>
+<discord-message id="m-1519142745304727684" timestamp="2026-06-24T00:50:54.788Z" profile="625255619569647616">у вас актив все меньше и меньше</discord-message>
+<discord-message id="m-1519142799222509671" timestamp="2026-06-24T00:51:07.643Z" profile="625255619569647616"><discord-attachments slot="attachments"><img class="discord-image" data-lightbox="true" src="attachments/1519142799222509671_image.png" alt="image.png" style="max-width:420px;border-radius:8px;margin-top:8px;cursor:pointer;" /></discord-attachments></discord-message>
+<discord-message id="m-1519142818659041280" timestamp="2026-06-24T00:51:12.277Z" profile="625255619569647616">статистика за месяц показывает</discord-message>
+<discord-message id="m-1519142927878721576" timestamp="2026-06-24T00:51:38.317Z" profile="625255619569647616">месяц назад при матриксе актив еще хоть какой то был</discord-message>
+<discord-message id="m-1519142935520608257" timestamp="2026-06-24T00:51:40.139Z" profile="625255619569647616">сейчас актив говна</discord-message>
+<discord-message id="m-1519142954202173502" timestamp="2026-06-24T00:51:44.593Z" profile="625255619569647616">игроки у вас сидят</discord-message>
+<discord-message id="m-1519142958409056358" timestamp="2026-06-24T00:51:45.596Z" profile="625255619569647616">без чата</discord-message>
+<discord-message id="m-1519142983289667694" timestamp="2026-06-24T00:51:51.528Z" profile="625255619569647616">в дискорде через войс отыгрывают</discord-message>
+<discord-message id="m-1519143005175681274" timestamp="2026-06-24T00:51:56.746Z" profile="625255619569647616">что бы хоть что то отыграть</discord-message>
+<discord-message id="m-1519143017792147457" timestamp="2026-06-24T00:51:59.754Z" profile="625255619569647616">просят других это сделать</discord-message>
+<discord-message id="m-1519143038864330773" timestamp="2026-06-24T00:52:04.778Z" profile="625255619569647616">просят РПшку создать</discord-message>
+<discord-message id="m-1519143069478293554" timestamp="2026-06-24T00:52:12.077Z" profile="625255619569647616">это унизительно</discord-message>
+<discord-message id="m-1519143125984083979" timestamp="2026-06-24T00:52:25.549Z" profile="625255619569647616">унизительно что такой проект позволяет себе много чего</discord-message>
+<discord-message id="m-1519143211312877699" timestamp="2026-06-24T00:52:45.893Z" profile="625255619569647616">как димкасик ранее сказал</discord-message>
+<discord-message id="m-1519143236155867176" timestamp="2026-06-24T00:52:51.816Z" profile="625255619569647616">лидеры фракций у вас так же афк</discord-message>
+<discord-message id="m-1519143267009167530" timestamp="2026-06-24T00:52:59.172Z" profile="625255619569647616">нет бы провести хоть какие то тренировки</discord-message>
+<discord-message id="m-1519143272981987450" timestamp="2026-06-24T00:53:00.596Z" profile="625255619569647616">мпшки</discord-message>
+<discord-message id="m-1519143279101476995" timestamp="2026-06-24T00:53:02.055Z" profile="625255619569647616">для фракций</discord-message>
+<discord-message id="m-1519143288978800681" timestamp="2026-06-24T00:53:04.410Z" profile="625255619569647616">они хуй сосут</discord-message>
+<discord-message id="m-1519143304933933256" timestamp="2026-06-24T00:53:08.214Z" profile="625255619569647616">играют в раст</discord-message>
+<discord-message id="m-1519143314748866663" timestamp="2026-06-24T00:53:10.554Z" profile="625255619569647616">им похуй на фраку</discord-message>
+<discord-message id="m-1519143366946979870" timestamp="2026-06-24T00:53:22.999Z" profile="625255619569647616">это получается такая бермудская каша</discord-message>
+<discord-message id="m-1519143377554243614" timestamp="2026-06-24T00:53:25.528Z" profile="625255619569647616">которую вы заварили</discord-message>
+<discord-message id="m-1519143386966265986" timestamp="2026-06-24T00:53:27.772Z" profile="625255619569647616">все вместе</discord-message>
+<discord-message id="m-1519143398198477014" timestamp="2026-06-24T00:53:30.450Z" profile="625255619569647616">а разварить не моежте</discord-message>
+<discord-message id="m-1519143539131547722" timestamp="2026-06-24T00:54:04.051Z" profile="625255619569647616">правила, нон актив состав администрации, афк руководство, афк лидеры фракций, отсутствие желания вести дальше проект, отсутствие чата</discord-message>
+<discord-message id="m-1519143566281015436" timestamp="2026-06-24T00:54:10.524Z" profile="625255619569647616">все это такая ебанная каша</discord-message>
+<discord-message id="m-1519143780048175194" timestamp="2026-06-24T00:55:01.490Z" profile="625255619569647616"></discord-message>
+<discord-message id="m-1519143796544114880" timestamp="2026-06-24T00:55:05.423Z" profile="625255619569647616">еще одна статистика ваша</discord-message>
+<discord-message id="m-1519143818820190260" timestamp="2026-06-24T00:55:10.734Z" profile="625255619569647616">в целом</discord-message>
+<discord-message id="m-1519143827078778991" timestamp="2026-06-24T00:55:12.703Z" profile="625255619569647616">кого я не спрашивал</discord-message>
+<discord-message id="m-1519143846980620459" timestamp="2026-06-24T00:55:17.448Z" profile="625255619569647616">многим уже похуй на этот проект</discord-message>
+<discord-message id="m-1519143925921615902" timestamp="2026-06-24T00:55:36.269Z" profile="625255619569647616">все кто был здесь на высоких должностях и хотел вернуться, уже как то и перехотел</discord-message>
+<discord-message id="m-1519143949619691660" timestamp="2026-06-24T00:55:41.919Z" profile="625255619569647616">мне в целом так же похуй</discord-message>
+<discord-message id="m-1519143968112251011" timestamp="2026-06-24T00:55:46.328Z" profile="625255619569647616">я сижу вас говном поливаю</discord-message>
+<discord-message id="m-1519143987334873138" timestamp="2026-06-24T00:55:50.911Z" profile="625255619569647616">а вы хаваете это все</discord-message>
+<discord-message id="m-1519144021308739755" timestamp="2026-06-24T00:55:59.011Z" profile="625255619569647616">и буду дальше поливать говном</discord-message>
+<discord-message id="m-1519144097347014658" timestamp="2026-06-24T00:56:17.140Z" profile="625255619569647616">потому что не за что говорить что то хорошее</discord-message>
+<discord-message id="m-1519144258295304263" timestamp="2026-06-24T00:56:55.513Z" profile="625255619569647616">говно проект с говно будущим, с говно стафом и с говно руководством, сговно правила и с говно системами, с говно активом и с говно статистикой, еще и выебывается на другие проекты</discord-message>
+<discord-message id="m-1519144376474013746" timestamp="2026-06-24T00:57:23.689Z" profile="625255619569647616">панкейку и я</discord-message>
+<discord-message id="m-1519144390424002581" timestamp="2026-06-24T00:57:27.015Z" profile="625255619569647616">и коробка</discord-message>
+<discord-message id="m-1519144406803021874" timestamp="2026-06-24T00:57:30.920Z" profile="625255619569647616">и димкасик</discord-message>
+<discord-message id="m-1519144419402580068" timestamp="2026-06-24T00:57:33.924Z" profile="625255619569647616">и матрикс</discord-message>
+<discord-message id="m-1519144431679311945" timestamp="2026-06-24T00:57:36.851Z" profile="625255619569647616">и еще очень много людей</discord-message>
+<discord-message id="m-1519144441997295676" timestamp="2026-06-24T00:57:39.311Z" profile="625255619569647616">промывали мозги</discord-message>
+<discord-message id="m-1519144493503352882" timestamp="2026-06-24T00:57:51.591Z" profile="625255619569647616">говорили что рано или поздно он заварит такую кашу которую хуй разхлебете</discord-message>
+<discord-message id="m-1519144500122091591" timestamp="2026-06-24T00:57:53.169Z" profile="625255619569647616">ну типо</discord-message>
+<discord-message id="m-1519144503469146173" timestamp="2026-06-24T00:57:53.967Z" profile="625255619569647616">че</discord-message>
+<discord-message id="m-1519144511677141214" timestamp="2026-06-24T00:57:55.924Z" profile="625255619569647616">ему похуй было</discord-message>
+<discord-message id="m-1519144523840753704" timestamp="2026-06-24T00:57:58.824Z" profile="625255619569647616">вы пришли к тому что хотели</discord-message>
+<discord-message id="m-1519146582615003272" timestamp="2026-06-24T01:06:09.674Z" profile="501686815120687105">я хз честно тут большую часть сказали уже</discord-message>
+<discord-message id="m-1519146694036422706" timestamp="2026-06-24T01:06:36.239Z" profile="501686815120687105">ну начну</discord-message>
+<discord-message id="m-1519146704668987555" timestamp="2026-06-24T01:06:38.774Z" profile="501686815120687105">я не буду говорить что я был святой на менеджменте</discord-message>
+<discord-message id="m-1519146801939218515" timestamp="2026-06-24T01:07:01.965Z" profile="501686815120687105"><discord-reply slot="reply" author="сквиртик" avatar="https://cdn.discordapp.com/avatars/501686815120687105/d2ce72c80bc8a6bdbfa976e7c2a08cfd.png?size=128" role-color="#ffffff"><span data-goto="1519146704668987555">я не буду говорить что я был святой на менеджменте</span></discord-reply>но с игроками я был реально святой</discord-message>
+<discord-message id="m-1519146835027955813" timestamp="2026-06-24T01:07:09.854Z" profile="501686815120687105">и это видно на графиках ваших</discord-message>
+<discord-message id="m-1519146908529197086" timestamp="2026-06-24T01:07:27.378Z" profile="501686815120687105"><discord-attachments slot="attachments"><img class="discord-image" data-lightbox="true" src="attachments/1519146908529197086_image.png" alt="image.png" style="max-width:420px;border-radius:8px;margin-top:8px;cursor:pointer;" /></discord-attachments></discord-message>
+<discord-message id="m-1519146953664102472" timestamp="2026-06-24T01:07:38.139Z" profile="501686815120687105">период ебейшего актива это период моего срока менеджмента</discord-message>
+<discord-message id="m-1519146967911895081" timestamp="2026-06-24T01:07:41.536Z" profile="501686815120687105">день в день</discord-message>
+<discord-message id="m-1519147030298099722" timestamp="2026-06-24T01:07:56.410Z" profile="501686815120687105">первый повод задуматься</discord-message>
+<discord-message id="m-1519147061986197535" timestamp="2026-06-24T01:08:03.965Z" profile="501686815120687105">те ли люди на менеджменте</discord-message>
+<discord-message id="m-1519147129736790147" timestamp="2026-06-24T01:08:20.118Z" profile="501686815120687105">исключение бимаджа ток наверн<discord-reactions slot="reactions"><discord-reaction count="1" burst="false" me="false">❤️</discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1519147170757083157" timestamp="2026-06-24T01:08:29.898Z" profile="501686815120687105"><discord-reply slot="reply" author="сквиртик" avatar="https://cdn.discordapp.com/avatars/501686815120687105/d2ce72c80bc8a6bdbfa976e7c2a08cfd.png?size=128" role-color="#ffffff"><span data-goto="1519147129736790147">исключение бимаджа ток наверн</span></discord-reply>и то не без грехов</discord-message>
+<discord-message id="m-1519147206416928939" timestamp="2026-06-24T01:08:38.400Z" profile="501686815120687105">борис мб чет еще делает</discord-message>
+<discord-message id="m-1519147217066262639" timestamp="2026-06-24T01:08:40.939Z" profile="501686815120687105">но тоже афк</discord-message>
+<discord-message id="m-1519147332032008304" timestamp="2026-06-24T01:09:08.349Z" profile="501686815120687105">каким боком сидят фулл афк типы на менеджменте я ваще хз</discord-message>
+<discord-message id="m-1519147345491787786" timestamp="2026-06-24T01:09:11.558Z" profile="501686815120687105">вы берете типа</discord-message>
+<discord-message id="m-1519147361203523654" timestamp="2026-06-24T01:09:15.304Z" profile="501686815120687105">который в чсп сидит</discord-message>
+<discord-message id="m-1519147368384168067" timestamp="2026-06-24T01:09:17.016Z" profile="501686815120687105">кати аки</discord-message>
+<discord-message id="m-1519147390609920072" timestamp="2026-06-24T01:09:22.315Z" profile="501686815120687105">вы чем думали когда его ставили</discord-message>
+<discord-message id="m-1519147396532011069" timestamp="2026-06-24T01:09:23.727Z" profile="501686815120687105">нюк</discord-message>
+<discord-message id="m-1519147419500154960" timestamp="2026-06-24T01:09:29.203Z" profile="501686815120687105">про которого говорят с зимы</discord-message>
+<discord-message id="m-1519147447891263488" timestamp="2026-06-24T01:09:35.972Z" profile="501686815120687105">что он афкшит 90% времени</discord-message>
+<discord-message id="m-1519147499963814029" timestamp="2026-06-24T01:09:48.387Z" profile="501686815120687105">заменять гаге и димкасика</discord-message>
+<discord-message id="m-1519147520675152013" timestamp="2026-06-24T01:09:53.325Z" profile="501686815120687105">на бандита</discord-message>
+<discord-message id="m-1519147535933898852" timestamp="2026-06-24T01:09:56.963Z" profile="501686815120687105">ебать норм тема</discord-message>
+<discord-message id="m-1519147671426695188" timestamp="2026-06-24T01:10:29.267Z" profile="501686815120687105"><discord-reply slot="reply" author="сквиртик" avatar="https://cdn.discordapp.com/avatars/501686815120687105/d2ce72c80bc8a6bdbfa976e7c2a08cfd.png?size=128" role-color="#ffffff"><span data-goto="1519147535933898852">ебать норм тема</span></discord-reply>синичка менеджер фракций, базар, а хули он не делает то ничего</discord-message>
+<discord-message id="m-1519147796458897458" timestamp="2026-06-24T01:10:59.077Z" profile="501686815120687105"><discord-reply slot="reply" author="сквиртик" avatar="https://cdn.discordapp.com/avatars/501686815120687105/d2ce72c80bc8a6bdbfa976e7c2a08cfd.png?size=128" role-color="#ffffff"><span data-goto="1519147671426695188">синичка менеджер фракций, базар, а хули он не делает то ничего</span></discord-reply>я за неделю своего срока, учитывая что я параллельно диплом писал, сделал больше чем он за 2 недели</discord-message>
+<discord-message id="m-1519148295283282121" timestamp="2026-06-24T01:12:58.006Z" profile="501686815120687105"><discord-reply slot="reply" author="сквиртик" avatar="https://cdn.discordapp.com/avatars/501686815120687105/d2ce72c80bc8a6bdbfa976e7c2a08cfd.png?size=128" role-color="#ffffff"><span data-goto="1519147796458897458">я за неделю своего срока, учитывая что я параллельно диплом писал, сделал больше чем он за 2 недели</span></discord-reply>почему но нейм сидит пашет на всех фронтах, делает вам сайт для работы админов, просит принять его в команду разработчиков, на что ему отвечают «нууу посмотрим»</discord-message>
+<discord-message id="m-1519148317135863858" timestamp="2026-06-24T01:13:03.216Z" profile="501686815120687105">да бля даже вот</discord-message>
+<discord-message id="m-1519148361838493767" timestamp="2026-06-24T01:13:13.874Z" profile="501686815120687105">кандидат на менеджера сообщества</discord-message>
+<discord-message id="m-1519148387927195678" timestamp="2026-06-24T01:13:20.094Z" profile="501686815120687105">в разы лучше чем кати аки</discord-message>
+<discord-message id="m-1519148394856321065" timestamp="2026-06-24T01:13:21.746Z" profile="501686815120687105">но нет</discord-message>
+<discord-message id="m-1519148435867959418" timestamp="2026-06-24T01:13:31.524Z" profile="501686815120687105">типа с 30/30 будет выгоднее поставить</discord-message>
+<discord-message id="m-1519148484694114356" timestamp="2026-06-24T01:13:43.165Z" profile="501686815120687105">так еще и афкшного</discord-message>
+<discord-message id="m-1519148493267275857" timestamp="2026-06-24T01:13:45.209Z" profile="501686815120687105">кароче я хз</discord-message>
+<discord-message id="m-1519148538699841747" timestamp="2026-06-24T01:13:56.041Z" profile="501686815120687105">с моей стороны это выглядит как большая шутка</discord-message>
+<discord-message id="m-1519148574200303759" timestamp="2026-06-24T01:14:04.505Z" profile="501686815120687105">смотря на ваши графики онлайна</discord-message>
+<discord-message id="m-1519148600347594943" timestamp="2026-06-24T01:14:10.739Z" profile="501686815120687105">смотря в целом в чаты</discord-message>
+<discord-message id="m-1519148639333908620" timestamp="2026-06-24T01:14:20.034Z" profile="501686815120687105">видя сколько старичков уходит с проекта</discord-message>
+<discord-message id="m-1519148647340703896" timestamp="2026-06-24T01:14:21.943Z" profile="501686815120687105">ежедневно</discord-message>
+<discord-message id="m-1519148686939000893" timestamp="2026-06-24T01:14:31.384Z" profile="501686815120687105">коробке я говорил когда еще был менеджером</discord-message>
+<discord-message id="m-1519148719948173383" timestamp="2026-06-24T01:14:39.254Z" profile="501686815120687105">что сервак дай бог дотянет до конца лета</discord-message>
+<discord-message id="m-1519148751632208002" timestamp="2026-06-24T01:14:46.808Z" profile="501686815120687105">с нынешним руководством и персоналом</discord-message>
+<discord-message id="m-1519148784569946314" timestamp="2026-06-24T01:14:54.661Z" profile="501686815120687105">просто самое грустное</discord-message>
+<discord-message id="m-1519148857752162496" timestamp="2026-06-24T01:15:12.109Z" profile="501686815120687105">что в свои 16 лет панкейк не может оценить и до конца понять ситуацию</discord-message>
+<discord-message id="m-1519148894598992106" timestamp="2026-06-24T01:15:20.894Z" profile="501686815120687105">в силу возраста</discord-message>
+<discord-message id="m-1519148945090154496" timestamp="2026-06-24T01:15:32.932Z" profile="501686815120687105">а его решения самые важные</discord-message>
+<discord-message id="m-1519149060525785139" timestamp="2026-06-24T01:16:00.454Z" profile="501686815120687105">а он не знает как поднять актив</discord-message>
+<discord-message id="m-1519149113684394105" timestamp="2026-06-24T01:16:13.128Z" profile="501686815120687105">то есть обычные игроки видят больше чем он</discord-message>
+<discord-message id="m-1519149124253909195" timestamp="2026-06-24T01:16:15.648Z" profile="501686815120687105">так получается</discord-message>
+<discord-message id="m-1519149171083575356" timestamp="2026-06-24T01:16:26.813Z" profile="501686815120687105">я вам так скажу</discord-message>
+<discord-message id="m-1519149269360312340" timestamp="2026-06-24T01:16:50.244Z" profile="501686815120687105">проблема с тем что люди не заходят на серв связана далеко не с тем, что онлайн маленький</discord-message>
+<discord-message id="m-1519149355985014926" timestamp="2026-06-24T01:17:10.897Z" profile="501686815120687105">а с отношением персонала и руководства к проекту</discord-message>
+<discord-message id="m-1519149424796766258" timestamp="2026-06-24T01:17:27.303Z" profile="501686815120687105">да и к игрокам в целом</discord-message>
+<discord-message id="m-1519149708759662772" timestamp="2026-06-24T01:18:35.005Z" profile="501686815120687105">еще недавно</discord-message>
+<discord-message id="m-1519149751331717223" timestamp="2026-06-24T01:18:45.155Z" profile="501686815120687105">могу скинуть если интересно</discord-message>
+<discord-message id="m-1519149797506941048" timestamp="2026-06-24T01:18:56.164Z" profile="501686815120687105">как персонал и лидеры фракций относятся к новичкам</discord-message>
+<discord-message id="m-1519149855002460230" timestamp="2026-06-24T01:19:09.872Z" profile="501686815120687105">там типов за вопрос по фракции мутят на 7 дней</discord-message>
+<discord-message id="m-1519149898153595072" timestamp="2026-06-24T01:19:20.160Z" profile="501686815120687105">и всем все равно</discord-message>
+<discord-message id="m-1519244836849324172" timestamp="2026-06-24T07:36:35.309Z" profile="1133665013794607114"><discord-mention type="user">Lort_Kyrt</discord-mention> кат Аки это не сакура, не путай</discord-message>
+<discord-message id="m-1519244964175941654" timestamp="2026-06-24T07:37:05.666Z" profile="1133665013794607114"><discord-mention type="user">rebsqwizzy</discord-mention></discord-message>
+<discord-message id="m-1519244992898531348" timestamp="2026-06-24T07:37:12.514Z" profile="1133665013794607114">Вот сакура или кто он там</discord-message>
+<discord-message id="m-1519321147198410752" timestamp="2026-06-24T12:39:49.114Z" profile="1411384931548135604"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="https://cdn.discordapp.com/avatars/1133665013794607114/9952a7f75bf8748ecfd9a8e39af2e279.png?size=128" role-color="#ffffff"><span data-goto="1519244992898531348">Вот сакура или кто он там</span></discord-reply>Панкейк</discord-message>
+<discord-message id="m-1519321172125290516" timestamp="2026-06-24T12:39:55.057Z" profile="1411384931548135604">Тебя не удивляет</discord-message>
+<discord-message id="m-1519321192920514600" timestamp="2026-06-24T12:40:00.015Z" profile="1411384931548135604">Что у них одни ники</discord-message>
+<discord-message id="m-1519321207135141898" timestamp="2026-06-24T12:40:03.404Z" profile="1411384931548135604">?</discord-message>
+<discord-message id="m-1519321255407259719" timestamp="2026-06-24T12:40:14.913Z" profile="1133665013794607114">Нет</discord-message>
+<discord-message id="m-1519321451403149442" timestamp="2026-06-24T12:41:01.642Z" profile="1411384931548135604">Тебе сказать почему?<discord-reactions slot="reactions"><discord-reaction count="1" burst="false" me="false">❔</discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1519321482763829270" timestamp="2026-06-24T12:41:09.119Z" profile="1133665013794607114">Что хочешь? Его не снимут, состав менеджмента тебя вообще не должен волновать</discord-message>
+<discord-message id="m-1519321513029931098" timestamp="2026-06-24T12:41:16.335Z" profile="1133665013794607114"><discord-reply slot="reply" author="Lort_Kyrt" avatar="https://cdn.discordapp.com/avatars/1411384931548135604/eaf332b1074d7593270d1513623f986c.png?size=128" role-color="#ffffff"><span data-goto="1519321451403149442">Тебе сказать почему?</span></discord-reply>Он дал сакуре свой твинк</discord-message>
+<discord-message id="m-1519321544311181415" timestamp="2026-06-24T12:41:23.793Z" profile="1411384931548135604"><discord-reply slot="reply" author="Pancakeboyman_8" avatar="https://cdn.discordapp.com/avatars/1133665013794607114/9952a7f75bf8748ecfd9a8e39af2e279.png?size=128" role-color="#ffffff"><span data-goto="1519321482763829270">Что хочешь? Его не снимут, состав менеджмента тебя вообще не должен волновать</span></discord-reply>Я уже все сказал</discord-message>
+<discord-message id="m-1519321557577633884" timestamp="2026-06-24T12:41:26.956Z" profile="1411384931548135604">Я не требую снятие</discord-message>
+<discord-message id="m-1519321568940003328" timestamp="2026-06-24T12:41:29.665Z" profile="1411384931548135604">Я предложил идею</discord-message>
+<discord-message id="m-1519321585247322342" timestamp="2026-06-24T12:41:33.553Z" profile="1411384931548135604">Твоё право</discord-message>
+<discord-message id="m-1519321597956063272" timestamp="2026-06-24T12:41:36.583Z" profile="1411384931548135604">Делай че хочешь</discord-message>
+<discord-message id="m-1519321614825685102" timestamp="2026-06-24T12:41:40.605Z" profile="1411384931548135604">Проект сгнил</discord-message>
+<discord-message id="m-1519321637789372588" timestamp="2026-06-24T12:41:46.080Z" profile="1133665013794607114">Состава младше 12-13 лет кстати нет</discord-message>
+<discord-message id="m-1519321692491612190" timestamp="2026-06-24T12:41:59.122Z" profile="1411384931548135604">Ну ну</discord-message>
+<discord-message id="m-1519321708081844224" timestamp="2026-06-24T12:42:02.839Z" profile="1133665013794607114">Назови 1</discord-message>
+<discord-message id="m-1519330222422364221" timestamp="2026-06-24T13:15:52.816Z" profile="1133665013794607114">$закрыть (Для транскрипта мне надо, щас открою)</discord-message>
+<discord-message id="m-1519330271093198869" timestamp="2026-06-24T13:16:04.420Z" profile="1499112043855482980"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #fbfe32;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет закрыт <discord-mention type="user">Pancakeboyman_8</discord-mention>.</span></div></div></div></discord-message>
+<discord-message id="m-1519330285127471254" timestamp="2026-06-24T13:16:07.766Z" profile="1499112043855482980"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #1ec45b;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f513.svg" alt="🔓" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет открыт <discord-mention type="user">Pancakeboyman_8</discord-mention>.</span></div></div></div></discord-message>
+<discord-message id="m-1519331425613123636" timestamp="2026-06-24T13:20:39.679Z" profile="760966468715937814"><discord-reply slot="reply" author="Lort_Kyrt" avatar="https://cdn.discordapp.com/avatars/1411384931548135604/eaf332b1074d7593270d1513623f986c.png?size=128" role-color="#ffffff"><span data-goto="1519321614825685102">Проект сгнил</span></discord-reply>Дима.<br/>Проект не сгнил , это во первых.<br/>Во вторых, поверь пожалуйста Дане, ради меня</discord-message>
+<discord-message id="m-1524073814408036536" timestamp="2026-07-07T15:25:13.277Z" profile="1133665013794607114">$закрыть Актив поднят. Остальные идеи тоже примем к сведенью, если ещё не сделали.</discord-message>
+<discord-message id="m-1524073817096327309" timestamp="2026-07-07T15:25:13.918Z" profile="1499112043855482980"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #f39c12;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет закроется через несколько секунд...</span></div></div></div></discord-message>
+</discord-messages></body></html>
