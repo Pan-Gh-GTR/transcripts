@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Гражданские Операции — поддержка-1773</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1363556047704293517/1513924719437680660/-ERLC------.png?ex=6a297fc4&is=6a282e44&hm=1810ee6d4c66657140fbb7fc3d89572de5b7768f2648ec3a721f0b730e083520&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1499112043855482980":{"author":"ERLC Россия","avatar":"https://cdn.discordapp.com/avatars/1499112043855482980/8bfcdd85f17467e7032a3e4a480432e8.png?size=128","roleColor":"#ffffff","roleIcon":"","roleName":"User","bot":true,"verified":false},"942085661308125215":{"author":"Tigran","avatar":"https://cdn.discordapp.com/avatars/942085661308125215/e3c8ad733301228e81fd3ab9fc686a59.png?size=128","roleColor":"#ffffff","roleIcon":"","roleName":"User","bot":false,"verified":false},"760966468715937814":{"author":"bjmajgda","avatar":"https://cdn.discordapp.com/avatars/760966468715937814/27faba6d9b43896b2fab256da3dc74a5.png?size=128","roleColor":"#ffffff","roleIcon":"","roleName":"User","bot":false,"verified":false},"1133665013794607114":{"author":"Pancakeboyman_8","avatar":"https://cdn.discordapp.com/avatars/1133665013794607114/9c8ea01c75afe46290caecd8e0494ab9.png?size=128","roleColor":"#ffffff","roleIcon":"","roleName":"User","bot":false,"verified":false},"501686815120687105":{"author":"сквиртик","avatar":"https://cdn.discordapp.com/avatars/501686815120687105/97963feeffb19b78f01bf870369554d1.png?size=128","roleColor":"#ffffff","roleIcon":"","roleName":"User","bot":false,"verified":false},"1195675629010558986":{"author":"The_","avatar":"https://cdn.discordapp.com/avatars/1195675629010558986/16b83fbe315df0f2f7ee3e08fee39600.png?size=128","roleColor":"#ffffff","roleIcon":"","roleName":"User","bot":false,"verified":false}}};</script>
+<style>
+body{background:#36393f;color:#dcddde;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;margin:0;padding:0}
+#lightboxOverlay{display:none;position:fixed;left:0;top:0;right:0;bottom:0;width:100vw;height:100vh;z-index:99999;background:rgba(30,30,30,.85);align-items:center;justify-content:center}
+#lightboxImg{max-width:90vw;max-height:90vh;object-fit:contain;border-radius:6px;box-shadow:0 4px 20px rgba(0,0,0,.6);background:#222}
+discord-reactions{display:flex;flex-wrap:wrap;gap:2px;margin-top:8px}
+discord-reaction{display:inline-flex;align-items:center;border-radius:6px;margin-right:2px;padding:2px 4px;font-size:14px;color:#dcddde}
+discord-custom-emoji{vertical-align:middle;margin-right:4px}
+.emoji-img{height:18px;width:18px;vertical-align:middle;display:inline-block;object-fit:contain}
+.reply-preview{margin-bottom:6px;padding:6px 10px;border-left:3px solid #5865f2;background:#2b2d31;border-radius:4px;color:#b5bac1;cursor:pointer}
+</style>
+<script>
+    document.addEventListener("click", (event) => {
+      const target = event.target;
+      if (!target) return;
+      const goto = target.getAttribute && target.getAttribute("data-goto");
+      if (goto) {
+        const reply = document.getElementById("m-" + goto);
+        if (reply) {
+          reply.scrollIntoView({ behavior: "smooth", block: "center" });
+          reply.style.backgroundColor = "rgba(148,156,247,0.1)";
+          reply.style.transition = "background-color 0.5s ease";
+          setTimeout(() => { reply.style.backgroundColor = "transparent"; }, 1000);
+        }
+      }
+      if (target.matches && target.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+        const src = target.getAttribute("src") || "";
+        if (src) {
+          const overlay = document.getElementById("lightboxOverlay");
+          const img = document.getElementById("lightboxImg");
+          overlay.style.display = "flex";
+          img.src = src;
+        }
+      }
+    });
+    window.addEventListener("DOMContentLoaded", () => {
+      const overlay = document.getElementById("lightboxOverlay");
+      if (overlay) overlay.addEventListener("click", () => { overlay.style.display = "none"; });
+    });
+  </script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js"></script>
+</head>
+<body>
+<div id="lightboxOverlay"><img id="lightboxImg" src="" alt="Просмотр"/></div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay" avatar="https://cdn.discordapp.com/icons/1331331077553262765/a06dfa47e027eb8acdf25152e486f1c8.webp?size=1024" timestamp="2026-08-22_15-54-46">Тикет Закрыт.<br/>Причина: .<br/>Закрыл: <@501686815120687105><br/>Дата: 2026-08-22_15-54-46<br/><a href="https://transcripts.erlcrussia.xyz/1331331077553262765/поддержка-1773_2026-08-22_15-54-46.html" style="color: #00aff4;">https://transcripts.erlcrussia.xyz/1331331077553262765/поддержка-1773_2026-08-22_15-54-46.html</a></discord-message>
+<discord-message id="m-1540466949295710229" timestamp="2026-08-21T21:05:41.204Z" profile="1499112043855482980"><div slot="components" style="margin-top:8px;"><div style="padding:8px;color:#dcddde;"><discord-mention type="role">Персонал Discord</discord-mention> <discord-mention type="role">Персонал ER:LC</discord-mention> <discord-mention type="user">Tigran</discord-mention></div><div style="background:#2f3136;border-left:4px solid #006800;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:8px 12px;"><div style="display:flex;gap:16px;align-items:flex-start;"><img src="https://cdn.discordapp.com/avatars/942085661308125215/e3c8ad733301228e81fd3ab9fc686a59.webp" style="width:80px;height:80px;border-radius:8px;object-fit:cover;flex-shrink:0;" /><div><span style="font-size:1.6em;font-weight:bold;color:#fff;display:block;margin:8px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg" alt="📨" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Новый Тикет — Поддержка</span><br/><strong>В чём проблема:</strong><br/>Привет! Извини за долгий пинг. <br/>Хотел бы обратиться по поводу транскриптов. Сегодня нам сказали, что доступ к ним закрыли для всех. Я понимаю, почему было принято такое решение, но для модераторов это создаёт довольно большие неудобства.<br/>Если нам теперь каждый раз для просмотра транскрипта нужно будет открывать тикет/запрашивать доступ, это будет очень сложно и неудобно в работе. Особенно если нам нужно повторно посмотреть уже закрытый тикет, проверить какую-то информацию или заново рассмотреть ситуацию — получается, каждый раз придётся отдельно открывать доступ только ради того, чтобы посмотреть транскрипт.<br/>Поэтому я бы хотел предложить убрать это ограничение для модераторов и оставить нам доступ к транскриптам. При этом жалобы на сотрудников можно оставить закрытыми для нас и продолжить рассматривать их самостоятельно.<br/>Мне кажется, так будет намного удобнее и для нас, и для самой работы модерации. Спасибо!</div></div></div><div style="padding:4px 12px;color:#dcddde;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/23f3.svg" alt="⏳" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> <strong>Ожидайте ответа от персонала.</strong></div><div style="height:1px;background:#4f545c;margin:4px 0;"></div><div style="height:8px;"></div><div style="display:flex;gap:8px;padding:8px 0;flex-wrap:wrap;"><button disabled style="background:#4f545c;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;">🔒 Закрыть Тикет</button><button disabled style="background:#4f545c;color:#ffffff;padding:8px 16px;border:none;border-radius:4px;display:inline-flex;align-items:center;font-size:14px;font-weight:500;">📥 Взять Тикет</button></div></div></div></discord-message>
+<discord-message id="m-1540466987136983081" timestamp="2026-08-21T21:05:50.226Z" profile="942085661308125215">этот тикет касается к</discord-message>
+<discord-message id="m-1540467000541970452" timestamp="2026-08-21T21:05:53.422Z" profile="942085661308125215"><discord-mention type="user">bjmajgda</discord-mention></discord-message>
+<discord-message id="m-1540467610469011516" timestamp="2026-08-21T21:08:18.840Z" profile="760966468715937814"><discord-reply slot="reply" author="Tigran" avatar="https://cdn.discordapp.com/avatars/942085661308125215/e3c8ad733301228e81fd3ab9fc686a59.png?size=128" role-color="#ffffff"><span data-goto="1540467000541970452">&lt;@760966468715937814&gt;</span></discord-reply>я это не решаю</discord-message>
+<discord-message id="m-1540467683462615120" timestamp="2026-08-21T21:08:36.243Z" profile="942085661308125215"><discord-reply slot="reply" author="bjmajgda" avatar="https://cdn.discordapp.com/avatars/760966468715937814/27faba6d9b43896b2fab256da3dc74a5.png?size=128" role-color="#ffffff"><span data-goto="1540467610469011516">я это не решаю</span></discord-reply>а хто</discord-message>
+<discord-message id="m-1540468815614181497" timestamp="2026-08-21T21:13:06.169Z" profile="942085661308125215"><discord-mention type="user">Pancakeboyman_8</discord-mention></discord-message>
+<discord-message id="m-1540468825223340142" timestamp="2026-08-21T21:13:08.460Z" profile="942085661308125215">?</discord-message>
+<discord-message id="m-1540469247904317461" timestamp="2026-08-21T21:14:49.235Z" profile="1133665013794607114"><discord-reply slot="reply" author="Tigran" avatar="https://cdn.discordapp.com/avatars/942085661308125215/e3c8ad733301228e81fd3ab9fc686a59.png?size=128" role-color="#ffffff"><span data-goto="1540468815614181497">&lt;@1133665013794607114&gt;</span></discord-reply>Мы можем сделать, чтобы те кто брал тикет видели транскрипт в лс, но не более, остальное по запросу<discord-reactions slot="reactions"><discord-reaction count="1" burst="false" me="false">👍</discord-reaction></discord-reactions></discord-message>
+<discord-message id="m-1540469374610317354" timestamp="2026-08-21T21:15:19.444Z" profile="942085661308125215">окей</discord-message>
+<discord-message id="m-1540485862549094400" timestamp="2026-08-21T22:20:50.475Z" profile="501686815120687105"><discord-reply slot="reply" author="ERLC Россия" avatar="https://cdn.discordapp.com/avatars/1499112043855482980/8bfcdd85f17467e7032a3e4a480432e8.png?size=128" role-color="#ffffff"><span data-goto="1540466949295710229">[пусто]</span></discord-reply>ты же это пишешь потому что сам всегда все тикеты через транскрипты чекал</discord-message>
+<discord-message id="m-1540485918287208550" timestamp="2026-08-21T22:21:03.764Z" profile="501686815120687105">а тут тебе просто лавочку прикрыли</discord-message>
+<discord-message id="m-1540485935223803934" timestamp="2026-08-21T22:21:07.802Z" profile="501686815120687105">и стало неприятно</discord-message>
+<discord-message id="m-1540486857903570984" timestamp="2026-08-21T22:24:47.786Z" profile="942085661308125215"><discord-reply slot="reply" author="сквиртик" avatar="https://cdn.discordapp.com/avatars/501686815120687105/97963feeffb19b78f01bf870369554d1.png?size=128" role-color="#ffffff"><span data-goto="1540485935223803934">и стало неприятно</span></discord-reply>нет это просто для того если я помог кому то в тикете и на всяки чтоб был транскрипт</discord-message>
+<discord-message id="m-1540486950572662926" timestamp="2026-08-21T22:25:09.880Z" profile="942085661308125215">и по уважительнее можно</discord-message>
+<discord-message id="m-1540487440714698753" timestamp="2026-08-21T22:27:06.739Z" profile="942085661308125215"><discord-reply slot="reply" author="сквиртик" avatar="https://cdn.discordapp.com/avatars/501686815120687105/97963feeffb19b78f01bf870369554d1.png?size=128" role-color="#ffffff"><span data-goto="1540485862549094400">ты же это пишешь потому что сам всегда все тикеты через транскрипты чекал</span></discord-reply>так плюсом я чека ток мои где я отвечал и закрыл</discord-message>
+<discord-message id="m-1540638349046452336" timestamp="2026-08-22T08:26:46.089Z" profile="1195675629010558986"><discord-reply slot="reply" author="ERLC Россия" avatar="https://cdn.discordapp.com/avatars/1499112043855482980/8bfcdd85f17467e7032a3e4a480432e8.png?size=128" role-color="#ffffff"><span data-goto="1540466949295710229">[пусто]</span></discord-reply>для модераторов дискорда это не будет создавать неудобства</discord-message>
+<discord-message id="m-1540700339655680120" timestamp="2026-08-22T12:33:05.802Z" profile="942085661308125215">я как бы только панкейка пинганул</discord-message>
+<discord-message id="m-1540700391509983302" timestamp="2026-08-22T12:33:18.165Z" profile="942085661308125215">и это для тебя а для меня мешает</discord-message>
+<discord-message id="m-1540703322712055868" timestamp="2026-08-22T12:44:57.018Z" profile="501686815120687105"><discord-reply slot="reply" author="Tigran" avatar="https://cdn.discordapp.com/avatars/942085661308125215/e3c8ad733301228e81fd3ab9fc686a59.png?size=128" role-color="#ffffff"><span data-goto="1540486950572662926">и по уважительнее можно</span></discord-reply><discord-attachments slot="attachments"><img class="discord-image" data-lightbox="true" src="attachments/1540703322712055868_IMG_7281.png" alt="IMG_7281.png" style="max-width:420px;border-radius:8px;margin-top:8px;cursor:pointer;" /></discord-attachments></discord-message>
+<discord-message id="m-1540703326113628250" timestamp="2026-08-22T12:44:57.829Z" profile="501686815120687105">не можно</discord-message>
+<discord-message id="m-1540704151615315989" timestamp="2026-08-22T12:48:14.644Z" profile="942085661308125215">ты меня не сровняй с другим</discord-message>
+<discord-message id="m-1540704188751945729" timestamp="2026-08-22T12:48:23.498Z" profile="942085661308125215">я с ним так говорю а не с тобой</discord-message>
+<discord-message id="m-1540704224940134522" timestamp="2026-08-22T12:48:32.126Z" profile="942085661308125215">так что подумай</discord-message>
+<discord-message id="m-1540704248642142389" timestamp="2026-08-22T12:48:37.777Z" profile="501686815120687105">о чем?</discord-message>
+<discord-message id="m-1540704388677369889" timestamp="2026-08-22T12:49:11.164Z" profile="501686815120687105">то что модер сам решает как ему общаться с разными людьми? хотя у него есть регламент в котором сказано, что со всеми уважительно надо</discord-message>
+<discord-message id="m-1540704517887234048" timestamp="2026-08-22T12:49:41.970Z" profile="942085661308125215">так я могу с ним только так общаться а с тобой общаюсь нормально</discord-message>
+<discord-message id="m-1540704600661827614" timestamp="2026-08-22T12:50:01.705Z" profile="942085661308125215">и плюс я уже не модер</discord-message>
+<discord-message id="m-1540705092922114138" timestamp="2026-08-22T12:51:59.069Z" profile="501686815120687105"><discord-reply slot="reply" author="Tigran" avatar="https://cdn.discordapp.com/avatars/942085661308125215/e3c8ad733301228e81fd3ab9fc686a59.png?size=128" role-color="#ffffff"><span data-goto="1540704600661827614">и плюс я уже не модер</span></discord-reply>а</discord-message>
+<discord-message id="m-1540705117370581003" timestamp="2026-08-22T12:52:04.898Z" profile="501686815120687105">так я закрываю тикет тогда</discord-message>
+<discord-message id="m-1540705344487948318" timestamp="2026-08-22T12:52:59.047Z" profile="942085661308125215">ок</discord-message>
+<discord-message id="m-1540705792691540079" timestamp="2026-08-22T12:54:45.907Z" profile="1499112043855482980"><div slot="components" style="margin-top:8px;"><div style="background:#2f3136;border-left:4px solid #f39c12;border-radius:4px;margin:8px 0;overflow:hidden;"><div style="padding:4px 12px;color:#dcddde;"><span style="font-size:1.1em;font-weight:bold;color:#fff;display:block;margin:4px 0;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет закроется через несколько секунд...</span></div></div></div></discord-message>
+</discord-messages></body></html>
