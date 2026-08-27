@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moscow RolePlay ER:LC — поддержка-1785</title>
+<link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1363556047704293517/1513924719437680660/-ERLC------.png?ex=6a297fc4&is=6a282e44&hm=1810ee6d4c66657140fbb7fc3d89572de5b7768f2648ec3a721f0b730e083520&=&format=webp&quality=lossless" />
+<script>window.$discordMessage={profiles:{"1499112043855482980":{"author":"Moscow RolePlay","avatar":"https://cdn.discordapp.com/guilds/1331331077553262765/users/1499112043855482980/avatars/2e8a619823785a7e2706120c2a90cb86.png?size=128","roleColor":"#006800","roleGradient":"linear-gradient(90deg, #006800 0%, #0cad78 100%)","roleIcon":"https://cdn.discordapp.com/role-icons/1513923522123137144/2276bb5a91b121fb79ce29d77d187bec.png?size=64","roleName":"Moscow RolePlay","bot":true,"verified":false},"1180559317989064704":{"author":"[MM-023] ma1knrjd","avatar":"https://cdn.discordapp.com/avatars/1180559317989064704/f9e6e756ecc44be1f0d530c78eafb1ce.png?size=128","roleColor":"#030103","roleGradient":"linear-gradient(90deg, #030103 0%, #ff0000 100%)","roleIcon":"https://cdn.discordapp.com/role-icons/1459965959258378412/2c143b327e01ee0e9694b7ba67e7a8a0.png?size=64","roleName":"ma1knrjd 67","bot":false,"verified":false},"760966468715937814":{"author":"Сора Касугано","avatar":"https://cdn.discordapp.com/avatars/760966468715937814/27faba6d9b43896b2fab256da3dc74a5.png?size=128","roleColor":"#ffffff","roleGradient":"linear-gradient(90deg, #ffffff 0%, #ffd3e6 100%)","roleIcon":"https://cdn.discordapp.com/role-icons/1527309206577873079/ceb3096994898f76f86fc59742f13ebe.png?size=64","roleName":"Сора Касугано","bot":false,"verified":false}}};</script>
+<style>
+body{background:#313338;color:#dbdee1;font-family:"gg sans","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:16px;line-height:1.375;margin:0;padding:0}
+discord-messages{background-color:#313338!important;color:#dbdee1!important;font-family:"gg sans","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:16px;min-height:100vh;display:block}
+discord-message{font-size:16px!important;line-height:1.375!important}
+a{color:#00aff4!important;text-decoration:none!important}
+a:hover{text-decoration:underline!important}
+.discord-application-tag{font-weight:600!important}
+.discord-command-name{background:rgba(88,101,242,0.15)!important;color:#5865f2!important;padding:1px 6px!important;border-radius:4px!important;font-weight:600!important;font-size:13px!important;display:inline-flex!important;align-items:center!important;gap:4px!important;cursor:pointer!important;text-decoration:none!important}
+.discord-command-name:hover{background:rgba(88,101,242,0.25)!important;color:#5865f2!important;text-decoration:none!important}
+discord-message[data-consecutive="true"]{position:relative!important;margin-top:0!important;padding-top:2px!important;padding-bottom:2px!important;min-height:unset!important}
+discord-message[data-consecutive="true"] .discord-author-avatar,discord-message[data-consecutive="true"] .discord-author-info,discord-message[data-consecutive="true"] .discord-message-timestamp{display:none!important}
+discord-message[data-consecutive="true"] .discord-message-content{margin-left:56px!important;padding-top:0!important}
+discord-message[data-consecutive="true"]:hover::before{content:attr(data-short-time);position:absolute;left:18px;top:4px;font-size:11px;color:#949ba4;line-height:1.375}
+discord-message[data-role-gradient] .discord-author-username,discord-message[data-role-gradient] span.discord-author-username,discord-message[data-role-gradient] .discord-message-author{background-image:var(--author-gradient)!important;-webkit-background-clip:text!important;-webkit-text-fill-color:transparent!important;background-clip:text!important;color:transparent!important;display:inline-block!important}
+discord-mention,.discord-mention{font-family:inherit!important;font-size:inherit!important;font-weight:500!important;padding:0 4px!important;border-radius:3px!important;cursor:pointer!important;transition:background-color 50ms ease-out, color 50ms ease-out!important;display:inline-block!important;vertical-align:baseline!important;line-height:1.25!important}
+discord-mention[type="user"],discord-mention[type="user"] .discord-mention,.discord-user-mention{color:#c9cdfb!important;background-color:rgba(88,101,242,0.3)!important}
+discord-mention[type="user"]:hover,discord-mention[type="user"]:hover .discord-mention,.discord-user-mention:hover{color:#ffffff!important;background-color:#5865f2!important}
+discord-mention[type="role"],discord-mention[type="role"] .discord-mention,.discord-role-mention{background-color:color-mix(in srgb, currentColor 15%, transparent)!important;background-color:var(--role-bg, color-mix(in srgb, currentColor 15%, transparent))!important}
+discord-mention[type="role"]:hover,discord-mention[type="role"]:hover .discord-mention,.discord-role-mention:hover{background-color:color-mix(in srgb, currentColor 35%, transparent)!important;filter:brightness(1.2)!important}
+discord-mention[type="role"][data-gradient],discord-mention[type="role"][data-gradient] .discord-mention{background-image:var(--role-gradient)!important;-webkit-background-clip:text!important;-webkit-text-fill-color:transparent!important;background-clip:text!important;color:transparent!important}
+#lightboxOverlay{display:none;position:fixed;left:0;top:0;right:0;bottom:0;width:100vw;height:100vh;z-index:99999;background:rgba(0,0,0,.85);align-items:center;justify-content:center;user-select:none}
+#lightboxContainer{display:flex;flex-direction:column;align-items:center;justify-content:center;max-width:90vw;max-height:90vh}
+#lightboxImg{max-width:85vw;max-height:85vh;object-fit:contain;border-radius:8px;box-shadow:0 4px 24px rgba(0,0,0,.9);background:#1e1f22;cursor:default}
+#lightboxOpenOrig{position:absolute;top:20px;right:76px;background:rgba(0,0,0,.6);color:#fff;border:none;width:44px;height:44px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;line-height:1;transition:background .2s,transform .1s;z-index:100000;text-decoration:none}
+#lightboxOpenOrig:hover{background:rgba(255,255,255,.25);color:#fff}
+#lightboxOpenOrig:active{transform:scale(.95)}
+#lightboxClose{position:absolute;top:20px;right:24px;background:rgba(0,0,0,.6);color:#fff;border:none;width:44px;height:44px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;line-height:1;transition:background .2s,transform .1s;z-index:100000}
+#lightboxClose:hover{background:rgba(255,255,255,.25)}
+#lightboxClose:active{transform:scale(.95)}
+#lightboxPrev,#lightboxNext{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;width:48px;height:48px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;line-height:1;transition:background .2s,transform .1s;z-index:100000}
+#lightboxPrev{left:24px}
+#lightboxNext{right:24px}
+#lightboxPrev:hover,#lightboxNext:hover{background:rgba(255,255,255,.25)}
+#lightboxPrev:active{transform:translateY(-50%) scale(.95)}
+#lightboxNext:active{transform:translateY(-50%) scale(.95)}
+button,discord-button,.discord-button,[slot="components"] button,[slot="reactions"]>div,.discord-reaction,discord-reply,.discord-replied-message,.discord-replied-message-username,.discord-replied-message-content{cursor:pointer!important}
+discord-reactions{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+discord-reaction{display:inline-flex;align-items:center;border-radius:6px;margin-right:2px;padding:2px 6px;font-size:14px;background:#2b2d31;color:#dbdee1}
+discord-custom-emoji{vertical-align:middle;margin-right:4px}
+.emoji-img{height:1.375em;width:1.375em;vertical-align:middle;display:inline-block;object-fit:contain}
+.reply-preview{margin-bottom:4px;padding:4px 8px;border-left:3px solid #5865f2;background:#2b2d31;border-radius:4px;color:#949ba4;cursor:pointer}
+</style>
+<script>
+    let allGalleryImages = [];
+    let currentImageIndex = -1;
+
+    function openLightbox(src) {
+      allGalleryImages = Array.from(document.querySelectorAll('discord-attachment[type=image] img, .discord-image, img[data-lightbox]'))
+        .map(el => el.getAttribute('src'))
+        .filter(Boolean);
+
+      // Unique images list preserving order
+      allGalleryImages = [...new Set(allGalleryImages)];
+      currentImageIndex = allGalleryImages.indexOf(src);
+      if (currentImageIndex === -1) {
+        allGalleryImages = [src];
+        currentImageIndex = 0;
+      }
+
+      updateLightboxImage();
+      const overlay = document.getElementById('lightboxOverlay');
+      if (overlay) overlay.style.display = 'flex';
+    }
+
+    function updateLightboxImage() {
+      if (currentImageIndex < 0 || currentImageIndex >= allGalleryImages.length) return;
+      const src = allGalleryImages[currentImageIndex];
+      const img = document.getElementById('lightboxImg');
+      const orig = document.getElementById('lightboxOpenOrig');
+      const prevBtn = document.getElementById('lightboxPrev');
+      const nextBtn = document.getElementById('lightboxNext');
+      if (img) img.src = src;
+      if (orig) orig.href = src;
+      if (prevBtn) prevBtn.style.display = allGalleryImages.length > 1 ? 'flex' : 'none';
+      if (nextBtn) nextBtn.style.display = allGalleryImages.length > 1 ? 'flex' : 'none';
+    }
+
+    function closeLightbox() {
+      const overlay = document.getElementById('lightboxOverlay');
+      if (overlay) overlay.style.display = 'none';
+    }
+
+    function prevLightboxImage() {
+      if (allGalleryImages.length <= 1) return;
+      currentImageIndex = (currentImageIndex - 1 + allGalleryImages.length) % allGalleryImages.length;
+      updateLightboxImage();
+    }
+
+    function nextLightboxImage() {
+      if (allGalleryImages.length <= 1) return;
+      currentImageIndex = (currentImageIndex + 1) % allGalleryImages.length;
+      updateLightboxImage();
+    }
+
+    document.addEventListener("click", (event) => {
+      const path = event.composedPath ? event.composedPath() : [event.target];
+      for (const el of path) {
+        if (!el || typeof el.getAttribute !== 'function') continue;
+        if (el.matches && el.matches("discord-attachment[type=image] img, .discord-image, img[data-lightbox]")) {
+          const src = el.getAttribute("src") || "";
+          if (src) openLightbox(src);
+          return;
+        }
+        const goto = el.getAttribute("data-goto");
+        if (goto) {
+          const reply = document.getElementById("m-" + goto);
+          if (reply) {
+            reply.scrollIntoView({ behavior: "smooth", block: "center" });
+            reply.style.backgroundColor = "rgba(148,156,247,0.15)";
+            reply.style.transition = "background-color 0.5s ease";
+            setTimeout(() => { reply.style.backgroundColor = "transparent"; }, 1200);
+          }
+          return;
+        }
+      }
+    });
+
+    window.addEventListener("keydown", (event) => {
+      const overlay = document.getElementById("lightboxOverlay");
+      if (overlay && overlay.style.display === "flex") {
+        if (event.key === "Escape") closeLightbox();
+        else if (event.key === "ArrowLeft") prevLightboxImage();
+        else if (event.key === "ArrowRight") nextLightboxImage();
+      }
+    });
+
+    window.addEventListener("DOMContentLoaded", () => {
+      const overlay = document.getElementById("lightboxOverlay");
+      const closeBtn = document.getElementById("lightboxClose");
+      const prevBtn = document.getElementById("lightboxPrev");
+      const nextBtn = document.getElementById("lightboxNext");
+      const container = document.getElementById("lightboxContainer");
+
+      if (closeBtn) closeBtn.addEventListener("click", (e) => { e.stopPropagation(); closeLightbox(); });
+      if (prevBtn) prevBtn.addEventListener("click", (e) => { e.stopPropagation(); prevLightboxImage(); });
+      if (nextBtn) nextBtn.addEventListener("click", (e) => { e.stopPropagation(); nextLightboxImage(); });
+      if (container) container.addEventListener("click", (e) => { e.stopPropagation(); });
+      if (overlay) overlay.addEventListener("click", () => { closeLightbox(); });
+
+      const applyEnhancements = () => {
+        const botBadgeText = "БОТ";
+        const appBadgeText = "ПРИЛОЖЕНИЕ";
+
+        const walkAndLocalize = (root) => {
+          if (!root) return;
+          const all = root.querySelectorAll ? root.querySelectorAll('*') : [];
+          all.forEach(el => {
+            if (el.classList && (
+              el.classList.contains('discord-application-tag') ||
+              el.classList.contains('discord-author-bot-tag') ||
+              el.classList.contains('discord-bot-tag') ||
+              el.classList.contains('discord-author-bot-tag-verified') ||
+              el.classList.contains('discord-author-bot-tag-op')
+            )) {
+              el.style.setProperty('font-weight', '600', 'important');
+              el.childNodes.forEach(child => {
+                if (child.nodeType === 3 && child.textContent && child.textContent.trim()) {
+                  const val = child.textContent.trim().toLowerCase();
+                  if (val === 'bot' || val === 'бот' || val === 'app') child.textContent = botBadgeText;
+                  else if (val === 'приложение') child.textContent = appBadgeText;
+                }
+              });
+            }
+            if (el.shadowRoot) {
+              walkAndLocalize(el.shadowRoot);
+            }
+          });
+        };
+
+        walkAndLocalize(document.body);
+
+        document.querySelectorAll('discord-message').forEach(msg => {
+          const mskTime = msg.getAttribute('data-timestamp-msk');
+          if (mskTime) {
+            const timeEl = msg.querySelector('.discord-message-timestamp') 
+              || (msg.shadowRoot && msg.shadowRoot.querySelector('.discord-message-timestamp'));
+            if (timeEl && timeEl.textContent !== mskTime) {
+              timeEl.textContent = mskTime;
+            }
+          }
+
+          const gradient = msg.getAttribute('data-role-gradient');
+          if (gradient) {
+            msg.style.setProperty('--author-gradient', gradient);
+            const authorEl = msg.querySelector('.discord-author-username') 
+              || (msg.shadowRoot && msg.shadowRoot.querySelector('.discord-author-username'))
+              || msg.querySelector('.discord-message-author');
+            if (authorEl) {
+              authorEl.style.setProperty('background-image', gradient, 'important');
+              authorEl.style.setProperty('-webkit-background-clip', 'text', 'important');
+              authorEl.style.setProperty('-webkit-text-fill-color', 'transparent', 'important');
+              authorEl.style.setProperty('background-clip', 'text', 'important');
+              authorEl.style.setProperty('color', 'transparent', 'important');
+              authorEl.style.setProperty('display', 'inline-block', 'important');
+            }
+          }
+        });
+
+        document.querySelectorAll('discord-reply, discord-command').forEach(reply => {
+          const gradient = reply.getAttribute('data-author-gradient');
+          if (gradient) {
+            const authorEl = reply.querySelector('.discord-replied-message-username, .discord-reply-author, .discord-author-username') 
+              || (reply.shadowRoot && reply.shadowRoot.querySelector('.discord-replied-message-username, .discord-reply-author, .discord-author-username'));
+            if (authorEl) {
+              authorEl.style.setProperty('background-image', gradient, 'important');
+              authorEl.style.setProperty('-webkit-background-clip', 'text', 'important');
+              authorEl.style.setProperty('-webkit-text-fill-color', 'transparent', 'important');
+              authorEl.style.setProperty('background-clip', 'text', 'important');
+              authorEl.style.setProperty('color', 'transparent', 'important');
+              authorEl.style.setProperty('display', 'inline-block', 'important');
+            }
+          }
+        });
+
+        document.querySelectorAll('discord-command').forEach(cmd => {
+          const root = cmd.shadowRoot || cmd;
+          if ("ru" === "ru") {
+            const walkAndTranslateUsed = (node) => {
+              if (!node) return;
+              if (node.nodeType === 3 && node.textContent && node.textContent.includes('used')) {
+                node.textContent = node.textContent.replace('used', 'использует');
+              }
+              if (node.shadowRoot) walkAndTranslateUsed(node.shadowRoot);
+              if (node.childNodes) node.childNodes.forEach(walkAndTranslateUsed);
+            };
+            walkAndTranslateUsed(root);
+          }
+
+          const cmdNameEl = root.querySelector('.discord-command-name');
+          if (cmdNameEl) {
+            cmdNameEl.style.setProperty('background', 'rgba(88, 101, 242, 0.15)', 'important');
+            cmdNameEl.style.setProperty('color', '#5865f2', 'important');
+            cmdNameEl.style.setProperty('padding', '1px 6px', 'important');
+            cmdNameEl.style.setProperty('border-radius', '4px', 'important');
+            cmdNameEl.style.setProperty('font-weight', '600', 'important');
+            cmdNameEl.style.setProperty('font-size', '13px', 'important');
+            cmdNameEl.style.setProperty('display', 'inline-flex', 'important');
+            cmdNameEl.style.setProperty('align-items', 'center', 'important');
+            cmdNameEl.style.setProperty('gap', '4px', 'important');
+            cmdNameEl.style.setProperty('text-decoration', 'none', 'important');
+            cmdNameEl.style.setProperty('cursor', 'pointer', 'important');
+
+            if (!cmdNameEl.querySelector('svg')) {
+              const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+              svg.setAttribute('width', '12');
+              svg.setAttribute('height', '12');
+              svg.setAttribute('viewBox', '0 0 24 24');
+              svg.setAttribute('fill', 'currentColor');
+              svg.innerHTML = '<path d="M4 4h4v4H4V4zm6 0h4v4h-4V4zm6 0h4v4h-4V4zM4 10h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4zM4 16h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4z"/>';
+              cmdNameEl.insertAdjacentElement('afterbegin', svg);
+            }
+          }
+        });
+
+        document.querySelectorAll('discord-mention[type="role"]').forEach(mention => {
+          const gradient = mention.getAttribute('data-gradient');
+          if (gradient) {
+            mention.style.setProperty('--role-gradient', gradient);
+            const target = mention.querySelector('.discord-mention') || (mention.shadowRoot && mention.shadowRoot.querySelector('.discord-mention')) || mention;
+            if (target) {
+              target.style.setProperty('background-image', gradient, 'important');
+              target.style.setProperty('-webkit-background-clip', 'text', 'important');
+              target.style.setProperty('-webkit-text-fill-color', 'transparent', 'important');
+              target.style.setProperty('background-clip', 'text', 'important');
+              target.style.setProperty('color', 'transparent', 'important');
+            }
+          }
+        });
+      };
+
+      applyEnhancements();
+      const observer = new MutationObserver(() => { applyEnhancements(); });
+      observer.observe(document.body, { childList: true, subtree: true, attributes: true });
+      const interval = setInterval(applyEnhancements, 200);
+      setTimeout(() => clearInterval(interval), 4000);
+    });
+  </script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@latest/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js"></script>
+</head>
+<body>
+<div id="lightboxOverlay">
+  <a id="lightboxOpenOrig" href="" target="_blank" title="Открыть оригинал в новой вкладке"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
+  <button id="lightboxClose" title="Закрыть (Esc)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+  <button id="lightboxPrev" title="Предыдущее (←)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+  <div id="lightboxContainer">
+    <img id="lightboxImg" src="" alt="Просмотр" />
+  </div>
+  <button id="lightboxNext" title="Следующее (→)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+</div>
+<discord-messages style="min-height:100vh">
+<discord-message author="Moscow RolePlay ER:LC" avatar="https://cdn.discordapp.com/icons/1331331077553262765/a06dfa47e027eb8acdf25152e486f1c8.webp?size=1024" timestamp="2026-08-27T17:11:49.066Z" data-timestamp-msk="27.08.2026 20:11"><strong>Название тикета:</strong> поддержка-1785<br/><strong>Причина:</strong> Не указано<br/><strong>Закрыл(а):</strong> <discord-mention type="user">[MM-023] ma1knrjd</discord-mention><br/><strong>Дата:</strong> 27.08.2026 20:11:49<br/><strong>Ссылка:</strong> <a href="https://transcripts.erlcrussia.xyz/1331331077553262765/поддержка-1785_2026-08-27_20-11-48" style="color: #00aff4;">https://transcripts.erlcrussia.xyz/1331331077553262765/поддержка-1785_2026-08-27_20-11-48</a></discord-message>
+<discord-message id="m-1542582139990577193" timestamp="2026-08-27T17:10:41.964Z" data-timestamp-msk="27.08.2026 20:10" data-short-time="20:10" profile="1499112043855482980" role-color="#006800" data-role-gradient="linear-gradient(90deg, #006800 0%, #0cad78 100%)" role-icon="https://cdn.discordapp.com/role-icons/1513923522123137144/2276bb5a91b121fb79ce29d77d187bec.png?size=64" role-name="Moscow RolePlay"><div slot="components" style="margin-top:4px;"><div style="margin-bottom:4px;color:#dbdee1;line-height:1.375;"><span class="discord-mention discord-role-mention" style="background-color:rgba(92, 53, 140, 0.15)!important;color:#5c358c!important;padding:0 4px!important;border-radius:3px!important;font-weight:500!important;display:inline-block!important;vertical-align:baseline!important;cursor:pointer!important;line-height:1.25!important;" onmouseover="this.style.backgroundColor='rgba(92, 53, 140, 0.35)';" onmouseout="this.style.backgroundColor='rgba(92, 53, 140, 0.15)';"><span style="background-image:linear-gradient(90deg, #5c358c 0%, #39007e 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;color:transparent;display:inline-block;">@Персонал Discord</span></span> <span class="discord-mention discord-role-mention" style="background-color:rgba(0, 21, 255, 0.15)!important;color:#0015ff!important;padding:0 4px!important;border-radius:3px!important;font-weight:500!important;display:inline-block!important;vertical-align:baseline!important;cursor:pointer!important;line-height:1.25!important;" onmouseover="this.style.backgroundColor='rgba(0, 21, 255, 0.35)';" onmouseout="this.style.backgroundColor='rgba(0, 21, 255, 0.15)';"><span style="background-image:linear-gradient(90deg, #0015ff 0%, #a1c2ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;color:transparent;display:inline-block;">@Персонал ER:LC</span></span> <discord-mention type="user">[MM-023] ma1knrjd</discord-mention></div><div style="background:#2b2d31;border-left:4px solid #006800;border-radius:8px;padding:10px 14px;margin:4px 0 0 0;width:100%;max-width:680px;box-sizing:border-box;box-shadow:0 1px 2px rgba(0,0,0,0.2);"><div><div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;"><div style="flex:1;min-width:0;"><h1 style="font-size:1.45rem;font-weight:700;color:#f2f3f5;margin:6px 0 3px 0;line-height:1.25;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e8.svg" alt="📨" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Новый тикет: Поддержка</h1><strong>В чём проблема:</strong><br/>Короче, есть предложение сделать у нас типо рассмеши стримера, ну и все.</div><img src="https://cdn.discordapp.com/avatars/1180559317989064704/f9e6e756ecc44be1f0d530c78eafb1ce.webp" style="width:80px;height:80px;border-radius:8px;object-fit:cover;flex-shrink:0;box-shadow:0 2px 4px rgba(0,0,0,0.3);" /></div></div><div style="color:#dbdee1;line-height:1.375;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/23f3.svg" alt="⏳" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> <strong>Ожидайте ответа персонала</strong></div><div style="height:1px;background:#3f4147;margin:8px 0;"></div><div style="display:flex;gap:8px;padding-top:6px;flex-wrap:wrap;"><button disabled style="background:#4e5058;color:#ffffff;padding:8px 16px;border:none;border-radius:6px;display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:500;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Закрыть Тикет</button><button disabled style="background:#4e5058;color:#ffffff;padding:8px 16px;border:none;border-radius:6px;display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:500;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4e5.svg" alt="📥" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Взять Тикет</button></div></div></div></discord-message>
+<discord-message id="m-1542582221620117604" timestamp="2026-08-27T17:11:01.426Z" data-timestamp-msk="27.08.2026 20:11" data-short-time="20:11" profile="760966468715937814" data-role-gradient="linear-gradient(90deg, #ffffff 0%, #ffd3e6 100%)" role-icon="https://cdn.discordapp.com/role-icons/1527309206577873079/ceb3096994898f76f86fc59742f13ebe.png?size=64" role-name="Сора Касугано">и?</discord-message>
+<discord-message id="m-1542582253291446284" timestamp="2026-08-27T17:11:08.977Z" data-timestamp-msk="27.08.2026 20:11" data-short-time="20:11" profile="1180559317989064704" role-color="#030103" data-role-gradient="linear-gradient(90deg, #030103 0%, #ff0000 100%)" role-icon="https://cdn.discordapp.com/role-icons/1459965959258378412/2c143b327e01ee0e9694b7ba67e7a8a0.png?size=64" role-name="ma1knrjd 67">Хм</discord-message>
+<discord-message id="m-1542582261390778379" timestamp="2026-08-27T17:11:10.908Z" data-timestamp-msk="27.08.2026 20:11" data-short-time="20:11" profile="760966468715937814" data-role-gradient="linear-gradient(90deg, #ffffff 0%, #ffd3e6 100%)" role-icon="https://cdn.discordapp.com/role-icons/1527309206577873079/ceb3096994898f76f86fc59742f13ebe.png?size=64" role-name="Сора Касугано">вы платить будете или что?</discord-message>
+<discord-message id="m-1542582278197350441" timestamp="2026-08-27T17:11:14.915Z" data-timestamp-msk="27.08.2026 20:11" data-short-time="20:11" profile="1180559317989064704" role-color="#030103" data-role-gradient="linear-gradient(90deg, #030103 0%, #ff0000 100%)" role-icon="https://cdn.discordapp.com/role-icons/1459965959258378412/2c143b327e01ee0e9694b7ba67e7a8a0.png?size=64" role-name="ma1knrjd 67">Не</discord-message>
+<discord-message id="m-1542582310770315364" timestamp="2026-08-27T17:11:22.681Z" data-timestamp-msk="27.08.2026 20:11" data-short-time="20:11" profile="1180559317989064704" role-color="#030103" data-role-gradient="linear-gradient(90deg, #030103 0%, #ff0000 100%)" role-icon="https://cdn.discordapp.com/role-icons/1459965959258378412/2c143b327e01ee0e9694b7ba67e7a8a0.png?size=64" role-name="ma1knrjd 67" data-consecutive="true">Типо просто рассмеши стримера</discord-message>
+<discord-message id="m-1542582314842980402" timestamp="2026-08-27T17:11:23.652Z" data-timestamp-msk="27.08.2026 20:11" data-short-time="20:11" profile="760966468715937814" data-role-gradient="linear-gradient(90deg, #ffffff 0%, #ffd3e6 100%)" role-icon="https://cdn.discordapp.com/role-icons/1527309206577873079/ceb3096994898f76f86fc59742f13ebe.png?size=64" role-name="Сора Касугано">в чем смысл?</discord-message>
+<discord-message id="m-1542582321293828137" timestamp="2026-08-27T17:11:25.190Z" data-timestamp-msk="27.08.2026 20:11" data-short-time="20:11" profile="1180559317989064704" role-color="#030103" data-role-gradient="linear-gradient(90deg, #030103 0%, #ff0000 100%)" role-icon="https://cdn.discordapp.com/role-icons/1459965959258378412/2c143b327e01ee0e9694b7ba67e7a8a0.png?size=64" role-name="ma1knrjd 67">Нахуй платить</discord-message>
+<discord-message id="m-1542582338934804561" timestamp="2026-08-27T17:11:29.396Z" data-timestamp-msk="27.08.2026 20:11" data-short-time="20:11" profile="1180559317989064704" role-color="#030103" data-role-gradient="linear-gradient(90deg, #030103 0%, #ff0000 100%)" role-icon="https://cdn.discordapp.com/role-icons/1459965959258378412/2c143b327e01ee0e9694b7ba67e7a8a0.png?size=64" role-name="ma1knrjd 67" data-consecutive="true">Хз</discord-message>
+<discord-message id="m-1542582360317501541" timestamp="2026-08-27T17:11:34.494Z" data-timestamp-msk="27.08.2026 20:11" data-short-time="20:11" profile="760966468715937814" data-role-gradient="linear-gradient(90deg, #ffffff 0%, #ffd3e6 100%)" role-icon="https://cdn.discordapp.com/role-icons/1527309206577873079/ceb3096994898f76f86fc59742f13ebe.png?size=64" role-name="Сора Касугано">бро</discord-message>
+<discord-message id="m-1542582374297243729" timestamp="2026-08-27T17:11:37.827Z" data-timestamp-msk="27.08.2026 20:11" data-short-time="20:11" profile="1180559317989064704" role-color="#030103" data-role-gradient="linear-gradient(90deg, #030103 0%, #ff0000 100%)" role-icon="https://cdn.discordapp.com/role-icons/1459965959258378412/2c143b327e01ee0e9694b7ba67e7a8a0.png?size=64" role-name="ma1knrjd 67">Ну тогда закрывай</discord-message>
+<discord-message id="m-1542582384594001960" timestamp="2026-08-27T17:11:40.282Z" data-timestamp-msk="27.08.2026 20:11" data-short-time="20:11" profile="760966468715937814" data-role-gradient="linear-gradient(90deg, #ffffff 0%, #ffd3e6 100%)" role-icon="https://cdn.discordapp.com/role-icons/1527309206577873079/ceb3096994898f76f86fc59742f13ebe.png?size=64" role-name="Сора Касугано">посмотри стримы</discord-message>
+<discord-message id="m-1542582413169795115" timestamp="2026-08-27T17:11:47.095Z" data-timestamp-msk="27.08.2026 20:11" data-short-time="20:11" profile="1499112043855482980" role-color="#006800" data-role-gradient="linear-gradient(90deg, #006800 0%, #0cad78 100%)" role-icon="https://cdn.discordapp.com/role-icons/1513923522123137144/2276bb5a91b121fb79ce29d77d187bec.png?size=64" role-name="Moscow RolePlay"><div slot="components" style="margin-top:4px;"><div style="margin-bottom:4px;color:#dbdee1;line-height:1.375;">Вы уверены, что хотите закрыть тикет?</div><div style="display:flex;gap:8px;padding-top:6px;flex-wrap:wrap;"><button disabled style="background:#4e5058;color:#ffffff;padding:8px 16px;border:none;border-radius:6px;display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:500;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2705.svg" alt="✅" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Закрыть</button><button disabled style="background:#4e5058;color:#ffffff;padding:8px 16px;border:none;border-radius:6px;display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:500;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/274c.svg" alt="❌" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Оставить</button></div></div></discord-message>
+<discord-message id="m-1542582417355964457" timestamp="2026-08-27T17:11:48.093Z" data-timestamp-msk="27.08.2026 20:11" data-short-time="20:11" profile="1499112043855482980" role-color="#006800" data-role-gradient="linear-gradient(90deg, #006800 0%, #0cad78 100%)" role-icon="https://cdn.discordapp.com/role-icons/1513923522123137144/2276bb5a91b121fb79ce29d77d187bec.png?size=64" role-name="Moscow RolePlay" data-consecutive="true"><div slot="components" style="margin-top:4px;"><div style="background:#2b2d31;border-left:4px solid #f39c12;border-radius:8px;padding:10px 14px;margin:4px 0 0 0;width:fit-content;max-width:680px;box-sizing:border-box;box-shadow:0 1px 2px rgba(0,0,0,0.2);"><div style="color:#dbdee1;line-height:1.375;"><h3 style="font-size:1.05rem;font-weight:700;color:#f2f3f5;margin:4px 0 2px 0;line-height:1.25;"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" alt="🔒" class="emoji-img" style="height:18px;width:18px;vertical-align:middle;display:inline-block;" loading="lazy" onerror="this.style.display='none'"/> Тикет закрывается...</h3></div></div></div></discord-message>
+</discord-messages></body></html>
